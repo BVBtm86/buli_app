@@ -3,13 +3,6 @@ import numpy as np
 from pickle import load
 import streamlit as st
 
-# ##### Read Prediction Games and Models
-final_model = load(open('././final_models/final_model.pkl', 'rb'))
-final_transform = load(open('././final_models/final_transform.pkl', 'rb'))
-feature_importance = pd.read_csv("././final_models/Final Feature Importance.csv", index_col='Unnamed: 0')
-model_features = feature_importance.index.to_list()
-prediction_game_df = pd.read_csv("././data/Season_Prediction_Games.csv")
-
 # ##### Team Names
 team_name_1 = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer 04 Leverkusen",
                "Hoffenheim": "TSG 1899 Hoffenheim", "Werder Bremen": "SV Werder Bremen", "Mainz 05": "1. FSV Mainz 05",
@@ -74,26 +67,35 @@ team_stats_names = ["Goals", "Assists", "Key Passes", "xGoals", "xAssisted", "Di
 
 main_columns = dict(zip(team_stats_vars, team_stats_names))
 
-# ##### Prediction Statistics
-prediction_stats_var = [team_stats_vars[team_stats_names.index(feature)] for feature in model_features]
-prediction_stats_names = model_features.copy()
 
-
+# ##### Read Data
 @st.cache(allow_output_mutation=True)
 def season_data_process(season):
+    # ###### Load Prediction Data
+    final_model = load(open('././final_models/final_model.pkl', 'rb'))
+    final_transform = load(open('././final_models/final_transform.pkl', 'rb'))
+    feature_importance = pd.read_csv("././final_models/Final Feature Importance.csv", index_col='Unnamed: 0')
+    model_features = feature_importance.index.to_list()
+    prediction_game_df = pd.read_csv("././data/Season_Prediction_Games.csv")
+    prediction_data = pd.read_csv("././data/New_Predictions_df.csv")
+
+    default_steps = prediction_data[prediction_data['Accuracy'] == prediction_data['Accuracy'].max()][
+        ['Home Steps', 'Away Steps']].values[0]
+    home_default = int(default_steps[0] - 1)
+    away_default = int(default_steps[1] - 1)
+
     # ##### Read Data
     buli_df = pd.read_csv(f"././data/Seasons_data/Bundesliga_Team_Statistics_{season}.csv", index_col='Unnamed: 0')
-    # buli_tracking_df = pd.read_csv(f"././data/Seasons_data/Bundesliga_Team_Tracking_Statistics_{season}.csv",
-    #                                index_col='Unnamed: 0')
+    buli_tracking_df = pd.read_csv(f"././data/Seasons_data/Bundesliga_Team_Tracking_Statistics_{season}.csv",
+                                   index_col='Unnamed: 0')
 
     # ##### Merge Tracking Statistics to the Main DataFrame
     buli_df['Team'] = buli_df['Team'].map(team_name_1)
     buli_df['Opponent'] = buli_df['Opponent'].map(team_name_1)
-    # buli_tracking_df['Team'] = buli_tracking_df['Team'].map(team_name_2)
-    # buli_tracking_df['Opponent'] = buli_tracking_df['Opponent'].map(team_name_2)
-    # df_analysis = pd.merge(buli_df, buli_tracking_df, left_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'],
-    #                        right_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'])
-    df_analysis = buli_df.copy()
+    buli_tracking_df['Team'] = buli_tracking_df['Team'].map(team_name_2)
+    buli_tracking_df['Opponent'] = buli_tracking_df['Opponent'].map(team_name_2)
+    df_analysis = pd.merge(buli_df, buli_tracking_df, left_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'],
+                           right_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'])
 
     # ##### Create Match Day Statistics
     df_analysis['Possession'] = np.round(df_analysis['Possession'] * 100, 2)
@@ -104,11 +106,12 @@ def season_data_process(season):
     df_analysis.rename(columns=main_columns, inplace=True)
     current_match_day = np.max(df_analysis['Week_No'])
 
-    return df_analysis, current_match_day, season
+    return df_analysis, current_match_day, season, final_model, final_transform, model_features, prediction_game_df, \
+           prediction_data, home_default, away_default
 
 
 @st.cache
-def transform_data(data, features):
+def transform_data(data, features, scalar):
     # ##### Final Variables
     group_vars = ["Season", "Week_No", "Team", "Opponent", "Venue", "Result"]
     group_vars.extend(features)
@@ -116,13 +119,13 @@ def transform_data(data, features):
 
     # #### Create Home Data for Analysis
     home_data = work_df[work_df["Venue"] == "Home"][group_vars]
-    home_name = ["Home " + col for col in model_features]
+    home_name = ["Home " + col for col in features]
     home_data.rename(columns=dict(zip(features, home_name)), inplace=True)
     home_data.rename(columns={"Team": "Home Team", "Opponent": "Away Team"}, inplace=True)
 
     # #### Create Away Data for Analysis
     away_data = work_df[work_df["Venue"] == "Away"][group_vars]
-    away_name = ["Away " + col for col in model_features]
+    away_name = ["Away " + col for col in features]
     away_data.rename(columns=dict(zip(features, away_name)), inplace=True)
     away_data.drop(columns=['Result', 'Venue'], inplace=True)
     away_data.rename(columns={"Team": "Away Team", "Opponent": "Home Team"}, inplace=True)
@@ -134,7 +137,7 @@ def transform_data(data, features):
                         right_on=["Season", "Week_No", "Home Team", "Away Team"])
 
     # ##### Transformed Data
-    model_df[final_model_features] = final_transform.transform(model_df[final_model_features])
+    model_df[final_model_features] = scalar.transform(model_df[final_model_features])
     model_df.drop(columns='Venue', inplace=True)
 
     index_agg_home_team = np.min(model_df.groupby(by='Home Team').count()['Season'])
@@ -143,7 +146,16 @@ def transform_data(data, features):
     return model_df, final_model_features, index_agg_home_team, index_agg_away_team
 
 
-def game_prediction_teams(data, features, match_day, games_predict, home_agg_steps, away_agg_steps):
+def game_prediction_teams(data, features, match_day, games_predict, home_agg_steps, away_agg_steps, predict_data,
+                          model):
+    # ##### Prediction Data
+    home_agg_function, away_agg_function = predict_data[(predict_data['Home Steps'] == home_agg_steps)
+                                                        & (predict_data['Away Steps'] == away_agg_steps)][
+        'Agg Function'].values[0].split('-')
+
+    accuracy_combo = np.round(predict_data[(predict_data['Home Steps'] == home_agg_steps) &
+                                           (predict_data['Away Steps'] == away_agg_steps)]['Accuracy'].values[0], 1)
+
     # ##### Prediction df
     prediction_df = games_predict[games_predict['Week_No'] == match_day].reset_index(drop=True)
     prediction_df['Game_No'] = [i for i in range(1, len(prediction_df) + 1)]
@@ -154,12 +166,14 @@ def game_prediction_teams(data, features, match_day, games_predict, home_agg_ste
 
     # ##### Create Home/Away Aggregate
     cutoff = int(len(features) / 2)
-    home_team = data.groupby('Home Team').rolling(home_agg_steps)[features[:cutoff]].mean().reset_index()
+    home_team = data.groupby('Home Team').rolling(home_agg_steps)[features[:cutoff]].agg(home_agg_function). \
+        reset_index()
     home_team['Last_Stats'] = np.where(home_team['Home Team'].duplicated(keep='last'), 0, 1)
     home_stats = home_team[home_team['Last_Stats'] == 1].reset_index(drop=True)
     home_stats.drop(columns=['level_1', 'Last_Stats'], inplace=True)
 
-    away_team = data.groupby('Away Team').rolling(away_agg_steps)[features[cutoff:]].mean().reset_index()
+    away_team = data.groupby('Away Team').rolling(away_agg_steps)[features[cutoff:]].agg(away_agg_function). \
+        reset_index()
     away_team['Last_Stats'] = np.where(away_team['Away Team'].duplicated(keep='last'), 0, 1)
     away_stats = away_team[away_team['Last_Stats'] == 1].reset_index(drop=True)
     away_stats.drop(columns=['level_1', 'Last_Stats'], inplace=True)
@@ -170,28 +184,38 @@ def game_prediction_teams(data, features, match_day, games_predict, home_agg_ste
     prediction_games.sort_values(by='Game_No', inplace=True)
 
     # ##### Prediction
-    final_proba = final_model.predict_proba(prediction_games[features].values)
+    final_proba = model.predict_proba(prediction_games[features].values)
     hprob = [np.round(final_proba[i][2] * 100, 2) for i in range(9)]
     dprob = [np.round(final_proba[i][1] * 100, 2) for i in range(9)]
     aprob = [np.round(final_proba[i][0] * 100, 2) for i in range(9)]
 
-    return home_team_names, away_team_names, hprob, dprob, aprob
+    return home_team_names, away_team_names, hprob, dprob, aprob, accuracy_combo
 
 
 def create_predictions_season(season_data, data, games_predict, home_agg_steps, away_agg_steps, final_features,
-                              match_day):
+                              match_day, predict_data, model):
+    # ##### Prediction Data
+    home_agg_function, away_agg_function = predict_data[(predict_data['Home Steps'] == home_agg_steps)
+                                                        & (predict_data['Away Steps'] == away_agg_steps)][
+        'Agg Function'].values[0].split('-')
+
+    accuracy_combo = np.round(predict_data[(predict_data['Home Steps'] == home_agg_steps) &
+                                           (predict_data['Away Steps'] == away_agg_steps)]['Accuracy'].values[0], 1)
+
     # ##### Prediction df
     prediction_df = games_predict[games_predict['Week_No'] > match_day].reset_index(drop=True)
     prediction_df['Game_No'] = [i for i in range(1, len(prediction_df) + 1)]
 
     # ##### Create Home/Away Aggregate
     cutoff = int(len(final_features) / 2)
-    home_team = data.groupby('Home Team').rolling(home_agg_steps)[final_features[:cutoff]].mean().reset_index()
+    home_team = data.groupby('Home Team').rolling(home_agg_steps)[final_features[:cutoff]].agg(home_agg_function). \
+        reset_index()
     home_team['Last_Stats'] = np.where(home_team['Home Team'].duplicated(keep='last'), 0, 1)
     home_stats = home_team[home_team['Last_Stats'] == 1].reset_index(drop=True)
     home_stats.drop(columns=['level_1', 'Last_Stats'], inplace=True)
 
-    away_team = data.groupby('Away Team').rolling(away_agg_steps)[final_features[cutoff:]].mean().reset_index()
+    away_team = data.groupby('Away Team').rolling(away_agg_steps)[final_features[cutoff:]].agg(away_agg_function). \
+        reset_index()
     away_team['Last_Stats'] = np.where(away_team['Away Team'].duplicated(keep='last'), 0, 1)
     away_stats = away_team[away_team['Last_Stats'] == 1].reset_index(drop=True)
     away_stats.drop(columns=['level_1', 'Last_Stats'], inplace=True)
@@ -202,7 +226,7 @@ def create_predictions_season(season_data, data, games_predict, home_agg_steps, 
     prediction_games.sort_values(by='Game_No', inplace=True)
 
     # ##### Prediction
-    prediction_games['Home Result'] = final_model.predict(prediction_games[final_features].values)
+    prediction_games['Home Result'] = model.predict(prediction_games[final_features].values)
     prediction_games['Away Result'] = np.where(prediction_games['Home Result'] == "Win", "Defeat",
                                                np.where(prediction_games['Home Result'] == "Draw", "Draw", "Win"))
 
@@ -233,4 +257,4 @@ def create_predictions_season(season_data, data, games_predict, home_agg_steps, 
     final_predict_tab.set_index('Rank', inplace=True)
     final_predict_tab.columns = ["Team", "MP", "W", "D", "L", "Pts"]
 
-    return final_predict_tab
+    return final_predict_tab, accuracy_combo

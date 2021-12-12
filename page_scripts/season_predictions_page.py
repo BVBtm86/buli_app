@@ -4,13 +4,16 @@ from PIL import Image
 
 def prediction_page(prediction_type, season):
     # ##### Season Data
-    buli_season_df, current_match_day, season = season_data_process(season=season)
+    buli_season_df, current_match_day, season, final_model, final_transform, model_features, \
+    prediction_game_df, prediction_data, home_default, away_default = season_data_process(season=season)
     remaining_weeks = list(range(current_match_day + 1, 35))
 
     if 17 <= current_match_day < 34:
+    # if 14 <= current_match_day < 34:
         season_transformed_data, final_model_features, index_agg_home_team, \
         index_agg_away_team = transform_data(data=buli_season_df,
-                                             features=model_features)
+                                             features=model_features,
+                                             scalar=final_transform)
 
         agg_stats_options = ['Last Game', 'Last 2 Games', 'Last 3 Games', 'Last 4 Games', 'Last 5 Games']
         if index_agg_home_team < 6:
@@ -27,7 +30,7 @@ def prediction_page(prediction_type, season):
         if prediction_type == 'Games':
             week_no = st.sidebar.selectbox("Select Week No", remaining_weeks, index=0)
 
-            match_day_col, _ = st.columns([8, 2])
+            match_day_col, accuracy_col = st.columns([8, 2])
             with match_day_col:
                 st.header(f"Season: {season} Match Day {week_no} Predictions")
 
@@ -37,12 +40,12 @@ def prediction_page(prediction_type, season):
 
             _, home_agg_col, _, away_agg_col, _ = st.columns([1, 2.5, 3, 2.5, 2])
             with home_agg_col:
-                home_agg_stats = st.selectbox("Home Aggregate Stats", home_agg_stats_options)
+                home_agg_stats = st.selectbox("Home Aggregate Stats", home_agg_stats_options, home_default)
                 home_agg_step = agg_stats_options.index(
                     home_agg_stats) + 1
 
             with away_agg_col:
-                away_agg_stats = st.selectbox("Away Aggregate Stats", away_agg_stats_options)
+                away_agg_stats = st.selectbox("Away Aggregate Stats", away_agg_stats_options, away_default)
                 away_agg_step = agg_stats_options.index(
                     away_agg_stats) + 1
 
@@ -60,21 +63,23 @@ def prediction_page(prediction_type, season):
                 st.markdown("")
                 st.markdown("<b>AWin</b>", unsafe_allow_html=True)
 
-            home_team_names, away_team_names, home_prob, draw_prob, away_prob = game_prediction_teams(
+            home_team_names, away_team_names, home_prob, draw_prob, away_prob, accuracy_combo = game_prediction_teams(
                 data=season_transformed_data,
                 features=final_model_features,
                 match_day=week_no,
                 games_predict=prediction_game_df,
                 home_agg_steps=home_agg_step,
-                away_agg_steps=away_agg_step)
+                away_agg_steps=away_agg_step,
+                predict_data=prediction_data,
+                model=final_model)
 
-            _, home_logo_col, home_name_col, hw_col, d_col, aw_col, away_logo_col, away_name_col, _ = st.columns(
-                [0.5, 0.35, 3, 1, 1, 1.1, 0.35, 3, 0.5])
+            _, home_logo_col, home_name_col, hw_col, d_col, aw_col, away_logo_col, away_name_col, _ = \
+                st.columns([0.5, 0.35, 3, 1, 1, 1.1, 0.35, 3, 0.5])
 
             with home_logo_col:
                 for hteam_logo in home_team_names:
                     h_logo = Image.open(f'images/{hteam_logo}.png')
-                    st.image(h_logo, width=25)
+                    st.image(h_logo, width=24)
 
             with home_name_col:
                 for hteam in home_team_names:
@@ -101,32 +106,40 @@ def prediction_page(prediction_type, season):
                 for aprob in away_prob:
                     st.markdown(f"{aprob}%", unsafe_allow_html=True)
 
+            with accuracy_col:
+                st.subheader("")
+                st.markdown(f"<b>Model Accuracy</b>: <b><font color=red>{accuracy_combo}%</font></b>",
+                            unsafe_allow_html=True)
+
         elif prediction_type == 'Season':
-            st.header(f"Season: {season} Predicted Table")
+            season_col, accuracy_col = st.columns([8, 2])
+            with season_col:
+                st.header(f"Season: {season} Predicted Table")
+
             st.markdown("<b><font color = black>Final Season Table</font></b> based on the <b><font color = red>"
                         "Averages</font></b> of previous Games Stats that captures a Teams form for Home/Away games",
                         unsafe_allow_html=True)
 
             season_home_agg_col, season_away_agg_col, _ = st.columns([2, 2, 8])
             with season_home_agg_col:
-                home_agg_stats = st.selectbox("Home Aggregate Stats", ['Last Game', 'Last 2 Games', 'Last 3 Games',
-                                                                       'Last 4 Games', 'Last 5 Games'])
+                home_agg_stats = st.selectbox("Home Aggregate Stats", home_agg_stats_options, home_default)
                 home_agg_step = ['Last Game', 'Last 2 Games', 'Last 3 Games', 'Last 4 Games', 'Last 5 Games'].index(
                     home_agg_stats) + 1
 
             with season_away_agg_col:
-                away_agg_stats = st.selectbox("Away Aggregate Stats", ['Last Game', 'Last 2 Games', 'Last 3 Games',
-                                                                       'Last 4 Games', 'Last 5 Games'])
+                away_agg_stats = st.selectbox("Away Aggregate Stats", away_agg_stats_options, away_default)
                 away_agg_step = ['Last Game', 'Last 2 Games', 'Last 3 Games', 'Last 4 Games', 'Last 5 Games'].index(
                     away_agg_stats) + 1
 
-            buli_predict_df = create_predictions_season(season_data=buli_season_df,
-                                                        data=season_transformed_data,
-                                                        games_predict=prediction_game_df,
-                                                        home_agg_steps=home_agg_step,
-                                                        away_agg_steps=away_agg_step,
-                                                        final_features=final_model_features,
-                                                        match_day=current_match_day)
+            buli_predict_df, accuracy_combo = create_predictions_season(season_data=buli_season_df,
+                                                                        data=season_transformed_data,
+                                                                        games_predict=prediction_game_df,
+                                                                        home_agg_steps=home_agg_step,
+                                                                        away_agg_steps=away_agg_step,
+                                                                        final_features=final_model_features,
+                                                                        match_day=current_match_day,
+                                                                        predict_data=prediction_data,
+                                                                        model=final_model)
             logo_col, rank_col, team_col, mp_col, w_col, d_col, l_col, pts_col = st.columns([0.42, 1, 5, 1, 1, 1, 1, 1])
 
             with logo_col:
@@ -171,8 +184,12 @@ def prediction_page(prediction_type, season):
                 for i in buli_predict_df['Pts'].values:
                     st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
 
+            with accuracy_col:
+                st.subheader("")
+                st.markdown(f"<b>Model Accuracy</b>: <b><font color=red>{accuracy_combo}%</font></b>",
+                            unsafe_allow_html=True)
         st.markdown(
-            f"<b><font color = red>Note</font></b>: The base model was build using the <b><font color = red>SVC "
+            f"<b><font color = red>Note</font></b>: The base model was build using the <b><font color = red>SVM "
             f"</font></b> Algorithm with the following features:  <b><font color = red>"
             f"{str(model_features).replace('[', '').replace(']', '')}</font></b> as features and an Accuracy of <b>"
             f"<font color = red>70%</font></b>", unsafe_allow_html=True)
