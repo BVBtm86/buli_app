@@ -79,7 +79,10 @@ def prediction_page(prediction_type, season):
             with home_logo_col:
                 for hteam_logo in home_team_names:
                     h_logo = Image.open(f'images/{hteam_logo}.png')
-                    st.image(h_logo, width=24)
+                    if current_match_day % 2 == 0:
+                        st.image(h_logo, width=24)
+                    else:
+                        st.image(h_logo, width=25)
 
             with home_name_col:
                 for hteam in home_team_names:
@@ -88,7 +91,10 @@ def prediction_page(prediction_type, season):
             with away_logo_col:
                 for ateam_logo in away_team_names:
                     a_logo = Image.open(f'images/{ateam_logo}.png')
-                    st.image(a_logo, width=25)
+                    if current_match_day % 2 == 0:
+                        st.image(a_logo, width=25)
+                    else:
+                        st.image(a_logo, width=24)
 
             with away_name_col:
                 for ateam in away_team_names:

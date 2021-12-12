@@ -74,7 +74,7 @@ def season_data_process(season):
     # ###### Load Prediction Data
     final_model = load(open('././final_models/final_model.pkl', 'rb'))
     final_transform = load(open('././final_models/final_transform.pkl', 'rb'))
-    feature_importance = pd.read_csv("././final_models/Final Feature Importance.csv", index_col='Unnamed: 0')
+    feature_importance = pd.read_csv("././final_models/Final Feature Importance.csv", index_col='Features')
     model_features = feature_importance.index.to_list()
     prediction_game_df = pd.read_csv("././data/Season_Prediction_Games.csv")
     prediction_data = pd.read_csv("././data/New_Predictions_df.csv")

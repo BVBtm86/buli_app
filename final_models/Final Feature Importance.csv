@@ -1,6 +1,11 @@
-,Importance
-xGoals,40.15
-Shot Accuracy %,26.61
-Crosses,6.72
-Clearences,13.35
-Carries Penalty Area,13.16
+Features
+xGoals
+Shot Accuracy %
+Crosses
+Pressure Regains
+Pressure Def 3rd
+Ball Recoveries
+Clearences
+Dribbles
+Dribbles Successful %
+Carries Penalty Area
