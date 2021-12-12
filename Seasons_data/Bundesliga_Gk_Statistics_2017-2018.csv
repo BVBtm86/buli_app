@@ -1,0 +1,617 @@
+,Season,Week_No,Team,Name,Nationality,Age,Minutes,Venue,Opponent,Result,shots_on_target_against,goals_against_gk,saves,save_pct,psxg_gk,passes_completed_launched_gk,passes_launched_gk,passes_pct_launched_gk,passes_gk,passes_throws_gk,pct_passes_launched_gk,passes_length_avg_gk,goal_kicks,pct_goal_kicks_launched,goal_kick_length_avg,crosses_gk,crosses_stopped_gk,crosses_stopped_pct_gk,def_actions_outside_pen_area_gk,avg_distance_def_actions_gk
+0,2017-2018,1,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Bayer Leverkusen,Win,4,1,3,75.0,0.9,2,6,33.3,22,4,13.6,26.5,4,75.0,56.0,9,0,0.0,1,11.5
+1,2017-2018,1,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Bayern Munich,Defeat,7,3,5,71.4,2.5,1,10,10.0,22,3,36.4,32.7,5,40.0,35.2,11,0,0.0,0,14.0
+2,2017-2018,1,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Werder Bremen,Win,2,0,2,100.0,0.1,6,15,40.0,29,1,41.4,34.9,3,100.0,62.3,5,0,0.0,1,21.0
+3,2017-2018,1,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Hoffenheim,Defeat,2,1,1,50.0,0.5,2,6,33.3,15,5,26.7,32.8,8,25.0,37.3,6,1,16.7,1,23.0
+4,2017-2018,1,Mainz 05,René Adler,GER,32,90.0,Home,Hannover 96,Defeat,2,1,1,50.0,0.7,4,8,50.0,30,2,13.3,26.2,5,80.0,57.2,3,0,0.0,1,20.7
+5,2017-2018,1,Hannover 96,Philipp Tschauner,GER,31,90.0,Away,Mainz 05,Win,4,0,4,100.0,0.9,10,22,45.5,27,4,59.3,44.6,12,50.0,42.3,10,0,0.0,0,12.5
+6,2017-2018,1,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Dortmund,Defeat,5,3,2,40.0,1.1,7,27,25.9,22,2,90.9,58.1,7,100.0,69.6,4,0,0.0,2,23.0
+7,2017-2018,1,Dortmund,Roman Bürki,SUI,26,90.0,Away,Wolfsburg,Win,0,0,0,,0.0,2,11,18.2,40,2,27.5,32.9,2,0.0,19.5,3,0,0.0,2,33.0
+8,2017-2018,1,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Augsburg,Win,1,0,1,100.0,0.1,12,27,44.4,27,3,77.8,58.3,9,66.7,55.2,19,1,5.3,0,13.8
+9,2017-2018,1,Augsburg,Marwin Hitz,SUI,29,90.0,Away,Hamburger SV,Defeat,5,1,4,80.0,0.8,6,18,33.3,39,10,41.0,36.4,3,66.7,48.0,5,2,40.0,3,17.6
+10,2017-2018,1,Hertha BSC,Rune Jarstein,NOR,32,90.0,Home,Stuttgart,Win,2,0,2,100.0,0.1,5,11,45.5,16,5,31.3,31.9,7,85.7,63.6,7,1,14.3,1,16.8
+11,2017-2018,1,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Hertha BSC,Defeat,4,2,2,50.0,1.3,6,18,33.3,22,2,63.6,42.7,4,100.0,71.3,7,0,0.0,1,14.8
+12,2017-2018,1,Schalke 04,Ralf Fährmann,GER,28,90.0,Home,RB Leipzig,Win,3,0,3,100.0,0.6,4,13,30.8,13,3,61.5,41.0,6,83.3,48.8,10,1,10.0,0,13.0
+13,2017-2018,1,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Schalke 04,Defeat,4,2,3,75.0,2.0,4,9,44.4,25,4,28.0,31.9,3,66.7,51.0,9,0,0.0,0,15.6
+14,2017-2018,1,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Eintracht Frankfurt,Draw,2,0,2,100.0,0.4,9,19,47.4,26,5,46.2,37.0,7,100.0,73.6,16,1,6.3,1,34.0
+15,2017-2018,1,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Away,Freiburg,Draw,1,1,1,0.0,0.0,9,21,42.9,33,2,48.5,42.0,6,83.3,68.8,5,0,0.0,1,14.5
+16,2017-2018,1,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Köln,Win,1,0,1,100.0,0.0,4,17,23.5,28,4,35.7,35.0,9,77.8,54.3,9,0,0.0,0,10.0
+17,2017-2018,1,Köln,Timo Horn,GER,24,90.0,Away,Mönchengladbach,Defeat,9,1,8,88.9,1.7,8,20,40.0,28,5,50.0,41.7,8,75.0,58.5,14,1,7.1,1,15.4
+18,2017-2018,2,Köln,Timo Horn,GER,24,90.0,Home,Hamburger SV,Defeat,4,3,1,25.0,3.1,1,4,25.0,24,2,4.2,23.0,3,100.0,60.7,3,0,0.0,1,16.5
+19,2017-2018,2,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Köln,Win,8,1,7,87.5,2.9,8,34,23.5,22,1,86.4,59.8,15,100.0,74.6,17,2,11.8,0,14.7
+20,2017-2018,2,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Mainz 05,Win,6,0,6,100.0,0.6,11,28,39.3,35,7,54.3,42.3,9,100.0,72.6,7,0,0.0,1,15.6
+21,2017-2018,2,Mainz 05,René Adler,GER,32,90.0,Away,Stuttgart,Defeat,4,1,3,75.0,1.0,2,4,50.0,22,6,18.2,27.1,5,0.0,27.8,11,3,27.3,1,16.8
+22,2017-2018,2,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Home,Wolfsburg,Defeat,3,1,2,66.7,0.9,6,14,42.9,26,5,34.6,36.8,5,100.0,77.8,5,0,0.0,3,16.8
+23,2017-2018,2,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Eintracht Frankfurt,Win,6,0,6,100.0,1.3,11,30,36.7,30,4,73.3,49.2,8,100.0,69.3,18,1,5.6,2,19.7
+24,2017-2018,2,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Bayern Munich,Defeat,7,2,5,71.4,1.7,7,25,28.0,18,3,83.3,60.4,10,100.0,69.9,11,2,18.2,0,12.5
+25,2017-2018,2,Bayern Munich,Manuel Neuer,GER,31,90.0,Away,Werder Bremen,Win,0,0,0,,0.0,4,11,36.4,19,1,52.6,37.4,3,33.3,39.7,4,0,0.0,0,8.7
+26,2017-2018,2,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Hoffenheim,Draw,4,2,2,50.0,1.3,2,9,22.2,30,3,30.0,31.7,0,,,8,1,12.5,4,22.3
+27,2017-2018,2,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Bayer Leverkusen,Draw,2,2,1,50.0,1.4,7,25,28.0,27,4,59.3,42.0,9,100.0,68.3,15,2,13.3,1,15.3
+28,2017-2018,2,Augsburg,Marwin Hitz,SUI,29,90.0,Home,Mönchengladbach,Draw,3,2,1,33.3,0.8,12,17,70.6,23,3,47.8,38.4,10,60.0,52.5,4,0,0.0,2,21.0
+29,2017-2018,2,Mönchengladbach,Yann Sommer,SUI,28,90.0,Away,Augsburg,Draw,9,2,7,77.8,3.0,4,16,25.0,21,3,57.1,46.0,7,57.1,49.7,15,1,6.7,0,9.0
+30,2017-2018,2,Dortmund,Roman Bürki,SUI,26,90.0,Home,Hertha BSC,Win,4,0,4,100.0,1.2,8,16,50.0,34,4,38.2,34.8,3,100.0,73.0,7,1,14.3,3,25.7
+31,2017-2018,2,Hertha BSC,Rune Jarstein,NOR,32,90.0,Away,Dortmund,Defeat,8,2,6,75.0,3.2,6,23,26.1,20,2,85.0,53.5,6,100.0,74.5,8,0,0.0,1,11.9
+32,2017-2018,2,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Freiburg,Win,4,1,3,75.0,1.2,6,11,54.5,36,12,25.0,29.2,2,100.0,64.0,4,0,0.0,1,15.8
+33,2017-2018,2,Freiburg,Alexander Schwolow,GER,25,90.0,Away,RB Leipzig,Defeat,11,4,7,63.6,3.8,7,24,29.2,15,2,80.0,52.3,12,100.0,71.5,7,0,0.0,0,19.2
+34,2017-2018,2,Hannover 96,Philipp Tschauner,GER,31,90.0,Home,Schalke 04,Win,1,0,1,100.0,0.4,5,13,38.5,32,6,21.9,28.7,7,85.7,53.0,12,0,0.0,0,10.6
+35,2017-2018,2,Schalke 04,Ralf Fährmann,GER,28,90.0,Away,Hannover 96,Defeat,3,1,2,66.7,0.7,4,18,22.2,37,2,43.2,33.8,7,28.6,34.9,5,0,0.0,1,14.6
+36,2017-2018,3,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,RB Leipzig,Defeat,4,2,2,50.0,1.5,6,19,31.6,13,0,76.9,58.4,9,100.0,72.0,8,0,0.0,0,9.0
+37,2017-2018,3,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Hamburger SV,Win,2,0,2,100.0,0.5,2,12,16.7,25,3,40.0,34.6,4,50.0,39.3,5,1,20.0,1,16.4
+38,2017-2018,3,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Eintracht Frankfurt,Defeat,4,1,3,75.0,0.6,3,15,20.0,26,2,53.8,44.2,1,100.0,66.0,6,0,0.0,0,9.7
+39,2017-2018,3,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Away,Mönchengladbach,Win,3,0,3,100.0,0.2,8,20,40.0,15,3,66.7,52.5,10,100.0,70.5,12,2,16.7,2,15.7
+40,2017-2018,3,Mainz 05,René Adler,GER,32,90.0,Home,Bayer Leverkusen,Win,2,1,1,50.0,0.5,2,13,15.4,18,3,55.6,44.1,4,75.0,62.3,10,0,0.0,0,13.0
+41,2017-2018,3,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Mainz 05,Defeat,5,3,2,40.0,2.3,2,18,11.1,34,3,47.1,40.4,6,33.3,47.3,6,0,0.0,3,29.0
+42,2017-2018,3,Augsburg,Marwin Hitz,SUI,29,90.0,Home,Köln,Win,3,0,3,100.0,0.2,8,21,38.1,21,2,66.7,50.4,7,100.0,64.3,14,1,7.1,0,9.2
+43,2017-2018,3,Köln,Timo Horn,GER,24,90.0,Away,Augsburg,Defeat,3,3,1,33.3,2.3,7,15,46.7,22,2,50.0,44.2,7,57.1,51.0,9,1,11.1,4,31.8
+44,2017-2018,3,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Hannover 96,Draw,2,1,1,50.0,1.0,11,24,45.8,24,0,87.5,51.3,4,75.0,54.8,8,1,12.5,0,10.0
+45,2017-2018,3,Hannover 96,Philipp Tschauner,GER,31,90.0,Away,Wolfsburg,Draw,6,1,5,83.3,1.3,1,11,9.1,20,6,40.0,42.3,4,75.0,59.3,10,0,0.0,0,13.8
+46,2017-2018,3,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Dortmund,Draw,3,0,3,100.0,0.2,12,31,38.7,12,1,83.3,61.8,21,100.0,75.1,16,1,6.3,0,
+47,2017-2018,3,Dortmund,Roman Bürki,SUI,26,90.0,Away,Freiburg,Draw,2,0,2,100.0,0.7,3,5,60.0,47,4,10.6,27.5,4,0.0,25.3,4,0,0.0,7,25.9
+48,2017-2018,3,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Bayern Munich,Win,6,0,6,100.0,1.2,2,30,6.7,23,3,87.0,59.9,10,100.0,67.2,26,0,0.0,1,14.9
+49,2017-2018,3,Bayern Munich,Manuel Neuer,GER,31,90.0,Away,Hoffenheim,Defeat,3,2,1,33.3,0.8,4,6,66.7,25,4,20.0,31.3,2,50.0,33.5,0,0,,1,12.3
+50,2017-2018,3,Hertha BSC,Rune Jarstein,NOR,32,90.0,Home,Werder Bremen,Draw,5,1,4,80.0,1.8,8,27,29.6,32,8,71.9,52.4,4,100.0,71.5,11,2,18.2,0,15.8
+51,2017-2018,3,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Hertha BSC,Draw,4,1,3,75.0,0.7,4,12,33.3,15,4,66.7,52.0,3,66.7,50.7,11,1,9.1,0,11.8
+52,2017-2018,3,Schalke 04,Ralf Fährmann,GER,28,90.0,Home,Stuttgart,Win,1,1,0,0.0,0.4,9,13,69.2,22,4,40.9,38.0,6,66.7,51.5,14,3,21.4,1,20.5
+53,2017-2018,3,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Schalke 04,Defeat,3,3,1,33.3,1.6,4,19,21.1,32,5,40.6,37.7,7,85.7,57.4,8,0,0.0,1,24.0
+54,2017-2018,4,Hannover 96,Philipp Tschauner,GER,31,90.0,Home,Hamburger SV,Win,3,0,3,100.0,1.0,6,12,50.0,22,3,40.9,38.2,5,60.0,48.4,10,0,0.0,0,9.1
+55,2017-2018,4,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Hannover 96,Defeat,4,2,2,50.0,1.5,4,15,26.7,13,2,69.2,56.5,8,75.0,61.1,12,0,0.0,0,5.7
+56,2017-2018,4,Bayern Munich,Manuel Neuer,GER,31,90.0,Home,Mainz 05,Win,5,0,5,100.0,0.7,10,11,90.9,29,3,37.9,34.9,3,0.0,25.0,1,0,0.0,0,16.5
+57,2017-2018,4,Mainz 05,René Adler,GER,32,90.0,Away,Bayern Munich,Defeat,14,4,10,71.4,5.4,7,20,35.0,17,3,70.6,51.6,9,88.9,56.6,8,1,12.5,1,14.3
+58,2017-2018,4,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Schalke 04,Defeat,4,2,3,50.0,0.7,8,18,44.4,26,4,50.0,41.4,6,83.3,58.2,8,0,0.0,0,
+59,2017-2018,4,Schalke 04,Ralf Fährmann,GER,28,90.0,Away,Werder Bremen,Win,2,1,1,50.0,0.6,9,24,37.5,20,3,75.0,50.8,9,100.0,66.8,12,1,8.3,1,18.8
+60,2017-2018,4,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Wolfsburg,Win,1,0,1,100.0,0.0,6,26,23.1,23,3,73.9,49.7,9,100.0,70.3,6,0,0.0,0,11.7
+61,2017-2018,4,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Stuttgart,Defeat,3,1,2,66.7,1.1,6,15,40.0,23,5,60.9,44.5,1,100.0,62.0,7,0,0.0,1,13.1
+62,2017-2018,4,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Home,Augsburg,Defeat,3,2,1,33.3,0.5,1,2,50.0,14,4,14.3,27.2,1,0.0,23.0,11,1,9.1,0,15.4
+63,2017-2018,4,Augsburg,Marwin Hitz,SUI,29,90.0,Away,Eintracht Frankfurt,Win,8,1,7,87.5,2.2,12,22,54.5,21,4,61.9,49.1,11,81.8,56.5,13,1,7.7,0,12.3
+64,2017-2018,4,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Mönchengladbach,Draw,2,2,1,50.0,2.0,4,15,26.7,26,1,34.6,35.6,6,100.0,67.0,5,0,0.0,2,25.0
+65,2017-2018,4,Mönchengladbach,Yann Sommer,SUI,28,90.0,Away,RB Leipzig,Draw,3,2,1,33.3,1.1,3,7,42.9,16,3,31.3,33.0,2,100.0,61.5,7,0,0.0,1,15.8
+66,2017-2018,4,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Hertha BSC,Draw,4,1,3,75.0,1.0,5,12,41.7,21,2,47.6,34.6,4,50.0,40.8,6,0,0.0,1,13.6
+67,2017-2018,4,Hertha BSC,Rune Jarstein,NOR,32,90.0,Away,Hoffenheim,Draw,2,1,1,50.0,0.7,9,19,47.4,21,4,71.4,50.9,6,66.7,52.8,11,1,9.1,0,9.9
+68,2017-2018,4,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Freiburg,Win,1,0,1,100.0,0.6,4,11,36.4,30,4,30.0,33.4,4,50.0,53.0,6,1,16.7,1,26.0
+69,2017-2018,4,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Bayer Leverkusen,Defeat,9,4,5,55.6,3.0,7,18,38.9,25,0,40.0,39.5,9,88.9,68.4,7,1,14.3,1,18.7
+70,2017-2018,4,Dortmund,Roman Bürki,SUI,26,90.0,Home,Köln,Win,2,0,2,100.0,0.3,2,5,40.0,31,5,16.1,25.3,1,0.0,27.0,1,0,0.0,0,18.3
+71,2017-2018,4,Köln,Timo Horn,GER,24,90.0,Away,Dortmund,Defeat,8,5,4,50.0,4.4,5,18,27.8,16,2,75.0,50.6,6,100.0,71.3,2,1,50.0,0,7.8
+72,2017-2018,5,Mönchengladbach,Tobias Sippel,GER,29,90.0,Home,Stuttgart,Win,4,0,4,100.0,1.6,5,12,41.7,16,0,37.5,38.8,6,100.0,71.0,8,0,0.0,0,16.0
+73,2017-2018,5,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Mönchengladbach,Defeat,2,2,1,50.0,1.4,0,10,0.0,21,3,42.9,40.5,5,20.0,37.0,9,0,0.0,2,21.0
+74,2017-2018,5,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Werder Bremen,Draw,3,1,2,66.7,1.1,6,19,31.6,25,2,60.0,43.0,5,80.0,63.8,8,0,0.0,0,14.5
+75,2017-2018,5,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Wolfsburg,Draw,4,1,3,75.0,1.6,6,17,35.3,20,6,50.0,44.2,7,100.0,68.0,12,0,0.0,1,17.0
+76,2017-2018,5,Schalke 04,Ralf Fährmann,GER,28,90.0,Home,Bayern Munich,Defeat,8,3,6,75.0,2.4,6,13,46.2,20,2,50.0,42.0,4,75.0,48.3,10,2,20.0,2,26.0
+77,2017-2018,5,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Schalke 04,Win,3,0,3,100.0,0.7,3,12,25.0,31,4,32.3,31.0,4,50.0,45.5,5,0,0.0,1,12.8
+78,2017-2018,5,Augsburg,Marwin Hitz,SUI,30,90.0,Home,RB Leipzig,Win,3,0,3,100.0,0.9,8,19,42.1,18,2,61.1,41.9,8,100.0,67.1,4,0,0.0,0,11.3
+79,2017-2018,5,RB Leipzig,Yvon Mvogo,SUI,23,90.0,Away,Augsburg,Defeat,4,1,3,75.0,1.2,7,14,50.0,32,5,31.3,29.9,4,100.0,70.0,6,0,0.0,4,21.7
+80,2017-2018,5,Köln,Timo Horn,GER,24,90.0,Home,Eintracht Frankfurt,Defeat,2,1,2,100.0,1.3,4,15,26.7,18,1,55.6,43.6,7,71.4,55.4,11,1,9.1,2,23.3
+81,2017-2018,5,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Away,Köln,Win,7,0,7,100.0,1.4,14,30,46.7,35,4,65.7,48.7,7,100.0,70.7,14,0,0.0,0,16.0
+82,2017-2018,5,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Dortmund,Defeat,7,3,4,57.1,3.4,2,10,20.0,17,1,52.9,43.7,3,33.3,26.3,9,1,11.1,0,12.5
+83,2017-2018,5,Dortmund,Roman Bürki,SUI,26,90.0,Away,Hamburger SV,Win,2,0,2,100.0,0.1,5,38,13.2,46,6,65.2,48.5,8,100.0,72.1,16,5,31.3,0,14.5
+84,2017-2018,5,Hertha BSC,Rune Jarstein,NOR,32,90.0,Home,Bayer Leverkusen,Win,4,1,3,75.0,0.4,9,26,34.6,27,1,74.1,51.6,6,100.0,69.7,17,0,0.0,0,6.3
+85,2017-2018,5,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Hertha BSC,Defeat,3,2,1,33.3,1.2,4,9,44.4,16,4,43.8,39.8,2,100.0,64.0,8,0,0.0,0,9.0
+86,2017-2018,5,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Hannover 96,Draw,3,1,2,66.7,1.3,7,26,26.9,32,3,62.5,46.1,6,100.0,70.7,6,0,0.0,0,10.5
+87,2017-2018,5,Hannover 96,Philipp Tschauner,GER,31,90.0,Away,Freiburg,Draw,5,1,4,80.0,1.8,8,20,40.0,42,6,40.5,34.0,4,75.0,51.3,6,0,0.0,0,13.0
+88,2017-2018,5,Mainz 05,René Adler,GER,32,90.0,Home,Hoffenheim,Defeat,5,3,2,40.0,1.8,6,13,46.2,14,1,71.4,50.4,4,75.0,62.0,4,0,0.0,1,20.5
+89,2017-2018,5,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Mainz 05,Win,6,2,4,66.7,1.1,6,18,33.3,38,3,34.2,34.3,5,100.0,68.4,12,0,0.0,3,15.2
+90,2017-2018,6,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Wolfsburg,Draw,4,2,2,50.0,0.9,3,6,50.0,17,2,35.3,32.9,2,0.0,26.5,4,0,0.0,1,30.0
+91,2017-2018,6,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Bayern Munich,Draw,2,2,1,50.0,1.2,11,27,40.7,34,5,58.8,43.9,11,63.6,48.2,4,0,0.0,0,11.6
+92,2017-2018,6,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Eintracht Frankfurt,Win,3,1,2,66.7,1.0,8,24,33.3,30,3,63.3,46.0,5,100.0,63.4,9,2,22.2,1,19.3
+93,2017-2018,6,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Away,RB Leipzig,Defeat,5,2,3,60.0,1.7,4,18,22.2,20,4,65.0,50.1,5,100.0,68.2,13,1,7.7,0,15.4
+94,2017-2018,6,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Freiburg,Draw,5,0,5,100.0,1.2,1,13,7.7,18,8,44.4,41.7,6,83.3,59.0,3,0,0.0,0,11.6
+95,2017-2018,6,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Werder Bremen,Draw,6,0,6,100.0,0.7,11,29,37.9,25,1,80.0,56.4,9,100.0,70.8,7,0,0.0,1,15.0
+96,2017-2018,6,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Schalke 04,Win,3,0,3,100.0,0.2,7,22,31.8,34,4,44.1,39.3,10,70.0,53.5,14,2,14.3,1,16.6
+97,2017-2018,6,Schalke 04,Ralf Fährmann,GER,28,90.0,Away,Hoffenheim,Defeat,6,2,4,66.7,1.6,3,5,60.0,22,3,22.7,32.5,2,0.0,21.5,4,0,0.0,0,18.0
+98,2017-2018,6,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Augsburg,Draw,3,0,3,100.0,0.6,11,29,37.9,44,3,56.8,41.3,4,100.0,69.0,6,0,0.0,2,17.5
+99,2017-2018,6,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Stuttgart,Draw,3,0,3,100.0,0.3,7,15,46.7,18,4,61.1,45.0,9,44.4,42.9,6,1,16.7,1,16.0
+100,2017-2018,6,Mainz 05,René Adler,GER,32,90.0,Home,Hertha BSC,Win,1,0,1,100.0,0.2,5,13,38.5,14,0,78.6,50.6,2,100.0,62.0,6,0,0.0,0,14.8
+101,2017-2018,6,Hertha BSC,Rune Jarstein,NOR,32,90.0,Away,Mainz 05,Defeat,2,1,2,100.0,0.9,18,32,56.3,28,2,85.7,54.9,8,100.0,71.5,6,0,0.0,0,13.8
+102,2017-2018,6,Dortmund,Roman Bürki,SUI,26,90.0,Home,Mönchengladbach,Win,5,1,4,80.0,1.9,2,5,40.0,54,5,9.3,25.6,1,0.0,29.0,3,1,33.3,1,29.7
+103,2017-2018,6,Mönchengladbach,Tobias Sippel,GER,29,90.0,Away,Dortmund,Defeat,9,6,3,33.3,4.4,1,11,9.1,8,1,75.0,60.1,6,83.3,67.2,11,1,9.1,0,10.3
+104,2017-2018,6,Hannover 96,Philipp Tschauner,GER,31,90.0,Home,Köln,Draw,1,0,1,100.0,0.4,3,3,100.0,15,5,13.3,24.9,4,25.0,25.0,5,0,0.0,0,16.8
+105,2017-2018,6,Köln,Timo Horn,GER,24,90.0,Away,Hannover 96,Draw,1,0,1,100.0,0.2,4,22,18.2,15,1,80.0,54.0,10,100.0,74.1,16,1,6.3,0,11.0
+106,2017-2018,6,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Hamburger SV,Win,1,0,1,100.0,0.1,8,32,25.0,30,1,83.3,56.1,7,100.0,70.1,2,0,0.0,0,13.0
+107,2017-2018,6,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Bayer Leverkusen,Defeat,6,3,3,50.0,3.6,1,10,10.0,16,3,56.3,40.9,3,33.3,41.0,6,0,0.0,0,15.0
+108,2017-2018,7,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Bayer Leverkusen,Draw,6,1,5,83.3,1.6,2,9,22.2,20,4,45.0,39.8,0,,,3,1,33.3,3,19.0
+109,2017-2018,7,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Schalke 04,Draw,4,1,3,75.0,0.4,9,15,60.0,28,3,35.7,37.7,5,100.0,66.0,7,0,0.0,0,20.0
+110,2017-2018,7,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Dortmund,Defeat,7,2,5,71.4,2.8,4,14,28.6,16,4,75.0,51.1,3,66.7,54.3,7,1,14.3,1,13.8
+111,2017-2018,7,Dortmund,Roman Bürki,SUI,26,90.0,Away,Augsburg,Win,5,1,4,80.0,2.8,6,22,27.3,38,9,36.8,37.8,9,88.9,68.1,15,2,13.3,1,13.4
+112,2017-2018,7,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Hannover 96,Win,2,1,1,50.0,1.0,6,8,75.0,22,4,18.2,26.8,6,66.7,50.0,8,1,12.5,2,20.0
+113,2017-2018,7,Hannover 96,Philipp Tschauner,GER,31,90.0,Away,Mönchengladbach,Defeat,6,2,5,83.3,1.9,7,19,36.8,31,1,45.2,38.7,10,50.0,44.9,6,0,0.0,3,24.4
+114,2017-2018,7,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Home,Stuttgart,Win,5,1,4,80.0,1.3,8,17,47.1,30,4,50.0,43.2,2,100.0,70.5,11,1,9.1,1,16.9
+115,2017-2018,7,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Eintracht Frankfurt,Defeat,6,2,4,66.7,1.6,3,18,16.7,27,4,59.3,44.3,2,100.0,58.0,17,2,11.8,2,18.4
+116,2017-2018,7,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Mainz 05,Draw,3,1,2,66.7,1.1,8,22,36.4,29,2,65.5,45.7,4,75.0,52.3,3,1,33.3,0,13.0
+117,2017-2018,7,Mainz 05,René Adler,GER,32,90.0,Away,Wolfsburg,Draw,2,1,1,50.0,1.3,8,15,53.3,36,2,36.1,34.6,2,100.0,66.0,11,2,18.2,1,15.5
+118,2017-2018,7,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Werder Bremen,Draw,3,0,3,100.0,0.2,8,17,47.1,15,1,73.3,53.3,6,100.0,71.7,4,0,0.0,0,7.5
+119,2017-2018,7,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Hamburger SV,Draw,6,0,6,100.0,1.4,13,27,48.1,22,4,81.8,56.8,9,100.0,71.6,11,1,9.1,0,13.1
+120,2017-2018,7,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Hoffenheim,Win,5,2,4,60.0,0.7,16,24,66.7,30,4,70.0,51.5,4,75.0,56.3,11,1,9.1,0,14.2
+121,2017-2018,7,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Freiburg,Defeat,6,3,3,50.0,1.2,2,11,18.2,39,9,23.1,29.2,4,50.0,48.5,9,2,22.2,2,16.8
+122,2017-2018,7,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Bayern Munich,Draw,3,2,1,33.3,0.4,6,29,20.7,22,4,77.3,56.2,12,100.0,70.5,14,1,7.1,1,13.5
+123,2017-2018,7,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Hertha BSC,Draw,5,2,3,60.0,2.2,5,11,45.5,18,4,44.4,38.4,4,75.0,57.3,6,0,0.0,0,14.7
+124,2017-2018,7,Köln,Timo Horn,GER,24,90.0,Home,RB Leipzig,Defeat,10,2,8,80.0,3.2,9,21,42.9,30,2,60.0,45.6,5,60.0,56.2,9,0,0.0,2,23.2
+125,2017-2018,7,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Köln,Win,6,1,5,83.3,2.1,12,23,52.2,31,2,64.5,47.5,3,100.0,67.3,9,3,33.3,0,8.0
+126,2017-2018,8,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Köln,Win,3,1,2,66.7,1.5,10,21,47.6,21,3,66.7,46.0,7,100.0,72.0,8,0,0.0,0,12.5
+127,2017-2018,8,Köln,Timo Horn,GER,24,90.0,Away,Stuttgart,Defeat,7,2,5,71.4,1.7,3,18,16.7,16,1,75.0,55.6,7,85.7,65.3,10,1,10.0,0,14.7
+128,2017-2018,8,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Freiburg,Win,2,0,2,100.0,0.6,2,3,66.7,26,5,7.7,24.0,2,50.0,55.5,3,0,0.0,1,24.0
+129,2017-2018,8,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Bayern Munich,Defeat,9,5,5,44.4,2.0,8,20,40.0,28,7,42.9,36.7,13,61.5,50.9,15,0,0.0,0,9.5
+130,2017-2018,8,Hannover 96,Philipp Tschauner,GER,31,90.0,Home,Eintracht Frankfurt,Defeat,4,2,2,50.0,1.6,5,16,31.3,31,9,32.3,31.1,10,60.0,48.8,7,0,0.0,0,12.3
+131,2017-2018,8,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Away,Hannover 96,Win,2,1,1,50.0,0.5,6,22,27.3,26,1,69.2,55.1,4,100.0,74.8,5,1,20.0,2,16.3
+132,2017-2018,8,Mainz 05,René Adler,GER,32,90.0,Home,Hamburger SV,Win,1,2,0,0.0,1.3,5,22,22.7,19,1,78.9,50.8,7,100.0,69.7,8,0,0.0,1,22.3
+133,2017-2018,8,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Mainz 05,Defeat,4,3,1,25.0,1.5,8,18,44.4,26,1,61.5,48.2,4,50.0,43.3,9,0,0.0,0,14.0
+134,2017-2018,8,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Schalke 04,Defeat,6,2,5,83.3,2.6,8,19,42.1,30,3,53.3,42.0,4,75.0,54.0,11,0,0.0,1,15.4
+135,2017-2018,8,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Hertha BSC,Win,0,0,0,,0.0,3,4,75.0,7,1,28.6,34.1,2,100.0,56.5,5,0,0.0,0,
+136,2017-2018,8,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Augsburg,Draw,6,2,5,66.7,1.2,11,16,68.8,35,10,45.7,36.5,0,,,10,0,0.0,0,12.0
+137,2017-2018,8,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Hoffenheim,Draw,8,2,6,75.0,2.9,2,8,25.0,24,5,16.7,30.0,6,66.7,50.2,12,0,0.0,1,20.0
+138,2017-2018,8,Dortmund,Roman Bürki,SUI,26,90.0,Home,RB Leipzig,Defeat,5,3,3,40.0,3.6,10,26,38.5,60,4,41.7,36.8,3,33.3,41.7,6,1,16.7,4,23.9
+139,2017-2018,8,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Dortmund,Win,7,2,6,85.7,4.0,8,22,36.4,17,1,82.4,54.9,8,100.0,74.1,8,0,0.0,1,19.3
+140,2017-2018,8,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Wolfsburg,Draw,5,2,3,60.0,2.1,6,14,42.9,29,2,34.5,37.4,8,50.0,44.4,7,0,0.0,1,19.0
+141,2017-2018,8,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Bayer Leverkusen,Draw,9,2,7,77.8,2.5,8,17,47.1,24,6,45.8,36.8,6,100.0,69.0,13,2,15.4,0,18.0
+142,2017-2018,8,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Mönchengladbach,Defeat,8,2,6,75.0,1.9,4,17,23.5,28,7,50.0,42.9,6,50.0,49.3,5,0,0.0,0,15.0
+143,2017-2018,8,Mönchengladbach,Yann Sommer,SUI,28,90.0,Away,Werder Bremen,Win,5,0,5,100.0,0.9,12,23,52.2,45,3,44.4,39.7,6,50.0,48.0,13,2,15.4,0,12.0
+144,2017-2018,9,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Mainz 05,Win,2,0,2,100.0,0.2,3,9,33.3,20,3,25.0,32.3,4,100.0,57.8,4,0,0.0,1,18.0
+145,2017-2018,9,Mainz 05,René Adler,GER,32,90.0,Away,Schalke 04,Defeat,5,2,3,60.0,1.7,7,9,77.8,27,2,25.9,32.7,6,33.3,41.2,13,2,15.4,0,17.0
+146,2017-2018,9,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Stuttgart,Win,2,0,2,100.0,0.7,10,20,50.0,24,3,58.3,45.3,8,75.0,54.6,10,0,0.0,1,19.6
+147,2017-2018,9,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,RB Leipzig,Defeat,3,1,2,66.7,0.3,10,28,35.7,28,4,64.3,49.6,10,100.0,61.9,5,1,20.0,1,13.8
+148,2017-2018,9,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Hannover 96,Defeat,5,2,3,60.0,1.8,8,18,44.4,29,3,55.2,43.5,7,28.6,35.0,5,1,20.0,1,14.6
+149,2017-2018,9,Hannover 96,Philipp Tschauner,GER,31,90.0,Away,Augsburg,Win,5,1,4,80.0,1.1,15,28,53.6,26,4,73.1,49.7,13,69.2,44.9,14,0,0.0,0,13.4
+150,2017-2018,9,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Bayer Leverkusen,Defeat,6,5,1,16.7,2.7,2,6,33.3,30,2,13.3,25.4,8,25.0,41.0,9,0,0.0,0,13.0
+151,2017-2018,9,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Mönchengladbach,Win,3,1,2,66.7,1.5,2,14,14.3,25,4,44.0,40.3,5,60.0,50.6,10,0,0.0,0,15.0
+152,2017-2018,9,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Home,Dortmund,Draw,6,2,4,66.7,1.7,10,23,43.5,26,6,61.5,49.2,7,100.0,72.7,10,1,10.0,1,13.7
+153,2017-2018,9,Dortmund,Roman Bürki,SUI,26,90.0,Away,Eintracht Frankfurt,Draw,6,2,5,83.3,2.7,6,23,26.1,38,8,50.0,42.8,6,66.7,59.7,10,1,10.0,4,17.8
+154,2017-2018,9,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Bayern Munich,Defeat,4,1,3,75.0,1.3,4,28,14.3,20,1,100.0,61.4,10,80.0,63.1,8,0,0.0,0,12.2
+155,2017-2018,9,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Hamburger SV,Win,2,0,2,100.0,0.5,6,16,37.5,26,4,57.7,42.0,2,50.0,46.0,8,1,12.5,2,24.8
+156,2017-2018,9,Köln,Timo Horn,GER,24,90.0,Home,Werder Bremen,Draw,1,0,1,100.0,0.1,10,22,45.5,20,2,75.0,55.9,7,100.0,69.0,12,2,16.7,0,17.5
+157,2017-2018,9,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Köln,Draw,9,0,9,100.0,1.1,2,14,14.3,19,4,57.9,45.6,3,100.0,63.7,9,1,11.1,0,10.0
+158,2017-2018,9,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Hertha BSC,Draw,2,1,2,100.0,1.5,11,19,57.9,29,2,41.4,40.8,8,87.5,62.4,12,0,0.0,1,11.8
+159,2017-2018,9,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Freiburg,Draw,6,1,6,100.0,3.2,13,23,56.5,22,3,77.3,51.9,7,85.7,58.7,6,0,0.0,2,16.4
+160,2017-2018,9,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Hoffenheim,Draw,4,1,4,100.0,1.5,7,11,63.6,37,11,24.3,32.4,9,22.2,37.4,10,4,40.0,1,14.3
+161,2017-2018,9,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Wolfsburg,Draw,5,1,4,80.0,1.2,4,18,22.2,33,2,36.4,37.7,9,66.7,51.7,15,2,13.3,0,16.0
+162,2017-2018,10,Mainz 05,Robin Zentner,GER,22,90.0,Home,Eintracht Frankfurt,Draw,3,1,3,66.7,0.5,8,26,30.8,41,8,53.7,41.7,7,57.1,49.9,6,0,0.0,2,14.7
+163,2017-2018,10,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Away,Mainz 05,Draw,3,1,2,66.7,1.0,11,25,44.0,28,3,71.4,51.4,5,100.0,67.6,9,1,11.1,0,14.2
+164,2017-2018,10,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Hamburger SV,Win,4,1,3,75.0,1.1,12,29,41.4,29,3,75.9,50.4,7,100.0,68.0,14,2,14.3,0,10.9
+165,2017-2018,10,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Hertha BSC,Defeat,3,2,1,33.3,1.7,2,11,18.2,17,5,52.9,38.0,3,66.7,48.0,2,0,0.0,0,15.0
+166,2017-2018,10,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Wolfsburg,Draw,2,1,1,50.0,0.5,6,18,33.3,29,10,41.4,35.4,6,100.0,67.2,7,0,0.0,0,12.6
+167,2017-2018,10,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Schalke 04,Draw,6,1,6,100.0,1.3,3,12,25.0,34,8,32.4,34.9,5,20.0,30.8,10,1,10.0,0,16.8
+168,2017-2018,10,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Mönchengladbach,Defeat,6,3,3,50.0,2.0,10,20,50.0,36,4,41.7,33.8,9,55.6,44.1,10,1,10.0,1,17.8
+169,2017-2018,10,Mönchengladbach,Yann Sommer,SUI,28,90.0,Away,Hoffenheim,Win,6,1,5,83.3,0.7,8,20,40.0,27,7,59.3,40.7,14,28.6,35.6,17,1,5.9,0,18.7
+170,2017-2018,10,Hannover 96,Philipp Tschauner,GER,31,90.0,Home,Dortmund,Win,4,2,2,50.0,1.3,5,18,27.8,16,1,87.5,60.7,6,66.7,58.5,9,3,33.3,2,17.0
+171,2017-2018,10,Dortmund,Roman Bürki,SUI,26,90.0,Away,Hannover 96,Defeat,6,4,3,50.0,3.1,10,25,40.0,39,5,48.7,43.2,8,75.0,55.8,8,2,25.0,2,35.3
+172,2017-2018,10,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Köln,Win,2,1,1,50.0,0.3,10,15,66.7,29,2,48.3,40.2,6,16.7,29.7,5,0,0.0,3,27.7
+173,2017-2018,10,Köln,Timo Horn,GER,24,90.0,Away,Bayer Leverkusen,Defeat,5,2,3,60.0,1.9,11,27,40.7,15,0,93.3,61.7,13,100.0,72.0,12,0,0.0,3,21.3
+174,2017-2018,10,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,RB Leipzig,Win,1,0,1,100.0,0.3,3,4,75.0,22,3,18.2,24.2,4,0.0,21.8,2,1,50.0,1,29.5
+175,2017-2018,10,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Bayern Munich,Defeat,7,2,5,71.4,1.7,13,23,56.5,28,8,42.9,41.5,15,73.3,53.7,12,0,0.0,0,16.4
+176,2017-2018,10,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Augsburg,Defeat,5,3,3,60.0,2.3,4,10,40.0,18,2,44.4,39.5,9,22.2,33.8,11,0,0.0,0,7.0
+177,2017-2018,10,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Werder Bremen,Win,2,0,2,100.0,0.2,13,26,50.0,28,4,71.4,49.2,11,54.5,43.6,16,1,6.3,1,17.6
+178,2017-2018,10,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Freiburg,Win,0,0,0,,0.0,5,11,45.5,27,2,40.7,34.7,4,0.0,25.3,3,1,33.3,1,19.6
+179,2017-2018,10,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Stuttgart,Defeat,6,3,3,50.0,2.5,14,26,53.8,35,3,48.6,40.7,9,100.0,69.2,13,1,7.7,2,16.6
+180,2017-2018,11,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Home,Werder Bremen,Win,7,1,6,85.7,1.4,8,22,36.4,35,5,54.3,37.9,4,75.0,58.0,11,0,0.0,2,14.7
+181,2017-2018,11,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Eintracht Frankfurt,Defeat,4,2,2,50.0,1.8,8,21,38.1,30,6,53.3,41.7,8,62.5,46.4,8,0,0.0,1,14.1
+182,2017-2018,11,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Schalke 04,Defeat,4,1,3,75.0,0.4,7,17,41.2,56,9,19.6,31.7,9,66.7,59.6,6,0,0.0,2,15.4
+183,2017-2018,11,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Freiburg,Win,2,0,2,100.0,0.4,4,9,44.4,12,2,41.7,38.4,9,44.4,42.3,4,0,0.0,0,10.0
+184,2017-2018,11,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Hannover 96,Win,4,1,3,75.0,1.8,13,23,56.5,38,8,50.0,40.3,6,66.7,50.7,11,1,9.1,3,17.3
+185,2017-2018,11,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,RB Leipzig,Defeat,6,2,3,66.7,2.5,10,23,43.5,25,0,72.0,47.1,9,55.6,42.9,5,0,0.0,0,12.3
+186,2017-2018,11,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Mainz 05,Draw,7,1,6,85.7,1.7,7,16,43.8,38,5,26.3,30.1,13,46.2,43.5,9,0,0.0,0,12.3
+187,2017-2018,11,Mainz 05,Robin Zentner,GER,23,90.0,Away,Mönchengladbach,Draw,3,1,2,66.7,1.0,4,20,20.0,25,5,56.0,48.7,9,66.7,54.6,9,1,11.1,2,21.4
+188,2017-2018,11,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Stuttgart,Win,1,1,1,100.0,1.0,2,7,28.6,25,4,28.0,32.0,3,0.0,17.3,1,0,0.0,1,14.8
+189,2017-2018,11,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Hamburger SV,Defeat,11,3,8,72.7,3.8,9,35,25.7,26,3,96.2,60.3,11,90.9,60.3,13,3,23.1,0,13.3
+190,2017-2018,11,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Bayer Leverkusen,Draw,3,1,2,66.7,0.4,4,9,44.4,17,2,35.3,33.9,4,75.0,53.0,7,0,0.0,0,13.0
+191,2017-2018,11,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Augsburg,Draw,4,1,3,75.0,1.2,12,25,48.0,42,3,52.4,44.8,6,50.0,51.5,17,0,0.0,1,16.3
+192,2017-2018,11,Dortmund,Roman Bürki,SUI,26,90.0,Home,Bayern Munich,Defeat,5,3,2,40.0,2.2,7,14,50.0,28,5,32.1,34.5,6,83.3,56.2,7,1,14.3,2,17.1
+193,2017-2018,11,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Dortmund,Win,4,1,3,75.0,1.1,8,24,33.3,35,9,48.6,41.7,9,77.8,59.0,6,0,0.0,0,15.3
+194,2017-2018,11,Köln,Timo Horn,GER,24,90.0,Home,Hoffenheim,Defeat,8,3,6,75.0,3.1,16,22,72.7,19,1,68.4,50.2,9,100.0,62.9,10,0,0.0,2,22.8
+195,2017-2018,11,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Köln,Win,4,0,4,100.0,0.6,7,14,50.0,36,4,30.6,30.6,10,30.0,35.8,14,0,0.0,2,20.0
+196,2017-2018,11,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Hertha BSC,Draw,6,3,3,50.0,1.8,6,17,35.3,37,5,40.5,33.6,3,66.7,58.3,6,2,33.3,2,16.1
+197,2017-2018,11,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Wolfsburg,Draw,7,3,4,57.1,2.0,8,31,25.8,35,1,71.4,50.4,6,100.0,66.2,10,2,20.0,0,10.3
+198,2017-2018,12,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Dortmund,Win,6,1,5,83.3,1.9,10,31,32.3,30,2,86.7,56.7,5,100.0,65.2,9,0,0.0,0,11.4
+199,2017-2018,12,Dortmund,Roman Bürki,SUI,27,90.0,Away,Stuttgart,Defeat,4,2,2,50.0,2.0,8,11,72.7,30,7,33.3,36.1,4,25.0,33.3,11,0,0.0,0,10.9
+200,2017-2018,12,Mainz 05,Robin Zentner,GER,23,90.0,Home,Köln,Win,0,0,0,,0.0,6,21,28.6,24,5,41.7,39.3,16,68.8,52.8,14,1,7.1,0,11.7
+201,2017-2018,12,Köln,Timo Horn,GER,24,90.0,Away,Mainz 05,Defeat,2,1,2,100.0,1.0,11,28,39.3,23,1,78.3,57.2,14,71.4,59.6,14,2,14.3,0,12.3
+202,2017-2018,12,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,RB Leipzig,Draw,1,2,1,100.0,1.9,7,22,31.8,24,2,54.2,45.6,11,81.8,62.3,7,0,0.0,0,14.0
+203,2017-2018,12,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Bayer Leverkusen,Draw,3,2,1,33.3,1.2,2,5,40.0,13,2,15.4,29.9,10,30.0,37.3,9,0,0.0,0,14.7
+204,2017-2018,12,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Eintracht Frankfurt,Draw,3,1,2,66.7,0.4,2,9,22.2,38,9,23.7,26.3,3,0.0,29.7,3,0,0.0,3,17.2
+205,2017-2018,12,Eintracht Frankfurt,Lukáš Hrádecký,FIN,27,90.0,Away,Hoffenheim,Draw,6,1,5,83.3,1.3,10,24,41.7,30,7,56.7,48.4,10,70.0,59.6,11,0,0.0,0,12.3
+206,2017-2018,12,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Augsburg,Win,2,0,2,100.0,0.2,3,11,27.3,28,2,32.1,32.6,6,33.3,35.7,7,0,0.0,2,17.5
+207,2017-2018,12,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Bayern Munich,Defeat,5,3,2,40.0,2.1,12,22,54.5,25,3,64.0,43.6,11,54.5,47.5,11,0,0.0,0,9.4
+208,2017-2018,12,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Freiburg,Win,6,1,5,83.3,1.1,13,27,48.1,46,4,45.7,42.9,6,100.0,71.7,8,2,25.0,0,10.3
+209,2017-2018,12,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Wolfsburg,Defeat,7,3,4,57.1,3.3,4,21,19.0,54,4,31.5,32.9,5,80.0,64.4,6,0,0.0,4,22.7
+210,2017-2018,12,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Mönchengladbach,Defeat,4,4,1,25.0,1.9,3,8,37.5,22,3,31.8,31.9,2,50.0,42.0,3,0,0.0,0,10.8
+211,2017-2018,12,Mönchengladbach,Yann Sommer,SUI,28,90.0,Away,Hertha BSC,Win,8,2,6,75.0,2.0,6,18,33.3,28,3,42.9,37.0,8,75.0,52.1,12,2,16.7,1,27.5
+212,2017-2018,12,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Hamburger SV,Win,1,0,1,100.0,0.1,5,17,29.4,24,3,54.2,41.5,7,57.1,49.9,5,0,0.0,0,12.0
+213,2017-2018,12,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Schalke 04,Defeat,3,2,2,66.7,1.7,2,10,20.0,37,7,21.6,30.1,4,50.0,42.0,7,0,0.0,1,11.9
+214,2017-2018,12,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Hannover 96,Win,7,0,7,100.0,1.4,9,20,45.0,28,7,64.3,45.0,5,40.0,43.2,2,0,0.0,1,18.2
+215,2017-2018,12,Hannover 96,Michael Esser,GER,29,90.0,Away,Werder Bremen,Defeat,7,4,3,42.9,2.5,4,12,33.3,24,6,33.3,32.4,9,44.4,40.6,9,3,33.3,1,13.2
+216,2017-2018,13,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Stuttgart,Draw,4,1,3,75.0,1.5,6,20,30.0,29,4,55.2,38.9,8,50.0,40.8,11,1,9.1,1,28.0
+217,2017-2018,13,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Hannover 96,Draw,3,1,3,100.0,1.2,8,31,25.8,30,2,76.7,49.4,10,80.0,62.5,8,0,0.0,0,15.0
+218,2017-2018,13,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Mainz 05,Win,5,1,4,80.0,0.9,11,23,47.8,23,4,56.5,44.1,11,90.9,65.5,6,1,16.7,4,43.6
+219,2017-2018,13,Mainz 05,Robin Zentner,GER,23,90.0,Away,Freiburg,Defeat,5,2,3,60.0,1.4,8,25,32.0,37,7,45.9,39.8,11,72.7,55.3,3,0,0.0,0,13.4
+220,2017-2018,13,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Wolfsburg,Win,3,1,2,66.7,0.3,1,4,25.0,14,2,14.3,33.6,2,100.0,59.0,4,0,0.0,1,14.0
+221,2017-2018,13,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Augsburg,Defeat,8,2,6,75.0,2.2,14,31,45.2,29,6,62.1,47.3,16,81.3,62.5,19,3,15.8,4,19.7
+222,2017-2018,13,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Bayer Leverkusen,Defeat,4,1,3,75.0,0.6,2,13,15.4,24,7,29.2,32.5,8,75.0,67.3,8,0,0.0,1,15.3
+223,2017-2018,13,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Eintracht Frankfurt,Win,3,0,3,100.0,0.6,10,21,47.6,38,8,42.1,37.3,9,55.6,50.2,3,0,0.0,0,14.4
+224,2017-2018,13,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Werder Bremen,Win,3,0,3,100.0,1.1,4,16,25.0,25,3,60.0,48.5,5,20.0,34.2,10,0,0.0,0,10.5
+225,2017-2018,13,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,RB Leipzig,Defeat,6,2,4,66.7,0.5,8,18,44.4,29,5,48.3,38.7,8,50.0,47.3,5,1,20.0,1,17.5
+226,2017-2018,13,Dortmund,Roman Weidenfeller,GER,37,90.0,Home,Schalke 04,Draw,7,4,2,42.9,3.4,4,26,15.4,34,1,55.9,40.3,8,87.5,60.8,7,0,0.0,1,17.4
+227,2017-2018,13,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Dortmund,Draw,6,4,3,33.3,2.8,2,6,33.3,15,5,33.3,31.3,2,50.0,42.0,5,0,0.0,1,13.7
+228,2017-2018,13,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Bayern Munich,Win,7,1,5,85.7,0.8,9,27,33.3,28,5,71.4,46.9,11,63.6,44.6,24,2,8.3,0,9.0
+229,2017-2018,13,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Mönchengladbach,Defeat,1,2,0,0.0,1.6,5,11,45.5,23,3,39.1,33.8,6,33.3,32.0,1,0,0.0,0,16.0
+230,2017-2018,13,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Hoffenheim,Win,2,0,2,100.0,0.1,10,23,43.5,16,2,87.5,53.6,9,100.0,64.6,4,0,0.0,1,17.0
+231,2017-2018,13,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Hamburger SV,Defeat,8,3,6,62.5,1.9,8,25,32.0,32,9,46.9,37.3,14,71.4,50.4,8,0,0.0,0,18.0
+232,2017-2018,13,Köln,Timo Horn,GER,24,90.0,Home,Hertha BSC,Defeat,6,2,5,83.3,1.9,8,18,44.4,23,1,65.2,46.0,3,100.0,61.3,9,0,0.0,0,11.3
+233,2017-2018,13,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Köln,Win,2,0,2,100.0,0.1,11,32,34.4,28,0,82.1,53.6,10,90.0,59.6,7,1,14.3,0,10.5
+234,2017-2018,14,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Hamburger SV,Draw,3,0,3,100.0,0.6,7,26,26.9,31,2,71.0,50.4,5,80.0,57.6,5,0,0.0,0,14.5
+235,2017-2018,14,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Freiburg,Draw,1,0,1,100.0,0.0,7,30,23.3,24,2,70.8,54.5,13,100.0,69.2,10,1,10.0,0,12.8
+236,2017-2018,14,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Dortmund,Draw,2,1,1,50.0,0.9,7,26,26.9,29,1,75.9,50.6,5,80.0,57.8,5,0,0.0,0,13.4
+237,2017-2018,14,Dortmund,Roman Bürki,SUI,27,90.0,Away,Bayer Leverkusen,Draw,9,1,8,88.9,2.2,3,7,42.9,28,7,21.4,29.2,3,33.3,29.3,8,1,12.5,2,34.7
+238,2017-2018,14,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,RB Leipzig,Win,5,0,5,100.0,0.4,6,29,20.7,32,2,75.0,49.6,6,83.3,51.7,5,1,20.0,1,19.8
+239,2017-2018,14,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Hoffenheim,Defeat,7,4,3,42.9,1.7,2,4,50.0,29,5,10.3,25.2,2,50.0,43.5,1,0,0.0,4,19.2
+240,2017-2018,14,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Stuttgart,Win,3,0,3,100.0,0.1,10,21,47.6,26,1,57.7,46.2,8,75.0,56.5,10,0,0.0,1,20.6
+241,2017-2018,14,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Werder Bremen,Defeat,5,1,4,80.0,1.0,6,23,26.1,41,4,48.8,39.8,6,50.0,44.7,9,1,11.1,2,20.0
+242,2017-2018,14,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Hannover 96,Win,3,1,2,66.7,1.7,2,10,20.0,15,3,46.7,40.5,6,50.0,39.8,5,0,0.0,0,11.8
+243,2017-2018,14,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Bayern Munich,Defeat,10,3,7,80.0,4.2,18,27,66.7,21,4,76.2,47.3,16,68.8,46.6,19,0,0.0,0,8.6
+244,2017-2018,14,Mainz 05,Robin Zentner,GER,23,90.0,Home,Augsburg,Defeat,3,3,1,33.3,2.6,7,16,43.8,22,7,54.5,41.0,6,66.7,55.7,9,1,11.1,2,15.1
+245,2017-2018,14,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Mainz 05,Win,5,1,4,80.0,0.6,8,21,38.1,26,2,61.5,44.7,10,50.0,43.2,9,0,0.0,0,16.3
+246,2017-2018,14,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Köln,Draw,2,2,1,50.0,1.7,2,5,40.0,8,1,25.0,40.3,4,75.0,60.3,4,0,0.0,2,26.0
+247,2017-2018,14,Köln,Timo Horn,GER,24,90.0,Away,Schalke 04,Draw,10,2,8,80.0,2.1,17,34,50.0,24,1,91.7,61.2,12,100.0,66.1,11,1,9.1,0,5.0
+248,2017-2018,14,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Eintracht Frankfurt,Defeat,5,2,3,60.0,0.9,11,23,47.8,32,5,65.6,45.8,2,100.0,57.0,9,0,0.0,1,16.8
+249,2017-2018,14,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Hertha BSC,Win,5,1,4,80.0,0.8,10,22,45.5,21,3,61.9,44.2,9,100.0,68.4,9,0,0.0,0,13.8
+250,2017-2018,14,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Mönchengladbach,Win,7,0,7,100.0,1.2,12,27,44.4,35,4,62.9,46.1,7,71.4,56.9,13,0,0.0,1,11.6
+251,2017-2018,14,Mönchengladbach,Yann Sommer,SUI,28,90.0,Away,Wolfsburg,Defeat,6,3,3,50.0,1.6,6,6,100.0,27,3,14.8,26.6,8,25.0,31.5,6,1,16.7,0,8.0
+252,2017-2018,15,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Bayer Leverkusen,Defeat,4,2,1,50.0,1.7,7,16,43.8,34,3,35.3,32.6,6,66.7,54.2,12,0,0.0,1,20.7
+253,2017-2018,15,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Stuttgart,Win,5,0,5,100.0,0.5,6,21,28.6,29,4,55.2,41.1,6,83.3,55.5,15,3,20.0,0,16.3
+254,2017-2018,15,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Wolfsburg,Draw,0,0,0,,0.0,4,13,30.8,27,4,40.7,33.3,5,40.0,31.0,13,0,0.0,1,15.8
+255,2017-2018,15,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Hamburger SV,Draw,2,0,2,100.0,0.5,10,32,31.3,27,1,88.9,49.8,10,80.0,56.4,10,1,10.0,0,11.5
+256,2017-2018,15,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Mainz 05,Draw,9,2,7,77.8,2.0,12,23,52.2,34,5,58.8,46.8,5,60.0,47.2,6,1,16.7,1,25.0
+257,2017-2018,15,Mainz 05,Robin Zentner,GER,23,90.0,Away,RB Leipzig,Draw,6,2,5,83.3,2.2,5,20,25.0,24,4,62.5,47.5,5,100.0,75.4,5,0,0.0,1,14.2
+258,2017-2018,15,Dortmund,Roman Bürki,SUI,27,90.0,Home,Werder Bremen,Defeat,4,2,2,50.0,1.1,6,13,46.2,32,6,28.1,34.0,7,57.1,49.9,3,0,0.0,2,21.7
+259,2017-2018,15,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Dortmund,Win,5,1,4,80.0,1.3,11,26,42.3,19,3,84.2,56.2,10,100.0,70.8,14,0,0.0,0,10.4
+260,2017-2018,15,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Bayern Munich,Defeat,1,1,0,0.0,0.4,8,18,44.4,37,3,45.9,37.5,1,100.0,60.0,8,0,0.0,1,14.7
+261,2017-2018,15,Bayern Munich,Tom Starke,GER,36,90.0,Away,Eintracht Frankfurt,Win,3,0,3,100.0,0.7,7,18,38.9,23,3,56.5,39.3,6,83.3,52.0,12,2,16.7,0,19.8
+262,2017-2018,15,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Schalke 04,Draw,5,1,5,80.0,0.6,2,10,20.0,33,8,24.2,30.5,4,50.0,42.3,6,0,0.0,0,7.3
+263,2017-2018,15,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Mönchengladbach,Draw,4,1,3,75.0,1.6,6,11,54.5,18,1,44.4,39.1,7,42.9,39.3,4,0,0.0,0,14.0
+264,2017-2018,15,Köln,Timo Horn,GER,24,90.0,Home,Freiburg,Defeat,9,4,7,77.8,3.8,8,25,32.0,21,3,90.5,55.9,7,85.7,60.0,16,1,6.3,1,11.9
+265,2017-2018,15,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Köln,Win,2,3,1,0.0,1.9,8,17,47.1,20,2,65.0,46.9,4,100.0,67.8,6,1,16.7,1,17.0
+266,2017-2018,15,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Hoffenheim,Win,5,0,5,100.0,1.4,14,20,70.0,25,4,60.0,43.4,6,83.3,52.5,4,0,0.0,0,11.2
+267,2017-2018,15,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Hannover 96,Defeat,4,2,2,50.0,1.7,5,18,27.8,30,5,36.7,31.2,9,77.8,52.9,5,0,0.0,0,13.3
+268,2017-2018,15,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Hertha BSC,Draw,4,1,3,75.0,1.0,7,15,46.7,34,7,44.1,38.4,2,0.0,19.5,6,0,0.0,1,17.5
+269,2017-2018,15,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Augsburg,Draw,3,1,2,66.7,0.7,13,31,41.9,30,2,70.0,50.3,13,76.9,59.0,9,0,0.0,0,13.8
+270,2017-2018,16,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,RB Leipzig,Draw,5,1,4,80.0,1.2,8,27,29.6,40,10,50.0,42.8,13,53.8,50.5,13,0,0.0,0,8.5
+271,2017-2018,16,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Wolfsburg,Draw,4,1,4,100.0,2.0,9,16,56.3,33,8,36.4,37.5,4,100.0,59.8,3,1,33.3,0,9.3
+272,2017-2018,16,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Mönchengladbach,Win,3,0,3,100.0,0.1,13,26,50.0,37,6,54.1,46.8,6,100.0,69.5,6,0,0.0,0,8.6
+273,2017-2018,16,Mönchengladbach,Yann Sommer,SUI,28,90.0,Away,Freiburg,Defeat,3,1,3,100.0,1.3,13,27,48.1,44,2,43.2,35.3,12,66.7,49.2,12,0,0.0,1,19.0
+274,2017-2018,16,Mainz 05,Robin Zentner,GER,23,90.0,Home,Dortmund,Defeat,6,2,4,66.7,3.1,7,19,36.8,19,6,52.6,45.3,12,75.0,52.8,4,0,0.0,0,11.0
+275,2017-2018,16,Dortmund,Roman Bürki,SUI,27,90.0,Away,Mainz 05,Win,0,0,0,,0.0,6,17,35.3,23,2,47.8,43.3,14,42.9,47.1,10,0,0.0,0,10.9
+276,2017-2018,16,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Eintracht Frankfurt,Defeat,5,2,3,60.0,0.9,5,16,31.3,25,5,44.0,35.9,7,71.4,53.3,1,0,0.0,2,25.2
+277,2017-2018,16,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Hamburger SV,Win,6,1,5,83.3,1.6,13,36,36.1,29,1,82.8,57.0,12,100.0,66.2,17,0,0.0,1,12.0
+278,2017-2018,16,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Stuttgart,Win,3,0,3,100.0,0.6,5,18,27.8,56,5,25.0,31.8,9,44.4,45.9,6,2,33.3,3,22.5
+279,2017-2018,16,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Hoffenheim,Defeat,2,1,1,50.0,0.8,6,18,33.3,30,4,43.3,40.8,7,71.4,53.3,9,1,11.1,1,20.5
+280,2017-2018,16,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Augsburg,Win,5,2,4,80.0,1.7,8,15,53.3,18,3,61.1,46.5,7,57.1,42.4,12,2,16.7,1,16.8
+281,2017-2018,16,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Schalke 04,Defeat,5,3,3,60.0,3.3,5,11,45.5,27,6,37.0,37.4,4,25.0,29.8,7,2,28.6,1,17.3
+282,2017-2018,16,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Werder Bremen,Win,2,0,2,100.0,0.5,9,20,45.0,30,1,46.7,40.4,7,85.7,62.1,6,0,0.0,0,17.0
+283,2017-2018,16,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Bayer Leverkusen,Defeat,7,1,6,85.7,2.0,9,22,40.9,28,6,50.0,41.9,13,61.5,47.8,11,1,9.1,0,13.7
+284,2017-2018,16,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Hannover 96,Win,6,1,5,83.3,1.6,14,30,46.7,30,2,73.3,46.6,8,100.0,67.0,12,1,8.3,0,8.0
+285,2017-2018,16,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Hertha BSC,Defeat,9,3,6,66.7,3.2,10,12,83.3,38,3,28.9,26.0,3,33.3,31.0,4,0,0.0,0,13.0
+286,2017-2018,16,Bayern Munich,Tom Starke,GER,36,90.0,Home,Köln,Win,3,0,3,100.0,0.8,3,4,75.0,23,6,13.0,27.3,3,33.3,36.0,3,0,0.0,3,26.6
+287,2017-2018,16,Köln,Timo Horn,GER,24,90.0,Away,Bayern Munich,Defeat,8,1,7,87.5,1.8,13,31,41.9,18,1,77.8,55.3,17,100.0,61.9,29,1,3.4,0,9.5
+288,2017-2018,17,Mönchengladbach,Yann Sommer,SUI,28,90.0,Home,Hamburger SV,Win,2,1,1,50.0,0.4,9,25,36.0,43,3,41.9,37.6,8,87.5,61.5,11,0,0.0,0,11.4
+289,2017-2018,17,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Mönchengladbach,Defeat,5,3,2,40.0,2.1,10,22,45.5,23,2,65.2,46.6,8,87.5,65.0,5,0,0.0,0,18.2
+290,2017-2018,17,Köln,Timo Horn,GER,24,90.0,Home,Wolfsburg,Win,5,0,5,100.0,1.0,4,20,20.0,22,5,68.2,50.9,5,100.0,60.0,15,2,13.3,1,14.3
+291,2017-2018,17,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Köln,Defeat,8,1,6,87.5,1.9,3,9,33.3,22,7,22.7,30.9,11,36.4,38.0,4,0,0.0,0,5.3
+292,2017-2018,17,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Bayern Munich,Defeat,7,1,6,85.7,2.8,10,25,40.0,31,4,67.7,44.7,8,50.0,48.4,13,2,15.4,0,13.8
+293,2017-2018,17,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Stuttgart,Win,2,0,2,100.0,1.3,5,17,29.4,32,5,50.0,40.3,2,50.0,49.5,13,4,30.8,0,12.0
+294,2017-2018,17,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Freiburg,Draw,6,3,3,50.0,3.0,6,11,54.5,29,5,31.0,35.8,5,40.0,38.4,4,0,0.0,0,17.0
+295,2017-2018,17,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Augsburg,Draw,8,3,5,62.5,3.4,17,30,56.7,31,4,61.3,44.2,11,100.0,70.7,22,0,0.0,0,15.3
+296,2017-2018,17,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Schalke 04,Draw,5,2,3,60.0,2.7,12,40,30.0,37,4,81.1,53.8,10,100.0,67.9,15,0,0.0,2,16.6
+297,2017-2018,17,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Eintracht Frankfurt,Draw,2,2,0,0.0,1.5,4,10,40.0,24,2,33.3,33.7,5,40.0,38.0,1,0,0.0,0,11.0
+298,2017-2018,17,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Mainz 05,Draw,3,2,1,33.3,1.7,8,22,36.4,19,1,89.5,63.1,5,100.0,79.6,8,1,12.5,0,10.0
+299,2017-2018,17,Mainz 05,Robin Zentner,GER,23,90.0,Away,Werder Bremen,Draw,7,2,5,71.4,2.5,6,19,31.6,30,6,60.0,44.0,1,100.0,72.0,9,2,22.2,1,14.0
+300,2017-2018,17,Dortmund,Roman Bürki,SUI,27,90.0,Home,Hoffenheim,Win,5,1,4,80.0,2.0,3,4,75.0,17,6,11.8,25.8,9,22.2,31.9,6,2,33.3,0,14.3
+301,2017-2018,17,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Dortmund,Defeat,2,2,1,50.0,2.3,7,17,41.2,37,8,40.5,34.6,8,25.0,29.6,7,0,0.0,0,8.3
+302,2017-2018,17,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Bayer Leverkusen,Draw,10,4,6,60.0,2.0,9,17,52.9,27,5,44.4,34.2,9,55.6,43.3,11,1,9.1,0,17.0
+303,2017-2018,17,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Hannover 96,Draw,6,4,3,50.0,2.8,12,25,48.0,23,3,69.6,50.0,13,69.2,50.0,7,0,0.0,0,14.8
+304,2017-2018,17,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Hertha BSC,Defeat,5,3,2,40.0,2.4,2,2,100.0,19,4,10.5,22.2,0,,,4,0,0.0,4,32.5
+305,2017-2018,17,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,RB Leipzig,Win,9,2,7,77.8,2.3,17,43,39.5,27,0,96.3,57.3,18,94.4,62.4,19,0,0.0,0,12.0
+306,2017-2018,18,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Bayern Munich,Defeat,6,3,3,50.0,2.2,11,26,42.3,30,2,60.0,42.0,9,88.9,62.8,9,0,0.0,1,14.8
+307,2017-2018,18,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Bayer Leverkusen,Win,1,1,0,0.0,0.4,9,20,45.0,28,7,53.6,41.2,8,62.5,48.3,5,1,20.0,1,16.6
+308,2017-2018,18,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Freiburg,Draw,1,1,0,0.0,0.6,7,19,36.8,41,8,41.5,35.6,5,40.0,43.2,3,0,0.0,0,13.5
+309,2017-2018,18,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Eintracht Frankfurt,Draw,5,1,4,80.0,2.0,9,33,27.3,26,1,65.4,43.5,18,88.9,66.6,9,0,0.0,0,16.7
+310,2017-2018,18,Hannover 96,Michael Esser,GER,30,90.0,Home,Mainz 05,Win,6,2,4,66.7,0.6,3,17,17.6,36,4,41.7,37.2,6,33.3,37.7,12,0,0.0,1,16.3
+311,2017-2018,18,Mainz 05,Robin Zentner,GER,23,90.0,Away,Hannover 96,Defeat,7,3,5,71.4,2.9,6,17,35.3,33,6,42.4,35.2,7,42.9,50.9,7,3,42.9,4,25.7
+312,2017-2018,18,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Hoffenheim,Draw,2,1,1,50.0,0.8,3,11,27.3,28,7,35.7,37.7,8,12.5,29.8,12,0,0.0,0,13.5
+313,2017-2018,18,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Werder Bremen,Draw,3,1,2,66.7,1.0,2,16,12.5,36,4,27.8,30.0,7,85.7,53.4,7,0,0.0,1,13.8
+314,2017-2018,18,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Hamburger SV,Win,6,0,6,100.0,0.8,11,22,50.0,32,7,59.4,47.6,6,50.0,43.5,8,2,25.0,1,11.7
+315,2017-2018,18,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Away,Augsburg,Defeat,5,1,4,80.0,1.3,9,27,33.3,31,5,67.7,49.6,6,100.0,61.2,8,1,12.5,0,14.8
+316,2017-2018,18,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Hertha BSC,Win,1,0,1,100.0,0.2,15,28,53.6,29,3,62.1,45.7,11,90.9,61.0,9,0,0.0,0,11.8
+317,2017-2018,18,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Stuttgart,Defeat,2,1,2,50.0,0.1,11,23,47.8,33,3,54.5,41.8,7,71.4,56.6,11,0,0.0,0,11.7
+318,2017-2018,18,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Schalke 04,Win,6,1,5,83.3,1.3,8,16,50.0,28,4,42.9,36.1,4,100.0,65.3,6,0,0.0,0,9.5
+319,2017-2018,18,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,RB Leipzig,Defeat,7,3,4,57.1,1.9,3,6,50.0,11,6,45.5,33.2,8,12.5,30.0,7,1,14.3,0,13.1
+320,2017-2018,18,Köln,Timo Horn,GER,24,90.0,Home,Mönchengladbach,Win,5,1,4,80.0,1.2,12,28,42.9,25,2,72.0,50.7,10,100.0,62.7,9,0,0.0,0,14.3
+321,2017-2018,18,Mönchengladbach,Yann Sommer,SUI,29,90.0,Away,Köln,Defeat,4,2,2,50.0,1.8,8,18,44.4,43,5,27.9,32.4,8,75.0,55.4,10,0,0.0,0,11.6
+322,2017-2018,18,Dortmund,Roman Bürki,SUI,27,90.0,Home,Wolfsburg,Draw,4,0,4,100.0,0.9,4,12,33.3,28,3,25.0,30.6,5,100.0,64.4,8,1,12.5,1,17.0
+323,2017-2018,18,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Dortmund,Draw,1,0,1,100.0,0.0,6,20,30.0,25,6,48.0,37.9,11,72.7,51.0,7,1,14.3,2,11.6
+324,2017-2018,19,Hertha BSC,Thomas Kraft,GER,29,90.0,Home,Dortmund,Draw,4,1,3,75.0,1.7,6,24,25.0,27,1,66.7,43.0,8,75.0,51.4,8,0,0.0,0,11.5
+325,2017-2018,19,Dortmund,Roman Bürki,SUI,27,90.0,Away,Hertha BSC,Draw,2,1,1,50.0,0.5,6,12,50.0,28,3,32.1,32.0,7,42.9,35.7,7,1,14.3,1,21.5
+326,2017-2018,19,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Eintracht Frankfurt,Defeat,6,3,3,50.0,2.8,7,19,36.8,29,9,41.4,39.6,10,70.0,49.5,9,0,0.0,0,11.8
+327,2017-2018,19,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Wolfsburg,Win,4,1,3,75.0,0.6,6,14,42.9,21,6,47.6,37.9,6,66.7,45.3,10,1,10.0,0,6.0
+328,2017-2018,19,Freiburg,Alexander Schwolow,GER,25,27.0,Home,RB Leipzig,Win,0,0,0,,0.0,1,5,20.0,8,1,50.0,38.9,2,50.0,56.5,3,0,0.0,1,107.0
+329,2017-2018,19,Freiburg,Rafał Gikiewicz,POL,30,63.0,Home,RB Leipzig,Win,3,1,2,66.7,1.0,12,28,42.9,26,3,73.1,52.9,10,90.0,64.4,9,1,11.1,1,14.1
+330,2017-2018,19,RB Leipzig,Péter Gulácsi,AUT,20,90.0,Away,Freiburg,Defeat,4,2,2,50.0,2.0,5,14,35.7,24,4,50.0,40.8,5,40.0,48.6,5,0,0.0,2,25.0
+331,2017-2018,19,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Bayer Leverkusen,Defeat,6,4,2,33.3,3.4,8,19,42.1,31,6,45.2,34.5,10,50.0,44.1,8,0,0.0,0,13.8
+332,2017-2018,19,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Hoffenheim,Win,3,1,2,66.7,0.2,6,15,40.0,35,6,25.7,31.1,12,50.0,43.8,5,1,20.0,1,18.8
+333,2017-2018,19,Mönchengladbach,Yann Sommer,SUI,29,90.0,Home,Augsburg,Win,3,0,3,100.0,0.2,12,32,37.5,37,5,59.5,43.1,12,83.3,56.3,20,0,0.0,1,10.1
+334,2017-2018,19,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Mönchengladbach,Defeat,6,2,4,66.7,1.2,12,19,63.2,28,8,50.0,41.3,7,71.4,53.1,5,0,0.0,0,9.8
+335,2017-2018,19,Mainz 05,Robin Zentner,GER,23,90.0,Home,Stuttgart,Win,5,2,3,60.0,1.9,2,13,15.4,19,4,52.6,44.8,6,50.0,46.8,6,2,33.3,2,13.8
+336,2017-2018,19,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Mainz 05,Defeat,11,3,8,72.7,2.2,6,21,28.6,37,7,48.6,42.4,9,33.3,36.9,11,0,0.0,2,16.0
+337,2017-2018,19,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Home,Köln,Defeat,2,2,0,0.0,1.1,7,19,36.8,19,2,73.7,48.6,7,71.4,55.4,7,0,0.0,3,19.6
+338,2017-2018,19,Köln,Timo Horn,GER,24,90.0,Away,Hamburger SV,Win,3,0,3,100.0,0.6,13,33,39.4,28,0,92.9,57.0,8,87.5,56.9,10,0,0.0,0,11.0
+339,2017-2018,19,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Werder Bremen,Win,4,2,3,50.0,1.5,6,18,33.3,35,3,45.7,35.0,5,40.0,41.0,8,0,0.0,0,19.5
+340,2017-2018,19,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Bayern Munich,Defeat,7,4,3,42.9,1.8,9,23,39.1,32,4,62.5,44.7,9,33.3,38.1,17,2,11.8,0,11.0
+341,2017-2018,19,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Hannover 96,Draw,4,1,3,75.0,1.3,8,20,40.0,24,3,50.0,40.0,9,88.9,53.4,15,2,13.3,0,12.0
+342,2017-2018,19,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Schalke 04,Draw,2,1,1,50.0,0.7,7,24,29.2,46,8,47.8,39.4,4,50.0,38.0,2,1,50.0,0,11.0
+343,2017-2018,20,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Mönchengladbach,Win,3,0,3,100.0,1.3,9,25,36.0,31,3,58.1,45.2,10,70.0,54.6,6,0,0.0,0,13.0
+344,2017-2018,20,Mönchengladbach,Yann Sommer,SUI,29,17.0,Away,Eintracht Frankfurt,Defeat,0,0,0,,0.0,1,5,20.0,7,0,42.9,40.0,2,100.0,68.0,1,0,0.0,0,
+345,2017-2018,20,Mönchengladbach,Tobias Sippel,GER,29,73.0,Away,Eintracht Frankfurt,Defeat,2,2,0,0.0,1.2,10,23,43.5,41,3,53.7,43.6,2,50.0,47.0,4,0,0.0,1,18.7
+346,2017-2018,20,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Hamburger SV,Draw,2,1,1,50.0,0.7,5,8,62.5,22,1,22.7,31.4,4,75.0,48.5,9,1,11.1,1,19.7
+347,2017-2018,20,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,RB Leipzig,Draw,6,1,5,83.3,1.4,5,24,20.8,16,1,87.5,52.3,10,100.0,65.0,5,0,0.0,0,14.0
+348,2017-2018,20,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Schalke 04,Defeat,6,2,5,83.3,2.8,8,13,61.5,27,5,29.6,31.3,7,71.4,57.6,9,0,0.0,0,12.6
+349,2017-2018,20,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Stuttgart,Win,1,0,1,100.0,0.1,5,15,33.3,20,6,35.0,34.2,10,80.0,51.8,14,2,14.3,0,14.3
+350,2017-2018,20,Köln,Timo Horn,GER,24,90.0,Home,Augsburg,Draw,2,1,1,50.0,1.0,2,14,14.3,17,1,52.9,42.0,8,62.5,52.6,11,0,0.0,2,22.3
+351,2017-2018,20,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Köln,Draw,5,1,4,80.0,1.6,12,17,70.6,22,2,54.5,42.6,8,62.5,45.3,5,0,0.0,0,7.8
+352,2017-2018,20,Dortmund,Roman Bürki,SUI,27,90.0,Home,Freiburg,Draw,3,2,1,33.3,1.3,5,11,45.5,44,4,20.5,27.7,3,66.7,46.3,3,0,0.0,1,18.3
+353,2017-2018,20,Freiburg,Rafał Gikiewicz,POL,30,90.0,Away,Dortmund,Draw,4,2,2,50.0,1.2,14,31,45.2,26,5,65.4,47.7,14,100.0,70.9,19,3,15.8,1,14.5
+354,2017-2018,20,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Hoffenheim,Win,3,2,1,33.3,1.3,3,7,42.9,28,5,25.0,27.0,1,0.0,40.0,7,0,0.0,0,11.8
+355,2017-2018,20,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Bayern Munich,Defeat,9,5,4,44.4,4.2,9,23,39.1,45,9,37.8,36.1,11,54.5,46.5,11,0,0.0,3,16.3
+356,2017-2018,20,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Hertha BSC,Draw,2,0,2,100.0,0.7,11,22,50.0,40,6,45.0,39.6,7,57.1,48.6,4,0,0.0,0,13.0
+357,2017-2018,20,Hertha BSC,Thomas Kraft,GER,29,90.0,Away,Werder Bremen,Draw,5,1,5,80.0,0.8,16,43,37.2,43,1,83.7,52.1,9,77.8,56.8,9,0,0.0,2,15.9
+358,2017-2018,20,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Mainz 05,Win,1,0,1,100.0,0.0,7,14,50.0,41,7,29.3,32.9,3,66.7,46.3,5,0,0.0,1,13.7
+359,2017-2018,20,Mainz 05,Robin Zentner,GER,23,90.0,Away,Bayer Leverkusen,Defeat,2,2,1,50.0,1.3,7,18,38.9,24,8,50.0,41.0,9,66.7,53.6,17,1,5.9,0,9.9
+360,2017-2018,20,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Wolfsburg,Defeat,2,1,1,50.0,0.8,4,7,57.1,17,2,29.4,28.4,5,40.0,37.6,11,0,0.0,0,19.0
+361,2017-2018,20,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Hannover 96,Win,3,0,3,100.0,0.4,7,26,26.9,33,8,51.5,43.5,13,69.2,53.5,17,2,11.8,0,9.5
+362,2017-2018,21,Köln,Timo Horn,GER,24,90.0,Home,Dortmund,Defeat,6,3,3,50.0,2.3,4,16,25.0,19,1,63.2,45.2,6,66.7,54.2,7,0,0.0,0,9.5
+363,2017-2018,21,Dortmund,Roman Bürki,SUI,27,90.0,Away,Köln,Win,5,2,3,60.0,2.2,5,19,26.3,28,5,39.3,39.6,8,100.0,66.8,20,3,15.0,1,14.6
+364,2017-2018,21,Hertha BSC,Thomas Kraft,GER,29,90.0,Home,Hoffenheim,Draw,3,1,3,100.0,1.3,5,14,35.7,38,4,31.6,34.6,11,18.2,33.9,8,0,0.0,1,17.3
+365,2017-2018,21,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Hertha BSC,Draw,3,1,2,66.7,0.2,10,15,66.7,39,5,30.8,28.8,5,60.0,47.0,9,1,11.1,1,20.2
+366,2017-2018,21,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Stuttgart,Draw,2,1,1,50.0,0.7,3,15,20.0,33,7,33.3,32.8,8,50.0,44.0,9,5,55.6,0,10.0
+367,2017-2018,21,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Away,Wolfsburg,Draw,5,1,4,80.0,0.9,13,32,40.6,30,1,73.3,49.5,10,100.0,68.6,8,0,0.0,0,8.7
+368,2017-2018,21,Mainz 05,Robin Zentner,GER,23,90.0,Home,Bayern Munich,Defeat,7,2,5,71.4,2.2,9,20,45.0,16,1,75.0,53.1,9,88.9,57.4,5,0,0.0,2,19.3
+369,2017-2018,21,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Mainz 05,Win,3,0,3,100.0,0.9,10,22,45.5,39,5,43.6,34.9,10,50.0,44.6,15,0,0.0,0,12.9
+370,2017-2018,21,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Bayer Leverkusen,Draw,3,0,3,100.0,0.3,16,35,45.7,38,2,57.9,47.2,13,100.0,73.2,14,1,7.1,0,14.5
+371,2017-2018,21,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Freiburg,Draw,5,0,5,100.0,0.4,5,8,62.5,36,4,16.7,29.0,7,28.6,30.6,1,0,0.0,2,27.0
+372,2017-2018,21,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Werder Bremen,Defeat,7,2,5,71.4,2.0,6,21,28.6,31,5,54.8,43.4,6,66.7,52.8,14,3,21.4,0,13.0
+373,2017-2018,21,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Schalke 04,Win,7,1,6,85.7,2.0,12,19,63.2,38,8,39.5,37.7,6,66.7,61.0,4,0,0.0,0,9.3
+374,2017-2018,21,Mönchengladbach,Tobias Sippel,GER,29,90.0,Home,RB Leipzig,Defeat,6,1,5,83.3,1.9,7,24,29.2,31,5,54.8,42.6,8,87.5,59.3,8,0,0.0,2,17.0
+375,2017-2018,21,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Mönchengladbach,Win,3,0,3,100.0,0.6,5,20,25.0,32,8,53.1,42.3,4,75.0,49.3,10,4,40.0,0,11.7
+376,2017-2018,21,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Eintracht Frankfurt,Win,2,0,2,100.0,0.3,15,27,55.6,28,4,64.3,46.1,10,90.0,56.5,7,0,0.0,0,10.8
+377,2017-2018,21,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Augsburg,Defeat,7,3,4,57.1,2.9,7,22,31.8,39,12,48.7,38.0,7,42.9,44.1,10,3,30.0,3,20.4
+378,2017-2018,21,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Hannover 96,Draw,7,1,5,85.7,1.4,2,12,16.7,29,6,24.1,32.9,8,62.5,47.3,4,2,50.0,2,25.3
+379,2017-2018,21,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Hamburger SV,Draw,3,1,2,66.7,0.8,9,19,47.4,21,1,57.1,44.9,9,77.8,55.9,10,2,20.0,0,16.0
+380,2017-2018,22,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Augsburg,Win,2,0,2,100.0,0.3,13,23,56.5,25,4,72.0,49.0,7,71.4,55.1,10,1,10.0,1,19.6
+381,2017-2018,22,Augsburg,Marwin Hitz,SUI,30,90.0,Away,RB Leipzig,Defeat,9,2,7,77.8,2.1,13,19,68.4,26,5,53.8,41.2,5,100.0,63.8,6,0,0.0,0,9.0
+382,2017-2018,22,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Mainz 05,Win,2,2,0,0.0,1.5,5,14,35.7,31,4,29.0,31.0,8,62.5,39.8,5,1,20.0,0,14.6
+383,2017-2018,22,Mainz 05,Robin Zentner,GER,23,90.0,Away,Hoffenheim,Defeat,8,4,4,50.0,2.5,10,22,45.5,20,4,50.0,43.7,13,92.3,68.5,10,0,0.0,3,19.3
+384,2017-2018,22,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Hertha BSC,Defeat,4,2,1,50.0,0.7,5,18,27.8,31,7,41.9,36.8,8,62.5,49.6,7,2,28.6,1,21.5
+385,2017-2018,22,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Bayer Leverkusen,Win,4,0,4,100.0,0.6,8,31,25.8,29,2,79.3,54.1,8,100.0,62.3,9,1,11.1,0,10.5
+386,2017-2018,22,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Freiburg,Win,4,1,3,75.0,1.0,11,22,50.0,22,2,63.6,42.3,9,88.9,58.7,13,0,0.0,0,17.0
+387,2017-2018,22,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Hannover 96,Defeat,6,2,4,66.7,1.3,10,25,40.0,28,2,71.4,48.5,6,83.3,65.7,7,0,0.0,1,24.0
+388,2017-2018,22,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Köln,Win,3,2,2,66.7,0.8,6,16,37.5,33,8,33.3,33.5,6,83.3,55.0,8,2,25.0,1,12.4
+389,2017-2018,22,Köln,Timo Horn,GER,24,90.0,Away,Eintracht Frankfurt,Defeat,8,4,4,50.0,3.7,11,27,40.7,31,4,74.2,49.3,5,80.0,54.6,15,0,0.0,0,15.9
+390,2017-2018,22,Dortmund,Roman Bürki,SUI,27,90.0,Home,Hamburger SV,Win,2,0,2,100.0,0.2,6,21,28.6,25,3,48.0,40.1,14,64.3,55.6,10,1,10.0,0,9.6
+391,2017-2018,22,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Dortmund,Defeat,3,2,1,33.3,1.9,6,19,31.6,21,4,66.7,47.1,7,71.4,56.1,2,0,0.0,1,14.2
+392,2017-2018,22,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Schalke 04,Win,3,1,2,66.7,0.6,9,19,47.4,31,8,54.8,39.2,5,40.0,32.2,5,0,0.0,0,11.8
+393,2017-2018,22,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Bayern Munich,Defeat,5,2,3,60.0,1.1,10,26,38.5,22,2,77.3,49.9,11,81.8,59.1,10,2,20.0,1,13.0
+394,2017-2018,22,Stuttgart,Ron-Robert Zieler,GER,28,90.0,Home,Mönchengladbach,Win,4,0,4,100.0,1.1,11,26,42.3,25,1,80.0,52.9,6,100.0,66.8,5,0,0.0,0,13.2
+395,2017-2018,22,Mönchengladbach,Tobias Sippel,GER,29,90.0,Away,Stuttgart,Defeat,3,1,2,66.7,0.9,11,20,55.0,52,5,30.8,35.6,7,57.1,41.6,10,1,10.0,3,22.0
+396,2017-2018,22,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Wolfsburg,Win,4,1,3,75.0,1.5,10,24,41.7,27,3,70.4,49.7,5,100.0,63.4,11,2,18.2,0,9.0
+397,2017-2018,22,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Werder Bremen,Defeat,4,3,1,25.0,0.9,5,19,26.3,34,5,47.1,39.6,4,75.0,65.0,6,1,16.7,0,8.7
+398,2017-2018,23,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Mainz 05,Defeat,7,2,5,71.4,1.9,7,19,36.8,31,6,54.8,39.0,6,33.3,41.2,6,3,50.0,0,15.0
+399,2017-2018,23,Mainz 05,Robin Zentner,GER,23,90.0,Away,Hertha BSC,Win,1,0,1,100.0,0.1,8,22,36.4,23,4,60.9,41.7,8,100.0,66.9,6,0,0.0,0,12.3
+400,2017-2018,23,Köln,Timo Horn,GER,24,90.0,Home,Hannover 96,Draw,8,1,7,87.5,2.1,12,26,46.2,23,4,69.6,49.4,14,71.4,50.3,8,0,0.0,1,12.8
+401,2017-2018,23,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Köln,Draw,1,1,0,0.0,0.6,6,23,26.1,24,4,62.5,45.8,8,100.0,56.0,8,0,0.0,0,15.0
+402,2017-2018,23,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Werder Bremen,Win,3,0,3,100.0,0.5,10,29,34.5,42,5,59.5,45.7,6,66.7,54.5,16,3,18.8,1,18.0
+403,2017-2018,23,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Freiburg,Defeat,2,1,2,100.0,1.6,4,10,40.0,45,9,17.8,29.0,5,40.0,42.4,3,0,0.0,0,14.6
+404,2017-2018,23,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Bayern Munich,Defeat,4,2,3,75.0,3.4,9,25,36.0,15,2,66.7,49.7,15,100.0,64.9,10,0,0.0,0,11.0
+405,2017-2018,23,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Wolfsburg,Win,1,1,0,0.0,0.7,1,4,25.0,14,2,21.4,29.4,5,20.0,28.0,2,0,0.0,0,14.3
+406,2017-2018,23,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Bayer Leverkusen,Defeat,5,2,3,60.0,1.9,5,16,31.3,16,3,43.8,37.9,11,81.8,57.5,4,0,0.0,1,14.8
+407,2017-2018,23,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Hamburger SV,Win,3,1,2,66.7,0.9,11,30,36.7,31,2,74.2,48.2,12,58.3,46.8,13,0,0.0,1,18.3
+408,2017-2018,23,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Hoffenheim,Win,4,1,3,75.0,0.7,7,14,50.0,17,2,70.6,49.4,4,50.0,41.5,16,3,18.8,0,12.5
+409,2017-2018,23,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Schalke 04,Defeat,6,2,4,66.7,1.6,10,20,50.0,57,9,29.8,32.4,4,75.0,61.8,3,0,0.0,3,17.0
+410,2017-2018,23,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Stuttgart,Defeat,6,1,5,83.3,1.8,8,15,53.3,33,6,39.4,37.7,6,33.3,39.5,8,2,25.0,5,23.3
+411,2017-2018,23,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Away,Augsburg,Win,2,1,2,50.0,0.2,7,25,28.0,22,1,72.7,52.5,10,90.0,62.0,13,2,15.4,1,19.5
+412,2017-2018,23,Mönchengladbach,Yann Sommer,SUI,29,90.0,Home,Dortmund,Defeat,2,1,1,50.0,0.5,3,12,25.0,32,7,37.5,36.0,3,0.0,25.0,2,0,0.0,1,15.4
+413,2017-2018,23,Dortmund,Roman Bürki,SUI,27,90.0,Away,Mönchengladbach,Win,11,0,11,100.0,1.6,6,32,18.8,32,6,65.6,50.0,12,91.7,65.3,9,1,11.1,0,11.2
+414,2017-2018,23,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,RB Leipzig,Win,2,1,1,50.0,0.9,5,20,25.0,25,3,60.0,44.4,6,83.3,57.3,7,0,0.0,0,14.0
+415,2017-2018,23,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Eintracht Frankfurt,Defeat,3,2,1,33.3,0.5,5,19,26.3,18,2,66.7,43.6,9,77.8,54.1,8,1,12.5,0,13.7
+416,2017-2018,24,Mainz 05,Robin Zentner,GER,23,90.0,Home,Wolfsburg,Draw,3,1,2,66.7,1.4,4,20,20.0,30,4,50.0,39.0,5,100.0,66.4,6,0,0.0,0,14.4
+417,2017-2018,24,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Mainz 05,Draw,4,1,3,75.0,2.1,8,20,40.0,38,7,36.8,33.1,10,60.0,52.7,7,1,14.3,1,20.2
+418,2017-2018,24,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Mönchengladbach,Defeat,4,1,3,75.0,0.5,3,14,21.4,24,5,45.8,38.4,9,33.3,35.8,3,0,0.0,1,16.3
+419,2017-2018,24,Mönchengladbach,Yann Sommer,SUI,29,90.0,Away,Hannover 96,Win,5,0,5,100.0,1.2,4,16,25.0,33,3,36.4,35.8,5,80.0,55.0,15,1,6.7,2,17.2
+420,2017-2018,24,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Home,Eintracht Frankfurt,Win,0,0,0,,0.0,14,40,35.0,33,2,84.8,58.8,12,100.0,73.1,15,2,13.3,0,15.2
+421,2017-2018,24,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Stuttgart,Defeat,4,1,3,75.0,1.4,9,15,60.0,43,9,27.9,34.2,5,60.0,49.0,6,2,33.3,1,15.7
+422,2017-2018,24,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Freiburg,Draw,2,1,2,100.0,0.9,5,14,35.7,42,2,31.0,29.5,3,33.3,34.7,7,0,0.0,2,22.4
+423,2017-2018,24,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Hoffenheim,Draw,3,1,2,66.7,0.8,10,24,41.7,48,7,37.5,35.1,10,60.0,48.0,7,1,14.3,0,15.0
+424,2017-2018,24,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Hertha BSC,Draw,3,0,3,100.0,0.1,2,7,28.6,26,8,19.2,27.4,4,50.0,41.3,2,0,0.0,0,16.0
+425,2017-2018,24,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Bayern Munich,Draw,6,0,6,100.0,1.1,8,31,25.8,23,2,91.3,59.7,10,100.0,66.0,16,3,18.8,0,7.0
+426,2017-2018,24,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Hamburger SV,Win,1,0,1,100.0,0.4,10,12,83.3,27,5,37.0,33.7,7,28.6,36.9,9,0,0.0,2,14.1
+427,2017-2018,24,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Werder Bremen,Defeat,3,1,3,66.7,0.5,3,18,16.7,17,4,76.5,52.2,5,100.0,68.6,16,1,6.3,0,11.0
+428,2017-2018,24,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Home,Schalke 04,Defeat,5,2,4,80.0,2.4,9,17,52.9,43,4,34.9,35.0,4,50.0,39.3,2,0,0.0,1,17.3
+429,2017-2018,24,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Bayer Leverkusen,Win,5,0,5,100.0,0.5,5,17,29.4,33,9,45.5,39.2,3,66.7,48.7,10,3,30.0,1,25.0
+430,2017-2018,24,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Köln,Defeat,5,2,3,60.0,1.0,4,16,25.0,24,3,41.7,39.7,6,100.0,59.2,11,2,18.2,0,15.3
+431,2017-2018,24,Köln,Timo Horn,GER,24,90.0,Away,RB Leipzig,Win,4,1,3,75.0,1.1,8,24,33.3,21,0,71.4,49.9,9,100.0,62.6,3,1,33.3,0,13.5
+432,2017-2018,24,Dortmund,Roman Bürki,SUI,27,90.0,Home,Augsburg,Draw,6,1,5,83.3,1.4,4,9,44.4,21,3,28.6,32.9,6,50.0,47.8,6,0,0.0,1,25.0
+433,2017-2018,24,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Dortmund,Draw,2,1,1,50.0,1.0,9,24,37.5,36,5,50.0,39.6,7,85.7,60.4,9,0,0.0,0,10.1
+434,2017-2018,25,Mönchengladbach,Yann Sommer,SUI,29,90.0,Home,Werder Bremen,Draw,6,2,4,66.7,2.6,6,21,28.6,25,4,52.0,41.4,9,88.9,60.0,11,1,9.1,0,13.3
+435,2017-2018,25,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Mönchengladbach,Draw,5,2,4,60.0,1.0,6,17,35.3,26,6,46.2,40.0,8,62.5,45.3,3,0,0.0,0,7.7
+436,2017-2018,25,Hamburger SV,Christian Mathenia,GER,25,90.0,Home,Mainz 05,Draw,2,0,2,100.0,0.6,2,6,33.3,29,8,20.7,28.4,6,0.0,22.0,2,0,0.0,1,18.6
+437,2017-2018,25,Mainz 05,Florian Müller,GER,20,90.0,Away,Hamburger SV,Draw,5,1,4,80.0,1.0,7,32,21.9,27,6,74.1,48.6,12,100.0,62.2,17,1,5.9,1,11.7
+438,2017-2018,25,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Hertha BSC,Win,3,0,3,100.0,0.2,2,19,10.5,20,4,55.0,42.8,8,100.0,67.8,15,1,6.7,0,7.5
+439,2017-2018,25,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Schalke 04,Defeat,4,1,3,75.0,1.0,9,21,42.9,33,3,51.5,41.0,5,80.0,61.6,5,1,20.0,0,13.5
+440,2017-2018,25,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Hoffenheim,Defeat,6,2,4,66.7,1.1,10,16,62.5,36,4,33.3,34.7,12,33.3,37.7,8,0,0.0,1,17.8
+441,2017-2018,25,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Augsburg,Win,2,0,2,100.0,0.1,15,36,41.7,31,2,93.5,62.3,7,100.0,67.7,9,1,11.1,2,17.5
+442,2017-2018,25,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Hannover 96,Win,1,0,1,100.0,0.1,9,13,69.2,23,5,47.8,39.7,3,66.7,37.0,6,1,16.7,1,13.1
+443,2017-2018,25,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Eintracht Frankfurt,Defeat,7,1,6,85.7,2.8,9,21,42.9,36,8,50.0,38.1,9,33.3,37.1,9,0,0.0,3,17.7
+444,2017-2018,25,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Bayer Leverkusen,Defeat,3,2,2,66.7,1.8,11,22,50.0,33,7,51.5,40.2,9,55.6,47.1,15,1,6.7,1,11.6
+445,2017-2018,25,Bayer Leverkusen,Bernd Leno,GER,25,90.0,Away,Wolfsburg,Win,2,1,1,50.0,0.8,9,19,47.4,27,4,48.1,38.6,9,66.7,51.1,4,0,0.0,1,17.6
+446,2017-2018,25,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Dortmund,Draw,2,1,1,50.0,1.2,6,22,27.3,39,4,46.2,39.2,5,80.0,56.8,3,0,0.0,2,19.7
+447,2017-2018,25,Dortmund,Roman Bürki,SUI,27,90.0,Away,RB Leipzig,Draw,3,1,2,66.7,0.6,4,14,28.6,22,5,50.0,40.1,6,50.0,51.0,11,0,0.0,1,16.4
+448,2017-2018,25,Köln,Timo Horn,GER,24,90.0,Home,Stuttgart,Defeat,4,3,1,25.0,1.0,5,15,33.3,20,4,60.0,46.6,4,75.0,54.8,10,1,10.0,1,14.1
+449,2017-2018,25,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Away,Köln,Win,4,2,2,50.0,1.6,13,35,37.1,30,4,76.7,54.1,12,100.0,70.8,9,0,0.0,1,16.4
+450,2017-2018,25,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Bayern Munich,Defeat,4,4,1,0.0,2.2,12,30,40.0,37,7,59.5,41.3,10,80.0,68.0,20,2,10.0,1,15.4
+451,2017-2018,25,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Freiburg,Win,1,0,1,100.0,0.2,7,11,63.6,26,4,34.6,32.7,5,40.0,41.4,7,0,0.0,0,10.0
+452,2017-2018,26,Mainz 05,Florian Müller,GER,20,90.0,Home,Schalke 04,Defeat,2,1,1,50.0,0.5,6,12,50.0,22,2,45.5,35.5,2,100.0,68.5,4,0,0.0,0,15.7
+453,2017-2018,26,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Mainz 05,Win,4,0,4,100.0,1.0,2,14,14.3,20,3,40.0,39.8,9,66.7,48.9,12,0,0.0,0,9.8
+454,2017-2018,26,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Wolfsburg,Win,1,0,1,100.0,0.2,7,15,46.7,34,5,35.3,36.5,5,60.0,48.0,5,1,20.0,0,14.2
+455,2017-2018,26,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Hoffenheim,Defeat,4,3,2,25.0,2.1,9,17,52.9,43,11,32.6,35.1,9,33.3,40.3,9,1,11.1,0,10.3
+456,2017-2018,26,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Augsburg,Defeat,9,3,6,66.7,3.3,7,15,46.7,34,11,35.3,31.1,6,50.0,39.8,10,0,0.0,1,15.6
+457,2017-2018,26,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Hannover 96,Win,5,1,4,80.0,1.0,7,29,24.1,25,1,84.0,55.7,13,61.5,51.5,8,1,12.5,0,11.1
+458,2017-2018,26,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Freiburg,Draw,0,0,0,,0.0,8,18,44.4,37,0,37.8,37.8,5,80.0,58.4,3,0,0.0,0,
+459,2017-2018,26,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Hertha BSC,Draw,4,0,4,100.0,0.7,12,33,36.4,45,7,55.6,42.0,8,100.0,65.1,9,1,11.1,0,13.3
+460,2017-2018,26,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Hamburger SV,Win,0,0,0,,0.0,2,7,28.6,30,3,23.3,31.3,2,0.0,27.0,4,1,25.0,0,11.7
+461,2017-2018,26,Hamburger SV,Christian Mathenia,GER,25,90.0,Away,Bayern Munich,Defeat,6,6,1,16.7,5.1,8,27,29.6,16,3,81.3,58.7,15,93.3,65.7,12,1,8.3,0,10.8
+462,2017-2018,26,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Home,Mönchengladbach,Win,2,0,2,100.0,0.0,9,20,45.0,34,3,50.0,39.6,3,100.0,68.3,2,0,0.0,2,19.2
+463,2017-2018,26,Mönchengladbach,Yann Sommer,SUI,29,90.0,Away,Bayer Leverkusen,Defeat,7,2,5,71.4,1.8,9,21,42.9,34,5,47.1,38.5,10,50.0,41.1,10,2,20.0,1,19.0
+464,2017-2018,26,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Home,RB Leipzig,Draw,3,0,3,100.0,0.3,9,28,32.1,30,4,63.3,46.6,10,90.0,66.2,13,0,0.0,2,14.8
+465,2017-2018,26,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Stuttgart,Draw,2,0,2,100.0,0.7,8,12,66.7,27,8,29.6,35.4,5,80.0,48.0,14,0,0.0,1,17.4
+466,2017-2018,26,Dortmund,Roman Bürki,SUI,27,90.0,Home,Eintracht Frankfurt,Win,3,2,1,33.3,1.8,3,21,14.3,25,6,44.0,44.2,11,90.9,71.4,12,3,25.0,1,14.5
+467,2017-2018,26,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Dortmund,Defeat,4,3,2,25.0,1.6,11,22,50.0,29,5,58.6,44.7,7,71.4,53.3,7,1,14.3,2,15.8
+468,2017-2018,26,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Köln,Win,2,1,1,50.0,0.8,11,21,52.4,27,6,59.3,43.4,6,83.3,58.2,6,0,0.0,0,10.7
+469,2017-2018,26,Köln,Timo Horn,GER,24,90.0,Away,Werder Bremen,Defeat,7,3,4,57.1,2.1,10,24,41.7,26,6,65.4,45.7,8,87.5,57.9,6,1,16.7,2,23.2
+470,2017-2018,27,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Stuttgart,Defeat,5,2,3,60.0,1.4,4,11,36.4,28,7,28.6,33.9,5,60.0,45.8,11,0,0.0,2,21.7
+471,2017-2018,27,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Away,Freiburg,Win,2,1,1,50.0,0.8,19,42,45.2,45,4,75.6,53.2,8,100.0,75.5,13,1,7.7,0,14.0
+472,2017-2018,27,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Home,Hertha BSC,Defeat,9,2,7,77.8,3.3,5,13,38.5,70,7,17.1,29.4,4,25.0,40.5,11,2,18.2,1,18.0
+473,2017-2018,27,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Hamburger SV,Win,3,1,2,66.7,0.2,7,23,30.4,30,2,50.0,40.3,8,100.0,65.3,13,1,7.7,2,21.4
+474,2017-2018,27,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Werder Bremen,Defeat,12,3,8,75.0,2.8,4,11,36.4,28,7,28.6,32.1,7,42.9,38.4,10,1,10.0,1,18.3
+475,2017-2018,27,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Augsburg,Win,6,1,4,83.3,1.5,6,18,33.3,25,7,44.0,35.6,9,77.8,54.3,11,0,0.0,0,9.8
+476,2017-2018,27,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Mainz 05,Win,1,0,1,100.0,0.3,11,26,42.3,45,2,48.9,40.9,11,36.4,41.2,8,1,12.5,1,14.0
+477,2017-2018,27,Mainz 05,Florian Müller,GER,20,90.0,Away,Eintracht Frankfurt,Defeat,6,3,3,50.0,2.5,7,14,50.0,24,9,37.5,31.1,9,55.6,46.0,5,0,0.0,1,12.8
+478,2017-2018,27,Mönchengladbach,Yann Sommer,SUI,29,90.0,Home,Hoffenheim,Draw,5,3,3,60.0,2.2,4,6,66.7,31,8,12.9,25.5,4,50.0,33.8,6,2,33.3,2,24.5
+479,2017-2018,27,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Mönchengladbach,Draw,9,3,6,66.7,1.9,2,16,12.5,24,4,50.0,43.7,8,50.0,48.3,12,0,0.0,0,15.3
+480,2017-2018,27,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Schalke 04,Defeat,2,1,2,50.0,1.3,5,8,62.5,41,6,14.6,29.8,4,50.0,49.8,2,0,0.0,0,8.5
+481,2017-2018,27,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Wolfsburg,Win,2,0,2,100.0,0.7,7,16,43.8,9,1,66.7,41.4,10,100.0,64.2,10,0,0.0,0,18.0
+482,2017-2018,27,Dortmund,Roman Bürki,SUI,27,90.0,Home,Hannover 96,Win,4,0,4,100.0,0.5,4,12,33.3,19,5,36.8,36.2,6,83.3,64.3,15,0,0.0,0,8.5
+483,2017-2018,27,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Dortmund,Defeat,8,1,7,87.5,1.5,11,26,42.3,40,11,47.5,36.3,11,63.6,42.1,15,1,6.7,2,18.6
+484,2017-2018,27,Köln,Timo Horn,GER,24,90.0,Home,Bayer Leverkusen,Win,3,0,3,100.0,0.9,4,16,25.0,19,5,57.9,46.4,5,100.0,62.2,5,0,0.0,0,12.0
+485,2017-2018,27,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Away,Köln,Defeat,3,2,1,33.3,1.3,5,23,21.7,38,6,50.0,41.2,10,40.0,43.1,5,1,20.0,3,31.8
+486,2017-2018,27,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Bayern Munich,Win,2,1,1,50.0,1.5,5,18,27.8,20,3,70.0,48.7,6,66.7,49.5,12,1,8.3,0,10.3
+487,2017-2018,27,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,RB Leipzig,Defeat,7,2,5,71.4,1.8,9,24,37.5,38,3,52.6,40.5,6,66.7,52.8,5,0,0.0,0,12.0
+488,2017-2018,28,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Home,Hamburger SV,Draw,6,1,5,83.3,1.1,8,32,25.0,45,5,64.4,49.0,3,100.0,73.0,12,0,0.0,0,15.0
+489,2017-2018,28,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Away,Stuttgart,Draw,4,1,3,75.0,1.3,17,26,65.4,72,6,33.3,35.4,5,40.0,43.8,4,0,0.0,3,21.0
+490,2017-2018,28,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Home,Augsburg,Draw,2,0,2,100.0,0.2,4,15,26.7,28,7,32.1,32.9,7,85.7,63.6,5,0,0.0,0,13.8
+491,2017-2018,28,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Bayer Leverkusen,Draw,2,1,2,50.0,0.2,14,24,58.3,20,1,70.0,48.9,19,52.6,44.3,11,0,0.0,0,9.7
+492,2017-2018,28,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Freiburg,Win,1,0,0,100.0,0.2,4,8,50.0,25,3,28.0,31.8,5,20.0,29.4,7,2,28.6,0,14.3
+493,2017-2018,28,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Schalke 04,Defeat,6,2,5,83.3,2.1,8,23,34.8,56,6,33.9,35.1,6,66.7,60.2,6,0,0.0,0,15.6
+494,2017-2018,28,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,RB Leipzig,Defeat,5,3,2,40.0,2.3,13,21,61.9,22,6,50.0,41.2,12,83.3,47.4,6,0,0.0,2,18.6
+495,2017-2018,28,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Hannover 96,Win,3,2,1,33.3,0.9,5,19,26.3,21,3,52.4,44.5,8,100.0,66.9,12,0,0.0,0,14.0
+496,2017-2018,28,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Köln,Win,2,0,2,100.0,0.3,9,21,42.9,33,6,51.5,41.2,8,50.0,44.3,7,1,14.3,1,14.8
+497,2017-2018,28,Köln,Timo Horn,GER,24,90.0,Away,Hoffenheim,Defeat,11,6,5,45.5,4.6,7,21,33.3,26,4,65.4,48.9,9,44.4,44.6,10,0,0.0,2,25.1
+498,2017-2018,28,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Dortmund,Win,3,0,3,100.0,0.2,3,11,27.3,21,6,28.6,36.0,10,50.0,48.2,8,0,0.0,1,18.0
+499,2017-2018,28,Dortmund,Roman Bürki,SUI,27,90.0,Away,Bayern Munich,Defeat,8,6,2,25.0,5.2,9,15,60.0,24,8,45.8,36.5,6,66.7,49.5,8,0,0.0,0,10.5
+500,2017-2018,28,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Wolfsburg,Draw,1,0,1,100.0,0.0,9,19,47.4,27,5,44.4,35.5,7,100.0,66.4,8,0,0.0,0,12.2
+501,2017-2018,28,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Hertha BSC,Draw,3,0,3,100.0,0.2,5,23,21.7,34,10,50.0,40.6,6,100.0,63.2,5,1,20.0,2,16.2
+502,2017-2018,28,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Home,Eintracht Frankfurt,Win,6,1,5,83.3,2.3,5,12,41.7,25,2,36.0,35.8,5,60.0,58.6,8,0,0.0,0,10.5
+503,2017-2018,28,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Werder Bremen,Defeat,5,2,4,60.0,1.9,5,25,20.0,42,7,52.4,39.5,5,60.0,56.0,9,1,11.1,3,21.1
+504,2017-2018,28,Mainz 05,René Adler,GER,33,90.0,Home,Mönchengladbach,Draw,3,0,3,100.0,0.4,6,13,46.2,15,3,53.3,42.9,5,100.0,68.2,8,0,0.0,2,17.3
+505,2017-2018,28,Mönchengladbach,Yann Sommer,SUI,29,90.0,Away,Mainz 05,Draw,5,0,4,100.0,0.4,12,30,40.0,38,6,55.3,40.9,13,69.2,48.6,10,2,20.0,1,12.3
+506,2017-2018,29,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Werder Bremen,Win,3,1,2,66.7,0.6,10,26,38.5,33,7,51.5,41.8,10,90.0,55.3,13,1,7.7,0,10.5
+507,2017-2018,29,Werder Bremen,Jiří Pavlenka,CZE,25,90.0,Away,Hannover 96,Defeat,6,2,4,66.7,1.3,6,19,31.6,32,8,43.8,39.0,7,71.4,51.3,4,0,0.0,2,15.5
+508,2017-2018,29,Mönchengladbach,Yann Sommer,SUI,29,90.0,Home,Hertha BSC,Win,5,1,4,80.0,1.4,11,26,42.3,53,7,39.6,37.0,10,50.0,44.0,10,2,20.0,1,12.4
+509,2017-2018,29,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Mönchengladbach,Defeat,2,2,1,50.0,1.4,9,23,39.1,26,4,61.5,48.7,9,77.8,59.4,5,0,0.0,0,11.8
+510,2017-2018,29,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Bayern Munich,Defeat,7,4,3,42.9,2.3,8,17,47.1,20,5,65.0,44.4,7,57.1,48.7,10,2,20.0,0,10.5
+511,2017-2018,29,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Augsburg,Win,1,1,1,0.0,0.7,6,22,27.3,44,6,47.7,41.0,6,16.7,29.7,5,1,20.0,1,19.0
+512,2017-2018,29,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Wolfsburg,Defeat,2,2,0,0.0,0.8,5,19,26.3,30,3,33.3,35.9,11,81.8,61.6,7,2,28.6,1,28.3
+513,2017-2018,29,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Freiburg,Win,0,0,0,,0.9,10,25,40.0,24,4,70.8,52.8,9,88.9,69.2,15,0,0.0,0,10.8
+514,2017-2018,29,Köln,Timo Horn,GER,24,90.0,Home,Mainz 05,Draw,4,1,3,75.0,1.7,15,33,45.5,28,2,85.7,60.1,9,100.0,69.8,10,4,40.0,1,16.9
+515,2017-2018,29,Mainz 05,René Adler,GER,33,90.0,Away,Köln,Draw,7,1,6,85.7,2.1,8,22,36.4,24,6,54.2,46.5,9,100.0,70.9,7,0,0.0,1,16.6
+516,2017-2018,29,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Home,Schalke 04,Win,4,2,2,50.0,2.2,6,22,27.3,46,3,39.1,36.4,6,66.7,60.2,4,0,0.0,1,13.2
+517,2017-2018,29,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Hamburger SV,Defeat,6,3,3,50.0,2.5,8,24,33.3,21,2,71.4,56.6,10,90.0,58.2,9,0,0.0,0,11.0
+518,2017-2018,29,Dortmund,Roman Bürki,SUI,27,90.0,Home,Stuttgart,Win,0,0,0,,0.0,14,29,48.3,31,5,54.8,45.4,12,100.0,67.0,10,0,0.0,0,11.0
+519,2017-2018,29,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Away,Dortmund,Defeat,7,3,4,57.1,3.3,9,23,39.1,27,4,66.7,50.2,5,100.0,82.6,6,1,16.7,0,15.4
+520,2017-2018,29,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Hoffenheim,Draw,3,1,2,66.7,0.7,2,6,33.3,42,8,11.9,24.9,7,14.3,29.4,7,0,0.0,0,16.7
+521,2017-2018,29,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Eintracht Frankfurt,Draw,4,1,3,75.0,1.1,7,15,46.7,24,8,45.8,39.6,6,66.7,55.5,12,0,0.0,1,13.9
+522,2017-2018,29,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Bayer Leverkusen,Defeat,7,4,3,42.9,3.1,4,13,30.8,22,2,50.0,40.7,4,50.0,42.5,12,0,0.0,1,13.4
+523,2017-2018,29,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Away,RB Leipzig,Win,4,1,3,75.0,1.4,6,20,30.0,30,8,50.0,40.7,10,50.0,44.7,2,0,0.0,1,15.6
+524,2017-2018,30,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Augsburg,Draw,2,0,2,100.0,0.7,4,8,50.0,11,4,54.5,45.0,4,50.0,43.8,6,1,16.7,1,15.5
+525,2017-2018,30,Augsburg,Marwin Hitz,SUI,30,90.0,Away,Wolfsburg,Draw,4,0,4,100.0,0.6,11,21,52.4,27,3,37.0,37.3,13,84.6,58.5,8,0,0.0,0,12.0
+526,2017-2018,30,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Home,Hannover 96,Draw,3,1,2,66.7,0.9,7,17,41.2,21,0,57.1,41.1,8,62.5,51.8,11,1,9.1,0,8.3
+527,2017-2018,30,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Stuttgart,Draw,5,1,4,80.0,1.0,12,20,60.0,28,3,64.3,41.7,6,33.3,33.5,10,0,0.0,4,23.6
+528,2017-2018,30,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Hamburger SV,Win,5,0,5,100.0,0.6,14,34,41.2,49,7,59.2,46.2,7,71.4,54.7,12,0,0.0,1,10.8
+529,2017-2018,30,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Away,Hoffenheim,Defeat,5,2,2,60.0,2.2,5,11,45.5,37,4,24.3,30.7,12,16.7,30.1,8,2,25.0,3,19.9
+530,2017-2018,30,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Home,Eintracht Frankfurt,Win,1,1,0,0.0,0.7,1,8,12.5,20,6,25.0,31.4,5,60.0,52.6,5,0,0.0,0,14.8
+531,2017-2018,30,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Bayer Leverkusen,Defeat,6,4,2,33.3,3.7,6,22,27.3,37,4,45.9,39.5,6,83.3,67.2,4,1,25.0,1,15.7
+532,2017-2018,30,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Köln,Win,2,1,1,50.0,0.7,6,18,33.3,21,3,47.6,41.3,9,88.9,63.1,13,0,0.0,1,17.0
+533,2017-2018,30,Köln,Timo Horn,GER,24,90.0,Away,Hertha BSC,Defeat,5,2,3,60.0,1.7,9,21,42.9,20,1,75.0,51.5,7,85.7,65.3,10,0,0.0,0,8.3
+534,2017-2018,30,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Mönchengladbach,Win,1,1,0,0.0,0.4,2,3,66.7,29,5,10.3,25.0,0,,,2,0,0.0,4,22.2
+535,2017-2018,30,Mönchengladbach,Yann Sommer,SUI,29,90.0,Away,Bayern Munich,Defeat,11,5,6,54.5,4.6,8,24,33.3,38,4,44.7,40.5,9,77.8,57.0,16,3,18.8,0,4.0
+536,2017-2018,30,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Dortmund,Win,5,0,5,100.0,0.6,5,20,25.0,24,5,62.5,45.9,6,83.3,55.2,6,0,0.0,0,12.8
+537,2017-2018,30,Dortmund,Roman Bürki,SUI,27,90.0,Away,Schalke 04,Defeat,3,2,1,33.3,0.8,4,9,44.4,14,1,14.3,27.3,12,58.3,55.7,7,0,0.0,0,
+538,2017-2018,30,Werder Bremen,Jiří Pavlenka,CZE,26,90.0,Home,RB Leipzig,Draw,4,1,3,75.0,1.3,7,19,36.8,20,4,55.0,51.0,9,88.9,61.0,5,1,20.0,0,10.7
+539,2017-2018,30,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Werder Bremen,Draw,6,1,4,83.3,1.2,11,31,35.5,34,4,52.9,42.2,14,92.9,64.2,15,1,6.7,0,11.8
+540,2017-2018,30,Mainz 05,René Adler,GER,33,90.0,Home,Freiburg,Win,0,0,0,,0.0,8,20,40.0,21,2,52.4,45.5,9,100.0,63.9,15,0,0.0,0,9.8
+541,2017-2018,30,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Mainz 05,Defeat,2,2,1,50.0,1.9,13,32,40.6,28,4,67.9,47.0,13,100.0,69.4,10,0,0.0,2,14.9
+542,2017-2018,31,Mönchengladbach,Yann Sommer,SUI,29,90.0,Home,Wolfsburg,Win,2,0,2,100.0,0.1,4,11,36.4,41,4,19.5,26.7,4,75.0,55.3,9,1,11.1,0,16.5
+543,2017-2018,31,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,Mönchengladbach,Defeat,7,3,4,57.1,3.4,9,22,40.9,27,2,59.3,45.7,6,100.0,67.5,0,0,,0,15.8
+544,2017-2018,31,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Hertha BSC,Defeat,2,3,0,0.0,2.5,8,16,50.0,40,4,35.0,33.8,2,100.0,66.5,8,0,0.0,1,16.1
+545,2017-2018,31,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Eintracht Frankfurt,Win,3,0,3,100.0,0.1,10,32,31.3,33,2,69.7,49.1,10,90.0,63.7,5,0,0.0,0,10.1
+546,2017-2018,31,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Hoffenheim,Defeat,7,5,2,28.6,3.8,6,9,66.7,27,8,25.9,30.3,6,33.3,44.3,9,1,11.1,1,16.0
+547,2017-2018,31,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,RB Leipzig,Win,7,2,6,71.4,2.7,7,18,38.9,29,4,51.7,40.6,7,42.9,39.7,5,0,0.0,0,16.4
+548,2017-2018,31,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Home,Werder Bremen,Win,3,0,3,100.0,0.4,8,27,29.6,27,4,66.7,50.7,9,100.0,75.6,12,2,16.7,1,16.6
+549,2017-2018,31,Werder Bremen,Jiří Pavlenka,CZE,26,90.0,Away,Stuttgart,Defeat,5,2,3,60.0,1.9,8,12,66.7,29,11,37.9,40.3,6,16.7,37.2,14,3,21.4,2,15.5
+550,2017-2018,31,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Bayern Munich,Defeat,8,3,5,62.5,3.4,12,17,70.6,21,5,57.1,45.8,9,55.6,38.3,17,0,0.0,0,13.0
+551,2017-2018,31,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Hannover 96,Win,2,0,2,100.0,0.1,3,7,42.9,27,9,22.2,31.7,4,25.0,30.3,5,1,20.0,2,19.3
+552,2017-2018,31,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Home,Freiburg,Win,5,0,5,100.0,1.2,5,26,19.2,54,3,40.7,36.8,7,57.1,42.9,7,1,14.3,2,23.0
+553,2017-2018,31,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Hamburger SV,Defeat,2,1,1,50.0,0.6,12,34,35.3,28,1,89.3,59.7,10,90.0,68.0,15,0,0.0,1,25.5
+554,2017-2018,31,Dortmund,Roman Bürki,SUI,27,90.0,Home,Bayer Leverkusen,Win,3,0,3,100.0,0.6,6,19,31.6,25,4,56.0,46.5,7,71.4,53.4,9,0,0.0,0,17.7
+555,2017-2018,31,Bayer Leverkusen,Ramazan Özcan,AUT,33,90.0,Away,Dortmund,Defeat,7,4,3,42.9,3.2,4,12,33.3,32,6,31.3,34.1,6,33.3,32.8,6,0,0.0,1,19.2
+556,2017-2018,31,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Mainz 05,Win,3,0,3,100.0,0.2,10,30,33.3,36,3,72.2,52.9,7,57.1,48.3,6,0,0.0,0,13.5
+557,2017-2018,31,Mainz 05,René Adler,GER,33,90.0,Away,Augsburg,Defeat,5,2,3,60.0,2.2,6,21,28.6,24,7,41.7,36.4,12,91.7,65.4,16,1,6.3,2,14.1
+558,2017-2018,31,Köln,Timo Horn,GER,24,90.0,Home,Schalke 04,Draw,7,2,5,71.4,2.2,11,25,44.0,31,6,48.4,41.3,11,90.9,61.6,11,0,0.0,4,21.1
+559,2017-2018,31,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Köln,Draw,3,2,1,33.3,0.2,6,18,33.3,22,6,59.1,46.5,6,83.3,66.7,11,3,27.3,0,12.5
+560,2017-2018,32,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Hannover 96,Win,4,1,3,75.0,1.2,5,16,31.3,33,4,45.5,37.4,5,20.0,34.8,15,2,13.3,0,12.6
+561,2017-2018,32,Hannover 96,Philipp Tschauner,GER,32,90.0,Away,Hoffenheim,Defeat,6,3,3,50.0,1.7,7,15,46.7,32,8,34.4,31.6,10,40.0,39.1,8,0,0.0,1,18.4
+562,2017-2018,32,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,Augsburg,Draw,3,2,1,33.3,1.2,13,27,48.1,36,4,52.8,42.0,10,80.0,59.7,11,0,0.0,2,18.5
+563,2017-2018,32,Augsburg,Andreas Luthe,GER,31,90.0,Away,Hertha BSC,Draw,3,2,2,66.7,2.8,9,19,47.4,34,4,47.1,39.8,6,50.0,44.2,12,4,33.3,2,19.8
+564,2017-2018,32,Schalke 04,Ralf Fährmann,GER,29,90.0,Home,Mönchengladbach,Draw,4,1,3,75.0,1.0,9,24,37.5,24,5,75.0,49.9,13,46.2,41.5,12,2,16.7,0,11.4
+565,2017-2018,32,Mönchengladbach,Yann Sommer,SUI,29,90.0,Away,Schalke 04,Draw,3,1,3,100.0,1.4,2,7,28.6,32,6,18.8,29.5,3,33.3,27.7,7,0,0.0,0,12.8
+566,2017-2018,32,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Eintracht Frankfurt,Win,3,1,2,66.7,0.8,7,18,38.9,39,9,38.5,39.3,7,42.9,37.7,8,1,12.5,2,20.2
+567,2017-2018,32,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Away,Bayern Munich,Defeat,6,4,2,33.3,2.7,12,20,60.0,42,8,33.3,33.2,8,75.0,51.0,6,1,16.7,2,16.8
+568,2017-2018,32,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Hamburger SV,Defeat,4,3,2,50.0,2.3,11,23,47.8,27,10,44.4,38.6,12,91.7,58.5,9,1,11.1,0,15.9
+569,2017-2018,32,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Away,Wolfsburg,Win,1,1,0,0.0,0.0,7,22,31.8,44,5,43.2,40.4,10,30.0,37.3,14,3,21.4,2,18.1
+570,2017-2018,32,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Köln,Win,2,2,0,0.0,1.3,9,24,37.5,24,0,62.5,49.0,9,100.0,73.4,12,0,0.0,0,16.2
+571,2017-2018,32,Köln,Timo Horn,GER,24,90.0,Away,Freiburg,Defeat,6,3,3,50.0,4.0,11,25,44.0,37,4,48.6,42.3,7,100.0,77.6,11,1,9.1,2,16.1
+572,2017-2018,32,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Home,Stuttgart,Defeat,1,1,0,0.0,0.6,8,11,72.7,19,3,47.4,32.7,7,28.6,35.3,6,1,16.7,0,14.8
+573,2017-2018,32,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Away,Bayer Leverkusen,Win,6,0,6,100.0,1.8,9,38,23.7,29,1,86.2,58.2,18,72.2,61.0,18,3,16.7,0,9.4
+574,2017-2018,32,Mainz 05,René Adler,GER,33,90.0,Home,RB Leipzig,Win,0,0,0,,0.0,10,25,40.0,15,2,93.3,59.9,11,100.0,68.5,10,0,0.0,1,15.6
+575,2017-2018,32,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Away,Mainz 05,Defeat,8,3,6,75.0,2.0,7,20,35.0,30,9,50.0,42.7,9,55.6,45.4,9,1,11.1,2,22.1
+576,2017-2018,32,Werder Bremen,Jiří Pavlenka,CZE,26,90.0,Home,Dortmund,Draw,6,1,4,83.3,2.3,5,19,26.3,34,4,47.1,43.4,7,42.9,38.6,5,0,0.0,1,13.0
+577,2017-2018,32,Dortmund,Roman Bürki,SUI,27,90.0,Away,Werder Bremen,Draw,5,1,4,80.0,0.9,14,23,60.9,30,8,43.3,37.9,10,100.0,66.5,7,0,0.0,1,17.2
+578,2017-2018,33,Augsburg,Marwin Hitz,SUI,30,90.0,Home,Schalke 04,Defeat,6,2,5,66.7,2.3,5,14,35.7,54,7,22.2,31.1,6,33.3,40.7,3,0,0.0,2,19.1
+579,2017-2018,33,Schalke 04,Ralf Fährmann,GER,29,90.0,Away,Augsburg,Win,5,1,4,80.0,0.8,7,23,30.4,28,6,64.3,56.8,10,50.0,49.4,13,3,23.1,0,11.3
+580,2017-2018,33,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Home,Hoffenheim,Win,7,0,7,100.0,1.5,14,32,43.8,31,5,64.5,47.2,12,100.0,75.5,19,3,15.8,0,10.6
+581,2017-2018,33,Hoffenheim,Oliver Baumann,GER,27,90.0,Away,Stuttgart,Defeat,2,2,0,0.0,1.2,2,4,50.0,22,4,13.6,26.2,4,25.0,26.5,9,0,0.0,0,12.5
+582,2017-2018,33,Werder Bremen,Jiří Pavlenka,CZE,26,90.0,Home,Bayer Leverkusen,Draw,2,0,2,100.0,0.5,11,21,52.4,37,5,51.4,42.2,6,33.3,39.8,13,1,7.7,0,11.3
+583,2017-2018,33,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Away,Werder Bremen,Draw,0,0,0,,0.0,0,6,0.0,23,3,21.7,29.0,5,20.0,37.8,9,1,11.1,3,25.0
+584,2017-2018,33,RB Leipzig,Péter Gulácsi,HUN,27,90.0,Home,Wolfsburg,Win,5,1,4,80.0,0.6,13,22,59.1,21,1,61.9,45.2,9,100.0,69.9,7,2,28.6,1,17.7
+585,2017-2018,33,Wolfsburg,Koen Casteels,BEL,25,90.0,Away,RB Leipzig,Defeat,7,4,3,42.9,4.3,2,16,12.5,32,11,40.6,39.4,7,42.9,45.7,7,1,14.3,2,14.8
+586,2017-2018,33,Eintracht Frankfurt,Lukáš Hrádecký,FIN,28,90.0,Home,Hamburger SV,Win,4,1,3,75.0,0.5,21,35,60.0,29,1,93.1,60.7,10,80.0,63.1,12,1,8.3,1,12.8
+587,2017-2018,33,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Away,Eintracht Frankfurt,Defeat,10,3,7,70.0,3.0,12,25,48.0,52,8,46.2,37.5,4,25.0,34.8,6,0,0.0,1,17.5
+588,2017-2018,33,Dortmund,Roman Bürki,SUI,27,90.0,Home,Mainz 05,Defeat,5,2,3,60.0,1.5,1,7,14.3,24,8,25.0,32.2,2,50.0,39.5,5,0,0.0,0,15.2
+589,2017-2018,33,Mainz 05,Florian Müller,GER,20,90.0,Away,Dortmund,Win,3,1,2,66.7,0.9,5,21,23.8,27,4,51.9,48.0,7,100.0,71.6,12,0,0.0,1,13.3
+590,2017-2018,33,Köln,Timo Horn,GER,24,90.0,Home,Bayern Munich,Defeat,9,3,6,66.7,3.3,14,29,48.3,27,4,77.8,56.3,9,88.9,65.0,19,3,15.8,0,11.3
+591,2017-2018,33,Bayern Munich,Sven Ulreich,GER,29,90.0,Away,Köln,Win,3,1,3,66.7,0.6,3,4,75.0,17,1,17.6,24.8,5,20.0,34.8,7,1,14.3,1,19.0
+592,2017-2018,33,Mönchengladbach,Yann Sommer,SUI,29,90.0,Home,Freiburg,Win,6,1,5,83.3,1.9,12,25,48.0,48,3,39.6,35.7,8,75.0,57.1,14,0,0.0,0,18.0
+593,2017-2018,33,Freiburg,Alexander Schwolow,GER,25,90.0,Away,Mönchengladbach,Defeat,5,3,2,40.0,2.0,7,15,46.7,21,2,33.3,35.9,8,100.0,72.5,5,1,20.0,2,15.2
+594,2017-2018,33,Hannover 96,Philipp Tschauner,GER,32,90.0,Home,Hertha BSC,Win,2,1,1,50.0,0.1,18,28,64.3,25,4,76.0,47.8,9,100.0,55.4,19,0,0.0,1,19.2
+595,2017-2018,33,Hertha BSC,Rune Jarstein,NOR,33,90.0,Away,Hannover 96,Defeat,5,3,2,40.0,1.3,12,30,40.0,28,3,75.0,50.6,9,100.0,70.7,9,0,0.0,1,13.4
+596,2017-2018,34,Schalke 04,Ralf Fährmann,GER,29,45.0,Home,Eintracht Frankfurt,Win,0,0,0,,0.0,6,12,50.0,19,2,52.6,38.8,2,100.0,57.5,0,0,,0,14.0
+597,2017-2018,34,Schalke 04,Alexander Nübel,GER,21,45.0,Home,Eintracht Frankfurt,Win,2,0,2,100.0,0.4,6,13,46.2,13,3,38.5,42.2,9,88.9,53.6,5,0,0.0,0,12.5
+598,2017-2018,34,Eintracht Frankfurt,Lukáš Hrádecký,GER,24,90.0,Away,Schalke 04,Defeat,5,1,4,80.0,0.6,8,21,38.1,32,5,56.3,40.1,6,50.0,49.8,10,1,10.0,1,15.8
+599,2017-2018,34,Bayer Leverkusen,Bernd Leno,GER,26,90.0,Home,Hannover 96,Win,4,2,2,50.0,2.0,9,21,42.9,28,8,42.9,39.5,9,100.0,65.2,13,1,7.7,1,13.0
+600,2017-2018,34,Hannover 96,Michael Esser,GER,30,90.0,Away,Bayer Leverkusen,Defeat,8,3,5,62.5,2.1,13,25,52.0,35,8,60.0,40.3,11,36.4,36.9,11,0,0.0,0,11.9
+601,2017-2018,34,Mainz 05,Florian Müller,GER,20,90.0,Home,Werder Bremen,Defeat,3,2,1,33.3,1.3,6,19,31.6,19,3,52.6,45.4,11,81.8,62.5,13,0,0.0,0,16.8
+602,2017-2018,34,Werder Bremen,Jiří Pavlenka,CZE,26,90.0,Away,Mainz 05,Win,1,1,0,0.0,0.6,12,25,48.0,31,4,61.3,42.0,10,60.0,50.3,8,0,0.0,1,12.0
+603,2017-2018,34,Wolfsburg,Koen Casteels,BEL,25,90.0,Home,Köln,Win,2,1,1,50.0,0.7,14,22,63.6,29,7,51.7,45.7,7,100.0,71.9,7,1,14.3,0,12.7
+604,2017-2018,34,Köln,Timo Horn,GER,25,90.0,Away,Wolfsburg,Defeat,7,4,3,42.9,3.3,6,18,33.3,22,3,40.9,39.7,10,90.0,68.0,13,2,15.4,1,20.0
+605,2017-2018,34,Hertha BSC,Rune Jarstein,NOR,33,90.0,Home,RB Leipzig,Defeat,10,6,4,40.0,3.1,9,21,42.9,22,3,77.3,51.3,4,100.0,66.5,4,0,0.0,1,12.0
+606,2017-2018,34,RB Leipzig,Péter Gulácsi,HUN,28,90.0,Away,Hertha BSC,Win,4,2,2,50.0,1.8,5,20,25.0,23,1,65.2,51.7,5,100.0,72.0,11,0,0.0,1,16.6
+607,2017-2018,34,Bayern Munich,Sven Ulreich,GER,29,90.0,Home,Stuttgart,Defeat,7,4,3,42.9,2.7,1,2,50.0,23,7,8.7,25.6,2,0.0,36.0,4,0,0.0,4,25.4
+608,2017-2018,34,Stuttgart,Ron-Robert Zieler,GER,29,90.0,Away,Bayern Munich,Win,7,1,6,85.7,1.9,7,34,20.6,25,2,88.0,59.8,15,80.0,63.7,27,2,7.4,1,10.0
+609,2017-2018,34,Freiburg,Alexander Schwolow,GER,25,90.0,Home,Augsburg,Win,2,0,2,100.0,0.0,12,23,52.2,26,2,73.1,53.3,4,100.0,73.5,8,1,12.5,1,18.6
+610,2017-2018,34,Augsburg,Andreas Luthe,GER,31,90.0,Away,Freiburg,Defeat,3,2,1,33.3,0.6,4,10,40.0,32,8,25.0,31.6,8,25.0,35.6,8,0,0.0,1,13.3
+611,2017-2018,34,Hoffenheim,Oliver Baumann,GER,27,90.0,Home,Dortmund,Win,4,1,3,75.0,0.7,2,7,28.6,39,6,17.9,21.3,3,0.0,26.0,5,1,20.0,2,16.5
+612,2017-2018,34,Dortmund,Roman Bürki,SUI,27,90.0,Away,Hoffenheim,Defeat,9,3,6,66.7,1.9,2,10,20.0,22,7,31.8,32.4,4,75.0,61.3,3,0,0.0,0,9.4
+613,2017-2018,34,Dortmund,Roman Weidenfeller,GER,37,1.0,Away,Hoffenheim,Defeat,0,0,0,,0.0,0,0,,0,0,,,0,,,0,0,,0,
+614,2017-2018,34,Hamburger SV,Julian Pollersbeck,GER,23,90.0,Home,Mönchengladbach,Win,2,1,1,50.0,1.0,7,22,31.8,56,3,37.5,36.6,2,50.0,51.5,3,0,0.0,4,20.5
+615,2017-2018,34,Mönchengladbach,Yann Sommer,SUI,29,90.0,Away,Hamburger SV,Defeat,7,2,6,85.7,2.3,9,25,36.0,38,8,47.4,38.7,11,63.6,47.0,10,2,20.0,2,17.8

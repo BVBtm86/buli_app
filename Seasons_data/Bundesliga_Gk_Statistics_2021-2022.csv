@@ -1,0 +1,254 @@
+,Season,Week_No,Team,Name,Nationality,Age,Minutes,Venue,Opponent,Result,shots_on_target_against,goals_against_gk,saves,save_pct,psxg_gk,passes_completed_launched_gk,passes_launched_gk,passes_pct_launched_gk,passes_gk,passes_throws_gk,pct_passes_launched_gk,passes_length_avg_gk,goal_kicks,pct_goal_kicks_launched,goal_kick_length_avg,crosses_gk,crosses_stopped_gk,crosses_stopped_pct_gk,def_actions_outside_pen_area_gk,avg_distance_def_actions_gk
+0,2021-2022,1,Mönchengladbach,Yann Sommer,SUI,32,90.0,Home,Bayern Munich,Draw,9,1,8,88.9,2.5,10,28,35.7,30,4,66.7,53.1,9,88.9,61.8,10,1,10.0,1,12.0
+1,2021-2022,1,Bayern Munich,Manuel Neuer,GER,35,90.0,Away,Mönchengladbach,Draw,4,1,3,75.0,0.4,6,8,75.0,44,9,18.2,24.9,6,0.0,22.3,6,0,0.0,2,19.8
+2,2021-2022,1,Augsburg,Rafał Gikiewicz,POL,33,90.0,Home,Hoffenheim,Defeat,8,4,4,50.0,3.4,11,17,64.7,31,4,35.5,34.0,8,75.0,56.5,8,0,0.0,2,14.8
+3,2021-2022,1,Hoffenheim,Oliver Baumann,GER,31,90.0,Away,Augsburg,Win,0,0,0,,0.0,6,14,42.9,39,9,25.6,29.0,9,44.4,35.1,6,0,0.0,1,12.8
+4,2021-2022,1,Union Berlin,Andreas Luthe,GER,34,90.0,Home,Bayer Leverkusen,Draw,3,1,2,66.7,0.6,2,12,16.7,23,4,39.1,38.4,6,50.0,41.5,5,0,0.0,1,15.1
+5,2021-2022,1,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Away,Union Berlin,Draw,5,1,4,80.0,1.1,8,19,42.1,33,3,39.4,34.7,7,85.7,62.4,6,0,0.0,1,21.0
+6,2021-2022,1,Wolfsburg,Koen Casteels,BEL,29,90.0,Home,Bochum,Win,1,0,1,100.0,0.1,3,9,33.3,17,5,29.4,33.9,6,66.7,56.8,4,0,0.0,1,15.0
+7,2021-2022,1,Bochum,Manuel Riemann,GER,32,90.0,Away,Wolfsburg,Defeat,7,1,6,85.7,3.1,21,42,50.0,53,6,64.2,47.7,10,80.0,58.7,10,2,20.0,5,18.6
+8,2021-2022,1,Arminia,Stefan Ortega,GER,28,90.0,Home,Freiburg,Draw,6,0,6,100.0,1.2,21,44,47.7,61,2,59.0,50.5,12,66.7,52.0,12,0,0.0,1,19.1
+9,2021-2022,1,Freiburg,Mark Flekken,NED,28,90.0,Away,Arminia,Draw,3,0,3,100.0,0.9,8,17,47.1,22,3,54.5,46.5,7,71.4,62.3,9,1,11.1,0,9.5
+10,2021-2022,1,Stuttgart,Florian Müller,GER,23,90.0,Home,Greuther Fürth,Win,4,1,3,75.0,1.0,5,8,62.5,23,5,34.8,32.8,4,0.0,13.8,5,0,0.0,0,3.5
+11,2021-2022,1,Greuther Fürth,Sascha Burchert,GER,31,90.0,Away,Stuttgart,Defeat,15,5,10,66.7,5.0,7,18,38.9,26,5,46.2,42.3,9,66.7,49.0,10,0,0.0,1,13.9
+12,2021-2022,1,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Eintracht Frankfurt,Win,3,2,2,33.3,1.9,11,19,57.9,49,2,30.6,31.6,9,44.4,33.0,5,0,0.0,2,18.8
+13,2021-2022,1,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Dortmund,Defeat,7,5,2,28.6,2.6,11,20,55.0,35,5,48.6,35.8,6,50.0,38.3,2,0,0.0,2,16.8
+14,2021-2022,1,Mainz 05,Robin Zentner,GER,26,90.0,Home,RB Leipzig,Win,2,0,2,100.0,0.8,5,21,23.8,23,7,60.9,50.6,8,87.5,70.1,19,3,15.8,2,14.3
+15,2021-2022,1,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Away,Mainz 05,Defeat,2,1,1,50.0,1.4,3,4,75.0,11,2,27.3,28.4,3,33.3,37.0,5,0,0.0,1,33.0
+16,2021-2022,1,Köln,Timo Horn,GER,28,90.0,Home,Hertha BSC,Win,5,1,4,80.0,1.7,10,12,83.3,27,1,25.9,27.6,7,71.4,48.0,5,0,0.0,0,5.0
+17,2021-2022,1,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,Köln,Defeat,5,3,2,40.0,2.4,8,18,44.4,18,3,50.0,41.6,13,69.2,49.0,14,0,0.0,0,11.0
+18,2021-2022,2,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Home,Stuttgart,Win,5,0,5,100.0,1.0,4,18,22.2,34,8,47.1,39.9,4,50.0,39.0,12,0,0.0,0,11.0
+19,2021-2022,2,Stuttgart,Florian Müller,GER,23,90.0,Away,RB Leipzig,Defeat,10,4,7,70.0,3.5,6,9,66.7,20,6,40.0,32.5,10,10.0,19.6,8,0,0.0,0,11.8
+20,2021-2022,2,Greuther Fürth,Sascha Burchert,GER,31,90.0,Home,Arminia,Draw,2,1,0,50.0,0.6,7,14,50.0,30,6,33.3,34.2,9,44.4,42.8,9,2,22.2,1,15.5
+21,2021-2022,2,Arminia,Stefan Ortega,GER,28,90.0,Away,Greuther Fürth,Draw,4,1,4,100.0,1.4,21,46,45.7,42,1,78.6,55.0,15,86.7,67.5,8,0,0.0,0,17.5
+22,2021-2022,2,Hertha BSC,Alexander Schwolow,GER,29,90.0,Home,Wolfsburg,Defeat,3,2,1,33.3,0.9,2,13,15.4,22,3,45.5,37.7,6,50.0,47.3,15,0,0.0,1,13.3
+23,2021-2022,2,Wolfsburg,Koen Casteels,BEL,29,90.0,Away,Hertha BSC,Win,4,1,4,100.0,1.2,4,9,44.4,33,1,24.2,29.6,4,25.0,41.0,8,2,25.0,2,32.5
+24,2021-2022,2,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Home,Augsburg,Draw,0,0,0,,0.0,9,20,45.0,35,5,45.7,36.8,7,57.1,46.4,8,1,12.5,3,23.3
+25,2021-2022,2,Augsburg,Rafał Gikiewicz,POL,33,90.0,Away,Eintracht Frankfurt,Draw,5,0,5,100.0,0.6,7,22,31.8,30,2,50.0,44.9,10,70.0,55.1,11,1,9.1,1,12.8
+26,2021-2022,2,Freiburg,Mark Flekken,NED,28,90.0,Home,Dortmund,Win,3,1,3,66.7,0.4,5,20,25.0,20,2,45.0,51.4,13,84.6,74.5,10,0,0.0,0,8.5
+27,2021-2022,2,Dortmund,Gregor Kobel,SUI,23,90.0,Away,Freiburg,Defeat,4,2,2,50.0,1.4,1,3,33.3,35,6,8.6,23.0,8,0.0,18.5,4,0,0.0,3,20.4
+28,2021-2022,2,Bochum,Manuel Riemann,GER,32,90.0,Home,Mainz 05,Win,3,0,3,100.0,0.8,19,36,52.8,34,1,79.4,54.7,11,81.8,56.2,12,0,0.0,1,19.0
+29,2021-2022,2,Mainz 05,Robin Zentner,GER,26,90.0,Away,Bochum,Defeat,4,2,2,50.0,1.9,1,5,20.0,24,7,16.7,25.1,2,50.0,48.0,6,0,0.0,2,15.0
+30,2021-2022,2,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Home,Mönchengladbach,Win,5,0,5,100.0,1.3,6,17,35.3,34,5,32.4,33.4,8,75.0,56.3,8,1,12.5,1,18.0
+31,2021-2022,2,Mönchengladbach,Yann Sommer,SUI,32,90.0,Away,Bayer Leverkusen,Defeat,5,4,2,20.0,2.9,4,7,57.1,19,2,26.3,29.8,6,33.3,35.3,3,1,33.3,0,10.0
+32,2021-2022,2,Hoffenheim,Oliver Baumann,GER,31,90.0,Home,Union Berlin,Draw,8,2,6,75.0,3.3,3,9,33.3,34,5,23.5,27.4,2,50.0,38.5,7,0,0.0,2,14.0
+33,2021-2022,2,Union Berlin,Andreas Luthe,GER,34,90.0,Away,Hoffenheim,Draw,3,2,1,33.3,1.2,14,25,56.0,32,6,65.6,44.4,5,80.0,53.2,8,1,12.5,0,14.1
+34,2021-2022,2,Bayern Munich,Manuel Neuer,GER,35,90.0,Home,Köln,Win,3,2,1,33.3,1.4,15,24,62.5,54,8,42.6,37.4,6,16.7,23.0,13,0,0.0,0,11.9
+35,2021-2022,2,Köln,Timo Horn,GER,28,90.0,Away,Bayern Munich,Defeat,6,3,3,50.0,3.0,4,11,36.4,28,3,35.7,33.5,9,11.1,23.6,8,2,25.0,2,13.2
+36,2021-2022,3,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Hoffenheim,Win,5,2,3,60.0,3.4,0,6,0.0,18,5,22.2,24.8,4,50.0,36.3,10,0,0.0,1,14.7
+37,2021-2022,3,Hoffenheim,Oliver Baumann,GER,31,90.0,Away,Dortmund,Defeat,13,3,10,76.9,3.6,5,18,27.8,33,7,45.5,38.2,10,30.0,24.7,11,1,9.1,1,17.3
+38,2021-2022,3,Stuttgart,Florian Müller,GER,23,90.0,Home,Freiburg,Defeat,7,3,4,57.1,1.7,4,8,50.0,26,3,26.9,30.2,6,16.7,26.3,7,0,0.0,1,16.8
+39,2021-2022,3,Freiburg,Mark Flekken,NED,28,90.0,Away,Stuttgart,Win,7,2,5,71.4,2.8,13,32,40.6,31,4,61.3,51.9,13,100.0,74.6,12,1,8.3,0,12.0
+40,2021-2022,3,Köln,Timo Horn,GER,28,90.0,Home,Bochum,Win,1,1,0,0.0,0.7,3,4,75.0,15,2,26.7,31.4,4,0.0,18.5,7,0,0.0,2,26.8
+41,2021-2022,3,Bochum,Manuel Riemann,GER,32,90.0,Away,Köln,Defeat,5,2,3,60.0,1.8,18,36,50.0,27,1,81.5,57.2,16,87.5,55.5,24,4,16.7,1,13.2
+42,2021-2022,3,Arminia,Stefan Ortega,GER,28,90.0,Home,Eintracht Frankfurt,Draw,3,1,2,66.7,1.9,16,28,57.1,42,5,59.5,45.0,5,60.0,47.0,8,3,37.5,3,18.7
+43,2021-2022,3,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Arminia,Draw,4,1,3,75.0,1.3,6,22,27.3,42,4,45.2,36.9,6,50.0,43.7,12,0,0.0,1,16.3
+44,2021-2022,3,Augsburg,Rafał Gikiewicz,POL,33,90.0,Home,Bayer Leverkusen,Defeat,5,4,2,20.0,1.4,6,9,66.7,17,5,35.3,30.8,5,60.0,44.2,4,0,0.0,1,19.8
+45,2021-2022,3,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Away,Augsburg,Win,4,1,3,75.0,1.6,11,19,57.9,44,9,29.5,34.0,8,75.0,52.0,13,0,0.0,2,14.6
+46,2021-2022,3,Mainz 05,Robin Zentner,GER,26,90.0,Home,Greuther Fürth,Win,1,0,1,100.0,0.1,4,11,36.4,18,1,38.9,35.1,8,50.0,52.0,5,0,0.0,2,29.6
+47,2021-2022,3,Greuther Fürth,Sascha Burchert,GER,31,90.0,Away,Mainz 05,Defeat,9,3,6,66.7,2.7,9,26,34.6,40,3,60.0,48.2,3,66.7,50.0,10,0,0.0,1,14.3
+48,2021-2022,3,Bayern Munich,Manuel Neuer,GER,35,90.0,Home,Hertha BSC,Win,3,0,3,100.0,0.1,5,8,62.5,35,5,20.0,27.0,7,14.3,23.7,5,0,0.0,1,20.0
+49,2021-2022,3,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,Bayern Munich,Defeat,7,5,1,28.6,4.0,5,13,38.5,24,6,29.2,31.0,12,50.0,42.9,5,0,0.0,0,7.2
+50,2021-2022,3,Union Berlin,Andreas Luthe,GER,34,90.0,Home,Mönchengladbach,Win,5,1,4,80.0,1.4,13,34,38.2,25,1,88.0,54.6,14,85.7,56.1,4,0,0.0,2,16.4
+51,2021-2022,3,Mönchengladbach,Yann Sommer,SUI,32,90.0,Away,Union Berlin,Defeat,3,2,1,33.3,2.0,4,14,28.6,40,3,30.0,32.5,10,20.0,27.2,8,0,0.0,1,16.3
+52,2021-2022,3,Wolfsburg,Koen Casteels,BEL,29,90.0,Home,RB Leipzig,Win,2,0,2,100.0,0.6,10,21,47.6,34,4,32.4,32.6,10,100.0,65.2,3,1,33.3,0,15.3
+53,2021-2022,3,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Away,Wolfsburg,Defeat,2,1,1,50.0,0.9,5,12,41.7,25,3,40.0,37.4,4,50.0,43.3,3,0,0.0,1,15.1
+54,2021-2022,4,Freiburg,Mark Flekken,NED,28,90.0,Home,Köln,Draw,5,1,4,80.0,1.4,9,17,52.9,49,12,28.6,33.0,7,42.9,38.1,16,1,6.3,4,19.5
+55,2021-2022,4,Köln,Timo Horn,GER,28,90.0,Away,Freiburg,Draw,3,1,3,66.7,1.7,11,22,50.0,35,2,48.6,44.2,8,62.5,51.4,12,0,0.0,1,12.6
+56,2021-2022,4,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Home,Dortmund,Defeat,5,4,2,40.0,1.9,8,16,50.0,35,11,42.9,37.8,2,50.0,48.0,7,0,0.0,1,15.6
+57,2021-2022,4,Dortmund,Gregor Kobel,SUI,23,90.0,Away,Bayer Leverkusen,Win,5,3,2,40.0,2.4,3,6,50.0,21,4,23.8,26.1,4,25.0,24.0,2,1,50.0,0,10.0
+58,2021-2022,4,Greuther Fürth,Sascha Burchert,GER,31,90.0,Home,Wolfsburg,Defeat,2,2,1,50.0,1.4,8,21,38.1,19,3,73.7,53.0,7,100.0,69.1,5,0,0.0,1,19.0
+59,2021-2022,4,Wolfsburg,Koen Casteels,BEL,29,90.0,Away,Greuther Fürth,Win,4,0,4,100.0,0.6,11,18,61.1,40,5,35.0,35.0,10,40.0,37.8,3,0,0.0,1,16.4
+60,2021-2022,4,Hoffenheim,Oliver Baumann,GER,31,90.0,Home,Mainz 05,Defeat,5,2,3,60.0,1.8,8,16,50.0,42,10,31.0,30.9,7,42.9,45.3,9,1,11.1,6,22.5
+61,2021-2022,4,Mainz 05,Robin Zentner,GER,26,90.0,Away,Hoffenheim,Win,0,0,0,,0.0,9,24,37.5,25,7,72.0,51.4,11,54.5,49.2,9,2,22.2,1,12.4
+62,2021-2022,4,Union Berlin,Andreas Luthe,GER,34,90.0,Home,Augsburg,Draw,6,0,6,100.0,1.1,2,3,66.7,13,5,0.0,23.1,7,42.9,38.4,14,1,7.1,0,10.0
+63,2021-2022,4,Augsburg,Rafał Gikiewicz,POL,33,90.0,Away,Union Berlin,Draw,5,0,4,100.0,1.6,7,26,26.9,27,3,51.9,40.8,14,85.7,63.0,9,0,0.0,1,13.2
+64,2021-2022,4,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Home,Bayern Munich,Defeat,5,4,2,40.0,4.1,6,12,50.0,27,3,40.7,35.7,9,11.1,26.1,5,0,0.0,2,21.8
+65,2021-2022,4,Bayern Munich,Manuel Neuer,GER,35,90.0,Away,RB Leipzig,Win,4,1,3,75.0,0.9,11,26,42.3,43,10,48.8,40.0,12,41.7,39.5,9,1,11.1,2,17.4
+66,2021-2022,4,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Home,Stuttgart,Draw,3,1,2,66.7,1.1,3,6,50.0,18,1,27.8,32.2,2,50.0,50.0,2,0,0.0,0,
+67,2021-2022,4,Stuttgart,Florian Müller,GER,23,90.0,Away,Eintracht Frankfurt,Draw,4,1,3,75.0,0.5,7,16,43.8,27,6,44.4,36.9,12,33.3,35.3,15,2,13.3,3,15.7
+68,2021-2022,4,Bochum,Manuel Riemann,GER,33,90.0,Home,Hertha BSC,Defeat,4,3,1,25.0,1.7,12,27,44.4,42,2,59.5,49.0,2,100.0,53.0,1,0,0.0,2,26.8
+69,2021-2022,4,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,Bochum,Win,5,1,4,80.0,2.1,13,32,40.6,26,4,65.4,44.8,17,88.2,63.9,20,1,5.0,1,16.8
+70,2021-2022,4,Mönchengladbach,Yann Sommer,SUI,32,90.0,Home,Arminia,Win,7,1,6,85.7,1.5,8,21,38.1,51,9,35.3,31.9,9,33.3,41.2,9,0,0.0,0,9.4
+71,2021-2022,4,Arminia,Stefan Ortega,GER,28,90.0,Away,Mönchengladbach,Defeat,4,3,1,25.0,2.0,11,17,64.7,30,2,40.0,35.2,7,71.4,54.6,5,1,20.0,0,12.5
+72,2021-2022,5,Hertha BSC,Alexander Schwolow,GER,29,90.0,Home,Greuther Fürth,Win,2,1,2,100.0,1.3,5,10,50.0,23,7,26.1,34.1,8,50.0,51.5,14,1,7.1,0,11.3
+73,2021-2022,5,Greuther Fürth,Sascha Burchert,GER,31,90.0,Away,Hertha BSC,Defeat,3,2,2,33.3,0.7,14,29,48.3,26,0,76.9,53.0,9,100.0,65.1,6,0,0.0,0,15.8
+74,2021-2022,5,Arminia,Stefan Ortega,GER,28,90.0,Home,Hoffenheim,Draw,4,0,4,100.0,0.7,18,28,64.3,59,4,37.3,39.0,12,50.0,48.6,15,1,6.7,1,16.5
+75,2021-2022,5,Hoffenheim,Oliver Baumann,GER,31,90.0,Away,Arminia,Draw,2,0,2,100.0,0.8,9,15,60.0,36,4,30.6,34.6,7,57.1,44.0,10,2,20.0,0,10.2
+76,2021-2022,5,Augsburg,Rafał Gikiewicz,POL,33,90.0,Home,Mönchengladbach,Win,0,0,0,,0.0,7,20,35.0,26,6,65.4,47.5,5,60.0,44.4,8,2,25.0,0,10.8
+77,2021-2022,5,Mönchengladbach,Yann Sommer,SUI,32,90.0,Away,Augsburg,Defeat,1,1,0,0.0,0.7,6,8,75.0,31,3,25.8,28.7,6,0.0,21.7,6,1,16.7,4,25.3
+78,2021-2022,5,Mainz 05,Robin Zentner,GER,26,90.0,Home,Freiburg,Draw,1,0,1,100.0,0.6,1,9,11.1,22,3,22.7,25.8,11,36.4,42.5,7,0,0.0,0,16.0
+79,2021-2022,5,Freiburg,Mark Flekken,NED,28,90.0,Away,Mainz 05,Draw,3,0,3,100.0,0.9,11,31,35.5,41,6,61.0,50.1,6,100.0,73.8,8,0,0.0,1,15.0
+80,2021-2022,5,Bayern Munich,Manuel Neuer,GER,35,90.0,Home,Bochum,Win,2,0,2,100.0,0.5,4,5,80.0,40,6,10.0,22.8,4,25.0,28.3,7,1,14.3,1,19.7
+81,2021-2022,5,Bochum,Manuel Riemann,GER,33,90.0,Away,Bayern Munich,Defeat,14,7,8,50.0,4.9,15,29,51.7,34,2,67.6,49.8,9,66.7,51.1,14,2,14.3,0,15.4
+82,2021-2022,5,Köln,Timo Horn,GER,28,90.0,Home,RB Leipzig,Draw,9,1,8,88.9,2.7,10,13,76.9,40,7,30.0,33.2,5,20.0,34.2,5,1,20.0,0,13.8
+83,2021-2022,5,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Away,Köln,Draw,6,1,5,83.3,2.2,6,16,37.5,29,2,51.7,42.8,7,14.3,24.7,8,1,12.5,4,27.9
+84,2021-2022,5,Stuttgart,Florian Müller,GER,23,90.0,Home,Bayer Leverkusen,Defeat,4,3,1,25.0,2.2,4,7,57.1,17,1,35.3,30.6,5,20.0,31.8,6,0,0.0,1,18.7
+85,2021-2022,5,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Away,Stuttgart,Win,6,1,5,83.3,1.5,5,28,17.9,25,5,64.0,45.3,13,92.3,63.6,8,1,12.5,1,19.2
+86,2021-2022,5,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Union Berlin,Win,4,2,3,75.0,1.2,6,15,40.0,38,3,31.6,34.1,3,100.0,66.3,11,3,27.3,1,13.0
+87,2021-2022,5,Union Berlin,Andreas Luthe,GER,34,90.0,Away,Dortmund,Defeat,5,4,2,20.0,2.2,2,13,15.4,22,3,40.9,38.3,6,66.7,49.3,6,0,0.0,1,12.5
+88,2021-2022,5,Wolfsburg,Koen Casteels,BEL,29,90.0,Home,Eintracht Frankfurt,Draw,2,1,1,50.0,1.3,12,22,54.5,50,2,40.0,33.9,5,40.0,41.4,11,1,9.1,1,16.7
+89,2021-2022,5,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Wolfsburg,Draw,6,1,5,83.3,1.8,6,17,35.3,20,4,50.0,37.0,8,87.5,65.8,12,0,0.0,1,17.8
+90,2021-2022,6,Greuther Fürth,Sascha Burchert,GER,31,90.0,Home,Bayern Munich,Defeat,4,3,2,25.0,1.2,6,19,31.6,28,6,50.0,43.3,6,83.3,62.2,12,0,0.0,3,19.7
+91,2021-2022,6,Bayern Munich,Manuel Neuer,GER,35,90.0,Away,Greuther Fürth,Win,5,1,4,80.0,1.2,3,6,50.0,46,14,13.0,28.8,2,0.0,34.5,13,1,7.7,3,16.1
+92,2021-2022,6,Hoffenheim,Oliver Baumann,GER,31,90.0,Home,Wolfsburg,Win,3,1,2,66.7,0.8,2,15,13.3,45,7,26.7,32.4,8,37.5,36.6,9,1,11.1,0,8.8
+93,2021-2022,6,Wolfsburg,Koen Casteels,BEL,29,90.0,Away,Hoffenheim,Defeat,3,3,0,0.0,2.0,5,8,62.5,40,1,15.0,29.0,10,20.0,23.7,13,0,0.0,1,16.4
+94,2021-2022,6,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Home,Hertha BSC,Win,2,0,2,100.0,0.1,7,12,58.3,36,2,30.6,32.9,2,50.0,34.5,2,0,0.0,1,16.3
+95,2021-2022,6,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,RB Leipzig,Defeat,8,6,3,37.5,3.4,7,12,58.3,29,8,24.1,30.6,6,83.3,58.5,8,0,0.0,2,17.5
+96,2021-2022,6,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Home,Mainz 05,Win,5,0,5,100.0,2.6,7,12,58.3,29,2,37.9,37.6,11,9.1,30.2,2,0,0.0,1,17.5
+97,2021-2022,6,Mainz 05,Robin Zentner,GER,26,90.0,Away,Bayer Leverkusen,Defeat,9,1,8,88.9,2.6,6,17,35.3,22,5,45.5,37.4,11,63.6,50.5,10,0,0.0,2,21.0
+98,2021-2022,6,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Home,Köln,Draw,2,1,1,50.0,0.9,7,23,30.4,21,3,71.4,50.7,14,57.1,53.8,11,0,0.0,0,11.5
+99,2021-2022,6,Köln,Timo Horn,GER,28,90.0,Away,Eintracht Frankfurt,Draw,3,1,2,66.7,0.8,5,9,55.6,29,2,20.7,35.4,9,33.3,30.7,12,0,0.0,1,17.3
+100,2021-2022,6,Union Berlin,Andreas Luthe,GER,34,90.0,Home,Arminia,Win,2,0,2,100.0,0.2,2,10,20.0,35,12,17.1,29.9,5,80.0,55.0,7,1,14.3,1,14.6
+101,2021-2022,6,Arminia,Stefan Ortega,GER,28,90.0,Away,Union Berlin,Defeat,4,1,3,75.0,0.9,12,35,34.3,50,4,54.0,46.0,11,72.7,62.4,17,0,0.0,3,20.0
+102,2021-2022,6,Mönchengladbach,Yann Sommer,SUI,32,90.0,Home,Dortmund,Win,0,0,0,,0.0,7,10,70.0,40,6,20.0,27.1,4,50.0,41.0,5,0,0.0,0,13.3
+103,2021-2022,6,Dortmund,Gregor Kobel,SUI,23,90.0,Away,Mönchengladbach,Defeat,3,1,2,66.7,1.1,4,13,30.8,28,3,35.7,35.1,4,75.0,60.0,8,1,12.5,0,14.0
+104,2021-2022,6,Bochum,Manuel Riemann,GER,33,90.0,Home,Stuttgart,Draw,3,0,3,100.0,0.5,14,36,38.9,52,2,53.8,42.7,8,100.0,71.6,5,0,0.0,3,19.2
+105,2021-2022,6,Stuttgart,Florian Müller,GER,23,90.0,Away,Bochum,Draw,4,0,4,100.0,0.3,3,10,30.0,30,5,26.7,29.2,8,25.0,25.5,11,1,9.1,0,8.8
+106,2021-2022,6,Freiburg,Mark Flekken,NED,28,90.0,Home,Augsburg,Win,2,0,2,100.0,0.3,13,28,46.4,35,1,51.4,40.1,11,90.9,77.4,2,0,0.0,1,23.3
+107,2021-2022,6,Augsburg,Rafał Gikiewicz,POL,33,90.0,Away,Freiburg,Defeat,6,3,4,66.7,2.7,6,15,40.0,30,6,33.3,38.1,7,71.4,56.1,7,1,14.3,0,12.7
+108,2021-2022,7,Köln,Timo Horn,GER,28,90.0,Home,Greuther Fürth,Win,3,1,2,66.7,0.6,8,13,61.5,39,3,28.2,34.7,6,33.3,41.7,9,0,0.0,2,19.9
+109,2021-2022,7,Greuther Fürth,Marius Funk,GER,25,90.0,Away,Köln,Defeat,8,3,5,62.5,3.5,14,31,45.2,26,2,84.6,61.6,10,90.0,68.5,12,1,8.3,3,18.9
+110,2021-2022,7,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Augsburg,Win,4,1,3,75.0,0.6,2,6,33.3,21,3,23.8,33.5,3,33.3,31.3,5,0,0.0,1,16.8
+111,2021-2022,7,Augsburg,Rafał Gikiewicz,POL,33,90.0,Away,Dortmund,Defeat,3,2,2,66.7,1.3,5,21,23.8,15,3,53.3,44.5,13,100.0,70.6,4,1,25.0,1,17.3
+112,2021-2022,7,Hertha BSC,Alexander Schwolow,GER,29,90.0,Home,Freiburg,Defeat,6,2,4,66.7,2.3,3,8,37.5,26,11,19.2,26.7,6,50.0,32.2,9,0,0.0,0,14.1
+113,2021-2022,7,Freiburg,Mark Flekken,NED,28,90.0,Away,Hertha BSC,Win,3,1,2,66.7,0.8,5,18,27.8,28,2,53.6,45.9,9,33.3,38.4,5,2,40.0,0,18.7
+114,2021-2022,7,Stuttgart,Florian Müller,GER,23,90.0,Home,Hoffenheim,Win,4,1,3,75.0,0.8,3,9,33.3,23,4,30.4,29.1,7,28.6,29.3,11,2,18.2,1,11.3
+115,2021-2022,7,Hoffenheim,Oliver Baumann,GER,31,90.0,Away,Stuttgart,Defeat,6,3,3,50.0,2.1,5,18,27.8,43,5,39.5,36.3,9,11.1,20.2,4,0,0.0,0,12.0
+116,2021-2022,7,Wolfsburg,Koen Casteels,BEL,29,90.0,Home,Mönchengladbach,Defeat,8,3,5,62.5,2.6,5,8,62.5,41,5,19.5,31.3,2,0.0,13.5,5,0,0.0,2,16.8
+117,2021-2022,7,Mönchengladbach,Yann Sommer,SUI,32,90.0,Away,Wolfsburg,Win,5,1,4,80.0,1.7,7,15,46.7,36,8,38.9,37.1,6,16.7,30.2,12,0,0.0,1,11.4
+118,2021-2022,7,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Home,Bochum,Win,2,0,2,100.0,0.2,10,23,43.5,43,8,48.8,37.6,7,28.6,27.7,12,0,0.0,1,12.8
+119,2021-2022,7,Bochum,Manuel Riemann,GER,33,90.0,Away,RB Leipzig,Defeat,8,3,5,62.5,2.4,13,48,27.1,45,1,91.1,58.9,8,87.5,62.6,6,0,0.0,5,18.9
+120,2021-2022,7,Mainz 05,Robin Zentner,GER,26,90.0,Home,Union Berlin,Defeat,2,2,0,0.0,0.9,7,16,43.8,25,5,32.0,35.3,11,72.7,53.6,7,1,14.3,1,20.5
+121,2021-2022,7,Union Berlin,Andreas Luthe,GER,34,90.0,Away,Mainz 05,Win,4,1,3,75.0,0.8,6,21,28.6,33,7,45.5,41.7,9,66.7,52.9,10,1,10.0,0,12.3
+122,2021-2022,7,Bayern Munich,Manuel Neuer,GER,35,90.0,Home,Eintracht Frankfurt,Defeat,3,2,1,33.3,0.6,6,8,75.0,38,7,21.1,29.6,2,0.0,21.5,2,1,50.0,9,39.9
+123,2021-2022,7,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Bayern Munich,Win,10,1,9,90.0,1.4,10,40,25.0,31,5,80.6,51.2,20,75.0,53.8,8,0,0.0,1,12.2
+124,2021-2022,7,Arminia,Stefan Ortega,GER,28,90.0,Home,Bayer Leverkusen,Defeat,6,4,3,50.0,2.5,10,13,76.9,33,4,27.3,33.3,11,36.4,34.7,6,1,16.7,0,11.8
+125,2021-2022,7,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Away,Arminia,Win,3,0,3,100.0,0.7,1,5,20.0,27,5,11.1,21.7,7,28.6,29.0,7,0,0.0,1,18.2
+126,2021-2022,8,Hoffenheim,Oliver Baumann,GER,31,90.0,Home,Köln,Win,0,0,0,,0.0,6,21,28.6,33,2,51.5,41.1,14,28.6,27.3,7,0,0.0,0,10.0
+127,2021-2022,8,Köln,Timo Horn,GER,28,90.0,Away,Hoffenheim,Defeat,8,5,3,37.5,3.3,5,14,35.7,31,3,41.9,38.1,5,20.0,29.4,9,0,0.0,0,14.0
+128,2021-2022,8,Freiburg,Mark Flekken,NED,28,90.0,Home,RB Leipzig,Draw,2,1,2,100.0,1.0,6,15,40.0,37,6,29.7,36.8,5,80.0,60.4,7,0,0.0,2,14.3
+129,2021-2022,8,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Away,Freiburg,Draw,3,1,2,66.7,1.2,12,22,54.5,21,3,52.4,44.1,11,100.0,68.8,9,0,0.0,3,21.9
+130,2021-2022,8,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Home,Hertha BSC,Defeat,6,2,4,66.7,2.8,4,10,40.0,26,4,30.8,30.0,8,25.0,34.3,8,0,0.0,3,22.0
+131,2021-2022,8,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,Eintracht Frankfurt,Win,4,1,4,100.0,2.7,9,29,31.0,36,3,52.8,41.0,10,100.0,68.4,9,0,0.0,0,7.2
+132,2021-2022,8,Union Berlin,Andreas Luthe,GER,34,90.0,Home,Wolfsburg,Win,4,0,4,100.0,1.2,11,31,35.5,45,5,60.0,44.3,8,50.0,40.8,16,5,31.3,1,13.3
+133,2021-2022,8,Wolfsburg,Koen Casteels,BEL,29,90.0,Away,Union Berlin,Defeat,3,2,1,33.3,1.5,7,16,43.8,30,4,40.0,34.9,4,100.0,64.3,9,0,0.0,0,10.0
+134,2021-2022,8,Greuther Fürth,Marius Funk,GER,25,90.0,Home,Bochum,Defeat,2,1,1,50.0,1.1,9,32,28.1,46,4,54.3,46.2,10,70.0,53.5,10,1,10.0,1,15.7
+135,2021-2022,8,Bochum,Manuel Riemann,GER,33,90.0,Away,Greuther Fürth,Win,3,0,3,100.0,0.4,20,41,48.8,39,5,82.1,55.1,9,100.0,60.8,6,0,0.0,1,16.0
+136,2021-2022,8,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Mainz 05,Win,2,1,1,50.0,0.7,5,13,38.5,38,1,26.3,32.4,6,50.0,45.2,3,0,0.0,1,20.0
+137,2021-2022,8,Mainz 05,Robin Zentner,GER,26,90.0,Away,Dortmund,Defeat,3,3,1,33.3,1.6,3,12,25.0,23,4,52.2,38.8,6,0.0,20.0,9,0,0.0,2,18.1
+138,2021-2022,8,Mönchengladbach,Yann Sommer,SUI,32,90.0,Home,Stuttgart,Draw,2,1,1,50.0,0.3,4,12,33.3,39,3,25.6,30.8,3,66.7,53.0,1,0,0.0,1,15.8
+139,2021-2022,8,Stuttgart,Fabian Bredlow,GER,26,90.0,Away,Mönchengladbach,Draw,8,1,7,87.5,1.7,6,10,60.0,17,5,47.1,38.6,13,15.4,26.5,6,1,16.7,0,9.0
+140,2021-2022,8,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Home,Bayern Munich,Defeat,11,5,6,54.5,3.2,5,14,35.7,41,11,22.0,27.0,10,50.0,39.5,8,2,25.0,1,11.9
+141,2021-2022,8,Bayern Munich,Manuel Neuer,GER,35,90.0,Away,Bayer Leverkusen,Win,4,1,3,75.0,1.3,4,4,100.0,27,4,14.8,28.7,4,0.0,20.5,3,0,0.0,2,22.5
+142,2021-2022,8,Augsburg,Rafał Gikiewicz,POL,33,90.0,Home,Arminia,Draw,2,1,1,50.0,0.5,10,24,41.7,32,4,53.1,42.9,7,100.0,68.9,10,0,0.0,1,12.7
+143,2021-2022,8,Arminia,Stefan Ortega,GER,28,90.0,Away,Augsburg,Draw,6,1,5,83.3,1.3,14,33,42.4,41,2,65.9,51.1,6,100.0,76.3,5,1,20.0,0,13.0
+144,2021-2022,9,Mainz 05,Robin Zentner,GER,26,90.0,Home,Augsburg,Win,2,1,1,50.0,0.8,1,9,11.1,27,4,33.3,38.7,5,0.0,12.4,7,0,0.0,1,13.6
+145,2021-2022,9,Augsburg,Rafał Gikiewicz,POL,33,90.0,Away,Mainz 05,Defeat,9,4,5,55.6,3.7,5,18,27.8,32,5,43.8,39.2,8,50.0,45.1,6,1,16.7,2,16.8
+146,2021-2022,9,Arminia,Stefan Ortega,GER,28,90.0,Home,Dortmund,Defeat,6,3,4,66.7,2.1,8,23,34.8,41,4,51.2,45.9,4,50.0,41.8,6,0,0.0,0,13.4
+147,2021-2022,9,Dortmund,Gregor Kobel,SUI,23,45.0,Away,Arminia,Win,2,0,2,100.0,0.8,2,5,40.0,23,2,21.7,32.5,2,0.0,10.0,3,0,0.0,0,13.0
+148,2021-2022,9,Dortmund,Marwin Hitz,SUI,34,45.0,Away,Arminia,Win,4,1,4,100.0,1.3,2,3,66.7,20,5,15.0,32.6,3,0.0,22.0,3,0,0.0,0,11.8
+149,2021-2022,9,Wolfsburg,Koen Casteels,BEL,29,90.0,Home,Freiburg,Defeat,4,2,2,50.0,1.7,5,11,45.5,26,5,34.6,32.8,8,25.0,28.5,10,0,0.0,0,9.7
+150,2021-2022,9,Freiburg,Mark Flekken,NED,28,90.0,Away,Wolfsburg,Win,4,0,4,100.0,0.6,12,33,36.4,44,3,63.6,50.8,7,71.4,61.9,12,1,8.3,0,12.2
+151,2021-2022,9,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Home,Greuther Fürth,Win,3,1,3,100.0,1.2,4,7,57.1,26,10,23.1,33.1,2,50.0,38.5,13,2,15.4,1,16.4
+152,2021-2022,9,Greuther Fürth,Marius Funk,GER,25,90.0,Away,RB Leipzig,Defeat,4,4,1,25.0,3.7,5,18,27.8,32,4,40.6,38.6,10,50.0,46.1,7,1,14.3,4,19.8
+153,2021-2022,9,Bayern Munich,Manuel Neuer,GER,35,90.0,Home,Hoffenheim,Win,1,0,1,100.0,0.7,5,13,38.5,52,2,25.0,31.1,9,0.0,24.6,9,0,0.0,3,20.7
+154,2021-2022,9,Hoffenheim,Oliver Baumann,GER,31,90.0,Away,Bayern Munich,Defeat,7,4,3,42.9,2.3,5,12,41.7,31,1,32.3,33.5,9,22.2,30.3,3,0,0.0,1,18.3
+155,2021-2022,9,Hertha BSC,Alexander Schwolow,GER,29,90.0,Home,Mönchengladbach,Win,1,0,1,100.0,0.0,8,22,36.4,31,4,48.4,40.0,8,87.5,61.6,5,0,0.0,0,14.4
+156,2021-2022,9,Mönchengladbach,Yann Sommer,SUI,32,90.0,Away,Hertha BSC,Defeat,4,1,3,75.0,0.8,5,6,83.3,19,5,21.1,28.4,4,50.0,32.8,4,1,25.0,3,21.0
+157,2021-2022,9,Köln,Timo Horn,GER,28,90.0,Home,Bayer Leverkusen,Draw,5,2,3,60.0,0.8,8,12,66.7,34,8,29.4,32.8,7,28.6,32.0,2,0,0.0,0,14.1
+158,2021-2022,9,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Away,Köln,Draw,5,2,3,60.0,1.2,8,30,26.7,28,4,75.0,51.4,13,69.2,53.5,15,1,6.7,1,18.3
+159,2021-2022,9,Stuttgart,Fabian Bredlow,GER,26,90.0,Home,Union Berlin,Draw,3,1,2,66.7,0.8,2,3,66.7,24,3,12.5,28.8,8,0.0,17.1,13,0,0.0,3,18.3
+160,2021-2022,9,Union Berlin,Andreas Luthe,GER,34,90.0,Away,Stuttgart,Draw,2,1,1,50.0,0.9,6,19,31.6,42,3,33.3,34.8,6,83.3,50.0,6,0,0.0,0,11.8
+161,2021-2022,9,Bochum,Manuel Riemann,GER,33,90.0,Home,Eintracht Frankfurt,Win,5,0,5,100.0,1.5,16,35,45.7,37,0,83.8,60.4,7,57.1,46.6,6,2,33.3,0,11.0
+162,2021-2022,9,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Bochum,Defeat,7,2,5,71.4,2.3,13,27,48.1,48,6,35.4,31.2,11,90.9,60.9,7,1,14.3,2,15.0
+163,2021-2022,10,Hoffenheim,Oliver Baumann,GER,31,90.0,Home,Hertha BSC,Win,2,0,2,100.0,0.2,1,9,11.1,34,4,26.5,29.4,3,0.0,15.3,11,0,0.0,2,14.7
+164,2021-2022,10,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,Hoffenheim,Defeat,3,2,1,33.3,1.1,6,15,40.0,33,6,36.4,34.8,7,42.9,46.0,12,0,0.0,1,12.8
+165,2021-2022,10,Union Berlin,Andreas Luthe,GER,34,90.0,Home,Bayern Munich,Defeat,5,5,1,20.0,4.3,4,16,25.0,28,5,57.1,42.2,6,0.0,14.3,8,1,12.5,1,16.6
+166,2021-2022,10,Bayern Munich,Manuel Neuer,GER,35,90.0,Away,Union Berlin,Win,6,2,4,66.7,1.8,8,14,57.1,34,7,32.4,37.1,6,50.0,35.7,14,1,7.1,1,21.0
+167,2021-2022,10,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Köln,Win,5,0,5,100.0,0.7,6,19,31.6,27,5,51.9,40.7,11,45.5,41.1,9,2,22.2,1,16.8
+168,2021-2022,10,Köln,Timo Horn,GER,28,90.0,Away,Dortmund,Defeat,5,2,3,60.0,2.1,4,12,33.3,29,4,34.5,34.7,7,28.6,39.1,2,0,0.0,2,22.5
+169,2021-2022,10,Arminia,Stefan Ortega,GER,28,90.0,Home,Mainz 05,Defeat,4,2,2,50.0,2.1,11,29,37.9,50,4,48.0,42.2,8,62.5,47.9,8,0,0.0,3,19.1
+170,2021-2022,10,Mainz 05,Robin Zentner,GER,27,90.0,Away,Arminia,Win,6,1,5,83.3,1.1,5,12,41.7,31,11,38.7,36.3,4,0.0,11.3,6,0,0.0,0,12.8
+171,2021-2022,10,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Home,Wolfsburg,Defeat,8,2,6,75.0,2.5,2,7,28.6,23,3,26.1,35.1,4,25.0,39.0,6,0,0.0,0,17.0
+172,2021-2022,10,Wolfsburg,Koen Casteels,BEL,29,90.0,Away,Bayer Leverkusen,Win,0,0,0,,0.4,9,20,45.0,21,4,57.1,44.9,13,61.5,47.8,11,0,0.0,0,10.3
+173,2021-2022,10,Freiburg,Mark Flekken,NED,28,90.0,Home,Greuther Fürth,Win,4,1,3,75.0,1.1,9,19,47.4,34,4,44.1,39.2,6,66.7,57.2,5,0,0.0,0,7.8
+174,2021-2022,10,Greuther Fürth,Marius Funk,GER,25,90.0,Away,Freiburg,Defeat,4,3,3,50.0,1.3,4,14,28.6,35,4,34.3,34.5,8,25.0,30.0,5,0,0.0,0,17.8
+175,2021-2022,10,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Home,RB Leipzig,Draw,8,1,7,87.5,2.2,7,19,36.8,28,3,50.0,39.9,10,50.0,42.9,7,0,0.0,0,17.2
+176,2021-2022,10,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Away,Eintracht Frankfurt,Draw,3,1,2,66.7,0.2,8,15,53.3,22,2,40.9,34.0,12,50.0,40.8,3,0,0.0,1,17.8
+177,2021-2022,10,Augsburg,Rafał Gikiewicz,POL,34,90.0,Home,Stuttgart,Win,3,1,2,66.7,0.6,7,20,35.0,30,4,56.7,40.5,3,100.0,68.7,7,1,14.3,0,14.6
+178,2021-2022,10,Stuttgart,Fabian Bredlow,GER,26,90.0,Away,Augsburg,Defeat,10,4,6,60.0,3.6,2,4,50.0,22,8,18.2,25.0,8,0.0,7.9,10,0,0.0,0,14.1
+179,2021-2022,10,Mönchengladbach,Yann Sommer,SUI,32,90.0,Home,Bochum,Win,4,1,3,75.0,0.5,2,10,20.0,36,2,19.4,29.2,5,60.0,49.8,7,1,14.3,1,40.0
+180,2021-2022,10,Bochum,Manuel Riemann,GER,33,90.0,Away,Mönchengladbach,Defeat,4,2,2,50.0,2.1,12,26,46.2,35,3,68.6,47.8,6,33.3,43.5,5,1,20.0,2,18.6
+181,2021-2022,11,Mainz 05,Robin Zentner,GER,27,90.0,Home,Mönchengladbach,Draw,5,1,4,80.0,1.4,2,6,33.3,18,8,22.2,31.1,7,28.6,28.7,5,0,0.0,1,16.9
+182,2021-2022,11,Mönchengladbach,Yann Sommer,SUI,32,90.0,Away,Mainz 05,Draw,8,1,7,87.5,2.5,9,20,45.0,31,6,48.4,42.6,10,50.0,41.1,8,0,0.0,0,12.0
+183,2021-2022,11,Bochum,Manuel Riemann,GER,33,90.0,Home,Hoffenheim,Win,1,0,1,100.0,0.1,18,38,47.4,40,2,82.5,53.1,8,62.5,57.0,13,1,7.7,0,15.0
+184,2021-2022,11,Hoffenheim,Oliver Baumann,GER,31,90.0,Away,Bochum,Defeat,4,2,2,50.0,1.4,5,15,33.3,61,7,23.0,28.5,6,16.7,28.5,6,0,0.0,3,24.6
+185,2021-2022,11,Bayern Munich,Manuel Neuer,GER,35,90.0,Home,Freiburg,Win,3,1,2,66.7,1.3,6,10,60.0,46,2,21.7,28.3,8,0.0,22.4,10,0,0.0,2,29.3
+186,2021-2022,11,Freiburg,Mark Flekken,NED,28,90.0,Away,Bayern Munich,Defeat,11,2,9,81.8,2.6,17,30,56.7,27,6,66.7,46.7,13,92.3,67.5,10,1,10.0,1,19.6
+187,2021-2022,11,Wolfsburg,Koen Casteels,BEL,29,90.0,Home,Augsburg,Win,3,0,3,100.0,0.7,10,23,43.5,44,5,47.7,38.1,4,50.0,43.8,7,1,14.3,0,8.0
+188,2021-2022,11,Augsburg,Rafał Gikiewicz,POL,34,90.0,Away,Wolfsburg,Defeat,3,1,2,66.7,0.3,5,15,33.3,25,3,44.0,40.0,8,50.0,48.3,12,0,0.0,1,15.5
+189,2021-2022,11,Stuttgart,Fabian Bredlow,GER,26,90.0,Home,Arminia,Defeat,3,1,2,66.7,0.7,2,7,28.6,27,6,22.2,25.4,8,12.5,23.9,9,0,0.0,1,16.9
+190,2021-2022,11,Arminia,Stefan Ortega,GER,29,90.0,Away,Stuttgart,Win,3,0,3,100.0,0.5,8,27,29.6,38,1,60.5,46.6,5,80.0,57.0,7,0,0.0,2,16.3
+191,2021-2022,11,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Home,Dortmund,Win,3,1,2,66.7,0.8,4,18,22.2,32,5,50.0,45.3,3,66.7,52.0,7,0,0.0,1,17.2
+192,2021-2022,11,Dortmund,Gregor Kobel,SUI,23,90.0,Away,RB Leipzig,Defeat,6,2,4,66.7,2.2,5,12,41.7,30,7,30.0,31.0,7,42.9,43.3,8,1,12.5,1,14.4
+193,2021-2022,11,Hertha BSC,Alexander Schwolow,GER,29,90.0,Home,Bayer Leverkusen,Draw,4,1,3,75.0,1.4,6,11,54.5,30,8,23.3,30.5,8,50.0,45.1,8,3,37.5,0,9.6
+194,2021-2022,11,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Away,Hertha BSC,Draw,5,1,4,80.0,0.8,3,7,42.9,28,8,17.9,27.3,9,22.2,31.3,6,0,0.0,1,16.5
+195,2021-2022,11,Köln,Timo Horn,GER,28,90.0,Home,Union Berlin,Draw,3,2,1,33.3,0.8,6,12,50.0,40,4,25.0,29.9,3,66.7,49.3,6,0,0.0,1,19.0
+196,2021-2022,11,Union Berlin,Andreas Luthe,GER,34,90.0,Away,Köln,Draw,5,2,3,60.0,1.4,5,22,22.7,17,1,58.8,49.6,14,85.7,61.1,10,1,10.0,0,13.8
+197,2021-2022,11,Greuther Fürth,Marius Funk,GER,25,90.0,Home,Eintracht Frankfurt,Defeat,4,2,2,50.0,1.7,12,32,37.5,47,2,57.4,43.2,7,71.4,49.3,3,0,0.0,1,18.8
+198,2021-2022,11,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Greuther Fürth,Win,2,1,1,50.0,1.4,7,18,38.9,26,3,61.5,41.5,8,25.0,29.8,12,1,8.3,0,17.5
+199,2021-2022,12,Augsburg,Rafał Gikiewicz,POL,34,90.0,Home,Bayern Munich,Win,4,1,3,75.0,0.8,10,27,37.0,18,1,83.3,54.9,13,92.3,62.3,14,1,7.1,0,10.0
+200,2021-2022,12,Bayern Munich,Manuel Neuer,GER,35,90.0,Away,Augsburg,Defeat,3,2,1,33.3,1.5,2,4,50.0,36,2,11.1,24.3,1,0.0,15.0,7,0,0.0,4,38.8
+201,2021-2022,12,Arminia,Stefan Ortega,GER,29,90.0,Home,Wolfsburg,Draw,5,2,3,60.0,2.7,13,29,44.8,27,1,81.5,55.1,11,63.6,51.2,5,0,0.0,0,16.0
+202,2021-2022,12,Wolfsburg,Koen Casteels,BEL,29,90.0,Away,Arminia,Draw,2,2,1,50.0,1.8,4,5,80.0,28,6,14.3,25.7,5,20.0,29.2,10,1,10.0,3,17.6
+203,2021-2022,12,Mönchengladbach,Yann Sommer,SUI,32,90.0,Home,Greuther Fürth,Win,1,0,1,100.0,0.0,3,8,37.5,32,4,21.9,31.3,4,25.0,24.5,7,0,0.0,0,9.5
+204,2021-2022,12,Greuther Fürth,Marius Funk,GER,25,90.0,Away,Mönchengladbach,Defeat,11,4,7,63.6,3.2,5,18,27.8,34,4,32.4,35.9,10,70.0,52.7,3,0,0.0,0,12.2
+205,2021-2022,12,Hoffenheim,Oliver Baumann,GER,31,90.0,Home,RB Leipzig,Win,0,0,0,,0.0,8,17,47.1,31,3,45.2,39.2,6,50.0,42.0,8,0,0.0,1,11.6
+206,2021-2022,12,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Away,Hoffenheim,Defeat,8,2,6,75.0,1.2,2,3,66.7,28,7,7.1,23.0,10,10.0,23.2,10,0,0.0,0,8.5
+207,2021-2022,12,Bayer Leverkusen,Lukáš Hrádecký,FIN,31,90.0,Home,Bochum,Win,7,0,7,100.0,0.2,7,25,28.0,43,6,53.5,41.1,11,18.2,27.5,8,0,0.0,1,16.7
+208,2021-2022,12,Bochum,Manuel Riemann,GER,33,90.0,Away,Bayer Leverkusen,Defeat,5,1,4,80.0,1.2,13,24,54.2,32,5,59.4,45.0,7,71.4,49.9,2,0,0.0,2,19.3
+209,2021-2022,12,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Stuttgart,Win,4,1,3,75.0,1.0,1,5,20.0,30,4,6.7,24.7,5,60.0,45.0,2,0,0.0,0,12.5
+210,2021-2022,12,Stuttgart,Florian Müller,GER,24,90.0,Away,Dortmund,Defeat,5,2,2,60.0,2.1,1,8,12.5,26,6,23.1,27.8,11,18.2,29.4,6,1,16.7,0,9.2
+211,2021-2022,12,Union Berlin,Andreas Luthe,GER,34,90.0,Home,Hertha BSC,Win,2,0,2,100.0,0.0,5,14,35.7,24,6,41.7,40.3,9,44.4,36.9,13,1,7.7,0,10.3
+212,2021-2022,12,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,Union Berlin,Defeat,5,2,3,60.0,1.4,4,9,44.4,22,5,13.6,26.5,9,66.7,48.8,5,0,0.0,1,18.8
+213,2021-2022,12,Freiburg,Mark Flekken,NED,28,90.0,Home,Eintracht Frankfurt,Defeat,7,2,5,71.4,1.6,6,13,46.2,37,3,32.4,32.9,5,20.0,30.8,7,0,0.0,0,
+214,2021-2022,12,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Freiburg,Win,4,0,4,100.0,0.9,5,22,22.7,22,5,63.6,44.9,12,66.7,48.1,18,1,5.6,0,11.7
+215,2021-2022,12,Mainz 05,Robin Zentner,GER,27,90.0,Home,Köln,Draw,5,1,4,80.0,0.6,5,16,31.3,33,9,39.4,42.5,6,50.0,38.7,9,2,22.2,0,13.9
+216,2021-2022,12,Köln,Timo Horn,GER,28,90.0,Away,Mainz 05,Draw,2,1,1,50.0,0.3,8,23,34.8,35,5,54.3,41.1,6,66.7,44.7,8,0,0.0,1,14.7
+217,2021-2022,13,Stuttgart,Florian Müller,GER,24,90.0,Home,Mainz 05,Win,5,1,4,80.0,1.3,2,9,22.2,33,12,18.2,28.2,12,25.0,26.2,17,1,5.9,0,11.5
+218,2021-2022,13,Mainz 05,Robin Zentner,GER,27,90.0,Away,Stuttgart,Defeat,3,2,1,33.3,0.9,4,12,33.3,29,6,27.6,30.4,7,57.1,41.9,6,0,0.0,0,10.9
+219,2021-2022,13,Wolfsburg,Pavao Pervan,AUT,34,90.0,Home,Dortmund,Defeat,7,3,5,71.4,2.4,2,7,28.6,17,5,35.3,34.5,3,33.3,36.0,8,0,0.0,0,9.3
+220,2021-2022,13,Dortmund,Gregor Kobel,SUI,23,90.0,Away,Wolfsburg,Win,7,1,6,85.7,0.9,3,8,37.5,15,5,20.0,25.7,11,45.5,44.0,13,4,30.8,1,15.5
+221,2021-2022,13,Köln,Marvin Schwäbe,GER,26,90.0,Home,Mönchengladbach,Win,5,1,4,80.0,1.2,9,18,50.0,28,4,53.6,42.9,6,50.0,47.0,4,0,0.0,0,18.2
+222,2021-2022,13,Mönchengladbach,Yann Sommer,SUI,32,90.0,Away,Köln,Defeat,9,4,4,55.6,3.0,10,21,47.6,35,4,48.6,37.9,6,66.7,48.2,10,0,0.0,2,24.3
+223,2021-2022,13,Bochum,Manuel Riemann,GER,33,90.0,Home,Freiburg,Win,11,1,9,90.9,3.5,18,32,56.3,46,5,63.0,46.6,9,33.3,38.7,16,2,12.5,1,13.4
+224,2021-2022,13,Freiburg,Mark Flekken,NED,28,90.0,Away,Bochum,Defeat,6,2,4,66.7,0.9,4,15,26.7,31,7,38.7,36.2,6,50.0,44.8,11,1,9.1,1,17.7
+225,2021-2022,13,Greuther Fürth,Marius Funk,GER,25,90.0,Home,Hoffenheim,Defeat,11,6,6,45.5,5.5,12,24,50.0,42,7,38.1,36.7,8,100.0,68.4,8,0,0.0,2,18.5
+226,2021-2022,13,Hoffenheim,Philipp Pentke,GER,36,90.0,Away,Greuther Fürth,Win,7,3,4,57.1,2.4,4,11,36.4,33,5,30.3,29.5,7,14.3,27.3,8,0,0.0,1,13.6
+227,2021-2022,13,Hertha BSC,Alexander Schwolow,GER,29,90.0,Home,Augsburg,Draw,6,1,5,83.3,1.3,10,24,41.7,27,3,55.6,45.4,9,100.0,64.1,9,0,0.0,2,14.5
+228,2021-2022,13,Augsburg,Rafał Gikiewicz,POL,34,90.0,Away,Hertha BSC,Draw,4,1,3,75.0,0.4,4,9,44.4,23,4,26.1,31.7,10,30.0,35.4,8,0,0.0,1,16.7
+229,2021-2022,13,Bayern Munich,Manuel Neuer,GER,35,90.0,Home,Arminia,Win,0,0,0,,0.0,4,8,50.0,36,9,19.4,26.4,6,16.7,31.7,3,2,66.7,0,9.2
+230,2021-2022,13,Arminia,Stefan Ortega,GER,29,90.0,Away,Bayern Munich,Defeat,10,1,9,90.0,1.2,20,35,57.1,30,1,83.3,56.5,16,62.5,49.2,13,0,0.0,0,13.2
+231,2021-2022,13,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Home,Union Berlin,Win,3,1,3,100.0,1.4,6,16,37.5,32,7,50.0,36.6,3,0.0,26.3,4,0,0.0,0,11.2
+232,2021-2022,13,Union Berlin,Andreas Luthe,GER,34,90.0,Away,Eintracht Frankfurt,Defeat,2,2,0,0.0,1.4,8,29,27.6,36,3,50.0,41.0,18,61.1,46.3,14,1,7.1,1,20.5
+233,2021-2022,13,RB Leipzig,Josep Martinez,ESP,23,90.0,Home,Bayer Leverkusen,Defeat,4,3,1,25.0,1.9,2,5,40.0,15,1,26.7,35.1,7,14.3,34.3,3,0,0.0,3,26.5
+234,2021-2022,13,Bayer Leverkusen,Lukáš Hrádecký,FIN,32,90.0,Away,RB Leipzig,Win,3,1,2,66.7,0.8,8,12,66.7,27,3,37.0,35.4,3,66.7,47.7,10,0,0.0,0,9.2
+235,2021-2022,14,Union Berlin,Andreas Luthe,GER,34,90.0,Home,RB Leipzig,Win,3,1,2,66.7,0.7,9,19,47.4,27,5,55.6,45.4,13,30.8,30.4,13,1,7.7,1,13.0
+236,2021-2022,14,RB Leipzig,Péter Gulácsi,HUN,31,90.0,Away,Union Berlin,Defeat,4,2,2,50.0,1.9,3,13,23.1,23,2,47.8,39.0,7,28.6,35.4,11,0,0.0,1,16.6
+237,2021-2022,14,Mainz 05,Robin Zentner,GER,27,90.0,Home,Wolfsburg,Win,0,0,0,,0.0,6,17,35.3,19,2,57.9,44.4,13,46.2,44.5,7,0,0.0,1,26.3
+238,2021-2022,14,Wolfsburg,Pavao Pervan,AUT,34,90.0,Away,Mainz 05,Defeat,4,3,2,25.0,0.4,3,10,30.0,23,5,34.8,35.7,8,25.0,25.9,8,1,12.5,0,12.2
+239,2021-2022,14,Bayer Leverkusen,Lukáš Hrádecký,FIN,32,90.0,Home,Greuther Fürth,Win,3,1,2,66.7,1.0,7,11,63.6,27,3,25.9,30.4,7,57.1,41.3,4,0,0.0,1,22.5
+240,2021-2022,14,Greuther Fürth,Marius Funk,GER,25,90.0,Away,Bayer Leverkusen,Defeat,8,7,1,12.5,4.7,9,24,37.5,31,1,61.3,44.6,6,83.3,62.3,3,0,0.0,1,10.4
+241,2021-2022,14,Hoffenheim,Oliver Baumann,GER,31,90.0,Home,Eintracht Frankfurt,Win,3,2,1,33.3,1.0,5,20,25.0,48,4,37.5,36.3,6,33.3,37.7,13,2,15.4,2,18.9
+242,2021-2022,14,Eintracht Frankfurt,Kevin Trapp,GER,31,90.0,Away,Hoffenheim,Defeat,4,3,1,25.0,2.3,3,16,18.8,46,6,32.6,32.9,4,25.0,22.3,6,0,0.0,2,14.9
+243,2021-2022,14,Arminia,Stefan Ortega,GER,29,90.0,Home,Köln,Draw,3,1,2,66.7,0.6,16,29,55.2,34,1,73.5,48.6,8,50.0,45.0,18,0,0.0,1,18.0
+244,2021-2022,14,Köln,Marvin Schwäbe,GER,26,90.0,Away,Arminia,Draw,4,1,3,75.0,0.6,5,11,45.5,47,4,12.8,25.7,12,41.7,36.6,11,0,0.0,0,9.0
+245,2021-2022,14,Augsburg,Rafał Gikiewicz,POL,34,90.0,Home,Bochum,Defeat,6,3,3,50.0,2.0,11,23,47.8,43,7,41.9,38.3,7,71.4,44.0,4,0,0.0,4,26.5
+246,2021-2022,14,Bochum,Michael Esser,GER,34,90.0,Away,Augsburg,Win,5,2,4,80.0,1.9,8,22,36.4,30,6,50.0,40.4,13,53.8,40.5,14,0,0.0,0,8.3
+247,2021-2022,14,Dortmund,Gregor Kobel,SUI,23,90.0,Home,Bayern Munich,Defeat,5,3,3,60.0,2.5,2,11,18.2,31,10,25.8,28.6,7,42.9,39.0,4,0,0.0,1,17.3
+248,2021-2022,14,Bayern Munich,Manuel Neuer,GER,35,90.0,Away,Dortmund,Win,4,2,2,50.0,1.6,7,15,46.7,37,5,37.8,34.1,11,9.1,30.4,7,2,28.6,2,17.6
+249,2021-2022,14,Stuttgart,Florian Müller,GER,24,90.0,Home,Hertha BSC,Draw,6,2,4,66.7,1.4,4,8,50.0,29,5,24.1,25.8,3,33.3,37.7,13,0,0.0,0,6.5
+250,2021-2022,14,Hertha BSC,Alexander Schwolow,GER,29,90.0,Away,Stuttgart,Draw,3,2,1,33.3,1.3,4,8,50.0,25,3,24.0,28.6,3,66.7,43.0,8,1,12.5,0,15.0
+251,2021-2022,14,Mönchengladbach,Yann Sommer,SUI,32,90.0,Home,Freiburg,Defeat,7,6,1,14.3,4.0,4,9,44.4,33,4,21.2,26.7,5,40.0,36.6,5,0,0.0,1,13.0
+252,2021-2022,14,Freiburg,Mark Flekken,NED,28,90.0,Away,Mönchengladbach,Win,3,0,3,100.0,0.1,12,26,46.2,26,3,73.1,57.8,7,100.0,74.0,6,1,16.7,0,13.2

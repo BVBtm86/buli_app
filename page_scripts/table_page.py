@@ -1,0 +1,76 @@
+from page_scripts.stats_scripts.table_stats import *
+from PIL import Image
+
+
+def table_page(seasons, start_season):
+    buli_season = st.sidebar.selectbox("Select Season", seasons, index=start_season)
+    filter_season_df, match_day = filter_data(season=buli_season)
+
+    start_type = ["Total", "Home", "Away", "1st Period", "2nd Period"]
+    if match_day <= 17:
+        start_type.remove("2nd Period")
+
+    season_type = st.sidebar.selectbox("Table Type", start_type)
+    buli_season_df = buli_table_data(data=filter_season_df, table_type=season_type)
+
+    st.header(f'Season {buli_season}: {season_type} Table Games')
+
+    logo_col, rank_col, team_col, mp_col, w_col, d_col, l_col, gf_col, ga_col, gd_col, pts_col = st.columns(
+        [0.42, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1])
+
+    with logo_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>#</b>", unsafe_allow_html=True)
+        teams_logo = buli_season_df['Team'].unique()
+        logo_teams = [Image.open(f'images/{teams_logo[i]}.png') for i in range(len(teams_logo))]
+        st.image(logo_teams, width=24)
+
+    with rank_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>Rank</b>", unsafe_allow_html=True)
+        rank = buli_season_df.index
+        for i in rank:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with team_col:
+        st.markdown(f"<h4 style='text-align: left;'h4><b>Team</b>", unsafe_allow_html=True)
+        for i in buli_season_df['Team'].values:
+            st.markdown(f"<p style='text-align: left;'p>{i}", unsafe_allow_html=True)
+
+    with mp_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>MP</b>", unsafe_allow_html=True)
+        for i in buli_season_df['MP'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with w_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>W</b>", unsafe_allow_html=True)
+        for i in buli_season_df['W'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with d_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>D</b>", unsafe_allow_html=True)
+        for i in buli_season_df['D'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with l_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>L</b>", unsafe_allow_html=True)
+        for i in buli_season_df['L'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with gf_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>GF</b>", unsafe_allow_html=True)
+        for i in buli_season_df['GF'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with ga_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>GA</b>", unsafe_allow_html=True)
+        for i in buli_season_df['GA'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with gd_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>GD</b>", unsafe_allow_html=True)
+        for i in buli_season_df['GD'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+    with pts_col:
+        st.markdown(f"<h4 style='text-align: center;'h4><b>Pts</b>", unsafe_allow_html=True)
+        for i in buli_season_df['Pts'].values:
+            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
