@@ -142,7 +142,6 @@ def season_data_process(season, stat_type):
     return final_df
 
 
-@st.cache
 def teams_season_stats(data, stat_name, stat_filter, team_type):
     # #### Filter Season Data by Season Type
     filter_team_stat = data[data[stat_filter] == 1].reset_index(drop=True)
@@ -190,7 +189,6 @@ def teams_season_stats(data, stat_name, stat_filter, team_type):
     return season_fig, avg_value, better_avg
 
 
-@st.cache
 def teams_charts_day(data, team, stat_name, stat_filter):
     # ##### Filter Season Data by Season Type
     filter_df_team = data[(data['Team'] == team)].reset_index(drop=True)
@@ -366,7 +364,6 @@ def teams_season_type(data, team, stat_name):
     return team_stat_fig, team_data_name, team_value_1, team_value_2, team_part_name, team_value_3, team_value_4
 
 
-@st.cache
 def relationship_data(data, team, filter_type, stat_x, stat_y, stat_size, ols_line):
     # ##### Filter Season Data by Season Type
     if team != 'All Teams':
@@ -530,7 +527,6 @@ def teams_buli_type(data, analysis_seasons, filter_type, team, stat_name):
     return team_stat_fig, rank_season, better_seasons, no_seasons
 
 
-@st.cache
 def relationship_buli_data(data, team, analysis_seasons, filter_type, stat_x, stat_y, ols_line):
     # ##### Filter Season Data by Season Type
     final_df = data[

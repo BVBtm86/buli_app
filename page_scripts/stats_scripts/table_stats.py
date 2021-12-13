@@ -16,7 +16,6 @@ team_name_1 = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer
 
 @st.cache
 def filter_data(season):
-
     # ##### Read Data
     buli_df = pd.read_csv(f"./data/Seasons_data/Bundesliga_Team_Statistics_{season}.csv", index_col='Unnamed: 0')
 
@@ -51,7 +50,6 @@ def filter_data(season):
 
 
 def buli_table_data(data, table_type):
-
     # #####season Data
     buli_season = data[data[table_type] == 1].reset_index(drop=True)
 

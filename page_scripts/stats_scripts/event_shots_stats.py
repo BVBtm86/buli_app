@@ -155,6 +155,7 @@ def team_event_plot(data):
     return shot_event_fig
 
 
+@st.cache
 def players_team_events(data, team_name, season_filter):
     # ##### Team Event Data
     event_data = data[(data['Team'] == team_name) & (data[season_filter] == 1)].reset_index(drop=True)
