@@ -57,217 +57,194 @@ def match_day_page(seasons, start_season, favourite_team):
                          'own_goals'].values[0]
         st.markdown(f"<h1 style='text-align: center;'p>{away_goals}</h1>", unsafe_allow_html=True)
 
+    # Select Match Day
+    match_day = \
+        season_buli_df[(season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
+                       (season_buli_df['Venue'] == 'Home')]['Week_No'].values[0]
+
     # ##### General Statistics
     if stats_options == 'General':
         with stat_name:
             st.markdown(" ")
             st.markdown("<h5 style='text-align: center;'p>General Stats</h5>", unsafe_allow_html=True)
-            match_day = \
-                season_buli_df[(season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                               (season_buli_df['Venue'] == 'Home')]['Week_No'].values[0]
             st.markdown(f"<p style='text-align: center;'p>Match Day: {match_day}</p>", unsafe_allow_html=True)
         icon_col, stat_name_col, home_stat_col, away_stat_col = st.columns([0.25, 0.75, 2.25, 3])
         with icon_col:
-            for i in range(len(general_stats_names)):
-                st.markdown(general_emoji[i])
+            [st.markdown(gen_emoji) for gen_emoji in general_emoji]
 
         with stat_name_col:
-            for i in range(len(general_stats_names)):
-                st.markdown(general_stats_names[i])
+            [st.markdown(gen_stat_name) for gen_stat_name in general_stats_names]
 
         with home_stat_col:
-            for i in range(len(general_stats_names)):
-                home_stat = \
-                    season_buli_df[
-                        (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                        (season_buli_df['Venue'] == 'Home')][general_stats_vars[i]].values[0]
-                if general_stats_names[i] == "Possession" or general_stats_names[i] == "Aerial Duels %":
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}", unsafe_allow_html=True)
+            home_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=general_stats_vars,
+                                        venue="Home")
+            [st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}%", unsafe_allow_html=True) if (
+                    general_stats_names[i] == "Possession" or general_stats_names[
+                i] == "Aerial Duels %") else st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}",
+                                                         unsafe_allow_html=True) for i in range(len(home_stat))]
 
         with away_stat_col:
-            for i in range(len(general_stats_names)):
-                away_stat = \
-                    season_buli_df[
-                        (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team) &
-                        (season_buli_df['Venue'] == 'Away')][general_stats_vars[i]].values[0]
-                if general_stats_names[i] == "Possession" or general_stats_names[i] == "Aerial Duels %":
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}", unsafe_allow_html=True)
+            away_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=general_stats_vars,
+                                        venue="Away")
+            [st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}%", unsafe_allow_html=True) if (
+                    general_stats_names[i] == "Possession" or general_stats_names[
+                i] == "Aerial Duels %") else st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}",
+                                                         unsafe_allow_html=True) for i in range(len(away_stat))]
 
     # ##### Offensive Statistics
     if stats_options == 'Offensive':
         with stat_name:
             st.markdown(" ")
             st.markdown("<h5 style='text-align: center;'p>Offensive Stats</h5>", unsafe_allow_html=True)
-            match_day = \
-                season_buli_df[(season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                               (season_buli_df['Venue'] == 'Home')]['Week_No'].values[0]
             st.markdown(f"<p style='text-align: center;'p>Match Day: {match_day}</p>", unsafe_allow_html=True)
         icon_col, stat_name_col, home_stat_col, away_stat_col = st.columns([0.35, 0.65, 2.25, 3])
         with icon_col:
-            for i in range(len(offensive_stats_names)):
-                st.markdown(offensive_emoji[i])
+            [st.markdown(off_emoji) for off_emoji in offensive_emoji]
 
         with stat_name_col:
-            for i in range(len(offensive_stats_names)):
-                st.markdown(offensive_stats_names[i])
+            [st.markdown(off_stat_name) for off_stat_name in offensive_stats_names]
 
         with home_stat_col:
-            for i in range(len(offensive_stats_names)):
-                home_stat = \
-                    season_buli_df[
-                        (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                        (season_buli_df['Venue'] == 'Home')][offensive_stats_var[i]].values[0]
-                if offensive_stats_names[i] == "Accuracy %" or offensive_stats_names[i] == "Dribbles %":
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}", unsafe_allow_html=True)
+            home_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=offensive_stats_var,
+                                        venue="Home")
+            [st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}%", unsafe_allow_html=True) if (
+                    offensive_stats_names[i] == "Accuracy %" or offensive_stats_names[
+                i] == "Dribbles %") else st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}",
+                                                     unsafe_allow_html=True) for i in range(len(home_stat))]
 
         with away_stat_col:
-            for i in range(len(offensive_stats_names)):
-                away_stat = \
-                    season_buli_df[
-                        (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team) &
-                        (season_buli_df['Venue'] == 'Away')][offensive_stats_var[i]].values[0]
-                if offensive_stats_names[i] == "Accuracy %" or offensive_stats_names[i] == "Dribbles %":
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}", unsafe_allow_html=True)
+            away_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=offensive_stats_var,
+                                        venue="Away")
+            [st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}%", unsafe_allow_html=True) if (
+                    offensive_stats_names[i] == "Accuracy %" or offensive_stats_names[
+                i] == "Dribbles %") else st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}",
+                                                     unsafe_allow_html=True) for i in range(len(away_stat))]
 
-    # ##### Defensive Statistics
+        # ##### Defensive Statistics
     if stats_options == 'Defensive':
         with stat_name:
             st.markdown(" ")
             st.markdown("<h5 style='text-align: center;'p>Defensive Stats</h5>", unsafe_allow_html=True)
-            match_day = \
-                season_buli_df[(season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                               (season_buli_df['Venue'] == 'Home')]['Week_No'].values[0]
             st.markdown(f"<p style='text-align: center;'p>Match Day: {match_day}</p>", unsafe_allow_html=True)
         icon_col, stat_name_col, home_stat_col, away_stat_col = st.columns([0.35, 0.65, 2.25, 3])
         with icon_col:
-            for i in range(len(defensive_stats_names)):
-                st.markdown(defensive_emoji[i])
+            [st.markdown(def_emoji) for def_emoji in defensive_emoji]
 
         with stat_name_col:
-            for i in range(len(defensive_stats_names)):
-                st.markdown(defensive_stats_names[i])
+            [st.markdown(def_stat_name) for def_stat_name in defensive_stats_names]
 
         with home_stat_col:
-            for i in range(len(defensive_stats_names)):
-                home_stat = \
-                    season_buli_df[
-                        (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                        (season_buli_df['Venue'] == 'Home')][defensive_stats_var[i]].values[0]
-                if defensive_stats_names[i] == "Tackles Won %" or defensive_stats_names[i] == "Pressure Won %":
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}", unsafe_allow_html=True)
+            home_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=defensive_stats_var,
+                                        venue="Home")
+            [st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}%", unsafe_allow_html=True) if (
+                    defensive_stats_names[i] == "Tackles Won %" or defensive_stats_names[
+                i] == "Pressure Won %") else st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}",
+                                                         unsafe_allow_html=True) for i in range(len(home_stat))]
 
         with away_stat_col:
-            for i in range(len(defensive_stats_names)):
-                away_stat = \
-                    season_buli_df[
-                        (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team) &
-                        (season_buli_df['Venue'] == 'Away')][defensive_stats_var[i]].values[0]
-                if defensive_stats_names[i] == "Tackles Won %" or defensive_stats_names[i] == "Pressure Won %":
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}", unsafe_allow_html=True)
+            away_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=defensive_stats_var,
+                                        venue="Away")
+            [st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}%", unsafe_allow_html=True) if (
+                    defensive_stats_names[i] == "Tackles Won %" or defensive_stats_names[
+                i] == "Pressure Won %") else st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}",
+                                                         unsafe_allow_html=True) for i in range(len(away_stat))]
 
     # ##### Passing Statistics
     if stats_options == 'Passing':
         with stat_name:
             st.markdown(" ")
             st.markdown("<h5 style='text-align: center;'p>Passing Stats</h5>", unsafe_allow_html=True)
-            match_day = \
-                season_buli_df[(season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                               (season_buli_df['Venue'] == 'Home')]['Week_No'].values[0]
             st.markdown(f"<p style='text-align: center;'p>Match Day: {match_day}</p>", unsafe_allow_html=True)
         icon_col, stat_name_col, home_stat_col, away_stat_col = st.columns([0.35, 0.65, 2.25, 3])
         with icon_col:
-            for i in range(len(passing_stats_names)):
-                st.markdown(passing_emoji[i])
+            [st.markdown(pass_emoji) for pass_emoji in passing_emoji]
 
         with stat_name_col:
-            for i in range(len(passing_stats_names)):
-                st.markdown(passing_stats_names[i])
+            [st.markdown(pass_stat_name) for pass_stat_name in passing_stats_names]
 
         with home_stat_col:
-            for i in range(len(passing_stats_names)):
-                home_stat = \
-                    season_buli_df[
-                        (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                        (season_buli_df['Venue'] == 'Home')][passing_stats_var[i]].values[0]
-                if passing_stats_names[i] == "Pass %" or passing_stats_names[i] == "Pass Short %" or \
-                        passing_stats_names[i] == "Pass Medium %" or passing_stats_names[i] == "Pass Long %":
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}", unsafe_allow_html=True)
+            home_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=passing_stats_var,
+                                        venue="Home")
+            [st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}%", unsafe_allow_html=True) if (
+                    passing_stats_names[i] == "Pass %" or passing_stats_names[i] == "Pass Short %" or
+                    passing_stats_names[i] == "Pass Medium %" or passing_stats_names[i] == "Pass Long %")
+             else st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}", unsafe_allow_html=True)
+             for i in range(len(home_stat))]
 
         with away_stat_col:
-            for i in range(len(passing_stats_names)):
-                away_stat = \
-                    season_buli_df[
-                        (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team) &
-                        (season_buli_df['Venue'] == 'Away')][passing_stats_var[i]].values[0]
-                if passing_stats_names[i] == "Pass %" or passing_stats_names[i] == "Pass Short %" or \
-                        passing_stats_names[i] == "Pass Medium %" or passing_stats_names[i] == "Pass Long %":
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}", unsafe_allow_html=True)
+            away_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=passing_stats_var,
+                                        venue="Away")
+            [st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}%", unsafe_allow_html=True) if (
+                    passing_stats_names[i] == "Pass %" or passing_stats_names[i] == "Pass Short %" or
+                    passing_stats_names[i] == "Pass Medium %" or passing_stats_names[i] == "Pass Long %")
+             else st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}", unsafe_allow_html=True)
+             for i in range(len(away_stat))]
 
     # ##### Goalkeeper Statistics
     if stats_options == 'Goalkeeper':
         with stat_name:
             st.markdown(" ")
             st.markdown("<h5 style='text-align: center;'p>Goalkeeper Stats</h5>", unsafe_allow_html=True)
-            match_day = \
-                season_buli_df[(season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                               (season_buli_df['Venue'] == 'Home')]['Week_No'].values[0]
             st.markdown(f"<p style='text-align: center;'p>Match Day: {match_day}</p>", unsafe_allow_html=True)
         icon_col, stat_name_col, home_stat_col, away_stat_col = st.columns([0.35, 0.65, 2.25, 3])
         with icon_col:
-            for i in range(len(gk_stats_names)):
-                st.markdown(gk_emoji[i])
+            [st.markdown(gk_emoji) for gk_emoji in goalkeeper_emoji]
 
         with stat_name_col:
-            for i in range(len(gk_stats_names)):
-                st.markdown(gk_stats_names[i])
+            [st.markdown(gk_stat_name) for gk_stat_name in gk_stats_names]
 
         with home_stat_col:
-            for i in range(len(gk_stats_names)):
-                home_stat = \
-                    season_buli_df[
-                        (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                        (season_buli_df['Venue'] == 'Home')][gk_stats_var[i]].values[0]
-                if gk_stats_names[i] == "Saves %" or gk_stats_names[i] == "Passes %" or \
-                        gk_stats_names[i] == "Goal Kicks %":
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{home_stat}", unsafe_allow_html=True)
+            home_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=gk_stats_var,
+                                        venue="Home")
+            [st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}%", unsafe_allow_html=True) if (
+                    gk_stats_names[i] == "Saves %" or gk_stats_names[i] == "Passes %" or
+                    gk_stats_names[i] == "Goal Kicks %") else
+             st.markdown(f"<p style='text-align: center;'p>{home_stat[i]}", unsafe_allow_html=True)
+             for i in range(len(home_stat))]
 
         with away_stat_col:
-            for i in range(len(gk_stats_names)):
-                away_stat = \
-                    season_buli_df[
-                        (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team) &
-                        (season_buli_df['Venue'] == 'Away')][gk_stats_var[i]].values[0]
-                if gk_stats_names[i] == "Saves %" or gk_stats_names[i] == "Passes %" or \
-                        gk_stats_names[i] == "Goal Kicks %":
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}%", unsafe_allow_html=True)
-                else:
-                    st.markdown(f"<p style='text-align: center;'p>{away_stat}", unsafe_allow_html=True)
+            away_stat = match_day_stats(data=season_buli_df,
+                                        home_team=home_team,
+                                        away_team=away_team,
+                                        stats_type=gk_stats_var,
+                                        venue="Away")
+            [st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}%", unsafe_allow_html=True) if (
+                    gk_stats_names[i] == "Saves %" or gk_stats_names[i] == "Passes %" or
+                    gk_stats_names[i] == "Goal Kicks %") else
+             st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}", unsafe_allow_html=True)
+             for i in range(len(away_stat))]
 
     if stats_options == 'Shot Events':
         with stat_name:
             st.markdown(" ")
             st.markdown("<h5 style='text-align: center;'p>Shot Events</h5>", unsafe_allow_html=True)
-            match_day = \
-                season_buli_df[(season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
-                               (season_buli_df['Venue'] == 'Home')]['Week_No'].values[0]
             st.markdown(f"<p style='text-align: center;'p>Match Day: {match_day}</p>", unsafe_allow_html=True)
 
         shot_events_df = shot_events_data_day(season=buli_season,
@@ -317,7 +294,7 @@ def match_day_page(seasons, start_season, favourite_team):
             with pitch_col:
                 st.pyplot(fig=shot_event_fig.figure)
 
-    # ##### Stadium Info
+        # ##### Stadium Info
     _, stadium_logo, _ = st.columns([2, 1, 1])
     with stadium_logo:
         if (home_team == "Sport-Club Freiburg") and (buli_season == '2021-2022') and (match_day > 6):

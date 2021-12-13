@@ -100,7 +100,7 @@ gk_stats_var = ["saves", "saves_pct", "passes_gk", "passess_pct_successful_gk", 
 
 gk_stats_names = ["Saves", "Saves %", "Passes", "Passes %", "Goal Kicks", "Goal Kicks %", "Throws"]
 
-gk_emoji = ["🧤", "🧤✅", "🔁", "🔁✅", "👟", "👟✅", "🤾"]
+goalkeeper_emoji = ["🧤", "🧤✅", "🔁", "🔁✅", "👟", "👟✅", "🤾"]
 
 
 @st.cache
@@ -150,6 +150,16 @@ def match_day_process_data(season):
 
     season_buli_df = buli_df[buli_df['Season'] == season].reset_index(drop=True)
     return season_buli_df
+
+
+def match_day_stats(data, home_team, away_team, stats_type, venue):
+    if venue == "Home":
+        day_stats = data[(data['Team'] == home_team) & (data['Opponent'] == away_team) &
+                         (data['Venue'] == 'Home')][stats_type].values[0]
+    else:
+        day_stats = data[(data['Opponent'] == home_team) & (data['Team'] == away_team) &
+                         (data['Venue'] == 'Away')][stats_type].values[0]
+    return day_stats
 
 
 @st.cache
