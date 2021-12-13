@@ -132,7 +132,7 @@ def match_day_page(seasons, start_season, favourite_team):
                 i] == "Dribbles %") else st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}",
                                                      unsafe_allow_html=True) for i in range(len(away_stat))]
 
-        # ##### Defensive Statistics
+    # ##### Defensive Statistics
     if stats_options == 'Defensive':
         with stat_name:
             st.markdown(" ")
@@ -241,6 +241,7 @@ def match_day_page(seasons, start_season, favourite_team):
              st.markdown(f"<p style='text-align: center;'p>{away_stat[i]}", unsafe_allow_html=True)
              for i in range(len(away_stat))]
 
+    # ##### Shot Events
     if stats_options == 'Shot Events':
         with stat_name:
             st.markdown(" ")
@@ -294,7 +295,7 @@ def match_day_page(seasons, start_season, favourite_team):
             with pitch_col:
                 st.pyplot(fig=shot_event_fig.figure)
 
-        # ##### Stadium Info
+    # ##### Stadium Info
     _, stadium_logo, _ = st.columns([2, 1, 1])
     with stadium_logo:
         if (home_team == "Sport-Club Freiburg") and (buli_season == '2021-2022') and (match_day > 6):

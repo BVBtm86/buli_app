@@ -2,7 +2,7 @@ from page_scripts.stats_scripts.table_stats import *
 from PIL import Image
 
 
-def table_page(seasons, start_season):
+def table_page(seasons, start_season, favourite_team):
     buli_season = st.sidebar.selectbox("Select Season", seasons, index=start_season)
     filter_season_df, match_day = filter_data(season=buli_season)
 
@@ -23,54 +23,83 @@ def table_page(seasons, start_season):
         teams_logo = buli_season_df['Team'].unique()
         logo_teams = [Image.open(f'images/{teams_logo[i]}.png') for i in range(len(teams_logo))]
         st.image(logo_teams, width=24)
-
+        pos_favourite_team = list(teams_logo).index(favourite_team)
+        print(pos_favourite_team)
     with rank_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>Rank</b>", unsafe_allow_html=True)
         rank = buli_season_df.index
-        for i in rank:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{rank[i]}</b></font>", unsafe_allow_html=True)
+         if i == pos_favourite_team else st.markdown(f"<p style='text-align: center;'p>{rank[i]}",
+                                                     unsafe_allow_html=True) for i in range(len(rank))]
 
     with team_col:
         st.markdown(f"<h4 style='text-align: left;'h4><b>Team</b>", unsafe_allow_html=True)
-        for i in buli_season_df['Team'].values:
-            st.markdown(f"<p style='text-align: left;'p>{i}", unsafe_allow_html=True)
+        team_names = buli_season_df['Team'].values
+        [st.markdown(f"<p style='text-align: left;'p><font color=red><b>{team_names[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: left;'p>{team_names[i]}", unsafe_allow_html=True)
+         for i in range(len(team_names))]
 
     with mp_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>MP</b>", unsafe_allow_html=True)
-        for i in buli_season_df['MP'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        matches_played = buli_season_df['MP'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{matches_played[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{matches_played[i]}", unsafe_allow_html=True)
+         for i in range(len(matches_played))]
 
     with w_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>W</b>", unsafe_allow_html=True)
-        for i in buli_season_df['W'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        team_wins = buli_season_df['W'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{team_wins[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{team_wins[i]}", unsafe_allow_html=True)
+         for i in range(len(team_wins))]
 
     with d_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>D</b>", unsafe_allow_html=True)
-        for i in buli_season_df['D'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        team_draws = buli_season_df['D'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{team_draws[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{team_draws[i]}", unsafe_allow_html=True)
+         for i in range(len(team_draws))]
 
     with l_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>L</b>", unsafe_allow_html=True)
-        for i in buli_season_df['L'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        team_defeats = buli_season_df['L'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{team_defeats[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{team_defeats[i]}", unsafe_allow_html=True)
+         for i in range(len(team_defeats))]
 
     with gf_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>GF</b>", unsafe_allow_html=True)
-        for i in buli_season_df['GF'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        team_goals_for = buli_season_df['GF'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{team_goals_for[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{team_goals_for[i]}", unsafe_allow_html=True)
+         for i in range(len(team_goals_for))]
 
     with ga_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>GA</b>", unsafe_allow_html=True)
-        for i in buli_season_df['GA'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        team_goals_aga = buli_season_df['GA'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{team_goals_aga[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{team_goals_aga[i]}", unsafe_allow_html=True)
+         for i in range(len(team_goals_aga))]
 
     with gd_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>GD</b>", unsafe_allow_html=True)
-        for i in buli_season_df['GD'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        team_goals_diff = buli_season_df['GD'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{team_goals_diff[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{team_goals_diff[i]}", unsafe_allow_html=True)
+         for i in range(len(team_goals_diff))]
 
     with pts_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>Pts</b>", unsafe_allow_html=True)
-        for i in buli_season_df['Pts'].values:
-            st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+        team_points = buli_season_df['Pts'].values
+        [st.markdown(f"<p style='text-align: center;'p><font color=red><b>{team_points[i]}</b></font>",
+                     unsafe_allow_html=True) if i == pos_favourite_team else
+         st.markdown(f"<p style='text-align: center;'p>{team_points[i]}", unsafe_allow_html=True)
+         for i in range(len(team_points))]

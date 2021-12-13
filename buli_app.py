@@ -49,7 +49,8 @@ def main():
     # ##### Season Table
     elif statistics_track == 'Season Table':
         table_page(seasons=seasons,
-                   start_season=start_season)
+                   start_season=start_season,
+                   favourite_team=favourite_team)
 
     # ##### Team Statistics
     elif statistics_track == 'Team Statistics':
