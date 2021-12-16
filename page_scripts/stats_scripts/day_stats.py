@@ -55,7 +55,7 @@ stadiums = {"1. FC Köln": "RheinEnergieStadion", "1. FC Nürnberg": "Max-Morloc
             "1. FSV Mainz 05": "Opel Arena", "RasenBallsport Leipzig": "Red Bull Arena",
             "Sport-Club Freiburg": ["Dreisamstadion", "Europa-Park Stadion"], "SC Paderborn 07": "Benteler-Arena",
             "FC Schalke 04": "Veltins-Arena", "1. FC Union Berlin": "Stadion An der Alten Försterei",
-            "VfB Stuttgart": "Mercedes-Benz Arena", "VfL Bochum": "Vonovia Ruhrstadion",
+            "VfB Stuttgart": "Mercedes-Benz Arena", "VfL Bochum 1848": "Vonovia Ruhrstadion",
             "VfL Wolfsburg": "Volkswagen Arena", "Werder Bremen": "Weser-Stadion"}
 
 # ##### General Statistics
