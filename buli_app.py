@@ -93,13 +93,13 @@ def main():
     _, fan_club_name, fan_club_logo = st.columns([10, 1, 1])
     with fan_club_name:
         st.markdown(f"<p style='text-align: left;'p>", unsafe_allow_html=True)
-        st.markdown(f"<p style='text-align: left;'p>Created By: ", unsafe_allow_html=True)
+        st.markdown(f"<p style='text-align: right;'p>Created By: ", unsafe_allow_html=True)
     with fan_club_logo:
         bvb_ro_logo = Image.open('images/BVB_Romania.png')
         st.image(bvb_ro_logo, width=50)
     _, name_col = st.columns([10, 1.75])
     with name_col:
-        st.markdown("@ <b><font color = red><a href='mailto:omescu.mario.lucian@gmail.com' "
+        st.markdown("@ <b><font color = red style='text-align: right;'><a href='mailto:omescu.mario.lucian@gmail.com' "
                     "style='text-decoration: none;'>Mario Omescu</a></font></b>", unsafe_allow_html=True)
 
 
