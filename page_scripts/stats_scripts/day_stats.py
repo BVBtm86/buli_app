@@ -67,6 +67,7 @@ general_stats_names = ["Manager", "Lineup", "Distance Covered", "Sprints", "Poss
 
 general_emoji = ["👨‍💼", "📏", "🚄", "🏃‍", "⚽", "🤼‍", "🚫", "📐", "🤒", "🟨", "🟥"]
 
+
 # ##### Offensive Statistics
 offensive_stats_var = ['xg', 'assists', "assisted_shots", "shots_total", "shots_on_target", "shot_accuracy",
                        "blocked_shots", "dribbles", "successful_dribbles"]
@@ -103,7 +104,6 @@ gk_stats_names = ["Saves", "Saves %", "Passes", "Passes %", "Goal Kicks", "Goal 
 goalkeeper_emoji = ["🧤", "🧤✅", "🔁", "🔁✅", "👟", "👟✅", "🤾"]
 
 
-@st.cache
 def match_day_process_data(season):
     # ##### Read Data
     buli_df = pd.read_csv(f"./data/Seasons_data/Bundesliga_Team_Statistics_{season}.csv", index_col='Unnamed: 0')

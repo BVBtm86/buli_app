@@ -19,7 +19,7 @@ def table_page(seasons, start_season, favourite_team):
         [0.42, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1])
 
     with logo_col:
-        st.markdown(f"<h4 style='text-align: center;'h4><b>#</b>", unsafe_allow_html=True)
+        st.markdown(f"<h4 style='text-align: center;'h4><b><font color='white'>#</font></b>", unsafe_allow_html=True)
         teams_logo = buli_season_df['Team'].unique()
         logo_teams = [Image.open(f'images/{teams_logo[i]}.png') for i in range(len(teams_logo))]
         st.image(logo_teams, width=24)
