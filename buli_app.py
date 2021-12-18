@@ -9,7 +9,10 @@ from page_scripts.season_predictions_page import *
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",
+                   page_title="Bundesliga App",
+                   page_icon="⚽",
+                   initial_sidebar_state="expanded")
 
 # ##### Logo
 buli_logo = Image.open('images/Bundesliga.png')
