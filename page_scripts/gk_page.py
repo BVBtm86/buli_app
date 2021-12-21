@@ -169,7 +169,10 @@ def gk_page(seasons, start_season, favourite_team):
             filter_type_gk = ["Total", "Home", "Away", "1st Period", "2nd Period"]
             stat_gk_seasons = st.selectbox("Gk Statistics", gk_stats_names_avg)
             seasons_gk_filter = st.selectbox("Select Season Type", filter_type_gk)
-            seasons_gk_name = st.selectbox("Gk Name", final_avg_gk)
+            default_player_team = buli_gk_season_df[
+                (buli_gk_season_df['Team'] == favourite_team) & (buli_gk_season_df['Season'] == seasons[-1])][
+                'Name'].unique()[0]
+            seasons_gk_name = st.selectbox("Gk Name", final_avg_gk, final_avg_gk.index(default_player_team))
 
             gk_team_name = gk_current_season_team(data=buli_gk_season_df,
                                                   season=seasons[-1],
