@@ -93,17 +93,21 @@ def main():
                         season=seasons[-1])
 
     # ##### Footer Page
-    _, fan_club_name, fan_club_logo = st.columns([10, 1, 1])
+    ref_col, fan_club_name, fan_club_logo = st.columns([10, 1, 1])
     with fan_club_name:
         st.markdown(f"<p style='text-align: left;'p>", unsafe_allow_html=True)
         st.markdown(f"<p style='text-align: right;'p>Created By: ", unsafe_allow_html=True)
     with fan_club_logo:
         bvb_ro_logo = Image.open('images/BVB_Romania.png')
         st.image(bvb_ro_logo, width=50)
-    _, name_col = st.columns([10, 1.75])
-    with name_col:
-        st.markdown("@ <b><font color = red style='text-align: right;'><a href='mailto:omescu.mario.lucian@gmail.com' "
-                    "style='text-decoration: none;'>Mario Omescu</a></font></b>", unsafe_allow_html=True)
+        st.markdown("@ <b><font color = red style='text-align: center;'><a href='mailto:omescu.mario.lucian@gmail.com' "
+                    "style='text-decoration: none; '>Mario Omescu</a></font></b>", unsafe_allow_html=True)
+    with ref_col:
+        st.markdown(
+            f"<b><font color=red>Data Reference:</font></b><ul><li><a href='https://fbref.com' "
+            "style='text-decoration: none; '>Team & Players Stats</a></li><li><a href='https://www.bundesliga.com' "
+            "style='text-decoration: none; '>Tracking Stats</a></li><li><a href='https://understat.com' "
+            "style='text-decoration: none; '>Event Stats</a></li></ul>", unsafe_allow_html=True)
 
 
 if __name__ == '__main__':
