@@ -9,7 +9,6 @@ def prediction_page(prediction_type, season):
     remaining_weeks = list(range(current_match_day + 1, 35))
 
     if 17 <= current_match_day < 34:
-    # if 14 <= current_match_day < 34:
         season_transformed_data, final_model_features, index_agg_home_team, \
         index_agg_away_team = transform_data(data=buli_season_df,
                                              features=model_features,

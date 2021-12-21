@@ -73,7 +73,7 @@ def team_event_data(data, team_name, season_filter, event_type):
     goals_data_team = game_event_data_team[game_event_data_team['Event'] == 'Goal']
     shots_data_team = game_event_data_team.copy()
     if goals_data_team.shape[0] > 0:
-        team_goals_box = np.round(np.sum(goals_data_team['X_cord'] <= 16) / goals_data_team.shape[0] * 100, 2)
+        team_goals_box = np.round(np.sum(goals_data_team['X_cord'] <= 18) / goals_data_team.shape[0] * 100, 2)
         goals_data_team['Half'] = np.where(goals_data_team['Minute'] < 46, "1st Half", "2nd Half")
         best_team_goals_half = goals_data_team['Half'].value_counts(normalize=True).reset_index()
         best_team_goals_half_value = best_team_goals_half.iloc[0, 0]
@@ -84,7 +84,7 @@ def team_event_data(data, team_name, season_filter, event_type):
         best_team_goals_half_score = ""
 
     if shots_data_team.shape[0] > 0:
-        team_shots_box = np.round(np.sum(shots_data_team['X_cord'] <= 16) / shots_data_team.shape[0] * 100, 2)
+        team_shots_box = np.round(np.sum(shots_data_team['X_cord'] <= 18) / shots_data_team.shape[0] * 100, 2)
         shots_data_team['Half'] = np.where(shots_data_team['Minute'] < 46, "1st Half", "2nd Half")
         best_team_shots_half = shots_data_team['Half'].value_counts(normalize=True).reset_index()
         best_team_shots_half_value = best_team_shots_half.iloc[0, 0]
@@ -97,7 +97,7 @@ def team_event_data(data, team_name, season_filter, event_type):
     goals_data_opp = game_event_data_opp[game_event_data_opp['Event'] == 'Goal']
     shots_data_opp = game_event_data_opp.copy()
     if goals_data_opp.shape[0] > 0:
-        opp_goals_box = np.round(np.sum(goals_data_opp['X_cord'] >= 89) / goals_data_opp.shape[0] * 100, 2)
+        opp_goals_box = np.round(np.sum(goals_data_opp['X_cord'] >= 87) / goals_data_opp.shape[0] * 100, 2)
         goals_data_opp['Half'] = np.where(goals_data_opp['Minute'] < 46, "1st Half", "2nd Half")
         best_opp_goals_half = goals_data_opp['Half'].value_counts(normalize=True).reset_index()
         best_opp_goals_half_value = best_opp_goals_half.iloc[0, 0]
@@ -108,7 +108,7 @@ def team_event_data(data, team_name, season_filter, event_type):
         best_opp_goals_half_score = ""
 
     if shots_data_opp.shape[0] > 0:
-        opp_shots_box = np.round(np.sum(shots_data_opp['X_cord'] >= 89) / shots_data_opp.shape[0] * 100, 2)
+        opp_shots_box = np.round(np.sum(shots_data_opp['X_cord'] >= 87) / shots_data_opp.shape[0] * 100, 2)
         shots_data_opp['Half'] = np.where(shots_data_opp['Minute'] < 46, "1st Half", "2nd Half")
         best_opp_shots_half = shots_data_opp['Half'].value_counts(normalize=True).reset_index()
         best_opp_shots_half_value = best_opp_shots_half.iloc[0, 0]
@@ -197,7 +197,7 @@ def player_event_data(data, team_name, player_name, season_filter, event_type):
     goals_data_player = game_event_data_player[game_event_data_player['Event'] == 'Goal']
     shots_data_player = game_event_data_player.copy()
     if goals_data_player.shape[0] > 0:
-        player_goals_box = np.round(np.sum(goals_data_player['X_cord'] >= 89) / goals_data_player.shape[0] * 100, 2)
+        player_goals_box = np.round(np.sum(goals_data_player['X_cord'] >= 87) / goals_data_player.shape[0] * 100, 2)
         goals_data_player['Half'] = np.where(goals_data_player['Minute'] < 46, "1st Half", "2nd Half")
         best_player_goals_half = goals_data_player['Half'].value_counts(normalize=True).reset_index()
         best_player_goals_half_value = best_player_goals_half.iloc[0, 0]
@@ -207,7 +207,7 @@ def player_event_data(data, team_name, player_name, season_filter, event_type):
         best_player_goals_half_value = ""
         best_player_goals_half_score = ""
     if shots_data_player.shape[0] > 0:
-        player_shots_box = np.round(np.sum(shots_data_player['X_cord'] >= 89) / shots_data_player.shape[0] * 100, 2)
+        player_shots_box = np.round(np.sum(shots_data_player['X_cord'] >= 87) / shots_data_player.shape[0] * 100, 2)
         shots_data_player['Half'] = np.where(shots_data_player['Minute'] < 46, "1st Half", "2nd Half")
         best_player_shots_half = shots_data_player['Half'].value_counts(normalize=True).reset_index()
         best_player_shots_half_value = best_player_shots_half.iloc[0, 0]
