@@ -194,10 +194,10 @@ def prediction_page(prediction_type, season):
                 st.markdown(f"<b>Model Accuracy</b>: <b><font color=red>{accuracy_combo}%</font></b>",
                             unsafe_allow_html=True)
         st.markdown(
-            f"<b><font color = red>Note</font></b>: The base model was build using the <b><font color = red>SVM "
-            f"</font></b> Algorithm with the following features:  <b><font color = red>"
-            f"{str(model_features).replace('[', '').replace(']', '')}</font></b> as features and an Accuracy of <b>"
-            f"<font color = red>70%</font></b>", unsafe_allow_html=True)
+            f"<b><font color = red>Note</font></b>: The base model was build using the <b><font color = red>Logistic "
+            f"Regression </font></b> Algorithm on the last 3 seasons of data with the following features:  <b>"
+            f"<font color = red>{str(model_features).replace('[', '').replace(']', '')}</font></b> as features with an "
+            f"Accuracy of <b><font color = red>70%</font></b>", unsafe_allow_html=True)
     else:
         st.markdown("<h2><b>Page will be available after </font></b></h2> <h2><b><font color=red>Match Day: 2"
                     "</font></font></b></h2>",
