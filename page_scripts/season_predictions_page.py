@@ -189,8 +189,8 @@ def prediction_page(prediction_type, season, favourite_team):
                 with rank_col:
                     if teams_logo[i] == favourite_team:
                         st.markdown(
-                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df.index[i]}</font></b>",
-                            unsafe_allow_html=True)
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df.index[i]}"
+                            f"</font></b>", unsafe_allow_html=True)
                     else:
                         st.markdown(f"<p style='text-align: center;'p>{buli_predict_df.index[i]}",
                                     unsafe_allow_html=True)
@@ -198,8 +198,8 @@ def prediction_page(prediction_type, season, favourite_team):
                 with team_col:
                     if teams_logo[i] == favourite_team:
                         st.markdown(
-                            f"<p style='text-align: left;'p><b><font color=#d20614>{buli_predict_df['Team'].values[i]}</font></b>",
-                            unsafe_allow_html=True)
+                            f"<p style='text-align: left;'p><b><font color=#d20614>{buli_predict_df['Team'].values[i]}"
+                            f"</font></b>", unsafe_allow_html=True)
                     else:
                         st.markdown(f"<p style='text-align: left;'p>{buli_predict_df['Team'].values[i]}",
                                     unsafe_allow_html=True)
@@ -207,8 +207,8 @@ def prediction_page(prediction_type, season, favourite_team):
                 with mp_col:
                     if teams_logo[i] == favourite_team:
                         st.markdown(
-                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['MP'].values[i]}</font></b>",
-                            unsafe_allow_html=True)
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['MP'].values[i]}"
+                            f"</font></b>", unsafe_allow_html=True)
                     else:
                         st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['MP'].values[i]}",
                                     unsafe_allow_html=True)
@@ -216,8 +216,8 @@ def prediction_page(prediction_type, season, favourite_team):
                 with w_col:
                     if teams_logo[i] == favourite_team:
                         st.markdown(
-                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['W'].values[i]}</font></b>",
-                            unsafe_allow_html=True)
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['W'].values[i]}"
+                            f"</font></b>", unsafe_allow_html=True)
                     else:
                         st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['W'].values[i]}",
                                     unsafe_allow_html=True)
@@ -225,8 +225,8 @@ def prediction_page(prediction_type, season, favourite_team):
                 with d_col:
                     if teams_logo[i] == favourite_team:
                         st.markdown(
-                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['D'].values[i]}</font></b>",
-                            unsafe_allow_html=True)
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['D'].values[i]}"
+                            f"</font></b>", unsafe_allow_html=True)
                     else:
                         st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['D'].values[i]}",
                                     unsafe_allow_html=True)
@@ -234,8 +234,8 @@ def prediction_page(prediction_type, season, favourite_team):
                 with l_col:
                     if teams_logo[i] == favourite_team:
                         st.markdown(
-                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['L'].values[i]}</font></b>",
-                            unsafe_allow_html=True)
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['L'].values[i]}"
+                            f"</font></b>", unsafe_allow_html=True)
                     else:
                         st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['L'].values[i]}",
                                     unsafe_allow_html=True)
@@ -243,8 +243,8 @@ def prediction_page(prediction_type, season, favourite_team):
                 with pts_col:
                     if teams_logo[i] == favourite_team:
                         st.markdown(
-                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['Pts'].values[i]}</font></b>",
-                            unsafe_allow_html=True)
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['Pts'].values[i]}"
+                            f"</font></b>", unsafe_allow_html=True)
                     else:
                         st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['Pts'].values[i]}",
                                     unsafe_allow_html=True)
