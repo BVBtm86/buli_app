@@ -90,7 +90,8 @@ def main():
         # ##### Game/Table Predictions
         prediction_type = st.sidebar.selectbox("Select Predictions", ["Games", "Season"])
         prediction_page(prediction_type=prediction_type,
-                        season=seasons[-1])
+                        season=seasons[-1],
+                        favourite_team=favourite_team)
 
     # ##### Footer Page
     ref_col, fan_club_name, fan_club_logo = st.columns([10, 1, 1])

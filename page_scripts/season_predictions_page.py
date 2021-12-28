@@ -2,7 +2,7 @@ from page_scripts.stats_scripts.season_predictions import *
 from PIL import Image
 
 
-def prediction_page(prediction_type, season):
+def prediction_page(prediction_type, season, favourite_team):
     # ##### Season Data
     buli_season_df, current_match_day, season, final_model, final_transform, model_features, \
     prediction_game_df, prediction_data, home_default, away_default = season_data_process(season=season)
@@ -76,41 +76,49 @@ def prediction_page(prediction_type, season):
             _, home_logo_col, home_name_col, hw_col, d_col, aw_col, away_logo_col, away_name_col, _ = \
                 st.columns([0.5, 0.35, 3, 1, 1, 1.1, 0.35, 3, 0.5])
 
-            with home_logo_col:
-                for hteam_logo in home_team_names:
-                    h_logo = Image.open(f'images/{hteam_logo}.png')
+            for i in range(len(home_team_names)):
+                with home_logo_col:
+                    h_logo = Image.open(f'images/{home_team_names[i]}.png')
                     if current_match_day % 2 == 0:
                         st.image(h_logo, width=24)
                     else:
                         st.image(h_logo, width=25)
 
-            with home_name_col:
-                for hteam in home_team_names:
-                    st.markdown(hteam)
+                with home_name_col:
+                    if home_team_names[i] == favourite_team or away_team_names[i] == favourite_team:
+                        st.markdown(f"<b><font color = #d20614>{home_team_names[i]}</font></b>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(home_team_names[i])
 
-            with away_logo_col:
-                for ateam_logo in away_team_names:
-                    a_logo = Image.open(f'images/{ateam_logo}.png')
+                with away_logo_col:
+                    a_logo = Image.open(f'images/{away_team_names[i]}.png')
                     if current_match_day % 2 == 0:
                         st.image(a_logo, width=25)
                     else:
                         st.image(a_logo, width=24)
 
-            with away_name_col:
-                for ateam in away_team_names:
-                    st.markdown(ateam)
+                with away_name_col:
+                    if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
+                        st.markdown(f"<b><font color = #d20614>{away_team_names[i]}</font></b>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(away_team_names[i])
 
-            with hw_col:
-                for hprob in home_prob:
-                    st.markdown(f"{hprob}%", unsafe_allow_html=True)
+                with hw_col:
+                    if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
+                        st.markdown(f"<b><font color = #d20614>{home_prob[i]}%</font></b>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(home_prob[i])
 
-            with d_col:
-                for dprob in draw_prob:
-                    st.markdown(f"{dprob}%", unsafe_allow_html=True)
-
-            with aw_col:
-                for aprob in away_prob:
-                    st.markdown(f"{aprob}%", unsafe_allow_html=True)
+                with d_col:
+                    if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
+                        st.markdown(f"<b><font color = #d20614>{draw_prob[i]}%</font></b>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(draw_prob[i])
+                with aw_col:
+                    if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
+                        st.markdown(f"<b><font color = #d20614>{away_prob[i]}%</font></b>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(away_prob[i])
 
             with accuracy_col:
                 st.subheader("")
@@ -148,47 +156,98 @@ def prediction_page(prediction_type, season):
                                                                         model=final_model)
             logo_col, rank_col, team_col, mp_col, w_col, d_col, l_col, pts_col = st.columns([0.42, 1, 5, 1, 1, 1, 1, 1])
 
+            teams_logo = buli_predict_df['Team'].unique()
             with logo_col:
-                st.markdown(f"<h4 style='text-align: center;'h4><b>#</b>", unsafe_allow_html=True)
-                teams_logo = buli_predict_df['Team'].unique()
-                logo_teams = [Image.open(f'images/{teams_logo[i]}.png') for i in range(len(teams_logo))]
-                st.image(logo_teams, width=24)
-
+                st.markdown(f"<h4 style='text-align: center;'h4><b><font color='white'>#</font></b>",
+                            unsafe_allow_html=True)
             with rank_col:
                 st.markdown(f"<h4 style='text-align: center;'h4><b>Rank</b>", unsafe_allow_html=True)
-                rank = buli_predict_df.index
-                for i in rank:
-                    st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
 
             with team_col:
                 st.markdown(f"<h4 style='text-align: left;'h4><b>Team</b>", unsafe_allow_html=True)
-                for i in buli_predict_df['Team'].values:
-                    st.markdown(f"<p style='text-align: left;'p>{i}", unsafe_allow_html=True)
 
             with mp_col:
                 st.markdown(f"<h4 style='text-align: center;'h4><b>MP</b>", unsafe_allow_html=True)
-                for i in buli_predict_df['MP'].values:
-                    st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
 
             with w_col:
                 st.markdown(f"<h4 style='text-align: center;'h4><b>W</b>", unsafe_allow_html=True)
-                for i in buli_predict_df['W'].values:
-                    st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
 
             with d_col:
                 st.markdown(f"<h4 style='text-align: center;'h4><b>D</b>", unsafe_allow_html=True)
-                for i in buli_predict_df['D'].values:
-                    st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
 
             with l_col:
                 st.markdown(f"<h4 style='text-align: center;'h4><b>L</b>", unsafe_allow_html=True)
-                for i in buli_predict_df['L'].values:
-                    st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
 
             with pts_col:
                 st.markdown(f"<h4 style='text-align: center;'h4><b>Pts</b>", unsafe_allow_html=True)
-                for i in buli_predict_df['Pts'].values:
-                    st.markdown(f"<p style='text-align: center;'p>{i}", unsafe_allow_html=True)
+
+            for i in range(len(teams_logo)):
+                with logo_col:
+                    logo_teams = Image.open(f'images/{teams_logo[i]}.png')
+                    st.image(logo_teams, width=24)
+
+                with rank_col:
+                    if teams_logo[i] == favourite_team:
+                        st.markdown(
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df.index[i]}</font></b>",
+                            unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='text-align: center;'p>{buli_predict_df.index[i]}",
+                                    unsafe_allow_html=True)
+
+                with team_col:
+                    if teams_logo[i] == favourite_team:
+                        st.markdown(
+                            f"<p style='text-align: left;'p><b><font color=#d20614>{buli_predict_df['Team'].values[i]}</font></b>",
+                            unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='text-align: left;'p>{buli_predict_df['Team'].values[i]}",
+                                    unsafe_allow_html=True)
+
+                with mp_col:
+                    if teams_logo[i] == favourite_team:
+                        st.markdown(
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['MP'].values[i]}</font></b>",
+                            unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['MP'].values[i]}",
+                                    unsafe_allow_html=True)
+
+                with w_col:
+                    if teams_logo[i] == favourite_team:
+                        st.markdown(
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['W'].values[i]}</font></b>",
+                            unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['W'].values[i]}",
+                                    unsafe_allow_html=True)
+
+                with d_col:
+                    if teams_logo[i] == favourite_team:
+                        st.markdown(
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['D'].values[i]}</font></b>",
+                            unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['D'].values[i]}",
+                                    unsafe_allow_html=True)
+
+                with l_col:
+                    if teams_logo[i] == favourite_team:
+                        st.markdown(
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['L'].values[i]}</font></b>",
+                            unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['L'].values[i]}",
+                                    unsafe_allow_html=True)
+
+                with pts_col:
+                    if teams_logo[i] == favourite_team:
+                        st.markdown(
+                            f"<p style='text-align: center;'p><b><font color=#d20614>{buli_predict_df['Pts'].values[i]}</font></b>",
+                            unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='text-align: center;'p>{buli_predict_df['Pts'].values[i]}",
+                                    unsafe_allow_html=True)
 
             with accuracy_col:
                 st.subheader("")

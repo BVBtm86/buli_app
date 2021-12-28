@@ -24,7 +24,7 @@ def table_page(seasons, start_season, favourite_team):
         logo_teams = [Image.open(f'images/{teams_logo[i]}.png') for i in range(len(teams_logo))]
         st.image(logo_teams, width=24)
         pos_favourite_team = list(teams_logo).index(favourite_team)
-        print(pos_favourite_team)
+
     with rank_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b>Rank</b>", unsafe_allow_html=True)
         rank = buli_season_df.index
