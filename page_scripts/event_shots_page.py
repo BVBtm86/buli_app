@@ -81,19 +81,19 @@ def shot_event_page(seasons, start_season, favourite_team):
             st.subheader("Opponents")
 
         if team_goals_box != "":
-            st.markdown(f"For <b><font color = red>{season_type_filter}</font></b> Season Games, <b><font color = red>"
-                        f"{team_goals_box}%</font></b> of <b><font color = black>{shot_event_team}</font></b> Goals "
-                        f"were scored from Inside the Box, with <b><font color = red>"
+            st.markdown(f"For <b><font color = #d20614>{season_type_filter}</font></b> Season Games, <b>"
+                        f"<font color = #d20614>{team_goals_box}%</font></b> of <b><font color = black>{shot_event_team}"
+                        f"</font></b> Goals were scored from Inside the Box, with <b><font color = #d20614>"
                         f"{best_team_goals_half_score}%</font></b> of them in the <b><font color = black>"
-                        f"{best_team_goals_half_value}</font></b>, while her Opponents had <b><font color = red>"
-                        f"{opp_goals_box}%</font></b> Goals from Inside the Box, with <b><font color = red>"
+                        f"{best_team_goals_half_value}</font></b>, while her Opponents had <b><font color = #d20614>"
+                        f"{opp_goals_box}%</font></b> Goals from Inside the Box, with <b><font color = #d20614>"
                         f"{best_opp_goals_half_score}%</font></b> of them in the <b><font color = black>"
-                        f"{best_opp_goals_half_value}%</font></b>. If we look at Total Shots, "
-                        f"<b><font color = red>{team_shots_box}%</font></b> of <b><font color = black>"
-                        f"{shot_event_team}</font></b> Shots were from Inside the Box, with <b><font color = red>"
-                        f"{best_team_shots_half_score}%</font></b> of them in the <b><font color = black>"
-                        f"{best_team_shots_half_value}</font></b>, while her Opponents had <b><font color = red>"
-                        f"{opp_shots_box}%</font></b> Shots from Inside the Box, with <b><font color = red>"
+                        f"{best_opp_goals_half_value}</font></b>. If we look at Total Shots, "
+                        f"<b><font color = #d20614>{team_shots_box}%</font></b> of <b><font color = black>"
+                        f"{shot_event_team}</font></b> Shots were from Inside the Box, with <b><font color = #d20614>"
+                        f"{best_team_shots_half_score}%</font></b> of them in the <b><font color = #d20614>"
+                        f"{best_team_shots_half_value}</font></b>, while her Opponents had <b><font color = #d20614>"
+                        f"{opp_shots_box}%</font></b> Shots from Inside the Box, with <b><font color = #d20614>"
                         f"{best_opp_shots_half_score}%</font></b> of them in the <b><font color = black>"
                         f"{best_opp_shots_half_value}</font></b>.", unsafe_allow_html=True)
 
@@ -166,16 +166,16 @@ def shot_event_page(seasons, start_season, favourite_team):
             st.subheader(shot_event_player)
 
         if player_goals_box != "":
-            st.markdown(f"For <b><font color = red>{season_type_filter}</font></b> Season Games, <b><font color = red>"
-                        f"{player_goals_box}%</font></b> of <b><font color = black>{shot_event_player}</font></b> "
-                        f"Goals were scored from Inside the Box, with <b><font color = red>"
-                        f"{best_player_goals_half_score}%</font></b> of them in the <b><font color = black>"
-                        f"{best_player_goals_half_value}</font></b> and <b><font color = red>{player_shots_box}%</font>"
-                        f"</b> of Total Shots were from Inside the Box, with <b><font color = red>"
-                        f"{best_player_shots_half_score}%</font></b> of them in the <b><font color = black> "
-                        f"{best_player_shots_half_value}</font></b>.", unsafe_allow_html=True)
-        else:
-            st.markdown(f"For <b><font color = red>{season_type_filter}</font></b> Season Games, <b><font color = red>"
+            st.markdown(f"For <b><font color = #d20614>{season_type_filter}</font></b> Season Games, <b>"
+                        f"<font color = #d20614>{player_goals_box}%</font></b> of <b><font color = black>"
+                        f"{shot_event_player}</font></b> Goals were scored from Inside the Box, with <b>"
+                        f"<font color = #d20614>{best_player_goals_half_score}%</font></b> of them in the <b>"
+                        f"<font color = black>{best_player_goals_half_value}</font></b> and <b><font color = #d20614>"
                         f"{player_shots_box}%</font></b> of Total Shots were from Inside the Box, with <b>"
-                        f"<font color = red>{best_player_shots_half_score}%</font></b> of them in the <b>"
+                        f"<font color = #d20614>{best_player_shots_half_score}%</font></b> of them in the <b>"
+                        f"<font color = black> {best_player_shots_half_value}</font></b>.", unsafe_allow_html=True)
+        else:
+            st.markdown(f"For <b><font color = #d20614>{season_type_filter}</font></b> Season Games, <b>"
+                        f"<font color = #d20614>{player_shots_box}%</font></b> of Total Shots were from Inside the Box, "
+                        f"with <b><font color = #d20614>{best_player_shots_half_score}%</font></b> of them in the <b>"
                         f"<font color = black> {best_player_shots_half_value}</font></b>.", unsafe_allow_html=True)

@@ -100,11 +100,12 @@ def main():
     with fan_club_logo:
         bvb_ro_logo = Image.open('images/BVB_Romania.png')
         st.image(bvb_ro_logo, width=50)
-        st.markdown("@ <b><font color = red style='text-align: center;'><a href='mailto:omescu.mario.lucian@gmail.com' "
-                    "style='text-decoration: none; '>Mario Omescu</a></font></b>", unsafe_allow_html=True)
+        st.markdown("@ <b><font color = #d20614 style='text-align: center;'>"
+                    "<a href='mailto:omescu.mario.lucian@gmail.com' style='text-decoration: none; '>"
+                    "Mario Omescu</a></font></b>", unsafe_allow_html=True)
     with ref_col:
         st.markdown(
-            f"<b><font color=red>Data Reference:</font></b><ul><li><a href='https://fbref.com' "
+            f"<b><font color=#d20614>Data Reference:</font></b><ul><li><a href='https://fbref.com' "
             "style='text-decoration: none; '>Team & Players Stats</a></li><li><a href='https://www.bundesliga.com' "
             "style='text-decoration: none; '>Tracking Stats</a></li><li><a href='https://understat.com' "
             "style='text-decoration: none; '>Event Stats</a></li></ul>", unsafe_allow_html=True)

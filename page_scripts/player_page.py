@@ -50,25 +50,26 @@ def player_page(seasons, start_season, favourite_team):
             if teams_top10 == "":
                 st.markdown(
                     f"No team has more then 1 player in the Top 10 <b><font color = green>{top10_stat_type}</font>"
-                    f"</b> <b><font color = red>{top10_player_stat}</font></b> for <b><font color = red>"
+                    f"</b> <b><font color = #d20614>{top10_player_stat}</font></b> for <b><font color = #d20614>"
                     f"{top10_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
             else:
                 if no_teams_top10 == 1:
                     st.markdown(
-                        f"<b><font color = green>{teams_top10}</font></b>has <b><font color = red>{max_no_players}"
+                        f"<b><font color = green>{teams_top10}</font></b>has <b><font color = #d20614>{max_no_players}"
                         f"</font></b> players in the Top 10 <b><font color = green>{top10_stat_type}</font></b> "
-                        f"<b><font color = red>{top10_player_stat}</font></b> for <b><font color = red>"
+                        f"<b><font color = #d20614>{top10_player_stat}</font></b> for <b><font color = #d20614>"
                         f"{top10_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
                 else:
                     st.markdown(
-                        f"<b><font color = green>{teams_top10}</font></b>have <b><font color = red>{max_no_players}"
+                        f"<b><font color = green>{teams_top10}</font></b>have <b><font color = #d20614>{max_no_players}"
                         f"</font></b> players in the Top 10 <b><font color = green>{top10_stat_type}</font></b> "
-                        f"<b><font color = red>{top10_player_stat}</font></b> for <b><font color = red>"
+                        f"<b><font color = #d20614>{top10_player_stat}</font></b> for <b><font color = #d20614>"
                         f"{top10_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
 
             if top10_stat_type == "Average":
-                st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                            "</font></b> of minutes played were included.", unsafe_allow_html=True)
+                st.markdown("<b><font color = #d20614>Note</font></b>: Only Players with at least <b>"
+                            "<font color = #d20614>10%</font></b> of minutes played were included.",
+                            unsafe_allow_html=True)
 
         # ##### Player Season Statistics
         st.subheader(f"Players Season Statistics: Season {buli_player_season}")
@@ -103,38 +104,41 @@ def player_page(seasons, start_season, favourite_team):
 
         with player_menu_col:
             if player_stat_type == "Average":
-                st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                            "</font></b> of minutes played were included.", unsafe_allow_html=True)
+                st.markdown("<b><font color = #d20614>Note</font></b>: Only Players with at least <b>"
+                            "<font color = #d20614>10%</font></b> of minutes played were included.",
+                            unsafe_allow_html=True)
 
         with player_stat_col:
             if league_better > 0:
                 if player_stat_type == 'Total':
                     st.markdown(
-                        f"The Top <b><font color = red>{league_better}</font></b> Players of <b><font color = red>"
-                        f"{season_player_team}</font></b> had more <b><font color = green>{player_stat}</font></b> "
-                        f"than the league average of (<b><font color = Silver>{league_avg}</font></b>) <b><font "
-                        f"color = green>{player_stat}</font></b> for <b><font color = red>{season_player_filter}"
-                        f"</font></b> Season Games.", unsafe_allow_html=True)
+                        f"The Top <b><font color = #d20614>{league_better}</font></b> Players of <b><"
+                        f"font color = #d20614>{season_player_team}</font></b> had more <b><font color = green>"
+                        f"{player_stat}</font></b> than the league average of (<b><font color = Silver>{league_avg}"
+                        f"</font></b>) <b><font color = green>{player_stat}</font></b> for <b><font color = #d20614>"
+                        f"{season_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
                 elif player_stat_type == 'Average':
                     st.markdown(
-                        f"The Top <b><font color = red>{league_better}</font></b> Players of <b><font color = red>"
-                        f"{season_player_team}</font></b> had more <b><font color = green>{player_stat}</font></b> "
-                        f"per Game than the league average of (<b><font color = Silver>{league_avg}</font></b>) "
-                        f"<b><font color = green>{player_stat}</font></b> per Game for <b><font color = red>"
-                        f"{season_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
+                        f"The Top <b><font color = #d20614>{league_better}</font></b> Players of <b>"
+                        f"<font color = #d20614>{season_player_team}</font></b> had more <b><font color = green>"
+                        f"{player_stat}</font></b> per Game than the league average of (<b><font color = Silver>"
+                        f"{league_avg}</font></b>) <b><font color = green>{player_stat}</font></b> per Game for <b>"
+                        f"<font color = #d20614>{season_player_filter}</font></b> Season Games.",
+                        unsafe_allow_html=True)
             else:
                 if player_stat_type == 'Total':
-                    st.markdown(f"<b><font color = red>None</font></b> of the <b><font color = red>{season_player_team}"
-                                f"</font></b>  Players had more <b><font color = green>{player_stat}</font></b> "
-                                f"per Game than the league average of (<b><font color = Silver>{league_avg}</font></b>) "
-                                f"<b><font color = green>{player_stat}</font></b> per Game for <b><font color = red>"
-                                f"{season_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
+                    st.markdown(f"<b><font color = #d20614>None</font></b> of the <b><font color = #d20614>"
+                                f"{season_player_team}</font></b>  Players had more <b><font color = green>"
+                                f"{player_stat}</font></b> per Game than the league average of (<b>"
+                                f"<font color = Silver>{league_avg}</font></b>) <b><font color = green>{player_stat}"
+                                f"</font></b> per Game for <b><font color = #d20614>{season_player_filter}</font></b> "
+                                f"Season Games.", unsafe_allow_html=True)
                 elif player_stat_type == 'Average':
                     st.markdown(
-                        f"<b><font color = red>None</font></b> of the <b><font color = red>{season_player_team}"
+                        f"<b><font color = #d20614>None</font></b> of the <b><font color = #d20614>{season_player_team}"
                         f"</font></b> had more <b><font color = green>{player_stat}</font></b> "
                         f"per Game than the league average of (<b><font color = Silver>{league_avg}</font></b>) "
-                        f"<b><font color = green>{player_stat}</font></b> per Game for <b><font color = red>"
+                        f"<b><font color = green>{player_stat}</font></b> per Game for <b><font color = #d20614>"
                         f"{season_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
 
         # ##### Player Match Day Statistics
@@ -165,14 +169,16 @@ def player_page(seasons, start_season, favourite_team):
             if fig_max_value == 0:
                 pass
             else:
-                st.markdown(f"<b><font color = red>{player_name_day}</font></b> had the most <b><font color = green>"
-                            f"{stat_player_day}</font></b> for <b><font color = red>{season_player_team}</font></b> in "
-                            f"<b><font color = red>{team_max_day}</font></b> Games and had more <b><font color = green>"
-                            f"{stat_player_day}</font></b> then the team average in <b><font color = red>{team_avg_day}"
-                            f"</font></b> Games.", unsafe_allow_html=True)
+                st.markdown(
+                    f"<b><font color = #d20614>{player_name_day}</font></b> had the most <b><font color = green>"
+                    f"{stat_player_day}</font></b> for <b><font color = #d20614>{season_player_team}</font></b> in "
+                    f"<b><font color = #d20614>{team_max_day}</font></b> Games and had more <b><font color = green>"
+                    f"{stat_player_day}</font></b> then the team average in <b><font color = #d20614>{team_avg_day}"
+                    f"</font></b> Games.", unsafe_allow_html=True)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown(
+                "<b><font color = #d20614>Note</font></b>: Only Players with at least <b><font color = #d20614>10%"
+                "</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         # ##### Player vs Player Position Statistics
         st.subheader(f"Player Season vs Player Position Stats: Season {buli_player_season}")
@@ -204,19 +210,21 @@ def player_page(seasons, start_season, favourite_team):
             if fig_max_value == 0:
                 pass
             else:
-                st.markdown(f"<b><font color = red>{player_name_day}</font></b> has <b><font color = green>"
-                            f"{player_team_comparison}</font></b> <b><font color = green>{stat_player_day}</font></b> per Game "
-                            f"on Average than <b><font color = red>{season_player_team}</font></b>'s teams Average and "
-                            f"<b><font color = green>{player_league_comparison}</font></b> <b><font color = green>"
-                            f"{stat_player_day}</font></b> per Game than the Leagues <b><font color = red>{vs_player_type}"
-                            f"</font></b> Average.", unsafe_allow_html=True)
+                st.markdown(f"<b><font color = #d20614>{player_name_day}</font></b> has <b><font color = green>"
+                            f"{player_team_comparison}</font></b> <b><font color = green>{stat_player_day}</font></b> "
+                            f"per Game on Average than <b><font color = #d20614>{season_player_team}</font></b>'s teams"
+                            f" Average and <b><font color = green>{player_league_comparison}</font></b> <b>"
+                            f"<font color = green>{stat_player_day}</font></b> per Game than the Leagues <b>"
+                            f"<font color = #d20614>{vs_player_type}</font></b> Average.", unsafe_allow_html=True)
                 if player_home_away != "":
-                    st.markdown(f"<b><font color = red>{player_name_day}</font></b> has more <b><font color = green>"
-                                f"{stat_player_day}</font></b> per Game on Average for <b><font color = red>{player_home_away}"
-                                f"</font></b> Season Games.", unsafe_allow_html=True)
+                    st.markdown(
+                        f"<b><font color = #d20614>{player_name_day}</font></b> has more <b><font color = green>"
+                        f"{stat_player_day}</font></b> per Game on Average for <b><font color = #d20614>"
+                        f"{player_home_away}</font></b> Season Games.", unsafe_allow_html=True)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown(
+                "<b><font color = #d20614>Note</font></b>: Only Players with at least <b><font color = #d20614>10%"
+                "</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         # ##### Player Stats Relationship Statistics
         st.subheader(f"Player Stats Relationship: Season {buli_player_season}")
@@ -254,15 +262,16 @@ def player_page(seasons, start_season, favourite_team):
             st.image(team_corr_logo, width=100)
 
             if player_corr_value != "":
-                st.markdown(f"For <b><font color = red>{player_corr_filter_type}</font></b> Season Games, <b>"
-                            f"<font color = red>{player_corr_name}</font></b> has a <b><font color = green>{player_corr_sign}"
-                            f"</font></b> <b><font color = red>{player_corr_strength}</font></b> Correlation (<b>"
-                            f"<font color = green>{player_corr_value}</font></b>) between "
-                            f"<b><font color = green>{player_stat_x}</font></b> and <b><font color = red>{player_stat_y}"
-                            f"</font></b>.", unsafe_allow_html=True)
+                st.markdown(f"For <b><font color = #d20614>{player_corr_filter_type}</font></b> Season Games, <b>"
+                            f"<font color = #d20614>{player_corr_name}</font></b> has a <b><font color = green>"
+                            f"{player_corr_sign}</font></b> <b><font color = #d20614>{player_corr_strength}</font></b> "
+                            f"Correlation (<b><font color = green>{player_corr_value}</font></b>) between "
+                            f"<b><font color = green>{player_stat_x}</font></b> and <b><font color = #d20614>"
+                            f"{player_stat_y}</font></b>.", unsafe_allow_html=True)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown(
+                "<b><font color = #d20614>Note</font></b>: Only Players with at least <b><font color = #d20614>10%"
+                "</font></b> of minutes played were included.", unsafe_allow_html=True)
 
     elif player_stats == "Season by Season Stats":
         st.subheader(f"Player Stats over the Last 5 Seasons")
@@ -285,8 +294,9 @@ def player_page(seasons, start_season, favourite_team):
             buli_player_logo = Image.open(f'images/{seasons_player_team}.png')
             st.image(buli_player_logo, width=100)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown(
+                "<b><font color = #d20614>Note</font></b>: Only Players with at least <b><font color = #d20614>10%"
+                "</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         with player_stat_col:
             stat_player_seasons = st.selectbox("Player Statistics", player_stats_names_avg)
@@ -316,19 +326,20 @@ def player_page(seasons, start_season, favourite_team):
             if player_no_seasons > 1:
                 st.markdown(f"<b><font color = black>{seasons_player_name}</font></b> has the <b><font color = black>"
                             f"{player_rank_season}</font></b><b><font color = black>{player_rank_name}</font></b> "
-                            f"highest Average <b><font color = red>{stat_player_seasons}</font></b> per Game for the "
-                            f"<b><font color = black>{seasons_player_filter}</font></b> Season <b><font color = red>"
-                            f"{current_season}</font></b>, if we look at the last <b><font color = black>"
-                            f"{player_no_seasons}</font></b> Seasons. In <b><font color = red>{player_better_seasons}"
-                            f"</font></b> of the last <b><font color = black>{player_no_seasons}</font></b> Seasons, "
-                            f"<b><font color = red>{seasons_player_name}</font></b> has more <b><font color = black>"
-                            f"{stat_player_seasons}</font></b> on Average per Game then <b><font color = black>"
-                            f"{seasons_player_team}</font></b> Team Average for <b><font color = red>"
-                            f"{seasons_player_filter}</font></b> Season Games.", unsafe_allow_html=True)
+                            f"highest Average <b><font color = #d20614>{stat_player_seasons}</font></b> per Game for "
+                            f"the <b><font color = black>{seasons_player_filter}</font></b> Season <b>"
+                            f"<font color = #d20614>{current_season}</font></b>, if we look at the last <b>"
+                            f"<font color = black>{player_no_seasons}</font></b> Seasons. In <b><font color = #d20614>"
+                            f"{player_better_seasons}</font></b> of the last <b><font color = black>{player_no_seasons}"
+                            f"</font></b> Seasons, <b><font color = #d20614>{seasons_player_name}</font></b> has more "
+                            f"<b><font color = black>{stat_player_seasons}</font></b> on Average per Game then <b>"
+                            f"<font color = black>{seasons_player_team}</font></b> Team Average for <b>"
+                            f"<font color = #d20614>{seasons_player_filter}</font></b> Season Games.",
+                            unsafe_allow_html=True)
             elif player_no_seasons == 1:
-                st.markdown(f"<b><font color = red>{player_rank_season}</font></b>", unsafe_allow_html=True)
+                st.markdown(f"<b><font color = #d20614>{player_rank_season}</font></b>", unsafe_allow_html=True)
             else:
-                st.markdown(f"No Data for Season <b><font color = red>{current_season}</font></b>.",
+                st.markdown(f"No Data for Season <b><font color = #d20614>{current_season}</font></b>.",
                             unsafe_allow_html=True)
 
         st.subheader(f"Player Stats Relationship over the Last 5 Seasons")
@@ -340,8 +351,9 @@ def player_page(seasons, start_season, favourite_team):
             player_stats_names_2 = player_stats_names_1.copy()
             player_stats_names_2.remove(player_stat_x)
             player_stat_y = st.selectbox("Select Y Stat", player_stats_names_2)
-            st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown(
+                "<b><font color = #d20614>Note</font></b>: Only Players with at least <b><font color = #d20614>10%"
+                "</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         with player_markdown_col:
             corr_player_logo = Image.open(f'images/{seasons_player_team}.png')
@@ -360,9 +372,10 @@ def player_page(seasons, start_season, favourite_team):
 
             config = {'displayModeBar': False}
             st.plotly_chart(player_seasons_fig, config=config, use_container_width=True)
-            st.markdown("<b><font color = red>Size</font></b>: Points 1: <b><font color = red>Defeat</font></b>,"
-                        "Points 2: <b><font color = red>Draw</font></b>, Points 3: <b><font color = red>Win</font></b>",
-                        unsafe_allow_html=True)
+            st.markdown(
+                "<b><font color = #d20614>Size</font></b>: Points 1: <b><font color = #d20614>Defeat</font></b>,"
+                "Points 2: <b><font color = #d20614>Draw</font></b>, Points 3: <b><font color = #d20614>Win</font></b>",
+                unsafe_allow_html=True)
 
         with player_markdown_col:
             st.markdown(f"<b>{seasons_player_name}</b>", unsafe_allow_html=True)
@@ -371,17 +384,17 @@ def player_page(seasons, start_season, favourite_team):
                 no_season_name = "Season"
             else:
                 no_season_name = f"{player_no_seasons} Seasons"
-            st.markdown(f"For <b><font color = red>{player_corr_filter_type}</font></b> Season Games there is a "
-                        f"<b><font color = red>{pl_overall_corr_sign}</font></b> <b><font color = green>"
-                        f"{pl_overall_corr_strength}</font></b> Correlation between <b><font color = red>{player_stat_x}"
-                        f"</font></b> and <b><font color = red>{player_stat_y}</font></b> (<b><font color = purple>"
-                        f"{pl_overall_corr_value}</font></b>) if we look at the last {no_season_name} of "
-                        f"<b><font color = red>{seasons_player_name}</font></b> in the Bundesliga.",
-                        unsafe_allow_html=True)
+            st.markdown(f"For <b><font color = #d20614>{player_corr_filter_type}</font></b> Season Games there is a "
+                        f"<b><font color = #d20614>{pl_overall_corr_sign}</font></b> <b><font color = green>"
+                        f"{pl_overall_corr_strength}</font></b> Correlation between <b><font color = #d20614>"
+                        f"{player_stat_x}</font></b> and <b><font color = #d20614>{player_stat_y}</font></b> "
+                        f"(<b><font color = purple>{pl_overall_corr_value}</font></b>) if we look at the last "
+                        f"{no_season_name} of <b><font color = #d20614>{seasons_player_name}</font></b> in the "
+                        f"Bundesliga.", unsafe_allow_html=True)
             if player_no_seasons > 1:
-                st.markdown(f"If we look at Season data, Season <b><font color = red>{pl_season_name_best_corr}"
-                            f"</font></b> has the strongest correlation between <b><font color = red>{player_stat_x} "
-                            f"</font></b> and <b><font color = red>{player_stat_y}</font></b> (<b><font color = purple>"
-                            f"{pl_season_value_best_corr}</font></b>) a <b><font color = red>{pl_season_corr_sign}"
-                            f"</font></b><b><font color = green> {pl_season_corr_strength}</font></b> Relationship.",
-                            unsafe_allow_html=True)
+                st.markdown(f"If we look at Season data, Season <b><font color = #d20614>{pl_season_name_best_corr}"
+                            f"</font></b> has the strongest correlation between <b><font color = #d20614>"
+                            f"{player_stat_x} </font></b> and <b><font color = #d20614>{player_stat_y}</font></b> "
+                            f"(<b><font color = purple>{pl_season_value_best_corr}</font></b>) a <b>"
+                            f"<font color = #d20614>{pl_season_corr_sign}</font></b><b><font color = green> "
+                            f"{pl_season_corr_strength}</font></b> Relationship.", unsafe_allow_html=True)

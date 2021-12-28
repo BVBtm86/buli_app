@@ -43,8 +43,8 @@ def gk_page(seasons, start_season, favourite_team):
         with top10_menu_col:
             if top10_stat_type == "Average":
                 st.markdown(
-                    "<b><font color = red>Note</font></b>: Only Goalkeepers with at least <b><font color = red>10%"
-                    "</font></b> of minutes played were included.", unsafe_allow_html=True)
+                    "<b><font color = #d20614>Note</font></b>: Only Goalkeepers with at least <b>"
+                    "<font color = #d20614>10%</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         # ##### GK Match Data Statistics
         st.subheader(f"GK Match Day Statistics: Season {buli_gk_season}")
@@ -70,18 +70,18 @@ def gk_page(seasons, start_season, favourite_team):
         with gk_day_col:
             if gk_stat_sig_name == "":
                 st.markdown(
-                    f"<b><font color = red>{gk_name_day}</font></b> has on Average <b><font color = green>"
-                    f"{gk_league_comparison}</font></b> <b><font color = red>{stat_gk_day}</font></b> per game then "
-                    f"the league Average.", unsafe_allow_html=True)
+                    f"<b><font color = #d20614>{gk_name_day}</font></b> has on Average <b><font color = green>"
+                    f"{gk_league_comparison}</font></b> <b><font color = #d20614>{stat_gk_day}</font></b> per game "
+                    f"then the league Average.", unsafe_allow_html=True)
             else:
                 st.markdown(
-                    f"<b><font color = red>{gk_name_day}</font></b> has on Average <b><font color = greeen>"
-                    f"{gk_league_comparison}</font></b> <b><font color = red>{stat_gk_day}</font></b> per game then "
-                    f"the league Average which is <b><font color = red>{gk_stat_sig_name}</font></b>",
+                    f"<b><font color = #d20614>{gk_name_day}</font></b> has on Average <b><font color = greeen>"
+                    f"{gk_league_comparison}</font></b> <b><font color = #d20614>{stat_gk_day}</font></b> per game"
+                    f" then the league Average which is <b><font color = #d20614>{gk_stat_sig_name}</font></b>",
                     unsafe_allow_html=True)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Goalkeepers with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown("<b><font color = #d20614>Note</font></b>: Only Goalkeepers with at least <b>"
+                        "<font color = #d20614>10%</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         # ##### GK Season Type Statistics
         st.subheader(f"GK Season Type Stats: Season {buli_gk_season}")
@@ -104,12 +104,12 @@ def gk_page(seasons, start_season, favourite_team):
             st.plotly_chart(gk_stat_fig, config=config, use_container_width=True)
 
         with gk_team_name_col:
-            st.markdown(f"<b><font color = red>{gk_name_day}</font></b> has more <b><font color = green>"
-                        f"{gk_type_stat}</font></b> per Game on Average for <b><font color = red>{gk_home_away}"
+            st.markdown(f"<b><font color = #d20614>{gk_name_day}</font></b> has more <b><font color = green>"
+                        f"{gk_type_stat}</font></b> per Game on Average for <b><font color = #d20614>{gk_home_away}"
                         f"</font></b> Season Games.", unsafe_allow_html=True)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Goalkeepers with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown("<b><font color = #d20614>Note</font></b>: Only Goalkeepers with at least <b>"
+                        "<font color = #d20614>10%</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         # ##### Gk Stats Relationship Statistics
         st.subheader(f"GK Stats Relationship: Season {buli_gk_season}")
@@ -145,18 +145,18 @@ def gk_page(seasons, start_season, favourite_team):
 
         with gk_rel_filter_col:
             if gk_corr_value != "":
-                st.markdown(f"For <b><font color = red>{gk_corr_filter_type}</font></b> Season Games, <b>"
-                            f"<font color = red>{gk_name}</font></b> has a <b><font color = green>{gk_corr_sign}"
-                            f"</font></b> <b><font color = red>{gk_corr_strength}</font></b> Correlation (<b>"
+                st.markdown(f"For <b><font color = #d20614>{gk_corr_filter_type}</font></b> Season Games, <b>"
+                            f"<font color = #d20614>{gk_name}</font></b> has a <b><font color = green>{gk_corr_sign}"
+                            f"</font></b> <b><font color = #d20614>{gk_corr_strength}</font></b> Correlation (<b>"
                             f"<font color = green>{gk_corr_value}</font></b>) between "
-                            f"<b><font color = green>{gk_stat_x}</font></b> and <b><font color = red>{gk_stat_y}"
+                            f"<b><font color = green>{gk_stat_x}</font></b> and <b><font color = #d20614>{gk_stat_y}"
                             f"</font></b>.", unsafe_allow_html=True)
             else:
-                st.markdown(f"Less then <b><font color = black>10</font></b> <b><font color = red>{gk_corr_filter_type}"
-                            f"</font></b> Season Games played.", unsafe_allow_html=True)
+                st.markdown(f"Less then <b><font color = black>10</font></b> <b><font color = #d20614>"
+                            f"{gk_corr_filter_type}</font></b> Season Games played.", unsafe_allow_html=True)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Goalkeepers with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown("<b><font color = #d20614>Note</font></b>: Only Goalkeepers with at least <b>"
+                        "<font color = #d20614>10%</font></b> of minutes played were included.", unsafe_allow_html=True)
 
     elif gk_stats == "Season by Season Stats":
         st.subheader(f"Gk Stats over the Last 5 Seasons")
@@ -180,7 +180,7 @@ def gk_page(seasons, start_season, favourite_team):
             buli_gk_logo = Image.open(f'images/{gk_team_name}.png')
             st.image(buli_gk_logo, width=100)
 
-            st.markdown("<b><font color = red>Note</font></b>: Only Gk with at least <b><font color = red>10%"
+            st.markdown("<b><font color = #d20614>Note</font></b>: Only Gk with at least <b><font color = #d20614>10%"
                         "</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         with gk_chart_col:
@@ -209,19 +209,19 @@ def gk_page(seasons, start_season, favourite_team):
                 st.markdown(
                     f"<b><font color = black>{seasons_gk_name}</font></b> has the <b><font color = black>"
                     f"{gk_rank_season}</font></b><b><font color = black>{gk_rank_name}</font></b> "
-                    f"highest Average <b><font color = red>{stat_gk_seasons}</font></b> per Game for the "
-                    f"<b><font color = black>{seasons_gk_filter}</font></b> Season <b><font color = red>"
+                    f"highest Average <b><font color = #d20614>{stat_gk_seasons}</font></b> per Game for the "
+                    f"<b><font color = black>{seasons_gk_filter}</font></b> Season <b><font color = #d20614>"
                     f"{seasons[-1]}</font></b>, if we look at the last <b><font color = black>"
-                    f"{gk_no_seasons}</font></b> Seasons. In <b><font color = red>{gk_better_seasons}"
+                    f"{gk_no_seasons}</font></b> Seasons. In <b><font color = #d20614>{gk_better_seasons}"
                     f"</font></b> of the last <b><font color = black>{gk_no_seasons}</font></b> Seasons, "
-                    f"<b><font color = red>{seasons_gk_name}</font></b> has more <b><font color = black>"
+                    f"<b><font color = #d20614>{seasons_gk_name}</font></b> has more <b><font color = black>"
                     f"{stat_gk_seasons}</font></b> on Average per Game then the <b><font color = black>"
-                    f"Bundesliga</font></b> League Average for <b><font color = red>"
+                    f"Bundesliga</font></b> League Average for <b><font color = #d20614>"
                     f"{seasons_gk_filter}</font></b> Season Games.", unsafe_allow_html=True)
             elif gk_no_seasons == 1:
-                st.markdown(f"<b><font color = red>{gk_rank_season}</font></b>", unsafe_allow_html=True)
+                st.markdown(f"<b><font color = #d20614>{gk_rank_season}</font></b>", unsafe_allow_html=True)
             else:
-                st.markdown(f"No Data for Season <b><font color = red>{seasons[-1]}</font></b>.",
+                st.markdown(f"No Data for Season <b><font color = #d20614>{seasons[-1]}</font></b>.",
                             unsafe_allow_html=True)
 
         st.subheader(f"Gk Stats Relationship over the Last 5 Seasons")
@@ -233,8 +233,8 @@ def gk_page(seasons, start_season, favourite_team):
             gk_stats_names_2 = gk_stats_names_1.copy()
             gk_stats_names_2.remove(gk_stat_x)
             gk_stat_y = st.selectbox("Select Y Stat", gk_stats_names_2)
-            st.markdown("<b><font color = red>Note</font></b>: Only Players with at least <b><font color = red>10%"
-                        "</font></b> of minutes played were included.", unsafe_allow_html=True)
+            st.markdown("<b><font color = #d20614>Note</font></b>: Only Players with at least <b>"
+                        "<font color = #d20614>10%</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         with gk_rel_chart_col:
             gk_seasons_fig, gk_overall_corr_value, gk_overall_corr_strength, gk_overall_corr_sign, \
@@ -249,9 +249,9 @@ def gk_page(seasons, start_season, favourite_team):
 
             config = {'displayModeBar': False}
             st.plotly_chart(gk_seasons_fig, config=config, use_container_width=True)
-            st.markdown("<b><font color = red>Size</font></b>: Points 1: <b><font color = red>Defeat</font></b>, "
-                        "Points 2: <b><font color = red>Draw</font></b>, Points 3: <b><font color = red>Win</font></b>",
-                        unsafe_allow_html=True)
+            st.markdown("<b><font color = #d20614>Size</font></b>: Points 1: <b><font color = #d20614>Defeat</font></b>"
+                        ", Points 2: <b><font color = #d20614>Draw</font></b>, Points 3: <b><font color = #d20614>"
+                        "Win</font></b>", unsafe_allow_html=True)
 
         with gk_markdown_col:
             corr_gk_logo = Image.open(f'images/{gk_team_name}.png')
@@ -264,23 +264,23 @@ def gk_page(seasons, start_season, favourite_team):
                 no_season_name = f"{gk_no_seasons} Seasons"
 
             if gk_no_games > 10:
-                st.markdown(f"For <b><font color = red>{gk_corr_filter_type}</font></b> Season Games there is a "
-                            f"<b><font color = red>{gk_overall_corr_sign}</font></b> <b><font color = green>"
-                            f"{gk_overall_corr_strength}</font></b> Correlation between <b><font color = red>"
-                            f"{gk_stat_x}</font></b> and <b><font color = red>{gk_stat_y}</font></b> "
+                st.markdown(f"For <b><font color = #d20614>{gk_corr_filter_type}</font></b> Season Games there is a "
+                            f"<b><font color = #d20614>{gk_overall_corr_sign}</font></b> <b><font color = green>"
+                            f"{gk_overall_corr_strength}</font></b> Correlation between <b><font color = #d20614>"
+                            f"{gk_stat_x}</font></b> and <b><font color = #d20614>{gk_stat_y}</font></b> "
                             f"(<b><font color = purple>{gk_overall_corr_value}</font></b>) if we look at the last "
-                            f"{no_season_name} of <b><font color = red>{seasons_gk_name}</font></b> in the Bundesliga.",
-                            unsafe_allow_html=True)
+                            f"{no_season_name} of <b><font color = #d20614>{seasons_gk_name}</font></b> in the "
+                            f"Bundesliga.", unsafe_allow_html=True)
                 if gk_no_seasons > 1:
-                    st.markdown(f"If we look at Season data, Season <b><font color = red>{gk_season_name_best_corr}"
-                                f"</font></b> has the strongest correlation between <b><font color = red>{gk_stat_x} "
-                                f"</font></b> and <b><font color = red>{gk_stat_y}</font></b> (<b><font color = purple>"
-                                f"{gk_season_value_best_corr}</font></b>) a <b><font color = red>{gk_season_corr_sign}"
-                                f"</font></b><b><font color = green> {gk_season_corr_strength}</font></b> "
-                                f"Relationship.", unsafe_allow_html=True)
+                    st.markdown(f"If we look at Season data, Season <b><font color = #d20614>{gk_season_name_best_corr}"
+                                f"</font></b> has the strongest correlation between <b><font color = #d20614>"
+                                f"{gk_stat_x} </font></b> and <b><font color = #d20614>{gk_stat_y}</font></b> (<b>"
+                                f"<font color = purple>{gk_season_value_best_corr}</font></b>) a <b>"
+                                f"<font color = #d20614>{gk_season_corr_sign}</font></b><b><font color = green> "
+                                f"{gk_season_corr_strength}</font></b> Relationship.", unsafe_allow_html=True)
             elif gk_no_games == 0:
-                st.markdown(f"No Data for <b><font color = red>{gk_corr_filter_type}</font></b> Season Games.",
+                st.markdown(f"No Data for <b><font color = #d20614>{gk_corr_filter_type}</font></b> Season Games.",
                             unsafe_allow_html=True)
             else:
-                st.markdown(f"Less then 10 <b><font color = red>{gk_corr_filter_type}</font></b> Season Games.",
+                st.markdown(f"Less then 10 <b><font color = #d20614>{gk_corr_filter_type}</font></b> Season Games.",
                             unsafe_allow_html=True)

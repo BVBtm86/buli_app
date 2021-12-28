@@ -61,10 +61,10 @@ def player_vs_player_page(seasons, start_season, favourite_team):
         st.markdown(
             f"In <b><font color = green>{radar_player_1_better}</font></b> of the <b><font color = green>"
             f"{radar_len_stats}</font></b> <b><font color = green>{radar_compare_stat}</font></b> Statistics, "
-            f"<b><font color = red>{radar_main_player}</font></b> of <b><font color = red>{radar_team_main_player}"
-            f"</font></b> has better on average statistics for <b><font color = green>{radar_compare_season_type}"
-            f"</font></b> Season Games than <b><font color = grey>{radar_compare_player}</font></b> of <b>"
-            f"<font color = grey>{radar_team_compare_player}</font></b>.", unsafe_allow_html=True)
+            f"<b><font color = #d20614>{radar_main_player}</font></b> of <b><font color = #d20614>"
+            f"{radar_team_main_player}</font></b> has better on average statistics for <b><font color = green>"
+            f"{radar_compare_season_type}</font></b> Season Games than <b><font color = grey>{radar_compare_player}"
+            f"</font></b> of <b><font color = grey>{radar_team_compare_player}</font></b>.", unsafe_allow_html=True)
 
     st.subheader(f"Player vs Player Percentile: Season {buli_player_season}")
     pizza_player_col, pizza_chart_col, pizza_vs_player_col = st.columns([3, 8, 3])
@@ -108,10 +108,11 @@ def player_vs_player_page(seasons, start_season, favourite_team):
             st.markdown(
                 f"In <b><font color = green>{pizza_player_1_better}</font></b> of the <b><font color = green>"
                 f"{pizza_len_stats}</font></b> <b><font color = green>{pizza_compare_stat}</font></b> Statistics, "
-                f"<b><font color = red>{pizza_main_player}</font></b> of <b><font color = red>{pizza_team_main_player}"
-                f"</font></b> has better on average stats then 90% of the League for <b><font color = green>"
-                f"{radar_compare_season_type}</font></b> Season Games while in <b><font color = green>"
-                f"{pizza_player_2_better}</font></b> of the <b><font color = green>{pizza_len_stats}</font></b> "
-                f"<b><font color = green>{pizza_compare_stat}</font></b> Statistics, <b><font color = red>"
-                f"{pizza_compare_player}</font></b> of <b><font color = red>{pizza_team_compare_player}"
-                f"</font></b> has better on average stats then 90% of the League.", unsafe_allow_html=True)
+                f"<b><font color = #d20614>{pizza_main_player}</font></b> of <b><font color = #d20614>"
+                f"{pizza_team_main_player}</font></b> has better on average stats then 90% of the League for <b>"
+                f"<font color = green>{radar_compare_season_type}</font></b> Season Games while in <b>"
+                f"<font color = green>{pizza_player_2_better}</font></b> of the <b><font color = green>"
+                f"{pizza_len_stats}</font></b> <b><font color = green>{pizza_compare_stat}</font></b> Statistics, <b>"
+                f"<font color = #d20614>{pizza_compare_player}</font></b> of <b><font color = #d20614>"
+                f"{pizza_team_compare_player}</font></b> has better on average stats then 90% of the League.",
+                unsafe_allow_html=True)

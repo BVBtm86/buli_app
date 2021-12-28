@@ -33,9 +33,10 @@ def prediction_page(prediction_type, season):
             with match_day_col:
                 st.header(f"Season: {season} Match Day {week_no} Predictions")
 
-            st.markdown(f"<b><font color = red>Game Prediction</font></b> for Season <b><font color = black>{season}"
-                        f"</font></b> based on the <b><font color = red>""Averages</font></b> of previous Games Stats "
-                        "that captures a Teams form for Home/Away games", unsafe_allow_html=True)
+            st.markdown(
+                f"<b><font color = #d20614>Game Prediction</font></b> for Season <b><font color = black>{season}"
+                f"</font></b> based on the <b><font color = #d20614>""Averages</font></b> of previous Games Stats "
+                "that captures a Teams form for Home/Away games", unsafe_allow_html=True)
 
             _, home_agg_col, _, away_agg_col, _ = st.columns([1, 2.5, 3, 2.5, 2])
             with home_agg_col:
@@ -113,7 +114,7 @@ def prediction_page(prediction_type, season):
 
             with accuracy_col:
                 st.subheader("")
-                st.markdown(f"<b>Model Accuracy</b>: <b><font color=red>{accuracy_combo}%</font></b>",
+                st.markdown(f"<b>Model Accuracy</b>: <b><font color=#d20614>{accuracy_combo}%</font></b>",
                             unsafe_allow_html=True)
 
         elif prediction_type == 'Season':
@@ -121,7 +122,7 @@ def prediction_page(prediction_type, season):
             with season_col:
                 st.header(f"Season: {season} Predicted Table")
 
-            st.markdown("<b><font color = black>Final Season Table</font></b> based on the <b><font color = red>"
+            st.markdown("<b><font color = black>Final Season Table</font></b> based on the <b><font color = #d20614>"
                         "Averages</font></b> of previous Games Stats that captures a Teams form for Home/Away games",
                         unsafe_allow_html=True)
 
@@ -191,14 +192,14 @@ def prediction_page(prediction_type, season):
 
             with accuracy_col:
                 st.subheader("")
-                st.markdown(f"<b>Model Accuracy</b>: <b><font color=red>{accuracy_combo}%</font></b>",
+                st.markdown(f"<b>Model Accuracy</b>: <b><font color=#d20614>{accuracy_combo}%</font></b>",
                             unsafe_allow_html=True)
         st.markdown(
-            f"<b><font color = red>Note</font></b>: The base model was build using the <b><font color = red>Logistic "
-            f"Regression </font></b> Algorithm on the last 3 seasons of data with the following features:  <b>"
-            f"<font color = red>{str(model_features).replace('[', '').replace(']', '')}</font></b> as features with an "
-            f"Accuracy of <b><font color = red>70%</font></b>", unsafe_allow_html=True)
+            f"<b><font color = #d20614>Note</font></b>: The base model was build using the <b><font color = #d20614>"
+            f"Logistic Regression </font></b> Algorithm on the last 3 seasons of data with the following features:  <b>"
+            f"<font color = #d20614>{str(model_features).replace('[', '').replace(']', '')}</font></b> as features "
+            f"with an Accuracy of <b><font color = #d20614>70%</font></b>", unsafe_allow_html=True)
     else:
-        st.markdown("<h2><b>Page will be available after </font></b></h2> <h2><b><font color=red>Match Day: 2"
+        st.markdown("<h2><b>Page will be available after </font></b></h2> <h2><b><font color=#d20614>Match Day: 2"
                     "</font></font></b></h2>",
                     unsafe_allow_html=True)
