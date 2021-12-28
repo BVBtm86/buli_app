@@ -227,8 +227,8 @@ def create_predictions_season(season_data, data, games_predict, home_agg_steps, 
 
     # ##### Prediction
     prediction_games['Home Result'] = model.predict(prediction_games[final_features].values)
-    prediction_games['Away Result'] = np.where(prediction_games['Home Result'] == "Win", "Defeat",
-                                               np.where(prediction_games['Home Result'] == "Draw", "Draw", "Win"))
+    prediction_games['Away Result'] = np.where(prediction_games['Home Result'] == 2, 0,
+                                               np.where(prediction_games['Home Result'] == 1, 1, 2))
 
     # ##### Create Predicted Table
     home_predict_tab = prediction_games[['Home Team', 'Home Result']]
@@ -236,9 +236,9 @@ def create_predictions_season(season_data, data, games_predict, home_agg_steps, 
     home_predict_tab.rename(columns={'Home Team': 'Team', 'Home Result': 'Result'}, inplace=True)
     away_predict_tab.rename(columns={'Away Team': 'Team', 'Away Result': 'Result'}, inplace=True)
     predict_tab = pd.concat([home_predict_tab, away_predict_tab], axis=0)
-    predict_tab['Win'] = np.where(predict_tab['Result'] == 'Win', 1, 0)
-    predict_tab['Draw'] = np.where(predict_tab['Result'] == 'Draw', 1, 0)
-    predict_tab['Defeat'] = np.where(predict_tab['Result'] == 'Defeat', 1, 0)
+    predict_tab['Win'] = np.where(predict_tab['Result'] == 2, 1, 0)
+    predict_tab['Draw'] = np.where(predict_tab['Result'] == 1, 1, 0)
+    predict_tab['Defeat'] = np.where(predict_tab['Result'] == 0, 1, 0)
 
     # ##### Create Current Table
     season_data['Win'] = np.where(season_data['Result'] == 'Win', 1, 0)
