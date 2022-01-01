@@ -107,18 +107,18 @@ def prediction_page(prediction_type, season, favourite_team):
                     if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
                         st.markdown(f"<b><font color = #d20614>{home_prob[i]}%</font></b>", unsafe_allow_html=True)
                     else:
-                        st.markdown(home_prob[i])
+                        st.markdown(f"{home_prob[i]}%")
 
                 with d_col:
                     if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
                         st.markdown(f"<b><font color = #d20614>{draw_prob[i]}%</font></b>", unsafe_allow_html=True)
                     else:
-                        st.markdown(draw_prob[i])
+                        st.markdown(f"{draw_prob[i]}%")
                 with aw_col:
                     if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
                         st.markdown(f"<b><font color = #d20614>{away_prob[i]}%</font></b>", unsafe_allow_html=True)
                     else:
-                        st.markdown(away_prob[i])
+                        st.markdown(f"{away_prob[i]}%")
 
             with accuracy_col:
                 st.subheader("")
