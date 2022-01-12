@@ -13,7 +13,8 @@ team_name = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer 0
              "Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
              "Mönchengladbach": "Borussia Mönchengladbach", "Köln": "1. FC Köln", "Düsseldorf": "Fortuna Düsseldorf",
              "Nürnberg": "1. FC Nürnberg", "Paderborn 07": "SC Paderborn 07", "Union Berlin": "1. FC Union Berlin",
-             "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth"}
+             "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth",
+             "Greuther F�rth": "SpVgg Greuther Fürth"}
 
 gk_stats_vars_total = ["shots_on_target_against", "goals_against_gk", "saves", "psxg_gk", "passes_gk",
                        "passes_launched_gk", "passes_completed_launched_gk", "passes_throws_gk", "passes_length_avg_gk",

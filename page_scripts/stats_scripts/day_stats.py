@@ -13,7 +13,8 @@ team_name_1 = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer
                "Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
                "Mönchengladbach": "Borussia Mönchengladbach", "Köln": "1. FC Köln", "Düsseldorf": "Fortuna Düsseldorf",
                "Nürnberg": "1. FC Nürnberg", "Paderborn 07": "SC Paderborn 07", "Union Berlin": "1. FC Union Berlin",
-               "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth"}
+               "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth",
+               "Greuther F�rth": "SpVgg Greuther Fürth"}
 
 team_name_2 = {"FC Bayern Mu_nchen": "FC Bayern München", "Bayer 04 Leverkusen": "Bayer 04 Leverkusen",
                "1. FSV Mainz 05": "1. FSV Mainz 05", "Hannover 96": "Hannover 96", "Hamburger SV": "Hamburger SV",
@@ -30,7 +31,8 @@ team_name_2 = {"FC Bayern Mu_nchen": "FC Bayern München", "Bayer 04 Leverkusen"
                "RB Leipzig": "RasenBallsport Leipzig", "TSG Hoffenheim": "TSG 1899 Hoffenheim",
                "DSC Arminia Bielefeld": "Arminia Bielefeld", "Arminia Bielefeld": "Arminia Bielefeld",
                "SC Freiburg": "Sport-Club Freiburg", "SpVgg Greuther Fürth": "SpVgg Greuther Fürth",
-               "VfL Bochum 1848": "VfL Bochum 1848", "Borussia M'gladbach": "Borussia Mönchengladbach"}
+               "VfL Bochum 1848": "VfL Bochum 1848", "Borussia M'gladbach": "Borussia Mönchengladbach",
+               "Greuther F�rth": "SpVgg Greuther Fürth"}
 
 team_name_3 = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer 04 Leverkusen",
                "Hoffenheim": "TSG 1899 Hoffenheim", "Werder Bremen": "SV Werder Bremen", "Mainz 05": "1. FSV Mainz 05",
@@ -42,7 +44,7 @@ team_name_3 = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer
                "FC Cologne": "1. FC Köln", "Fortuna Duesseldorf": "Fortuna Düsseldorf", "Nuernberg": "1. FC Nürnberg",
                "Paderborn": "SC Paderborn 07", "Union Berlin": "1. FC Union Berlin",
                "Arminia Bielefeld": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848",
-               "Greuther Fuerth": "SpVgg Greuther Fürth"}
+               "Greuther Fuerth": "SpVgg Greuther Fürth", "Greuther F�rth": "SpVgg Greuther Fürth"}
 
 # ##### Stadiums
 stadiums = {"1. FC Köln": "RheinEnergieStadion", "1. FC Nürnberg": "Max-Morlock-Stadion",
