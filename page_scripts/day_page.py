@@ -46,15 +46,15 @@ def match_day_page(seasons, start_season, favourite_team):
         home_goals = season_buli_df[
                          (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
                          (season_buli_df['Venue'] == 'Home')]['goals'].values[0] + season_buli_df[
-                         (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team)][
-                         'own_goals'].values[0]
+                         (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team) &
+                         (season_buli_df['Venue'] == 'Away')]['own_goals'].values[0]
         st.markdown(f"<h1 style='text-align: center;'p>{home_goals}</h1>", unsafe_allow_html=True)
     with away_score:
         away_goals = season_buli_df[
                          (season_buli_df['Opponent'] == home_team) & (season_buli_df['Team'] == away_team) &
                          (season_buli_df['Venue'] == 'Away')]['goals'].values[0] + season_buli_df[
-                         (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team)][
-                         'own_goals'].values[0]
+                         (season_buli_df['Team'] == home_team) & (season_buli_df['Opponent'] == away_team) &
+                         (season_buli_df['Venue'] == 'Home')]['own_goals'].values[0]
         st.markdown(f"<h1 style='text-align: center;'p>{away_goals}</h1>", unsafe_allow_html=True)
 
     # Select Match Day
