@@ -14,6 +14,5 @@ Data Reference:
 - https://fbref.com/en/comps/20/Bundesliga-Stats
 - https://www.bundesliga.com/en/bundesliga
 - https://understat.com/league/Bundesliga
-- test
 
 App: [Bundesliga Statistical App](https://share.streamlit.io/bvbtm86/buli_app/buli_app.py)
