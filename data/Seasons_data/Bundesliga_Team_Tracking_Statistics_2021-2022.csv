@@ -381,8 +381,8 @@
 379,2021-2022,22,1. FC Köln,RB Leipzig,Away,119.3,282.0
 380,2021-2022,22,SpVgg Greuther Fürth,Hertha Berlin,Home,120.4,249.0
 381,2021-2022,22,Hertha Berlin,SpVgg Greuther Fürth,Away,121.3,245.0
-382,2021-2022,22,VfL Bochum 1848,FC Bayern München,Home,0.0,0.0
-383,2021-2022,22,FC Bayern München,VfL Bochum 1848,Away,0.0,0.0
+382,2021-2022,22,VfL Bochum 1848,FC Bayern München,Home,116.0,115.9
+383,2021-2022,22,FC Bayern München,VfL Bochum 1848,Away,115.9,116.0
 384,2021-2022,22,SC Freiburg,1. FSV Mainz 05,Home,116.8,220.0
 385,2021-2022,22,1. FSV Mainz 05,SC Freiburg,Away,116.7,205.0
 386,2021-2022,22,Borussia M'gladbach,FC Augsburg,Home,117.8,227.0
@@ -545,8 +545,8 @@
 543,2021-2022,31,Bayer 04 Leverkusen,SpVgg Greuther Fürth,Away,110.0,210.0
 544,2021-2022,31,1. FC Köln,Arminia Bielefeld,Home,111.7,252.0
 545,2021-2022,31,Arminia Bielefeld,1. FC Köln,Away,112.9,226.0
-546,2021-2022,31,Borussia M'gladbach,RB Leipzig,Home,111.0,174.0
-547,2021-2022,31,RB Leipzig,Borussia M'gladbach,Away,112.8,188.0
+546,2021-2022,31,SC Freiburg,Borussia M'gladbach,Home,111.0,174.0
+547,2021-2022,31,Borussia M'gladbach,SC Freiburg,Away,112.8,188.0
 548,2021-2022,31,Eintracht Frankfurt,TSG Hoffenheim,Home,118.0,296.0
 549,2021-2022,31,TSG Hoffenheim,Eintracht Frankfurt,Away,116.7,259.0
 550,2021-2022,31,RB Leipzig,1. FC Union Berlin,Home,111.2,186.0
