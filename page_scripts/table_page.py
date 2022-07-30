@@ -15,7 +15,7 @@ def table_page(page_season, favourite_team):
     st.header(f'Season {page_season}: {season_type} Table Games')
 
     logo_col, rank_col, team_col, mp_col, w_col, d_col, l_col, gf_col, ga_col, gd_col, pts_col = st.columns(
-        [0.40, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1])
+        [0.35, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1])
 
     with logo_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b><font color='white'>#</font></b>", unsafe_allow_html=True)
