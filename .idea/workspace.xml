@@ -20128,6 +20128,7 @@
       <change beforePath="$PROJECT_DIR$/../../Projects/Unsupervised Learning App/unsupervised_learning_app.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.Bundesliga App Demo.webm.icloud" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/Test_App-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page_scripts/table_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_scripts/table_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bundesliga_Predictions/.Algo_comparison_Accuracy.csv.icloud" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bundesliga_Predictions/.Algo_comparison_F1.csv.icloud" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bundesliga_Predictions/.Algo_comparison_LogLoss.csv.icloud" beforeDir="false" />
@@ -20201,14 +20202,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
