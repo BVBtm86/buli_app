@@ -43,8 +43,8 @@ def main():
 
     # ##### Seasons
     # """To be changed at the beginning of each season to only contain the last 5 Seasons"""
-    seasons = ['2017-2018', '2018-2019', '2019-2020', '2020-2021', '2021-2022']
-    selected_season = st.sidebar.selectbox("Select Season", seasons, index=4)
+    seasons = ['2018-2019', '2019-2020', '2020-2021', '2021-2022', '2022-2023']
+    selected_season = st.sidebar.selectbox("Select Season", seasons, index=-1)
     start_season = len(seasons) - 1
 
     # ##### Select Favourite Team
