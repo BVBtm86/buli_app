@@ -126,10 +126,10 @@ def player_comparison_pizza(data, season_filter, stats_type, player_1, player_2)
     player_2_values = list(player_stats[player_stats['Name'] == player_2].values[0][1:])
 
     # ##### Pizza PLot
-    font_normal = FontManager(("https://github.com/google/fonts/blob/main/apache/roboto/static/"
-                               "Roboto-Regular.ttf?raw=true"))
-    font_bold = FontManager(("https://github.com/google/fonts/blob/main/apache/roboto/static/"
-                             "Roboto-Medium.ttf?raw=true"))
+    # font_normal = FontManager(("https://github.com/google/fonts/blob/main/apache/roboto/static/"
+    #                            "Roboto-Regular.ttf?raw=true"))
+    # font_bold = FontManager(("https://github.com/google/fonts/blob/main/apache/roboto/static/"
+    #                          "Roboto-Medium.ttf?raw=true"))
 
     baker = PyPizza(
         params=plot_stats_names,
@@ -157,18 +157,21 @@ def player_comparison_pizza(data, season_filter, stats_type, player_1, player_2)
         ),
         kwargs_params=dict(
             color="#8265A7", fontsize=12,
-            fontproperties=font_normal.prop, va="center"
+            # fontproperties=font_normal.prop, va="center"
+            va="center"
         ),
         kwargs_values=dict(
             color="#FFFFFF", fontsize=12,
-            fontproperties=font_bold.prop, zorder=3,
+            # fontproperties=font_bold.prop, zorder=3,
+            zorder=3,
             bbox=dict(
                 edgecolor="#8265A7", facecolor="#c70b01",
                 boxstyle="round,pad=0.2", lw=1
             )
         ),
         kwargs_compare_values=dict(
-            color="#FFFFFF", fontsize=12, fontproperties=font_bold.prop, zorder=3,
+            # color="#FFFFFF", fontsize=12, fontproperties=font_bold.prop, zorder=3,
+            color="#FFFFFF", fontsize=12, zorder=3,
             bbox=dict(edgecolor="#808080", facecolor="#4e4e50", boxstyle="round,pad=0.2", lw=1)
         ),
     )
@@ -176,7 +179,8 @@ def player_comparison_pizza(data, season_filter, stats_type, player_1, player_2)
     fig_text(
         0.515, 0.99, f"<{player_1}> vs <{player_2}>", size=17, fig=pizza_fig,
         highlight_textprops=[{"color": '#c70b01'}, {"color": '#4e4e50'}],
-        ha="center", fontproperties=font_bold.prop, color="#8265A7")
+        # ha="center", fontproperties=font_bold.prop, color="#8265A7")
+        ha="center", color="#8265A7")
 
     # ##### Markdown
     pizza_player_1_better = np.sum(np.array(player_1_values) >= 90)
