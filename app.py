@@ -10,13 +10,14 @@ import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
 
-st.set_page_config(layout="wide",
-                   page_title="Bundesliga App",
-                   page_icon="⚽",
-                   initial_sidebar_state="expanded")
-
 # ##### Logo
 buli_logo = Image.open('images/Bundesliga.png')
+
+st.set_page_config(layout="wide",
+                   page_title="Bundesliga App",
+                   page_icon=buli_logo,
+                   initial_sidebar_state="expanded")
+
 buli_logo_col, text_col = st.columns([1, 10])
 buli_container = st.container()
 with buli_container:
@@ -28,7 +29,6 @@ with buli_container:
 # ##### Statistic Type
 statistics_type = ["Home", "Match Day Statistics", "Season Table", "Team Statistics", "Player Statistics",
                    "Player vs Player Statistics", "Goalkeeper Statistics", "Event Data", "Season Predictions"]
-# statistics_track = st.sidebar.selectbox("Select Page", statistics_type)
 
 
 def main():
@@ -39,7 +39,8 @@ def main():
                                        options=statistics_type,
                                        icons=["house-fill", "calendar3", "table", "reception-4",
                                               "person-lines-fill", "people-fill", "shield-shaded",
-                                              "skip-forward-circle", "ui-radios"])
+                                              "skip-forward-circle", "ui-radios"],
+                                       styles={"nav-link": {"--hover-color": "#e5e5e6"}})
 
     # ##### Seasons
     # """To be changed at the beginning of each season to only contain the last 5 Seasons"""
