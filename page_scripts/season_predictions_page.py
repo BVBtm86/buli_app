@@ -108,7 +108,8 @@ def prediction_page(prediction_type, season, favourite_team):
 
             with accuracy_col:
                 st.subheader("")
-                st.markdown(f"<b>Model Accuracy</b>: <b><font color=#d20614>{accuracy_combo[agg_stats]:.2%}</font></b>",
+                st.markdown(f"<b>Model Accuracy</b>: <b><font color=#d20614>"
+                            f"{accuracy_combo[agg_stats_options.index(agg_stats)]:.2%}</font></b>",
                             unsafe_allow_html=True)
 
         elif prediction_type == 'Season':
@@ -220,13 +221,15 @@ def prediction_page(prediction_type, season, favourite_team):
 
             with accuracy_col:
                 st.subheader("")
-                st.markdown(f"<b>Model Accuracy</b>: <b><font color=#d20614>{accuracy_combo[agg_stats]:.2%}</font></b>",
+                st.markdown(f"<b>Model Accuracy</b>: <b><font color=#d20614>"
+                            f"{accuracy_combo[agg_stats_options.index(agg_stats)]:.2%}</font></b>",
                             unsafe_allow_html=True)
             st.markdown(
                 f"<b><font color = #d20614>Note</font></b>: The base model was build using the <b><font color = #d20614"
-                f">Logistic Regression </font></b> Algorithm on the {model_data[agg_stats]} of data with the following "
-                f"features: <b><font color = #d20614>{str(model_features).replace('[', '').replace(']', '')}</font>"
-                f"</b>", unsafe_allow_html=True)
+                f">Logistic Regression </font></b> Algorithm on the {model_data[agg_stats_options.index(agg_stats)]} "
+                f"of data with the following features: <b><font color = #d20614>"
+                f"{str(model_features).replace('[', '').replace(']', '')}</font></b>", unsafe_allow_html=True)
+        st.sidebar.markdown("")
     else:
         st.markdown("<h2><b>Page will be available after </font></b></h2> <h2><b><font color=#d20614>Match Day: 2"
                     "</font></font></b></h2>",

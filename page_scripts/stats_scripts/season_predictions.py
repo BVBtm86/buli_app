@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from pickle import load
+from joblib import load
 import streamlit as st
 
 # ##### Team Names
@@ -99,7 +99,7 @@ def season_data_process(season):
 
 @st.cache
 def data_processing(data, current_match_day, rolling_data):
-    buli_prediction = pd.read_csv("././data/Model_Data/Season_Prediction_Games.csv")
+    buli_prediction = pd.read_csv("././data/Season_Prediction_Games.csv")
     buli_prediction = buli_prediction[buli_prediction['Week_No'] > current_match_day].reset_index(drop=True)
     df_home = data[(data['Venue'] == 'Home')].reset_index(drop=True)
     df_away = data[(data['Venue'] == 'Away')].reset_index(drop=True)
@@ -169,9 +169,10 @@ def data_processing(data, current_match_day, rolling_data):
 
 
 def data_prediction_game(data, step, week_no):
+
     # ###### Load Prediction Data
     final_model = load(open(f"././final_models/Last {step} Games Model.pkl", 'rb'))
-    final_transform = load(open(f"././final_models/Model_Data/Last {step} Games Transform.pkl", 'rb'))
+    final_transform = load(open(f"././final_models/Last {step} Games Transform.pkl", 'rb'))
     model_features = list(final_transform.get_feature_names_out())
 
     # ##### Predictions
@@ -194,8 +195,8 @@ def data_prediction_game(data, step, week_no):
 
 def create_predictions_season(data, current_data, step):
     # ###### Load Prediction Data
-    final_model = load(open(f"././data/Model_Data/Last {step} Games Model.pkl", 'rb'))
-    final_transform = load(open(f"././data/Model_Data/Last {step} Games Transform.pkl", 'rb'))
+    final_model = load(open(f"././final_models/Last {step} Games Model.pkl", 'rb'))
+    final_transform = load(open(f"././final_models/Last {step} Games Transform.pkl", 'rb'))
     model_features = list(final_transform.get_feature_names_out())
 
     # ##### Predictions

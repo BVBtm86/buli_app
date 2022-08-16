@@ -98,12 +98,12 @@ def player_vs_player_page(page_season, favourite_team):
         st.image(pizza_compare_team_player_logo, width=100)
 
     with pizza_chart_col:
-        pizza_fig, pizza_player_1_better, pizza_player_2_better, \
-        pizza_len_stats = player_comparison_pizza(data=buli_player_season_df,
-                                                  season_filter=pizza_compare_season_type,
-                                                  player_1=pizza_main_player,
-                                                  player_2=pizza_compare_player,
-                                                  stats_type=pizza_compare_stat)
+        pizza_fig, pizza_player_1_better, pizza_player_2_better, pizza_len_stats = \
+            player_comparison_pizza(data=buli_player_season_df,
+                                    season_filter=pizza_compare_season_type,
+                                    player_1=pizza_main_player,
+                                    player_2=pizza_compare_player,
+                                    stats_type=pizza_compare_stat)
 
         st.pyplot(pizza_fig)
 

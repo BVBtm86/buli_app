@@ -124,6 +124,11 @@ def player_comparison_pizza(data, season_filter, stats_type, player_1, player_2)
 
     player_1_values = list(player_stats[player_stats['Name'] == player_1].values[0][1:])
     player_2_values = list(player_stats[player_stats['Name'] == player_2].values[0][1:])
+    for i in range(len(player_1_values)):
+        if np.isnan(player_1_values[i]):
+            player_1_values[i] = 0
+        if np.isnan(player_2_values[i]):
+            player_2_values[i] = 0
 
     # ##### Pizza PLot
     # font_normal = FontManager(("https://github.com/google/fonts/blob/main/apache/roboto/static/"
