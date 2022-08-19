@@ -58,7 +58,7 @@ stadiums = {"1. FC Köln": "RheinEnergieStadion", "1. FC Nürnberg": "Max-Morloc
             "Sport-Club Freiburg": ["Dreisamstadion", "Europa-Park Stadion"], "SC Paderborn 07": "Benteler-Arena",
             "FC Schalke 04": "Veltins-Arena", "1. FC Union Berlin": "Stadion An der Alten Försterei",
             "VfB Stuttgart": "Mercedes-Benz Arena", "VfL Bochum 1848": "Vonovia Ruhrstadion",
-            "VfL Wolfsburg": "Volkswagen Arena", "Werder Bremen": "Weser-Stadion"}
+            "VfL Wolfsburg": "Volkswagen Arena", "SV Werder Bremen": "Weser-Stadion"}
 
 # ##### General Statistics
 general_stats_vars = ["Manager", "Team_Lineup", "Distance_Covered", "Sprints", "Possession", "aerials_won_pct",

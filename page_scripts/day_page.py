@@ -297,7 +297,9 @@ def match_day_page(page_season, favourite_team):
     # ##### Stadium Info
     _, stadium_logo, _ = st.columns([2, 1, 1])
     with stadium_logo:
-        if (home_team == "Sport-Club Freiburg") and (page_season == '2021-2022') and (match_day > 6):
+        if (home_team == "Sport-Club Freiburg") and (page_season == '2022-2023'):
+            stadium_name = stadiums[home_team][1]
+        elif (home_team == "Sport-Club Freiburg") and (page_season == '2021-2022') and (match_day > 6):
             stadium_name = stadiums[home_team][1]
         elif (home_team == "Sport-Club Freiburg") and (page_season == '2021-2022') and (match_day <= 6):
             stadium_name = stadiums[home_team][0]
