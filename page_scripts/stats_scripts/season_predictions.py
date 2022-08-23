@@ -128,7 +128,7 @@ def data_processing(data, current_match_day, rolling_data):
 
         final_df_away = pd.DataFrame()
         for away in df_away['Away Team'].unique():
-            df_away_filter = df_away[df_away['Home Team'] == away].drop(
+            df_away_filter = df_away[df_away['Away Team'] == away].drop(
                 columns=['Week_No', 'Season', 'Home Team', 'Away Result'])
             df_away_filter = pd.DataFrame(df_away_filter.iloc[-1, :]).T
             final_df_away = pd.concat([final_df_away, df_away_filter])
