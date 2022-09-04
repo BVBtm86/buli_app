@@ -523,7 +523,7 @@ def teams_buli_type(data, analysis_seasons, filter_type, team, stat_name):
         better_seasons = ""
         no_seasons = 1
 
-    return team_stat_fig, rank_season, better_seasons, no_seasons
+    return team_stat_fig, rank_season, better_seasons, no_seasons, current_season
 
 
 def relationship_buli_data(data, team, analysis_seasons, filter_type, stat_x, stat_y, ols_line):

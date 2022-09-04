@@ -92,9 +92,9 @@ def team_page(page_season, favourite_team):
             st.image(team_logo, width=100)
 
             fig_type_team, team_data_name, team_value_1, team_value_2, team_part_name, \
-            team_value_3, team_value_4 = teams_season_type(data=buli_season_df,
-                                                           team=team_chart,
-                                                           stat_name=stat_name_day)
+                team_value_3, team_value_4 = teams_season_type(data=buli_season_df,
+                                                               team=team_chart,
+                                                               stat_name=stat_name_day)
             st.markdown(
                 f"<b><font color = #d20614>{team_chart}</font></b> performs much better at <b><font color = #d20614>"
                 f"{team_data_name[0]}</font></b> Games with <b><font color = #d20614>{team_value_1}</font></b> <b>"
@@ -139,13 +139,13 @@ def team_page(page_season, favourite_team):
             final_team.extend(teams)
             corr_name_team = st.selectbox("Relationship Team Selection", final_team)
             relationship_fig, corr_value, corr_name, overall_corr_strength, overall_corr_sign, result_corr_strength, \
-            result_corr_sign, max_result = relationship_data(data=buli_season_df,
-                                                             team=corr_name_team,
-                                                             filter_type=corr_filter_type,
-                                                             stat_x=corr_stat_x,
-                                                             stat_y=corr_stat_y,
-                                                             stat_size=corr_stat_size,
-                                                             ols_line=regression_line)
+                result_corr_sign, max_result = relationship_data(data=buli_season_df,
+                                                                 team=corr_name_team,
+                                                                 filter_type=corr_filter_type,
+                                                                 stat_x=corr_stat_x,
+                                                                 stat_y=corr_stat_y,
+                                                                 stat_size=corr_stat_size,
+                                                                 ols_line=regression_line)
 
             config = {'displayModeBar': False}
             st.plotly_chart(relationship_fig, config=config, use_container_width=True)
@@ -169,7 +169,6 @@ def team_page(page_season, favourite_team):
 
         buli_df = season_data_process(season="", stat_type=1)
         seasons = list(buli_df['Season'].unique())[-5:]
-        current_season = seasons[-1]
         buli_teams = season_teams(buli_df, page_season)
         pos_team = buli_teams.index(favourite_team)
         st.subheader(f"Team Stats vs Opponent over the Last 5 Seasons")
@@ -186,12 +185,12 @@ def team_page(page_season, favourite_team):
             st.image(team_logo, use_column_width=True)
 
         with team_chart_col:
-            fig_seasons_team, rank_season, better_seasons, no_seasons = teams_buli_type(data=buli_df,
-                                                                                        analysis_seasons=seasons,
-                                                                                        filter_type=season_type_team,
-                                                                                        team=buli_team,
-                                                                                        stat_name=stat_name_team)
-
+            fig_seasons_team, rank_season, better_seasons, no_seasons, current_season = \
+                teams_buli_type(data=buli_df,
+                                analysis_seasons=seasons,
+                                filter_type=season_type_team,
+                                team=buli_team,
+                                stat_name=stat_name_team)
         with team_chart_col:
             config = {'displayModeBar': False}
             st.plotly_chart(fig_seasons_team, config=config, use_container_width=True)
@@ -245,7 +244,7 @@ def team_page(page_season, favourite_team):
         with corr_team_col:
 
             relationship_fig, overall_corr_value, overall_corr_strength, overall_corr_sign, \
-            season_name_best_corr, season_value_best_corr, season_corr_strength, season_corr_sign = \
+                season_name_best_corr, season_value_best_corr, season_corr_strength, season_corr_sign = \
                 relationship_buli_data(data=buli_df,
                                        analysis_seasons=seasons,
                                        team=buli_team,
