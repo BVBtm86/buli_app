@@ -57,6 +57,7 @@ packaging==21.3
 pandas==1.4.3
 pandocfilters==1.5.0
 parso==0.8.3
+patsy==0.5.2
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.2.0
@@ -89,6 +90,7 @@ six==1.16.0
 smmap==5.0.0
 soupsieve==2.3.2.post1
 stack-data==0.3.0
+statsmodels==0.13.2
 streamlit==1.10.0
 streamlit-option-menu==0.3.2
 tenacity==8.0.1
