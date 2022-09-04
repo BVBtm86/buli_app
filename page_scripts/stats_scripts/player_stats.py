@@ -614,7 +614,7 @@ def player_buli_stats(data, season_filter, team, player, avg_players, stat_name,
         player_better_seasons = ""
         player_no_seasons = 0
 
-    return player_seasons_fig, player_rank_season, player_better_seasons, player_no_seasons
+    return player_seasons_fig, player_rank_season, player_better_seasons, player_no_seasons, current_season
 
 
 def player_buli_corr_data(data, filter_type, team, player, stat_x, stat_y, analysis_seasons):

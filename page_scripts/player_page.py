@@ -303,14 +303,15 @@ def player_page(all_seasons, page_season, favourite_team):
             stat_player_seasons = st.selectbox("Player Statistics", player_stats_names_avg)
 
         with player_chart_col:
-            player_seasons_fig, player_rank_season, player_better_seasons, player_no_seasons = player_buli_stats(
-                data=buli_player_season_df,
-                season_filter=seasons_player_filter,
-                team=seasons_player_team,
-                player=seasons_player_name,
-                avg_players=final_avg_players,
-                stat_name=stat_player_seasons,
-                analysis_seasons=seasons)
+            player_seasons_fig, player_rank_season, player_better_seasons, player_no_seasons, latest_season = \
+                player_buli_stats(
+                    data=buli_player_season_df,
+                    season_filter=seasons_player_filter,
+                    team=seasons_player_team,
+                    player=seasons_player_name,
+                    avg_players=final_avg_players,
+                    stat_name=stat_player_seasons,
+                    analysis_seasons=seasons)
             config = {'displayModeBar': False}
             st.plotly_chart(player_seasons_fig, config=config, use_container_width=True)
 
@@ -329,7 +330,7 @@ def player_page(all_seasons, page_season, favourite_team):
                             f"{player_rank_season}</font></b><b><font color = black>{player_rank_name}</font></b> "
                             f"highest Average <b><font color = #d20614>{stat_player_seasons}</font></b> per Game for "
                             f"the <b><font color = black>{seasons_player_filter}</font></b> Season <b>"
-                            f"<font color = #d20614>{current_season}</font></b>, if we look at the last <b>"
+                            f"<font color = #d20614>{latest_season}</font></b>, if we look at the last <b>"
                             f"<font color = black>{player_no_seasons}</font></b> Seasons. In <b><font color = #d20614>"
                             f"{player_better_seasons}</font></b> of the last <b><font color = black>{player_no_seasons}"
                             f"</font></b> Seasons, <b><font color = #d20614>{seasons_player_name}</font></b> has more "
@@ -340,7 +341,7 @@ def player_page(all_seasons, page_season, favourite_team):
             elif player_no_seasons == 1:
                 st.markdown(f"<b><font color = #d20614>{player_rank_season}</font></b>", unsafe_allow_html=True)
             else:
-                st.markdown(f"No Data for Season <b><font color = #d20614>{current_season}</font></b>.",
+                st.markdown(f"No Data for Season <b><font color = #d20614>{latest_season}</font></b>.",
                             unsafe_allow_html=True)
 
         st.subheader(f"Player Stats Relationship over the Last 5 Seasons")
