@@ -169,7 +169,7 @@ def team_page(page_season, favourite_team):
 
         buli_df = season_data_process(season="", stat_type=1)
         seasons = list(buli_df['Season'].unique())[-5:]
-        current_season = page_season
+        current_season = seasons[-1]
         buli_teams = season_teams(buli_df, page_season)
         pos_team = buli_teams.index(favourite_team)
         st.subheader(f"Team Stats vs Opponent over the Last 5 Seasons")
