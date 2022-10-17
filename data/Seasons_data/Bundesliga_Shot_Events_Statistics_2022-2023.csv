@@ -1930,194 +1930,433 @@
 1928,2022-2023,8,Augsburg,Schalke 04,Away,Win,Mërgim Berisha,60,SavedShot,0.8130000305175781,0.3309999847412109,0.0592736825346946,OpenPlay,LeftFoot,Ermedin Demirovic,Pass
 1929,2022-2023,8,Augsburg,Schalke 04,Away,Win,Ermedin Demirovic,66,SavedShot,0.8090000152587891,0.57,0.050502423197031,OpenPlay,RightFoot,Florian Niederlechner,Pass
 1930,2022-2023,8,Augsburg,Schalke 04,Away,Win,André Hahn,76,Goal,0.8980000305175782,0.4759999847412109,0.0954547077417373,OpenPlay,Head,Robert Gumny,Cross
-1931,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,1,MissedShots,0.84,0.3220000076293945,0.03574853017926216,OpenPlay,LeftFoot,Andrej Kramaric,Pass
-1932,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,2,MissedShots,0.8690000152587891,0.29399999618530276,0.03838363662362099,OpenPlay,RightFoot,Christoph Baumgartner,Pass
-1933,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,5,MissedShots,0.8619999694824219,0.31,0.04012269899249077,OpenPlay,LeftFoot,Robert Skov,Pass
-1934,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,21,BlockedShot,0.895,0.27899999618530275,0.041793983429670334,OpenPlay,LeftFoot,Dennis Geiger,TakeOn
+1931,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,1,MissedShots,0.84,0.3220000076293945,0.0357485301792621,OpenPlay,LeftFoot,Andrej Kramaric,Pass
+1932,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,2,MissedShots,0.8690000152587891,0.2939999961853027,0.0383836366236209,OpenPlay,RightFoot,Christoph Baumgartner,Pass
+1933,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,5,MissedShots,0.8619999694824219,0.31,0.0401226989924907,OpenPlay,LeftFoot,Robert Skov,Pass
+1934,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,21,BlockedShot,0.895,0.2789999961853027,0.0417939834296703,OpenPlay,LeftFoot,Dennis Geiger,TakeOn
 1935,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Munas Dabbur,31,Goal,0.870999984741211,0.605,0.4290797710418701,OpenPlay,RightFoot,Dennis Geiger,Pass
-1936,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,33,ShotOnPost,0.9019999694824219,0.595999984741211,0.0805366113781929,OpenPlay,RightFoot,Dennis Geiger,Chipped
-1937,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Andrej Kramaric,38,MissedShots,0.8119999694824219,0.6469999694824219,0.03439733386039734,OpenPlay,RightFoot,Munas Dabbur,Pass
-1938,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Andrej Kramaric,46,MissedShots,0.8619999694824219,0.37099998474121093,0.048733677715063095,FromCorner,LeftFoot,,None
-1939,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Dennis Geiger,50,SavedShot,0.7780000305175782,0.29100000381469726,0.01450364664196968,OpenPlay,RightFoot,,None
-1940,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,51,MissedShots,0.9469999694824218,0.555,0.11055868864059448,OpenPlay,RightFoot,Munas Dabbur,Cross
-1941,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,54,SavedShot,0.9540000152587891,0.6509999847412109,0.09178484231233597,OpenPlay,LeftFoot,,TakeOn
-1942,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Munas Dabbur,61,SavedShot,0.8030000305175782,0.3609999847412109,0.03705458343029022,OpenPlay,RightFoot,,BallRecovery
-1943,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,61,SavedShot,0.8130000305175781,0.53,0.043003227561712265,OpenPlay,LeftFoot,,Rebound
-1944,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,63,BlockedShot,0.7069999694824218,0.48400001525878905,0.018393751233816147,OpenPlay,RightFoot,Munas Dabbur,Pass
-1945,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Grischa Prömel,64,SavedShot,0.9019999694824219,0.42700000762939455,0.0752672553062439,OpenPlay,Head,Robert Skov,Cross
+1936,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,33,ShotOnPost,0.901999969482422,0.595999984741211,0.0805366113781929,OpenPlay,RightFoot,Dennis Geiger,Chipped
+1937,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Andrej Kramaric,38,MissedShots,0.8119999694824219,0.6469999694824219,0.0343973338603973,OpenPlay,RightFoot,Munas Dabbur,Pass
+1938,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Andrej Kramaric,46,MissedShots,0.8619999694824219,0.3709999847412109,0.048733677715063,FromCorner,LeftFoot,,None
+1939,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Dennis Geiger,50,SavedShot,0.7780000305175782,0.2910000038146972,0.0145036466419696,OpenPlay,RightFoot,,None
+1940,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,51,MissedShots,0.9469999694824218,0.555,0.1105586886405944,OpenPlay,RightFoot,Munas Dabbur,Cross
+1941,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,54,SavedShot,0.9540000152587892,0.6509999847412109,0.0917848423123359,OpenPlay,LeftFoot,,TakeOn
+1942,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Munas Dabbur,61,SavedShot,0.8030000305175782,0.3609999847412109,0.0370545834302902,OpenPlay,RightFoot,,BallRecovery
+1943,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Robert Skov,61,SavedShot,0.8130000305175781,0.53,0.0430032275617122,OpenPlay,LeftFoot,,Rebound
+1944,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Christoph Baumgartner,63,BlockedShot,0.7069999694824218,0.484000015258789,0.0183937512338161,OpenPlay,RightFoot,Munas Dabbur,Pass
+1945,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Grischa Prömel,64,SavedShot,0.901999969482422,0.4270000076293945,0.0752672553062439,OpenPlay,Head,Robert Skov,Cross
 1946,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Grischa Prömel,91,BlockedShot,0.9619999694824218,0.5270000076293946,0.145724818110466,OpenPlay,RightFoot,Georginio Rutter,Pass
-1947,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Ozan Kabak,93,MissedShots,0.84,0.3509999847412109,0.01738903298974037,SetPiece,Head,Jacob Bruun Larsen,Chipped
-1948,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Niclas Füllkrug,6,MissedShots,0.88,0.5670000076293945,0.01984262466430664,OpenPlay,Head,Ilia Gruev,Aerial
-1949,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Marvin Ducksch,17,Goal,0.8380000305175781,0.629000015258789,0.09200102090835571,OpenPlay,RightFoot,Niclas Füllkrug,Pass
-1950,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Marvin Ducksch,24,BlockedShot,0.88,0.37799999237060544,0.05377531796693802,OpenPlay,RightFoot,Mitchell Weiser,Cross
-1951,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Niclas Füllkrug,35,SavedShot,0.7930000305175782,0.46099998474121096,0.04849889129400253,OpenPlay,LeftFoot,Romano Schmid,BallRecovery
-1952,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Mitchell Weiser,68,MissedShots,0.8480000305175781,0.5070000076293946,0.09363299608230591,OpenPlay,RightFoot,Niclas Füllkrug,Pass
-1953,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Marvin Ducksch,78,BlockedShot,0.8530000305175781,0.43,0.33231762051582336,OpenPlay,RightFoot,Mitchell Weiser,Pass
-1954,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Mitchell Weiser,79,MissedShots,0.8630000305175781,0.27700000762939453,0.0401662178337574,FromCorner,RightFoot,Leonardo Bittencourt,Pass
+1947,2022-2023,9,Hoffenheim,Werder Bremen,Home,Defeat,Ozan Kabak,93,MissedShots,0.84,0.3509999847412109,0.0173890329897403,SetPiece,Head,Jacob Bruun Larsen,Chipped
+1948,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Niclas Füllkrug,6,MissedShots,0.88,0.5670000076293945,0.0198426246643066,OpenPlay,Head,Ilia Gruev,Aerial
+1949,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Marvin Ducksch,17,Goal,0.8380000305175781,0.629000015258789,0.0920010209083557,OpenPlay,RightFoot,Niclas Füllkrug,Pass
+1950,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Marvin Ducksch,24,BlockedShot,0.88,0.3779999923706054,0.053775317966938,OpenPlay,RightFoot,Mitchell Weiser,Cross
+1951,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Niclas Füllkrug,35,SavedShot,0.7930000305175782,0.4609999847412109,0.0484988912940025,OpenPlay,LeftFoot,Romano Schmid,BallRecovery
+1952,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Mitchell Weiser,68,MissedShots,0.8480000305175781,0.5070000076293946,0.0936329960823059,OpenPlay,RightFoot,Niclas Füllkrug,Pass
+1953,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Marvin Ducksch,78,BlockedShot,0.8530000305175781,0.43,0.3323176205158233,OpenPlay,RightFoot,Mitchell Weiser,Pass
+1954,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Mitchell Weiser,79,MissedShots,0.8630000305175781,0.2770000076293945,0.0401662178337574,FromCorner,RightFoot,Leonardo Bittencourt,Pass
 1955,2022-2023,9,Werder Bremen,Hoffenheim,Away,Win,Niclas Füllkrug,86,Goal,0.885,0.5,0.75777667760849,Penalty,RightFoot,,Standard
-1956,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Moussa Diaby,5,MissedShots,0.9569999694824218,0.3340000152587891,0.07098738104104996,OpenPlay,RightFoot,Jeremie Frimpong,Pass
-1957,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,24,BlockedShot,0.874000015258789,0.5309999847412109,0.11190114170312881,OpenPlay,LeftFoot,Moussa Diaby,Pass
-1958,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,25,MissedShots,0.9259999847412109,0.4329999923706055,0.08165183663368225,FromCorner,Head,Moussa Diaby,Cross
-1959,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Callum Hudson-Odoi,26,BlockedShot,0.795,0.39599998474121095,0.04641200974583626,OpenPlay,RightFoot,Patrik Schick,TakeOn
-1960,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Charles Aránguiz,26,MissedShots,0.8140000152587891,0.4520000076293945,0.038143057376146317,FromCorner,RightFoot,,None
-1961,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Charles Aránguiz,34,SavedShot,0.8690000152587891,0.5429999923706055,0.031211983412504196,FromCorner,RightFoot,Piero Hincapié,Aerial
-1962,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Moussa Diaby,37,Goal,0.76,0.51,0.026805732399225235,OpenPlay,LeftFoot,Robert Andrich,Pass
-1963,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Jeremie Frimpong,40,Goal,0.9519999694824218,0.34599998474121096,0.29021191596984863,OpenPlay,RightFoot,Moussa Diaby,Pass
-1964,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Jeremie Frimpong,51,Goal,0.870999984741211,0.524000015258789,0.48482829332351685,OpenPlay,LeftFoot,Moussa Diaby,Throughball
-1965,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,68,MissedShots,0.9,0.519000015258789,0.037918150424957275,OpenPlay,Head,Jeremie Frimpong,Aerial
-1966,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,69,SavedShot,0.8959999847412109,0.6580000305175782,0.24419158697128296,OpenPlay,LeftFoot,Callum Hudson-Odoi,Pass
-1967,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Adam Hlozek,81,SavedShot,0.7480000305175781,0.5429999923706055,0.060325928032398224,OpenPlay,RightFoot,Piero Hincapié,Chipped
+1956,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Moussa Diaby,5,MissedShots,0.9569999694824218,0.3340000152587891,0.0709873810410499,OpenPlay,RightFoot,Jeremie Frimpong,Pass
+1957,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,24,BlockedShot,0.874000015258789,0.5309999847412109,0.1119011417031288,OpenPlay,LeftFoot,Moussa Diaby,Pass
+1958,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,25,MissedShots,0.9259999847412108,0.4329999923706055,0.0816518366336822,FromCorner,Head,Moussa Diaby,Cross
+1959,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Callum Hudson-Odoi,26,BlockedShot,0.795,0.3959999847412109,0.0464120097458362,OpenPlay,RightFoot,Patrik Schick,TakeOn
+1960,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Charles Aránguiz,26,MissedShots,0.8140000152587891,0.4520000076293945,0.0381430573761463,FromCorner,RightFoot,,None
+1961,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Charles Aránguiz,34,SavedShot,0.8690000152587891,0.5429999923706055,0.0312119834125041,FromCorner,RightFoot,Piero Hincapié,Aerial
+1962,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Moussa Diaby,37,Goal,0.76,0.51,0.0268057323992252,OpenPlay,LeftFoot,Robert Andrich,Pass
+1963,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Jeremie Frimpong,40,Goal,0.9519999694824218,0.3459999847412109,0.2902119159698486,OpenPlay,RightFoot,Moussa Diaby,Pass
+1964,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Jeremie Frimpong,51,Goal,0.870999984741211,0.524000015258789,0.4848282933235168,OpenPlay,LeftFoot,Moussa Diaby,Throughball
+1965,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,68,MissedShots,0.9,0.519000015258789,0.0379181504249572,OpenPlay,Head,Jeremie Frimpong,Aerial
+1966,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Patrik Schick,69,SavedShot,0.8959999847412109,0.6580000305175782,0.2441915869712829,OpenPlay,LeftFoot,Callum Hudson-Odoi,Pass
+1967,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Adam Hlozek,81,SavedShot,0.7480000305175781,0.5429999923706055,0.0603259280323982,OpenPlay,RightFoot,Piero Hincapié,Chipped
 1968,2022-2023,9,Bayer Leverkusen,Schalke 04,Home,Win,Paulinho,89,Goal,0.909000015258789,0.45,0.544876754283905,OpenPlay,RightFoot,Amine Adli,Throughball
-1969,2022-2023,9,Schalke 04,Bayer Leverkusen,Away,Defeat,Simon Terodde,41,MissedShots,0.9180000305175782,0.5370000076293945,0.06286823749542236,OpenPlay,Head,Cédric Brunner,Aerial
-1970,2022-2023,9,Schalke 04,Bayer Leverkusen,Away,Defeat,Simon Terodde,53,SavedShot,0.9219999694824219,0.4209999847412109,0.07674025744199753,OpenPlay,RightFoot,Marius Bülter,Cross
-1971,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Aarón Martín,17,BlockedShot,0.855999984741211,0.705,0.03901085630059242,OpenPlay,LeftFoot,Silvan Widmer,Pass
-1972,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Marcus Ingvartsen,20,MissedShots,0.865,0.5609999847412109,0.02468428947031498,OpenPlay,Head,Aarón Martín,Cross
-1973,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Karim Onisiwo,22,SavedShot,0.845999984741211,0.3240000152587891,0.06708507239818573,OpenPlay,LeftFoot,,TakeOn
-1974,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Dominik Kohr,24,MissedShots,0.695,0.46599998474121096,0.010650970973074436,OpenPlay,RightFoot,,None
-1975,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Jae-Sung Lee,24,SavedShot,0.9230000305175782,0.68,0.05454862490296364,OpenPlay,LeftFoot,Silvan Widmer,Chipped
-1976,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Anton Stach,34,MissedShots,0.8059999847412109,0.3529999923706055,0.033668145537376404,OpenPlay,RightFoot,,None
-1977,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Karim Onisiwo,43,MissedShots,0.8490000152587891,0.52,0.05180290341377258,OpenPlay,LeftFoot,Jae-Sung Lee,Cross
-1978,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Marcus Ingvartsen,44,Goal,0.9540000152587891,0.34799999237060547,0.32245945930480957,OpenPlay,RightFoot,Anton Stach,Throughball
-1979,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Karim Onisiwo,62,BlockedShot,0.7559999847412109,0.48,0.045608147978782654,OpenPlay,RightFoot,Dominik Kohr,TakeOn
-1980,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Benjamin Henrichs,4,BlockedShot,0.7219999694824218,0.445,0.01773642934858799,OpenPlay,LeftFoot,Dominik Szoboszlai,Pass
+1969,2022-2023,9,Schalke 04,Bayer Leverkusen,Away,Defeat,Simon Terodde,41,MissedShots,0.9180000305175782,0.5370000076293945,0.0628682374954223,OpenPlay,Head,Cédric Brunner,Aerial
+1970,2022-2023,9,Schalke 04,Bayer Leverkusen,Away,Defeat,Simon Terodde,53,SavedShot,0.921999969482422,0.4209999847412109,0.0767402574419975,OpenPlay,RightFoot,Marius Bülter,Cross
+1971,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Aarón Martín,17,BlockedShot,0.855999984741211,0.705,0.0390108563005924,OpenPlay,LeftFoot,Silvan Widmer,Pass
+1972,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Marcus Ingvartsen,20,MissedShots,0.865,0.5609999847412109,0.0246842894703149,OpenPlay,Head,Aarón Martín,Cross
+1973,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Karim Onisiwo,22,SavedShot,0.845999984741211,0.3240000152587891,0.0670850723981857,OpenPlay,LeftFoot,,TakeOn
+1974,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Dominik Kohr,24,MissedShots,0.695,0.4659999847412109,0.0106509709730744,OpenPlay,RightFoot,,None
+1975,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Jae-Sung Lee,24,SavedShot,0.9230000305175782,0.68,0.0545486249029636,OpenPlay,LeftFoot,Silvan Widmer,Chipped
+1976,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Anton Stach,34,MissedShots,0.8059999847412109,0.3529999923706055,0.0336681455373764,OpenPlay,RightFoot,,None
+1977,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Karim Onisiwo,43,MissedShots,0.8490000152587891,0.52,0.0518029034137725,OpenPlay,LeftFoot,Jae-Sung Lee,Cross
+1978,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Marcus Ingvartsen,44,Goal,0.9540000152587892,0.3479999923706054,0.3224594593048095,OpenPlay,RightFoot,Anton Stach,Throughball
+1979,2022-2023,9,Mainz 05,RasenBallsport Leipzig,Home,Draw,Karim Onisiwo,62,BlockedShot,0.7559999847412109,0.48,0.0456081479787826,OpenPlay,RightFoot,Dominik Kohr,TakeOn
+1980,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Benjamin Henrichs,4,BlockedShot,0.7219999694824218,0.445,0.0177364293485879,OpenPlay,LeftFoot,Dominik Szoboszlai,Pass
 1981,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Amadou Haidara,6,BlockedShot,0.7480000305175781,0.7319999694824219,0.0135508943349123,OpenPlay,RightFoot,Christopher Nkunku,Pass
-1982,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,15,MissedShots,0.92,0.5979999923706054,0.06473547220230103,OpenPlay,Head,Marcel Halstenberg,Cross
-1983,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Amadou Haidara,17,ShotOnPost,0.919000015258789,0.48700000762939455,0.4160899221897125,SetPiece,Head,Christopher Nkunku,Cross
-1984,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Emil Forsberg,17,MissedShots,0.8030000305175782,0.48900001525878906,0.050449151545763016,OpenPlay,RightFoot,Christopher Nkunku,Pass
-1985,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Christopher Nkunku,60,SavedShot,0.879000015258789,0.3820000076293945,0.33597227931022644,OpenPlay,RightFoot,Dominik Szoboszlai,Pass
-1986,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Marcel Halstenberg,61,MissedShots,0.865,0.4620000076293945,0.02136973664164543,FromCorner,Head,Dominik Szoboszlai,Cross
-1987,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,61,SavedShot,0.8640000152587891,0.47400001525878904,0.39042431116104126,OpenPlay,LeftFoot,Christopher Nkunku,Pass
-1988,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Amadou Haidara,69,BlockedShot,0.7830000305175782,0.605,0.02730311080813408,OpenPlay,RightFoot,Christopher Nkunku,Pass
-1989,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Christopher Nkunku,79,Goal,0.879000015258789,0.509000015258789,0.02529624104499817,OpenPlay,Head,Marcel Halstenberg,Aerial
-1990,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,82,MissedShots,0.8719999694824219,0.600999984741211,0.042813368141651154,OpenPlay,RightFoot,Benjamin Henrichs,Cross
-1991,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,86,MissedShots,0.7959999847412109,0.4979999923706055,0.045166123658418655,OpenPlay,RightFoot,André Silva,Pass
-1992,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Amadou Haidara,92,BlockedShot,0.735,0.5070000076293946,0.01869254745543003,OpenPlay,LeftFoot,,BallTouch
-1993,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Simon Zoller,16,MissedShots,0.855,0.31799999237060544,0.04721102491021156,OpenPlay,RightFoot,Philipp Hofmann,Pass
-1994,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Anthony Losilla,33,MissedShots,0.76,0.415,0.012352940626442432,OpenPlay,RightFoot,,Aerial
-1995,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Gerrit Holtmann,43,SavedShot,0.845,0.325,0.046659767627716064,OpenPlay,LeftFoot,,BallRecovery
-1996,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Cristian Gamboa,46,BlockedShot,0.7669999694824219,0.30100000381469727,0.01501244492828846,FromCorner,RightFoot,,None
-1997,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Förster,59,MissedShots,0.730999984741211,0.24100000381469727,0.03310780972242355,DirectFreekick,LeftFoot,,Standard
-1998,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Hofmann,68,BlockedShot,0.9059999847412109,0.38599998474121094,0.0766170397400856,OpenPlay,LeftFoot,,None
-1999,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Hofmann,70,Goal,0.924000015258789,0.5520000076293945,0.14553022384643555,FromCorner,Head,Philipp Förster,Aerial
-2000,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Silvère Ganvoula,82,MissedShots,0.9119999694824219,0.725999984741211,0.05230823531746864,OpenPlay,LeftFoot,Philipp Förster,Pass
-2001,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Förster,90,Goal,0.8440000152587891,0.49,0.11108051240444183,OpenPlay,RightFoot,Christopher Antwi-Adjei,Pass
-2002,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Silvère Ganvoula,92,SavedShot,0.9769999694824218,0.7230000305175781,0.05767087638378143,OpenPlay,RightFoot,Danilo Soares,Pass
-2003,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Jordi Osei-Tutu,93,SavedShot,0.865,0.29399999618530276,0.052408430725336075,OpenPlay,LeftFoot,Silvère Ganvoula,Pass
-2004,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Eric Junior Dina Ebimbe,3,MissedShots,0.7569999694824219,0.385,0.01686072163283825,FromCorner,RightFoot,,None
-2005,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Lucas Alario,6,MissedShots,0.7719999694824219,0.5740000152587891,0.02798411063849926,OpenPlay,RightFoot,Mario Götze,Pass
-2006,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Lucas Alario,22,SavedShot,0.8469999694824218,0.40700000762939453,0.33844277262687683,OpenPlay,RightFoot,Kristijan Jakic,Throughball
-2007,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Lucas Alario,24,MissedShots,0.9269999694824219,0.5870000076293945,0.03441304713487625,SetPiece,Head,Luca Pellegrini,Aerial
-2008,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Luca Pellegrini,30,MissedShots,0.305,0.54,0.005812835413962603,OpenPlay,LeftFoot,Kristijan Jakic,Pass
-2009,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Mario Götze,42,MissedShots,0.754000015258789,0.5,0.028945548459887505,FromCorner,RightFoot,Luca Pellegrini,Pass
-2010,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Mario Götze,54,MissedShots,0.835,0.615,0.058614976704120636,OpenPlay,RightFoot,,BallTouch
-2011,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Santos Borré,62,ShotOnPost,0.874000015258789,0.4909999847412109,0.09416958689689636,OpenPlay,RightFoot,,Dispossessed
-2012,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Daichi Kamada,65,MissedShots,0.91,0.515,0.056910254061222076,OpenPlay,Head,Jesper Lindstrom,Chipped
-2013,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Luca Pellegrini,73,SavedShot,0.750999984741211,0.7659999847412109,0.008838467299938202,SetPiece,LeftFoot,,None
-2014,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Daichi Kamada,75,BlockedShot,0.889000015258789,0.6840000152587891,0.04802274331450462,OpenPlay,RightFoot,,BallRecovery
-2015,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Eric Junior Dina Ebimbe,76,MissedShots,0.879000015258789,0.45299999237060545,0.06526459008455276,FromCorner,RightFoot,Tuta,HeadPass
-2016,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Evan Ndicka,86,OwnGoal,0.04099999904632568,0.43599998474121093,0.0,SetPiece,LeftFoot,,BallRecovery
+1982,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,15,MissedShots,0.92,0.5979999923706054,0.064735472202301,OpenPlay,Head,Marcel Halstenberg,Cross
+1983,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Amadou Haidara,17,ShotOnPost,0.919000015258789,0.4870000076293945,0.4160899221897125,SetPiece,Head,Christopher Nkunku,Cross
+1984,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Emil Forsberg,17,MissedShots,0.8030000305175782,0.489000015258789,0.050449151545763,OpenPlay,RightFoot,Christopher Nkunku,Pass
+1985,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Christopher Nkunku,60,SavedShot,0.879000015258789,0.3820000076293945,0.3359722793102264,OpenPlay,RightFoot,Dominik Szoboszlai,Pass
+1986,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Marcel Halstenberg,61,MissedShots,0.865,0.4620000076293945,0.0213697366416454,FromCorner,Head,Dominik Szoboszlai,Cross
+1987,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,61,SavedShot,0.8640000152587891,0.474000015258789,0.3904243111610412,OpenPlay,LeftFoot,Christopher Nkunku,Pass
+1988,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Amadou Haidara,69,BlockedShot,0.7830000305175782,0.605,0.027303110808134,OpenPlay,RightFoot,Christopher Nkunku,Pass
+1989,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Christopher Nkunku,79,Goal,0.879000015258789,0.509000015258789,0.0252962410449981,OpenPlay,Head,Marcel Halstenberg,Aerial
+1990,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,82,MissedShots,0.8719999694824219,0.600999984741211,0.0428133681416511,OpenPlay,RightFoot,Benjamin Henrichs,Cross
+1991,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Timo Werner,86,MissedShots,0.7959999847412109,0.4979999923706055,0.0451661236584186,OpenPlay,RightFoot,André Silva,Pass
+1992,2022-2023,9,RasenBallsport Leipzig,Mainz 05,Away,Draw,Amadou Haidara,92,BlockedShot,0.735,0.5070000076293946,0.01869254745543,OpenPlay,LeftFoot,,BallTouch
+1993,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Simon Zoller,16,MissedShots,0.855,0.3179999923706054,0.0472110249102115,OpenPlay,RightFoot,Philipp Hofmann,Pass
+1994,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Anthony Losilla,33,MissedShots,0.76,0.415,0.0123529406264424,OpenPlay,RightFoot,,Aerial
+1995,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Gerrit Holtmann,43,SavedShot,0.845,0.325,0.046659767627716,OpenPlay,LeftFoot,,BallRecovery
+1996,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Cristian Gamboa,46,BlockedShot,0.7669999694824219,0.3010000038146972,0.0150124449282884,FromCorner,RightFoot,,None
+1997,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Förster,59,MissedShots,0.730999984741211,0.2410000038146972,0.0331078097224235,DirectFreekick,LeftFoot,,Standard
+1998,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Hofmann,68,BlockedShot,0.9059999847412108,0.3859999847412109,0.0766170397400856,OpenPlay,LeftFoot,,None
+1999,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Hofmann,70,Goal,0.924000015258789,0.5520000076293945,0.1455302238464355,FromCorner,Head,Philipp Förster,Aerial
+2000,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Silvère Ganvoula,82,MissedShots,0.911999969482422,0.725999984741211,0.0523082353174686,OpenPlay,LeftFoot,Philipp Förster,Pass
+2001,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Philipp Förster,90,Goal,0.8440000152587891,0.49,0.1110805124044418,OpenPlay,RightFoot,Christopher Antwi-Adjei,Pass
+2002,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Silvère Ganvoula,92,SavedShot,0.9769999694824218,0.7230000305175781,0.0576708763837814,OpenPlay,RightFoot,Danilo Soares,Pass
+2003,2022-2023,9,Bochum,Eintracht Frankfurt,Home,Win,Jordi Osei-Tutu,93,SavedShot,0.865,0.2939999961853027,0.052408430725336,OpenPlay,LeftFoot,Silvère Ganvoula,Pass
+2004,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Eric Junior Dina Ebimbe,3,MissedShots,0.7569999694824219,0.385,0.0168607216328382,FromCorner,RightFoot,,None
+2005,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Lucas Alario,6,MissedShots,0.7719999694824219,0.5740000152587891,0.0279841106384992,OpenPlay,RightFoot,Mario Götze,Pass
+2006,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Lucas Alario,22,SavedShot,0.8469999694824218,0.4070000076293945,0.3384427726268768,OpenPlay,RightFoot,Kristijan Jakic,Throughball
+2007,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Lucas Alario,24,MissedShots,0.926999969482422,0.5870000076293945,0.0344130471348762,SetPiece,Head,Luca Pellegrini,Aerial
+2008,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Luca Pellegrini,30,MissedShots,0.305,0.54,0.0058128354139626,OpenPlay,LeftFoot,Kristijan Jakic,Pass
+2009,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Mario Götze,42,MissedShots,0.754000015258789,0.5,0.0289455484598875,FromCorner,RightFoot,Luca Pellegrini,Pass
+2010,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Mario Götze,54,MissedShots,0.835,0.615,0.0586149767041206,OpenPlay,RightFoot,,BallTouch
+2011,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Santos Borré,62,ShotOnPost,0.874000015258789,0.4909999847412109,0.0941695868968963,OpenPlay,RightFoot,,Dispossessed
+2012,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Daichi Kamada,65,MissedShots,0.91,0.515,0.056910254061222,OpenPlay,Head,Jesper Lindstrom,Chipped
+2013,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Luca Pellegrini,73,SavedShot,0.750999984741211,0.7659999847412109,0.0088384672999382,SetPiece,LeftFoot,,None
+2014,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Daichi Kamada,75,BlockedShot,0.889000015258789,0.6840000152587891,0.0480227433145046,OpenPlay,RightFoot,,BallRecovery
+2015,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Eric Junior Dina Ebimbe,76,MissedShots,0.879000015258789,0.4529999923706054,0.0652645900845527,FromCorner,RightFoot,Tuta,HeadPass
+2016,2022-2023,9,Eintracht Frankfurt,Bochum,Away,Defeat,Evan Ndicka,86,OwnGoal,0.0409999990463256,0.4359999847412109,0.0,SetPiece,LeftFoot,,BallRecovery
 2017,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ruben Vargas,10,MissedShots,0.850999984741211,0.415,0.0645972192287445,OpenPlay,RightFoot,,None
-2018,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,12,SavedShot,0.9640000152587891,0.485,0.7044848203659058,OpenPlay,LeftFoot,Ruben Vargas,Pass
-2019,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,13,BlockedShot,0.7680000305175781,0.7240000152587891,0.014378853142261505,OpenPlay,RightFoot,Carlos Gruezo,Chipped
-2020,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,15,SavedShot,0.9080000305175782,0.43400001525878906,0.01930205523967743,FromCorner,Head,Fredrik Jensen,Aerial
-2021,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Florian Niederlechner,17,BlockedShot,0.7980000305175782,0.7380000305175781,0.018169967457652092,OpenPlay,RightFoot,Ermedin Demirovic,LayOff
-2022,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Carlos Gruezo,21,MissedShots,0.74,0.42200000762939455,0.01480646338313818,OpenPlay,RightFoot,,None
-2023,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Iago,32,BlockedShot,0.879000015258789,0.6930000305175781,0.043177373707294464,OpenPlay,LeftFoot,,None
-2024,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Jeffrey Gouweleeuw,54,BlockedShot,0.91,0.5070000076293946,0.09504219889640808,FromCorner,RightFoot,Florian Niederlechner,BallTouch
-2025,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Robert Gumny,54,Goal,0.950999984741211,0.4229999923706055,0.13381844758987427,FromCorner,RightFoot,,Rebound
-2026,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Iago,60,BlockedShot,0.8819999694824219,0.6719999694824219,0.037635087966918945,FromCorner,LeftFoot,Ruben Vargas,BallTouch
-2027,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Elvis Rexhbecaj,62,MissedShots,0.765,0.43400001525878906,0.019597085192799568,FromCorner,LeftFoot,,None
-2028,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Jeffrey Gouweleeuw,62,SavedShot,0.9219999694824219,0.41200000762939454,0.09139025211334229,FromCorner,RightFoot,Elvis Rexhbecaj,None
-2029,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Jeffrey Gouweleeuw,62,SavedShot,0.955999984741211,0.43099998474121093,0.5182628035545349,FromCorner,RightFoot,,Rebound
-2030,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Iago,65,MissedShots,0.9209999847412109,0.6840000152587891,0.20546598732471466,OpenPlay,LeftFoot,Ermedin Demirovic,Pass
-2031,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Florian Niederlechner,66,MissedShots,0.8159999847412109,0.6370000076293946,0.04403451830148697,OpenPlay,LeftFoot,Carlos Gruezo,Chipped
-2032,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,82,MissedShots,0.9269999694824219,0.5620000076293945,0.052197158336639404,OpenPlay,Head,Robert Gumny,Aerial
+2018,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,12,SavedShot,0.9640000152587892,0.485,0.7044848203659058,OpenPlay,LeftFoot,Ruben Vargas,Pass
+2019,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,13,BlockedShot,0.7680000305175781,0.7240000152587891,0.0143788531422615,OpenPlay,RightFoot,Carlos Gruezo,Chipped
+2020,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,15,SavedShot,0.9080000305175782,0.434000015258789,0.0193020552396774,FromCorner,Head,Fredrik Jensen,Aerial
+2021,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Florian Niederlechner,17,BlockedShot,0.7980000305175782,0.7380000305175781,0.018169967457652,OpenPlay,RightFoot,Ermedin Demirovic,LayOff
+2022,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Carlos Gruezo,21,MissedShots,0.74,0.4220000076293945,0.0148064633831381,OpenPlay,RightFoot,,None
+2023,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Iago,32,BlockedShot,0.879000015258789,0.6930000305175781,0.0431773737072944,OpenPlay,LeftFoot,,None
+2024,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Jeffrey Gouweleeuw,54,BlockedShot,0.91,0.5070000076293946,0.095042198896408,FromCorner,RightFoot,Florian Niederlechner,BallTouch
+2025,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Robert Gumny,54,Goal,0.950999984741211,0.4229999923706055,0.1338184475898742,FromCorner,RightFoot,,Rebound
+2026,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Iago,60,BlockedShot,0.8819999694824219,0.6719999694824219,0.0376350879669189,FromCorner,LeftFoot,Ruben Vargas,BallTouch
+2027,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Elvis Rexhbecaj,62,MissedShots,0.765,0.434000015258789,0.0195970851927995,FromCorner,LeftFoot,,None
+2028,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Jeffrey Gouweleeuw,62,SavedShot,0.921999969482422,0.4120000076293945,0.0913902521133422,FromCorner,RightFoot,Elvis Rexhbecaj,None
+2029,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Jeffrey Gouweleeuw,62,SavedShot,0.955999984741211,0.4309999847412109,0.5182628035545349,FromCorner,RightFoot,,Rebound
+2030,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Iago,65,MissedShots,0.9209999847412108,0.6840000152587891,0.2054659873247146,OpenPlay,LeftFoot,Ermedin Demirovic,Pass
+2031,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Florian Niederlechner,66,MissedShots,0.8159999847412109,0.6370000076293946,0.0440345183014869,OpenPlay,LeftFoot,Carlos Gruezo,Chipped
+2032,2022-2023,9,Augsburg,Wolfsburg,Home,Draw,Ermedin Demirovic,82,MissedShots,0.926999969482422,0.5620000076293945,0.0521971583366394,OpenPlay,Head,Robert Gumny,Aerial
 2033,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Yannick Gerhardt,26,Goal,0.970999984741211,0.5359999847412109,0.7821929454803467,OpenPlay,LeftFoot,Bote Baku,Pass
-2034,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Maximilian Arnold,45,MissedShots,0.7559999847412109,0.48700000762939455,0.03637377917766571,OpenPlay,LeftFoot,,BallRecovery
-2035,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Felix Nmecha,48,SavedShot,0.9280000305175782,0.49599998474121093,0.12104522436857224,OpenPlay,Head,Maximilian Arnold,Chipped
+2034,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Maximilian Arnold,45,MissedShots,0.7559999847412109,0.4870000076293945,0.0363737791776657,OpenPlay,LeftFoot,,BallRecovery
+2035,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Felix Nmecha,48,SavedShot,0.9280000305175782,0.4959999847412109,0.1210452243685722,OpenPlay,Head,Maximilian Arnold,Chipped
 2036,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Felix Nmecha,48,SavedShot,0.935,0.5370000076293945,0.5838416814804077,OpenPlay,RightFoot,Omar Marmoush,Pass
-2037,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Omar Marmoush,49,SavedShot,0.919000015258789,0.534000015258789,0.041500091552734375,FromCorner,Head,Micky van de Ven,Aerial
-2038,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Paulo Otávio,55,BlockedShot,0.745999984741211,0.5690000152587891,0.01707254722714424,OpenPlay,LeftFoot,,None
+2037,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Omar Marmoush,49,SavedShot,0.919000015258789,0.534000015258789,0.0415000915527343,FromCorner,Head,Micky van de Ven,Aerial
+2038,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Paulo Otávio,55,BlockedShot,0.745999984741211,0.5690000152587891,0.0170725472271442,OpenPlay,LeftFoot,,None
 2039,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Yannick Gerhardt,57,SavedShot,0.8769999694824219,0.590999984741211,0.3667908012866974,OpenPlay,LeftFoot,,None
-2040,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Micky van de Ven,63,MissedShots,0.6940000152587891,0.575999984741211,0.013398445211350918,OpenPlay,LeftFoot,Bote Baku,Pass
-2041,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Patrick Wimmer,72,SavedShot,0.889000015258789,0.38599998474121094,0.05562219396233559,OpenPlay,LeftFoot,Yannick Gerhardt,Cross
-2042,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Maximilian Arnold,87,SavedShot,0.769000015258789,0.745999984741211,0.014502393081784248,OpenPlay,LeftFoot,Paulo Otávio,TakeOn
-2043,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Yannick Gerhardt,91,MissedShots,0.9680000305175781,0.4159999847412109,0.2742089033126831,SetPiece,Head,Maximilian Arnold,Cross
-2044,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Donyell Malen,20,BlockedShot,0.865999984741211,0.34599998474121096,0.06449293345212936,OpenPlay,RightFoot,Julian Brandt,Pass
-2045,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Raphael Guerreiro,29,SavedShot,0.8690000152587891,0.775,0.02236436866223812,OpenPlay,LeftFoot,Youssoufa Moukoko,Pass
-2046,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Donyell Malen,35,SavedShot,0.895,0.40200000762939453,0.10260903835296631,OpenPlay,RightFoot,Julian Brandt,Throughball
-2047,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Niklas Süle,39,BlockedShot,0.8280000305175781,0.4109999847412109,0.052568890154361725,OpenPlay,LeftFoot,Raphael Guerreiro,Pass
-2048,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Marius Wolf,45,SavedShot,0.759000015258789,0.2929999923706055,0.017283989116549492,OpenPlay,RightFoot,Donyell Malen,Pass
-2049,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Raphael Guerreiro,47,MissedShots,0.8209999847412109,0.505,0.02179381065070629,FromCorner,RightFoot,,Aerial
-2050,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Emre Can,72,BlockedShot,0.924000015258789,0.5029999923706054,0.055475667119026184,FromCorner,Head,Julian Brandt,Aerial
-2051,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Youssoufa Moukoko,73,Goal,0.8730000305175781,0.5270000076293946,0.09914404898881912,OpenPlay,LeftFoot,Anthony Modeste,Pass
+2040,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Micky van de Ven,63,MissedShots,0.6940000152587891,0.575999984741211,0.0133984452113509,OpenPlay,LeftFoot,Bote Baku,Pass
+2041,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Patrick Wimmer,72,SavedShot,0.889000015258789,0.3859999847412109,0.0556221939623355,OpenPlay,LeftFoot,Yannick Gerhardt,Cross
+2042,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Maximilian Arnold,87,SavedShot,0.769000015258789,0.745999984741211,0.0145023930817842,OpenPlay,LeftFoot,Paulo Otávio,TakeOn
+2043,2022-2023,9,Wolfsburg,Augsburg,Away,Draw,Yannick Gerhardt,91,MissedShots,0.968000030517578,0.4159999847412109,0.2742089033126831,SetPiece,Head,Maximilian Arnold,Cross
+2044,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Donyell Malen,20,BlockedShot,0.865999984741211,0.3459999847412109,0.0644929334521293,OpenPlay,RightFoot,Julian Brandt,Pass
+2045,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Raphael Guerreiro,29,SavedShot,0.8690000152587891,0.775,0.0223643686622381,OpenPlay,LeftFoot,Youssoufa Moukoko,Pass
+2046,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Donyell Malen,35,SavedShot,0.895,0.4020000076293945,0.1026090383529663,OpenPlay,RightFoot,Julian Brandt,Throughball
+2047,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Niklas Süle,39,BlockedShot,0.8280000305175781,0.4109999847412109,0.0525688901543617,OpenPlay,LeftFoot,Raphael Guerreiro,Pass
+2048,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Marius Wolf,45,SavedShot,0.759000015258789,0.2929999923706055,0.0172839891165494,OpenPlay,RightFoot,Donyell Malen,Pass
+2049,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Raphael Guerreiro,47,MissedShots,0.8209999847412109,0.505,0.0217938106507062,FromCorner,RightFoot,,Aerial
+2050,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Emre Can,72,BlockedShot,0.924000015258789,0.5029999923706054,0.0554756671190261,FromCorner,Head,Julian Brandt,Aerial
+2051,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Youssoufa Moukoko,73,Goal,0.8730000305175781,0.5270000076293946,0.0991440489888191,OpenPlay,LeftFoot,Anthony Modeste,Pass
 2052,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Anthony Modeste,82,SavedShot,0.95,0.5320000076293945,0.5059590339660645,OpenPlay,RightFoot,Karim Adeyemi,Pass
-2053,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Thorgan Hazard,93,MissedShots,0.8280000305175781,0.2510000038146973,0.020274003967642784,OpenPlay,RightFoot,,None
-2054,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Marius Wolf,93,BlockedShot,0.9019999694824219,0.475,0.1074017882347107,OpenPlay,RightFoot,Thorgan Hazard,Rebound
-2055,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Anthony Modeste,94,Goal,0.9730000305175781,0.575999984741211,0.3620918095111847,OpenPlay,Head,Nico Schlotterbeck,Cross
-2056,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leroy Sané,28,BlockedShot,0.72,0.39,0.019955620169639587,OpenPlay,LeftFoot,Jamal Musiala,Pass
-2057,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leon Goretzka,32,Goal,0.769000015258789,0.4759999847412109,0.02713674120604992,OpenPlay,RightFoot,Jamal Musiala,Pass
-2058,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Sadio Mané,48,MissedShots,0.9019999694824219,0.43,0.3435157239437103,OpenPlay,Head,Leon Goretzka,HeadPass
-2059,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leroy Sané,52,Goal,0.7709999847412109,0.45799999237060546,0.0423620268702507,OpenPlay,LeftFoot,,None
-2060,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Kingsley Coman,58,BlockedShot,0.855999984741211,0.575,0.11612707376480103,OpenPlay,RightFoot,,None
+2053,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Thorgan Hazard,93,MissedShots,0.8280000305175781,0.2510000038146973,0.0202740039676427,OpenPlay,RightFoot,,None
+2054,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Marius Wolf,93,BlockedShot,0.901999969482422,0.475,0.1074017882347107,OpenPlay,RightFoot,Thorgan Hazard,Rebound
+2055,2022-2023,9,Borussia Dortmund,Bayern Munich,Home,Draw,Anthony Modeste,94,Goal,0.973000030517578,0.575999984741211,0.3620918095111847,OpenPlay,Head,Nico Schlotterbeck,Cross
+2056,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leroy Sané,28,BlockedShot,0.72,0.39,0.0199556201696395,OpenPlay,LeftFoot,Jamal Musiala,Pass
+2057,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leon Goretzka,32,Goal,0.769000015258789,0.4759999847412109,0.0271367412060499,OpenPlay,RightFoot,Jamal Musiala,Pass
+2058,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Sadio Mané,48,MissedShots,0.901999969482422,0.43,0.3435157239437103,OpenPlay,Head,Leon Goretzka,HeadPass
+2059,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leroy Sané,52,Goal,0.7709999847412109,0.4579999923706054,0.0423620268702507,OpenPlay,LeftFoot,,None
+2060,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Kingsley Coman,58,BlockedShot,0.855999984741211,0.575,0.116127073764801,OpenPlay,RightFoot,,None
 2061,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Jamal Musiala,63,SavedShot,0.965,0.4209999847412109,0.5767858624458313,OpenPlay,RightFoot,Leroy Sané,Pass
-2062,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leon Goretzka,73,MissedShots,0.7480000305175781,0.525,0.023907873779535294,OpenPlay,RightFoot,Noussair Mazraoui,Pass
-2063,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Kingsley Coman,84,BlockedShot,0.8069999694824219,0.6919999694824219,0.029500843957066536,OpenPlay,RightFoot,Joshua Kimmich,Chipped
-2064,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Noussair Mazraoui,84,MissedShots,0.85,0.3290000152587891,0.05157303810119629,OpenPlay,RightFoot,,Rebound
-2065,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,9,SavedShot,0.955,0.6709999847412109,0.07548914849758148,OpenPlay,RightFoot,Ramy Bensebaini,TakeOn
-2066,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Ramy Bensebaini,10,BlockedShot,0.784000015258789,0.37,0.08235074579715729,DirectFreekick,LeftFoot,,Standard
-2067,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marvin Friedrich,26,Goal,0.92,0.5320000076293945,0.05809761583805084,FromCorner,OtherBodyPart,Jonas Hofmann,Cross
-2068,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,34,MissedShots,0.8040000152587891,0.65,0.029440784826874733,OpenPlay,RightFoot,Kouadio Kone,Pass
+2062,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Leon Goretzka,73,MissedShots,0.7480000305175781,0.525,0.0239078737795352,OpenPlay,RightFoot,Noussair Mazraoui,Pass
+2063,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Kingsley Coman,84,BlockedShot,0.8069999694824219,0.6919999694824219,0.0295008439570665,OpenPlay,RightFoot,Joshua Kimmich,Chipped
+2064,2022-2023,9,Bayern Munich,Borussia Dortmund,Away,Draw,Noussair Mazraoui,84,MissedShots,0.85,0.3290000152587891,0.0515730381011962,OpenPlay,RightFoot,,Rebound
+2065,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,9,SavedShot,0.955,0.6709999847412109,0.0754891484975814,OpenPlay,RightFoot,Ramy Bensebaini,TakeOn
+2066,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Ramy Bensebaini,10,BlockedShot,0.784000015258789,0.37,0.0823507457971572,DirectFreekick,LeftFoot,,Standard
+2067,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marvin Friedrich,26,Goal,0.92,0.5320000076293945,0.0580976158380508,FromCorner,OtherBodyPart,Jonas Hofmann,Cross
+2068,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,34,MissedShots,0.8040000152587891,0.65,0.0294407848268747,OpenPlay,RightFoot,Kouadio Kone,Pass
 2069,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Ramy Bensebaini,46,Goal,0.885,0.5,0.75777667760849,Penalty,LeftFoot,,Standard
-2070,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Lars Stindl,46,Goal,0.7390000152587891,0.605,0.02426844835281372,OpenPlay,RightFoot,,BallRecovery
-2071,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,52,MissedShots,0.935,0.47200000762939454,0.5384295582771301,OpenPlay,LeftFoot,Joe Scally,Cross
-2072,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Alassane Pléa,55,BlockedShot,0.8080000305175781,0.45599998474121095,0.07264161854982376,OpenPlay,RightFoot,Kouadio Kone,Pass
-2073,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,56,BlockedShot,0.845999984741211,0.4179999923706055,0.08811132609844208,OpenPlay,RightFoot,Kouadio Kone,Pass
-2074,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Nico Elvedi,73,MissedShots,0.9130000305175782,0.4979999923706055,0.03993365913629532,FromCorner,Head,Jonas Hofmann,Aerial
+2070,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Lars Stindl,46,Goal,0.7390000152587891,0.605,0.0242684483528137,OpenPlay,RightFoot,,BallRecovery
+2071,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,52,MissedShots,0.935,0.4720000076293945,0.5384295582771301,OpenPlay,LeftFoot,Joe Scally,Cross
+2072,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Alassane Pléa,55,BlockedShot,0.8080000305175781,0.4559999847412109,0.0726416185498237,OpenPlay,RightFoot,Kouadio Kone,Pass
+2073,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,56,BlockedShot,0.845999984741211,0.4179999923706055,0.088111326098442,OpenPlay,RightFoot,Kouadio Kone,Pass
+2074,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Nico Elvedi,73,MissedShots,0.9130000305175782,0.4979999923706055,0.0399336591362953,FromCorner,Head,Jonas Hofmann,Aerial
 2075,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Ramy Bensebaini,75,Goal,0.95,0.4979999923706055,0.7060439586639404,OpenPlay,LeftFoot,Jonas Hofmann,Pass
-2076,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Yvandro Borges Sanches,85,MissedShots,0.735,0.15199999809265136,0.010712360963225365,OpenPlay,RightFoot,,TakeOn
-2077,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,90,Goal,0.9080000305175782,0.5590000152587891,0.14182767271995544,OpenPlay,RightFoot,Alassane Pléa,Pass
-2078,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Alassane Pléa,93,MissedShots,0.87,0.6270000076293946,0.10146089643239975,OpenPlay,LeftFoot,Patrick Herrmann,Pass
-2079,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Steffen Tigges,8,MissedShots,0.8980000305175782,0.5520000076293945,0.03897753730416298,OpenPlay,Head,Jonas Hector,Aerial
-2080,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Dejan Ljubicic,24,BlockedShot,0.700999984741211,0.500999984741211,0.02420666441321373,FromCorner,RightFoot,Ondrej Duda,Pass
+2076,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Yvandro Borges Sanches,85,MissedShots,0.735,0.1519999980926513,0.0107123609632253,OpenPlay,RightFoot,,TakeOn
+2077,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Marcus Thuram,90,Goal,0.9080000305175782,0.5590000152587891,0.1418276727199554,OpenPlay,RightFoot,Alassane Pléa,Pass
+2078,2022-2023,9,Borussia M.Gladbach,FC Cologne,Home,Win,Alassane Pléa,93,MissedShots,0.87,0.6270000076293946,0.1014608964323997,OpenPlay,LeftFoot,Patrick Herrmann,Pass
+2079,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Steffen Tigges,8,MissedShots,0.8980000305175782,0.5520000076293945,0.0389775373041629,OpenPlay,Head,Jonas Hector,Aerial
+2080,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Dejan Ljubicic,24,BlockedShot,0.700999984741211,0.500999984741211,0.0242066644132137,FromCorner,RightFoot,Ondrej Duda,Pass
 2081,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Florian Kainz,30,Goal,0.885,0.5,0.75777667760849,Penalty,RightFoot,,Standard
 2082,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Denis Huseinbasic,82,Goal,0.960999984741211,0.515,0.5907198190689087,OpenPlay,RightFoot,,None
-2083,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Mark Uth,87,SavedShot,0.94,0.285,0.04448673501610756,OpenPlay,RightFoot,Ellyes Skhiri,Pass
-2084,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Dodi Lukebakio,13,MissedShots,0.735999984741211,0.47,0.039401598274707794,OpenPlay,LeftFoot,Suat Serdar,Pass
-2085,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Stevan Jovetic,25,MissedShots,0.9580000305175781,0.57,0.09379498660564423,SetPiece,RightFoot,Marvin Plattenhardt,Cross
+2083,2022-2023,9,FC Cologne,Borussia M.Gladbach,Away,Defeat,Mark Uth,87,SavedShot,0.94,0.285,0.0444867350161075,OpenPlay,RightFoot,Ellyes Skhiri,Pass
+2084,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Dodi Lukebakio,13,MissedShots,0.735999984741211,0.47,0.0394015982747077,OpenPlay,LeftFoot,Suat Serdar,Pass
+2085,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Stevan Jovetic,25,MissedShots,0.958000030517578,0.57,0.0937949866056442,SetPiece,RightFoot,Marvin Plattenhardt,Cross
 2086,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Dodi Lukebakio,33,Goal,0.885,0.5,0.75777667760849,Penalty,LeftFoot,,Standard
-2087,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Chidera Ejuke,37,MissedShots,0.9630000305175781,0.325,0.05781983584165573,OpenPlay,RightFoot,Dodi Lukebakio,Pass
-2088,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Jonjoe Kenny,41,MissedShots,0.8030000305175782,0.4279999923706055,0.04247203841805458,OpenPlay,LeftFoot,,None
-2089,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Ivan Sunjic,45,MissedShots,0.870999984741211,0.48700000762939455,0.04452696815133095,OpenPlay,Head,Stevan Jovetic,Cross
-2090,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Stevan Jovetic,49,MissedShots,0.545,0.57,0.006885788403451443,OpenPlay,RightFoot,,None
-2091,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Suat Serdar,60,Goal,0.7859999847412109,0.48200000762939454,0.038626085966825485,OpenPlay,RightFoot,Marco Richter,Pass
-2092,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Marco Richter,64,SavedShot,0.7369999694824219,0.7669999694824219,0.016227681189775467,SetPiece,RightFoot,Marvin Plattenhardt,Pass
-2093,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Lucas Tousart,66,BlockedShot,0.914000015258789,0.6020000076293945,0.03681749477982521,FromCorner,Head,Marvin Plattenhardt,Cross
-2094,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Marco Richter,79,MissedShots,0.7290000152587891,0.695,0.012792995199561119,FromCorner,RightFoot,,None
-2095,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Marco Richter,85,MissedShots,0.840999984741211,0.6809999847412109,0.028818491846323013,SetPiece,RightFoot,Marc-Oliver Kempf,Pass
-2096,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Agustín Rogel,90,MissedShots,0.9130000305175782,0.519000015258789,0.08293372392654419,SetPiece,RightFoot,Marvin Plattenhardt,Cross
-2097,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Michael Gregoritsch,16,MissedShots,0.9,0.43900001525878907,0.08161404728889465,OpenPlay,Head,Christian Günter,Cross
-2098,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Ritsu Doan,18,BlockedShot,0.8980000305175782,0.6409999847412109,0.06786786019802094,OpenPlay,LeftFoot,Vincenzo Grifo,Chipped
-2099,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Daniel-Kofi Kyereh,21,SavedShot,0.945,0.44299999237060544,0.5630500316619873,OpenPlay,LeftFoot,Ritsu Doan,Pass
-2100,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Daniel-Kofi Kyereh,21,Goal,0.914000015258789,0.43400001525878906,0.4350149631500244,OpenPlay,RightFoot,Ritsu Doan,Pass
-2101,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Vincenzo Grifo,24,MissedShots,0.9,0.6619999694824219,0.040880315005779266,OpenPlay,RightFoot,Ritsu Doan,Cross
-2102,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Vincenzo Grifo,43,MissedShots,0.750999984741211,0.6559999847412109,0.053941864520311356,DirectFreekick,RightFoot,,Standard
-2103,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Michael Gregoritsch,59,MissedShots,0.9319999694824219,0.500999984741211,0.4344765841960907,SetPiece,Head,Vincenzo Grifo,Aerial
-2104,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Ritsu Doan,63,SavedShot,0.7709999847412109,0.5879999923706055,0.026011981070041656,OpenPlay,LeftFoot,Vincenzo Grifo,Chipped
-2105,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Kevin Schade,77,Goal,0.9119999694824219,0.6819999694824219,0.05612893030047417,SetPiece,RightFoot,Yannik Keitel,Pass
-2106,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Dan-Axel Zagadou,13,SavedShot,0.955,0.43900001525878907,0.08495546877384186,SetPiece,OtherBodyPart,Hiroki Ito,Aerial
-2107,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Hiroki Ito,24,SavedShot,0.6719999694824219,0.44799999237060545,0.031313005834817886,DirectFreekick,LeftFoot,,Standard
-2108,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Sehrou Guirassy,33,MissedShots,0.9480000305175781,0.485,0.5320460796356201,OpenPlay,Head,Tiago Tomás,Aerial
-2109,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Wataru Endo,53,SavedShot,0.9109999847412109,0.5209999847412109,0.054364196956157684,OpenPlay,Head,Naouirou Ahamada,Aerial
-2110,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Silas Wamangituka,58,BlockedShot,0.875,0.40700000762939453,0.09535655379295349,OpenPlay,RightFoot,Wataru Endo,Pass
-2111,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Konstantinos Mavropanos,59,MissedShots,0.9169999694824219,0.509000015258789,0.09666939824819565,FromCorner,RightFoot,Tiago Tomás,Cross
-2112,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Naouirou Ahamada,78,BlockedShot,0.8440000152587891,0.5329999923706055,0.06768464297056198,SetPiece,LeftFoot,Atakan Karazor,BallTouch
+2087,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Chidera Ejuke,37,MissedShots,0.963000030517578,0.325,0.0578198358416557,OpenPlay,RightFoot,Dodi Lukebakio,Pass
+2088,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Jonjoe Kenny,41,MissedShots,0.8030000305175782,0.4279999923706055,0.0424720384180545,OpenPlay,LeftFoot,,None
+2089,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Ivan Sunjic,45,MissedShots,0.870999984741211,0.4870000076293945,0.0445269681513309,OpenPlay,Head,Stevan Jovetic,Cross
+2090,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Stevan Jovetic,49,MissedShots,0.545,0.57,0.0068857884034514,OpenPlay,RightFoot,,None
+2091,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Suat Serdar,60,Goal,0.7859999847412109,0.4820000076293945,0.0386260859668254,OpenPlay,RightFoot,Marco Richter,Pass
+2092,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Marco Richter,64,SavedShot,0.7369999694824219,0.7669999694824219,0.0162276811897754,SetPiece,RightFoot,Marvin Plattenhardt,Pass
+2093,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Lucas Tousart,66,BlockedShot,0.914000015258789,0.6020000076293945,0.0368174947798252,FromCorner,Head,Marvin Plattenhardt,Cross
+2094,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Marco Richter,79,MissedShots,0.7290000152587891,0.695,0.0127929951995611,FromCorner,RightFoot,,None
+2095,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Marco Richter,85,MissedShots,0.840999984741211,0.6809999847412109,0.028818491846323,SetPiece,RightFoot,Marc-Oliver Kempf,Pass
+2096,2022-2023,9,Hertha Berlin,Freiburg,Home,Draw,Agustín Rogel,90,MissedShots,0.9130000305175782,0.519000015258789,0.0829337239265441,SetPiece,RightFoot,Marvin Plattenhardt,Cross
+2097,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Michael Gregoritsch,16,MissedShots,0.9,0.439000015258789,0.0816140472888946,OpenPlay,Head,Christian Günter,Cross
+2098,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Ritsu Doan,18,BlockedShot,0.8980000305175782,0.6409999847412109,0.0678678601980209,OpenPlay,LeftFoot,Vincenzo Grifo,Chipped
+2099,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Daniel-Kofi Kyereh,21,SavedShot,0.945,0.4429999923706054,0.5630500316619873,OpenPlay,LeftFoot,Ritsu Doan,Pass
+2100,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Daniel-Kofi Kyereh,21,Goal,0.914000015258789,0.434000015258789,0.4350149631500244,OpenPlay,RightFoot,Ritsu Doan,Pass
+2101,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Vincenzo Grifo,24,MissedShots,0.9,0.6619999694824219,0.0408803150057792,OpenPlay,RightFoot,Ritsu Doan,Cross
+2102,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Vincenzo Grifo,43,MissedShots,0.750999984741211,0.6559999847412109,0.0539418645203113,DirectFreekick,RightFoot,,Standard
+2103,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Michael Gregoritsch,59,MissedShots,0.931999969482422,0.500999984741211,0.4344765841960907,SetPiece,Head,Vincenzo Grifo,Aerial
+2104,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Ritsu Doan,63,SavedShot,0.7709999847412109,0.5879999923706055,0.0260119810700416,OpenPlay,LeftFoot,Vincenzo Grifo,Chipped
+2105,2022-2023,9,Freiburg,Hertha Berlin,Away,Draw,Kevin Schade,77,Goal,0.911999969482422,0.6819999694824219,0.0561289303004741,SetPiece,RightFoot,Yannik Keitel,Pass
+2106,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Dan-Axel Zagadou,13,SavedShot,0.955,0.439000015258789,0.0849554687738418,SetPiece,OtherBodyPart,Hiroki Ito,Aerial
+2107,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Hiroki Ito,24,SavedShot,0.6719999694824219,0.4479999923706054,0.0313130058348178,DirectFreekick,LeftFoot,,Standard
+2108,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Sehrou Guirassy,33,MissedShots,0.948000030517578,0.485,0.5320460796356201,OpenPlay,Head,Tiago Tomás,Aerial
+2109,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Wataru Endo,53,SavedShot,0.9109999847412108,0.5209999847412109,0.0543641969561576,OpenPlay,Head,Naouirou Ahamada,Aerial
+2110,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Silas Wamangituka,58,BlockedShot,0.875,0.4070000076293945,0.0953565537929534,OpenPlay,RightFoot,Wataru Endo,Pass
+2111,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Konstantinos Mavropanos,59,MissedShots,0.916999969482422,0.509000015258789,0.0966693982481956,FromCorner,RightFoot,Tiago Tomás,Cross
+2112,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Naouirou Ahamada,78,BlockedShot,0.8440000152587891,0.5329999923706055,0.0676846429705619,SetPiece,LeftFoot,Atakan Karazor,BallTouch
 2113,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Konstantinos Mavropanos,78,BlockedShot,0.909000015258789,0.53,0.0909847691655159,SetPiece,RightFoot,Wataru Endo,Card
-2114,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Tiago Tomás,79,MissedShots,0.97,0.2929999923706055,0.04376053437590599,OpenPlay,RightFoot,Wataru Endo,Pass
-2115,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Robin Knoche,5,MissedShots,0.8909999847412109,0.5640000152587891,0.035578880459070206,FromCorner,RightFoot,,Aerial
-2116,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Paul Jäckel,44,SavedShot,0.874000015258789,0.5359999847412109,0.045136917382478714,SetPiece,Head,Niko Gießelmann,Cross
-2117,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Niko Gießelmann,45,MissedShots,0.9009999847412109,0.3940000152587891,0.04743305593729019,FromCorner,LeftFoot,Sheraldo Becker,Cross
-2118,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Julian Ryerson,50,MissedShots,0.735,0.6140000152587891,0.014651049859821796,FromCorner,RightFoot,,None
-2119,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Paul Jäckel,75,Goal,0.9290000152587891,0.46599998474121096,0.11466559767723083,FromCorner,Head,Niko Gießelmann,Cross
-2120,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Milos Pantovic,89,SavedShot,0.8690000152587891,0.5209999847412109,0.40246865153312683,OpenPlay,LeftFoot,Niko Gießelmann,Pass
-2121,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Jamie Leweling,92,SavedShot,0.8680000305175781,0.3240000152587891,0.07447583228349686,OpenPlay,RightFoot,Kevin Behrens,HeadPass
+2114,2022-2023,9,VfB Stuttgart,Union Berlin,Home,Defeat,Tiago Tomás,79,MissedShots,0.97,0.2929999923706055,0.0437605343759059,OpenPlay,RightFoot,Wataru Endo,Pass
+2115,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Robin Knoche,5,MissedShots,0.8909999847412109,0.5640000152587891,0.0355788804590702,FromCorner,RightFoot,,Aerial
+2116,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Paul Jäckel,44,SavedShot,0.874000015258789,0.5359999847412109,0.0451369173824787,SetPiece,Head,Niko Gießelmann,Cross
+2117,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Niko Gießelmann,45,MissedShots,0.9009999847412108,0.3940000152587891,0.0474330559372901,FromCorner,LeftFoot,Sheraldo Becker,Cross
+2118,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Julian Ryerson,50,MissedShots,0.735,0.6140000152587891,0.0146510498598217,FromCorner,RightFoot,,None
+2119,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Paul Jäckel,75,Goal,0.9290000152587892,0.4659999847412109,0.1146655976772308,FromCorner,Head,Niko Gießelmann,Cross
+2120,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Milos Pantovic,89,SavedShot,0.8690000152587891,0.5209999847412109,0.4024686515331268,OpenPlay,LeftFoot,Niko Gießelmann,Pass
+2121,2022-2023,9,Union Berlin,VfB Stuttgart,Away,Win,Jamie Leweling,92,SavedShot,0.8680000305175781,0.3240000152587891,0.0744758322834968,OpenPlay,RightFoot,Kevin Behrens,HeadPass
+2122,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Florent Mollet,3,MissedShots,0.6759999847412109,0.45799999237060546,0.03244182839989662,DirectFreekick,RightFoot,,Standard
+2123,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Tom Krauß,12,MissedShots,0.779000015258789,0.46,0.03070393204689026,OpenPlay,RightFoot,,None
+2124,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Marius Bülter,15,BlockedShot,0.9469999694824218,0.6780000305175782,0.047591883689165115,FromCorner,RightFoot,,None
+2125,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Tom Krauß,20,MissedShots,0.815,0.5059999847412109,0.04830879345536232,OpenPlay,RightFoot,,BallRecovery
+2126,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Florent Mollet,24,BlockedShot,0.8930000305175781,0.40400001525878904,0.07063350081443787,OpenPlay,LeftFoot,Cédric Brunner,Cross
+2127,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Simon Terodde,24,MissedShots,0.8569999694824219,0.37,0.05201123654842377,OpenPlay,LeftFoot,,Rebound
+2128,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Florent Mollet,29,ShotOnPost,0.8059999847412109,0.43599998474121093,0.024732643738389015,OpenPlay,LeftFoot,Thomas Ouwejan,Cross
+2129,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Thomas Ouwejan,29,SavedShot,0.899000015258789,0.715,0.03991582617163658,OpenPlay,LeftFoot,,Rebound
+2130,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Thomas Ouwejan,33,MissedShots,0.7719999694824219,0.5670000076293945,0.0264431182295084,OpenPlay,LeftFoot,,None
+2131,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Marius Bülter,45,BlockedShot,0.8830000305175781,0.5,0.06792455911636353,SetPiece,Head,Thomas Ouwejan,Cross
+2132,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Simon Terodde,45,SavedShot,0.9069999694824219,0.549000015258789,0.06766126304864883,FromCorner,Head,Thomas Ouwejan,Cross
+2133,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Marius Bülter,55,ShotOnPost,0.9440000152587891,0.40200000762939453,0.05944080278277397,FromCorner,Head,Thomas Ouwejan,Cross
+2134,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Florent Mollet,61,MissedShots,0.8080000305175781,0.6780000305175782,0.021725144237279892,OpenPlay,RightFoot,,None
+2135,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Marius Bülter,75,BlockedShot,0.8969999694824219,0.5570000076293945,0.019212864339351654,FromCorner,Head,Maya Yoshida,Aerial
+2136,2022-2023,10,Schalke 04,Hoffenheim,Home,Defeat,Alex Kral,77,BlockedShot,0.88,0.5979999923706054,0.09347563236951828,OpenPlay,RightFoot,Jordan Larsson,Pass
+2137,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Angelino,1,BlockedShot,0.7859999847412109,0.6120000076293945,0.021976253017783165,FromCorner,LeftFoot,,None
+2138,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Christoph Baumgartner,6,BlockedShot,0.9230000305175782,0.5320000076293945,0.12402999401092529,OpenPlay,RightFoot,Angelino,Goal
+2139,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Robert Skov,10,Goal,0.885,0.5,0.75777667760849,Penalty,LeftFoot,,Standard
+2140,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Robert Skov,16,BlockedShot,0.850999984741211,0.44099998474121094,0.10574126988649368,OpenPlay,LeftFoot,Grischa Prömel,Pass
+2141,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Georginio Rutter,22,MissedShots,0.9180000305175782,0.4470000076293945,0.6062505841255188,OpenPlay,RightFoot,Christoph Baumgartner,Pass
+2142,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Christoph Baumgartner,26,BlockedShot,0.8919999694824219,0.4809999847412109,0.04379266873002052,OpenPlay,Head,Robert Skov,Aerial
+2143,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Grischa Prömel,35,MissedShots,0.7859999847412109,0.47200000762939454,0.04676402732729912,OpenPlay,RightFoot,Christoph Baumgartner,Pass
+2144,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Christoph Baumgartner,40,SavedShot,0.865,0.6680000305175782,0.0632537305355072,OpenPlay,RightFoot,Dennis Geiger,Pass
+2145,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Christoph Baumgartner,43,BlockedShot,0.8669999694824219,0.5740000152587891,0.0973181426525116,OpenPlay,RightFoot,Georginio Rutter,Pass
+2146,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Robert Skov,43,MissedShots,0.8690000152587891,0.39599998474121095,0.08558743447065353,OpenPlay,RightFoot,,Rebound
+2147,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Munas Dabbur,46,Goal,0.8619999694824219,0.700999984741211,0.06857343018054962,OpenPlay,RightFoot,Georginio Rutter,Pass
+2148,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Robert Skov,58,Goal,0.885,0.5,0.75777667760849,Penalty,LeftFoot,,Standard
+2149,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Angelino,67,SavedShot,0.9,0.655,0.07509241998195648,OpenPlay,LeftFoot,Georginio Rutter,Cross
+2150,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Angelino,77,SavedShot,0.754000015258789,0.6020000076293945,0.02815009094774723,OpenPlay,LeftFoot,Jacob Bruun Larsen,Pass
+2151,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Georginio Rutter,82,SavedShot,0.9019999694824219,0.47400001525878904,0.14457347989082336,OpenPlay,RightFoot,Angelino,Pass
+2152,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Robert Skov,84,MissedShots,0.8169999694824219,0.33299999237060546,0.048511750996112823,OpenPlay,LeftFoot,Grischa Prömel,Pass
+2153,2022-2023,10,Hoffenheim,Schalke 04,Away,Win,Jacob Bruun Larsen,89,MissedShots,0.9390000152587891,0.4859999847412109,0.45014917850494385,OpenPlay,Head,Angelino,Cross
+2154,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Mario Götze,4,MissedShots,0.7530000305175781,0.629000015258789,0.017125021666288376,OpenPlay,RightFoot,,None
+2155,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Randal Kolo Muani,8,BlockedShot,0.8819999694824219,0.5279999923706055,0.3791801929473877,OpenPlay,LeftFoot,Mario Götze,Throughball
+2156,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Jesper Lindstrom,13,SavedShot,0.8469999694824218,0.6419999694824219,0.0615340918302536,OpenPlay,RightFoot,Daichi Kamada,Pass
+2157,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Randal Kolo Muani,27,SavedShot,0.9219999694824219,0.595999984741211,0.4072287976741791,OpenPlay,RightFoot,Jesper Lindstrom,Throughball
+2158,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Randal Kolo Muani,40,SavedShot,0.84,0.4929999923706055,0.08222505450248718,OpenPlay,RightFoot,Djibril Sow,Pass
+2159,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Daichi Kamada,49,Goal,0.885,0.5,0.75777667760849,Penalty,RightFoot,,Standard
+2160,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Randal Kolo Muani,57,Goal,0.9359999847412109,0.505,0.45571184158325195,OpenPlay,Head,Christopher Lenz,Aerial
+2161,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Jesper Lindstrom,60,MissedShots,0.8819999694824219,0.5359999847412109,0.13903675973415375,OpenPlay,LeftFoot,Randal Kolo Muani,Throughball
+2162,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Eric Junior Dina Ebimbe,60,SavedShot,0.9259999847412109,0.40700000762939453,0.10740025341510773,OpenPlay,LeftFoot,Christopher Lenz,Cross
+2163,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Jesper Lindstrom,60,BlockedShot,0.8630000305175781,0.40900001525878904,0.08574423938989639,OpenPlay,RightFoot,,Rebound
+2164,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Christopher Lenz,61,BlockedShot,0.7819999694824219,0.5129999923706055,0.025190388783812523,FromCorner,RightFoot,,None
+2165,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Jesper Lindstrom,64,Goal,0.905,0.3770000076293945,0.0945112481713295,OpenPlay,RightFoot,,None
+2166,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Daichi Kamada,71,Goal,0.885,0.5,0.75777667760849,Penalty,RightFoot,,Standard
+2167,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Djibril Sow,74,BlockedShot,0.7819999694824219,0.355,0.031244555488228798,OpenPlay,RightFoot,Jesper Lindstrom,BallTouch
+2168,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Randal Kolo Muani,75,SavedShot,0.9530000305175781,0.45799999237060546,0.144302099943161,OpenPlay,RightFoot,Jesper Lindstrom,Cross
+2169,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Faride Alidou,80,BlockedShot,0.8730000305175781,0.28399999618530275,0.05893820524215698,OpenPlay,LeftFoot,Lucas Alario,Pass
+2170,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Daichi Kamada,81,MissedShots,0.76,0.6409999847412109,0.019355637952685356,OpenPlay,RightFoot,Santos Borré,Pass
+2171,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Santos Borré,83,BlockedShot,0.8730000305175781,0.32,0.09445013850927353,OpenPlay,RightFoot,Evan Ndicka,Chipped
+2172,2022-2023,10,Eintracht Frankfurt,Bayer Leverkusen,Home,Win,Lucas Alario,85,Goal,0.9419999694824219,0.53,0.6480922698974609,OpenPlay,RightFoot,Santos Borré,Pass
+2173,2022-2023,10,Bayer Leverkusen,Eintracht Frankfurt,Away,Defeat,Moussa Diaby,19,BlockedShot,0.8669999694824219,0.4329999923706055,0.09253712743520737,OpenPlay,RightFoot,Jeremie Frimpong,Pass
+2174,2022-2023,10,Bayer Leverkusen,Eintracht Frankfurt,Away,Defeat,Jeremie Frimpong,32,ShotOnPost,0.9259999847412109,0.3679999923706055,0.2606789171695709,OpenPlay,RightFoot,Moussa Diaby,Cross
+2175,2022-2023,10,Bayer Leverkusen,Eintracht Frankfurt,Away,Defeat,Paulinho,46,MissedShots,0.8159999847412109,0.4490000152587891,0.052065979689359665,OpenPlay,RightFoot,,None
+2176,2022-2023,10,Bayer Leverkusen,Eintracht Frankfurt,Away,Defeat,Piero Hincapié,55,Goal,0.879000015258789,0.49,0.060347866266965866,SetPiece,Head,Kerem Demirbay,Cross
+2177,2022-2023,10,Bayer Leverkusen,Eintracht Frankfurt,Away,Defeat,Mitchel Bakker,66,SavedShot,0.9209999847412109,0.735,0.037642452865839005,OpenPlay,LeftFoot,Nadiem Amiri,Pass
+2178,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Yannick Gerhardt,8,MissedShots,0.9059999847412109,0.4809999847412109,0.10664670169353485,OpenPlay,RightFoot,Mattias Svanberg,Cross
+2179,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Micky van de Ven,11,MissedShots,0.935,0.445,0.06580951064825058,FromCorner,OtherBodyPart,Patrick Wimmer,Cross
+2180,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Lukas Nmecha,14,MissedShots,0.8590000152587891,0.28,0.03317810595035553,OpenPlay,RightFoot,Maximilian Arnold,Pass
+2181,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Yannick Gerhardt,15,BlockedShot,0.795,0.6140000152587891,0.024107497185468674,SetPiece,LeftFoot,,None
+2182,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Jakub Kaminski,36,ShotOnPost,0.97,0.585,0.44532451033592224,OpenPlay,LeftFoot,Patrick Wimmer,Pass
+2183,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Maximilian Arnold,38,SavedShot,0.745999984741211,0.4329999923706055,0.018104443326592445,OpenPlay,LeftFoot,,None
+2184,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Yannick Gerhardt,42,Goal,0.93,0.5120000076293946,0.5256817936897278,OpenPlay,LeftFoot,Paulo Otávio,Pass
+2185,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Lukas Nmecha,52,BlockedShot,0.845,0.7230000305175781,0.02996824122965336,OpenPlay,RightFoot,Patrick Wimmer,TakeOn
+2186,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Patrick Wimmer,55,MissedShots,0.88,0.33099998474121095,0.04903030022978783,OpenPlay,RightFoot,,None
+2187,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Omar Marmoush,63,MissedShots,0.9180000305175782,0.3189999961853027,0.05205162614583969,OpenPlay,RightFoot,Yannick Gerhardt,BallRecovery
+2188,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Felix Nmecha,66,MissedShots,0.92,0.555,0.08282926678657532,FromCorner,Head,Maximilian Arnold,Cross
+2189,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Omar Marmoush,68,Goal,0.86,0.5670000076293945,0.052131347358226776,OpenPlay,RightFoot,Paulo Otávio,Cross
+2190,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Maximilian Arnold,75,MissedShots,0.7380000305175781,0.605999984741211,0.017212752252817154,OpenPlay,RightFoot,,BallTouch
+2191,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Maximilian Arnold,86,BlockedShot,0.6959999847412109,0.4879999923706055,0.038942404091358185,DirectFreekick,LeftFoot,,Standard
+2192,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Kevin Paredes,86,SavedShot,0.9019999694824219,0.6680000305175782,0.07275868207216263,OpenPlay,LeftFoot,Jakub Kaminski,Pass
+2193,2022-2023,10,Wolfsburg,Borussia M.Gladbach,Home,Draw,Omar Marmoush,87,ShotOnPost,0.9159999847412109,0.505,0.13048896193504333,OpenPlay,Head,Jakub Kaminski,Cross
+2194,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Marcus Thuram,12,Goal,0.8730000305175781,0.7140000152587891,0.03345246613025665,OpenPlay,RightFoot,Alassane Pléa,TakeOn
+2195,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Kouadio Kone,35,MissedShots,0.6869999694824219,0.6530000305175782,0.01144430786371231,OpenPlay,RightFoot,,None
+2196,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Marcus Thuram,45,SavedShot,0.9209999847412109,0.6619999694824219,0.29501450061798096,OpenPlay,RightFoot,Ramy Bensebaini,HeadPass
+2197,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Jonas Hofmann,46,BlockedShot,0.865,0.245,0.026416251435875893,OpenPlay,LeftFoot,Alassane Pléa,Pass
+2198,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Marcus Thuram,46,BlockedShot,0.8969999694824219,0.5329999923706055,0.06052462384104729,FromCorner,Head,Jonas Hofmann,Cross
+2199,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Marcus Thuram,46,Goal,0.9,0.5420000076293945,0.11625703424215317,FromCorner,RightFoot,,Rebound
+2200,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Marcus Thuram,54,SavedShot,0.9030000305175782,0.49400001525878906,0.12127593904733658,OpenPlay,Head,Alassane Pléa,Cross
+2201,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Ramy Bensebaini,81,SavedShot,0.8169999694824219,0.515,0.16836144030094147,DirectFreekick,LeftFoot,,Standard
+2202,2022-2023,10,Borussia M.Gladbach,Wolfsburg,Away,Draw,Ramy Bensebaini,83,MissedShots,0.9430000305175781,0.5370000076293945,0.06944648176431656,FromCorner,Head,Jonas Hofmann,Aerial
+2203,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Enzo Millot,1,MissedShots,0.865,0.6719999694824219,0.05135500431060791,OpenPlay,LeftFoot,Luca Pfeiffer,Pass
+2204,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Silas Wamangituka,2,Goal,0.885,0.5,0.75777667760849,Penalty,RightFoot,,Standard
+2205,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Naouirou Ahamada,15,BlockedShot,0.8140000152587891,0.34,0.03784017264842987,OpenPlay,LeftFoot,Silas Wamangituka,Pass
+2206,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Enzo Millot,19,SavedShot,0.8869999694824219,0.519000015258789,0.12915579974651337,OpenPlay,RightFoot,Luca Pfeiffer,Pass
+2207,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Naouirou Ahamada,21,Goal,0.8819999694824219,0.43900001525878907,0.12667982280254364,OpenPlay,RightFoot,Silas Wamangituka,Pass
+2208,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Konstantinos Mavropanos,31,MissedShots,0.879000015258789,0.5570000076293945,0.013638727366924286,FromCorner,Head,Naouirou Ahamada,Aerial
+2209,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Konstantinos Mavropanos,37,MissedShots,0.909000015258789,0.4490000152587891,0.07076741755008698,FromCorner,RightFoot,Tiago Tomás,Cross
+2210,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Borna Sosa,44,SavedShot,0.7930000305175782,0.65,0.036493681371212006,OpenPlay,LeftFoot,Dan-Axel Zagadou,Pass
+2211,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Silas Wamangituka,45,BlockedShot,0.91,0.3110000038146973,0.06185130774974823,OpenPlay,RightFoot,Luca Pfeiffer,Chipped
+2212,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Borna Sosa,46,MissedShots,0.8730000305175781,0.17299999237060548,0.05583305284380913,DirectFreekick,LeftFoot,,Standard
+2213,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Silas Wamangituka,63,Goal,0.8480000305175781,0.455,0.09430951625108719,OpenPlay,RightFoot,Borna Sosa,Pass
+2214,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Konstantinos Mavropanos,70,BlockedShot,0.9009999847412109,0.524000015258789,0.09673360735177994,SetPiece,Head,Borna Sosa,Cross
+2215,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Dan-Axel Zagadou,70,MissedShots,0.9059999847412109,0.5779999923706055,0.0776863545179367,SetPiece,LeftFoot,,None
+2216,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Wataru Endo,70,Goal,0.9219999694824219,0.54,0.52053302526474,SetPiece,RightFoot,,None
+2217,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Silas Wamangituka,86,ShotOnPost,0.889000015258789,0.66,0.1096528023481369,OpenPlay,RightFoot,Nikolas Nartey,Pass
+2218,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Dan-Axel Zagadou,88,SavedShot,0.9,0.515,0.09954061359167099,SetPiece,Head,Pascal Stenzel,Cross
+2219,2022-2023,10,VfB Stuttgart,Bochum,Home,Win,Chris Führich,92,BlockedShot,0.92,0.6830000305175781,0.06790509819984436,OpenPlay,RightFoot,Nikolas Nartey,BallTouch
+2220,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Gerrit Holtmann,12,MissedShots,0.7680000305175781,0.5329999923706055,0.02986867167055607,OpenPlay,LeftFoot,Kevin Stöger,Pass
+2221,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Philipp Förster,23,BlockedShot,0.8469999694824218,0.2879999923706055,0.02405668795108795,FromCorner,LeftFoot,Cristian Gamboa,None
+2222,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Kevin Stöger,26,MissedShots,0.725999984741211,0.5540000152587891,0.010504311881959438,OpenPlay,LeftFoot,,None
+2223,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Kevin Stöger,27,BlockedShot,0.860999984741211,0.5129999923706055,0.09850940108299255,OpenPlay,RightFoot,Philipp Hofmann,Pass
+2224,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Simon Zoller,28,Goal,0.955,0.48200000762939454,0.582709550857544,OpenPlay,RightFoot,,None
+2225,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Kevin Stöger,32,MissedShots,0.6419999694824219,0.7030000305175781,0.01075431052595377,OpenPlay,LeftFoot,Gerrit Holtmann,Pass
+2226,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Philipp Hofmann,36,SavedShot,0.83,0.5720000076293945,0.0332530215382576,OpenPlay,LeftFoot,Cristian Gamboa,Cross
+2227,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Philipp Hofmann,51,BlockedShot,0.9019999694824219,0.425,0.08511247485876083,OpenPlay,RightFoot,Erhan Masovic,Chipped
+2228,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Gerrit Holtmann,51,SavedShot,0.9030000305175782,0.49900001525878906,0.3531675338745117,OpenPlay,RightFoot,,BlockedPass
+2229,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Kevin Stöger,56,SavedShot,0.8959999847412109,0.7659999847412109,0.0278688482940197,OpenPlay,LeftFoot,Christopher Antwi-Adjei,Pass
+2230,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Gerrit Holtmann,59,SavedShot,0.8640000152587891,0.43599998474121093,0.11954306811094284,OpenPlay,RightFoot,Philipp Hofmann,LayOff
+2231,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Philipp Hofmann,60,MissedShots,0.7969999694824219,0.4279999923706055,0.04322309046983719,OpenPlay,LeftFoot,Philipp Förster,Pass
+2232,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Gerrit Holtmann,76,ShotOnPost,0.9669999694824218,0.7140000152587891,0.04569624736905098,OpenPlay,LeftFoot,Silvère Ganvoula,Pass
+2233,2022-2023,10,Bochum,VfB Stuttgart,Away,Defeat,Philipp Förster,85,BlockedShot,0.8680000305175781,0.38,0.063356414437294,OpenPlay,LeftFoot,Erhan Masovic,BallTouch
+2234,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Marvin Ducksch,0,SavedShot,0.845,0.5670000076293945,0.296690434217453,OpenPlay,RightFoot,Niklas Stark,Pass
+2235,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Romano Schmid,6,BlockedShot,0.7169999694824218,0.515,0.019588155671954155,OpenPlay,RightFoot,Niclas Füllkrug,Pass
+2236,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Romano Schmid,7,MissedShots,0.745,0.565,0.01653110794723034,FromCorner,RightFoot,,None
+2237,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Niclas Füllkrug,11,MissedShots,0.879000015258789,0.3890000152587891,0.09367003291845322,OpenPlay,RightFoot,Marvin Ducksch,Pass
+2238,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Niclas Füllkrug,16,MissedShots,0.8159999847412109,0.4179999923706055,0.05360797047615051,OpenPlay,RightFoot,Romano Schmid,Pass
+2239,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Niklas Stark,25,MissedShots,0.865999984741211,0.5059999847412109,0.042643751949071884,SetPiece,Head,Marvin Ducksch,Cross
+2240,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Romano Schmid,32,MissedShots,0.8480000305175781,0.40599998474121096,0.07586659491062164,OpenPlay,LeftFoot,Anthony Jung,Pass
+2241,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Anthony Jung,37,MissedShots,0.750999984741211,0.4809999847412109,0.020748155191540718,OpenPlay,LeftFoot,,None
+2242,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Niclas Füllkrug,49,MissedShots,0.9,0.5359999847412109,0.08920437842607498,OpenPlay,Head,Anthony Jung,Cross
+2243,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Christian Groß,58,BlockedShot,0.745999984741211,0.5209999847412109,0.014390649273991585,OpenPlay,RightFoot,Anthony Jung,HeadPass
+2244,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Anthony Jung,59,BlockedShot,0.9209999847412109,0.6430000305175781,0.06302249431610107,FromCorner,RightFoot,,None
+2245,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Marvin Ducksch,69,SavedShot,0.904000015258789,0.47,0.11491800844669342,OpenPlay,LeftFoot,Mitchell Weiser,Pass
+2246,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Niklas Schmidt,79,MissedShots,0.9230000305175782,0.36700000762939455,0.26096057891845703,OpenPlay,RightFoot,,None
+2247,2022-2023,10,Werder Bremen,Mainz 05,Home,Defeat,Oliver Burke,86,SavedShot,0.9169999694824219,0.44799999237060545,0.040833890438079834,FromCorner,Head,Amos Pieper,Aerial
+2248,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Jae-Sung Lee,1,MissedShots,0.865,0.4640000152587891,0.07562556862831116,OpenPlay,RightFoot,Edimilson Fernandes,Chipped
+2249,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Jae-Sung Lee,2,BlockedShot,0.9069999694824219,0.5879999923706055,0.11236009746789932,OpenPlay,LeftFoot,Anton Stach,Pass
+2250,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Marcus Ingvartsen,26,BlockedShot,0.754000015258789,0.46,0.02481262944638729,OpenPlay,RightFoot,Alexander Hack,Chipped
+2251,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Jae-Sung Lee,26,BlockedShot,0.8219999694824218,0.5,0.06348481774330139,OpenPlay,RightFoot,,Interception
+2252,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Leandro Barreiro Martins,28,SavedShot,0.89,0.56,0.12140916287899017,OpenPlay,LeftFoot,Karim Onisiwo,Pass
+2253,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Marcus Ingvartsen,35,Goal,0.93,0.47,0.4169120788574219,OpenPlay,Head,Danny da Costa,Cross
+2254,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Karim Onisiwo,55,SavedShot,0.735,0.6580000305175782,0.0395229235291481,OpenPlay,RightFoot,Jae-Sung Lee,Pass
+2255,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Jae-Sung Lee,65,Goal,0.93,0.6530000305175782,0.09980028867721558,OpenPlay,LeftFoot,Anton Stach,Pass
+2256,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Karim Onisiwo,73,MissedShots,0.794000015258789,0.2620000076293945,0.015383555553853512,OpenPlay,RightFoot,Danny da Costa,TakeOn
+2257,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Leandro Barreiro Martins,77,SavedShot,0.8580000305175781,0.5509999847412109,0.12426263839006424,OpenPlay,RightFoot,,TakeOn
+2258,2022-2023,10,Mainz 05,Werder Bremen,Away,Win,Anton Stach,83,BlockedShot,0.9319999694824219,0.385,0.01477675698697567,FromCorner,Head,Aarón Martín,Aerial
+2259,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Dominik Szoboszlai,20,BlockedShot,0.715,0.62,0.04172543063759804,DirectFreekick,RightFoot,,Standard
+2260,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Christopher Nkunku,23,SavedShot,0.9169999694824219,0.664000015258789,0.06661458313465118,OpenPlay,LeftFoot,Amadou Haidara,Chipped
+2261,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Emil Forsberg,24,Goal,0.9630000305175781,0.445,0.7187361121177673,OpenPlay,RightFoot,Dominik Szoboszlai,Pass
+2262,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Abdou Diallo,29,MissedShots,0.8969999694824219,0.6659999847412109,0.011540059000253677,FromCorner,Head,Dominik Szoboszlai,Cross
+2263,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,David Raum,29,Goal,0.9480000305175781,0.514000015258789,0.12126059830188751,FromCorner,RightFoot,,None
+2264,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,André Silva,44,ShotOnPost,0.9430000305175781,0.555,0.44764798879623413,SetPiece,RightFoot,David Raum,Chipped
+2265,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Willi Orban,44,Goal,0.9830000305175781,0.46599998474121096,0.9330909252166748,SetPiece,LeftFoot,,Rebound
+2266,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,André Silva,49,MissedShots,0.8880000305175781,0.615,0.12177010625600815,OpenPlay,RightFoot,Emil Forsberg,Pass
+2267,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Christopher Nkunku,57,MissedShots,0.9180000305175782,0.34900001525878904,0.11819234490394592,OpenPlay,RightFoot,Emil Forsberg,Pass
+2268,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Kevin Kampl,68,BlockedShot,0.7480000305175781,0.5159999847412109,0.025367435067892075,OpenPlay,RightFoot,Christopher Nkunku,Pass
+2269,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Christopher Nkunku,79,BlockedShot,0.9619999694824218,0.5670000076293945,0.926135241985321,OpenPlay,LeftFoot,Dominik Szoboszlai,TakeOn
+2270,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Abdou Diallo,80,MissedShots,0.9259999847412109,0.5509999847412109,0.05764039605855942,FromCorner,OtherBodyPart,Benjamin Henrichs,Cross
+2271,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Yussuf Poulsen,87,BlockedShot,0.87,0.33599998474121096,0.047624167054891586,FromCorner,RightFoot,Benjamin Henrichs,Pass
+2272,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Kevin Kampl,88,MissedShots,0.740999984741211,0.51,0.02812560647726059,OpenPlay,RightFoot,,None
+2273,2022-2023,10,RasenBallsport Leipzig,Hertha Berlin,Home,Win,Christopher Nkunku,93,MissedShots,0.8669999694824219,0.5840000152587891,0.05413148179650307,FromCorner,RightFoot,Dominik Szoboszlai,Pass
+2274,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Marco Richter,1,SavedShot,0.7440000152587891,0.34200000762939453,0.011814403347671032,OpenPlay,RightFoot,,TakeOn
+2275,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Stevan Jovetic,31,BlockedShot,0.7809999847412109,0.3629999923706055,0.024440700188279152,OpenPlay,LeftFoot,Lucas Tousart,HeadPass
+2276,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Stevan Jovetic,34,MissedShots,0.855999984741211,0.5840000152587891,0.03968561068177223,OpenPlay,RightFoot,Jonjoe Kenny,Cross
+2277,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Dodi Lukebakio,46,BlockedShot,0.7859999847412109,0.3340000152587891,0.03465873375535011,OpenPlay,LeftFoot,,TakeOn
+2278,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Agustín Rogel,54,MissedShots,0.9619999694824218,0.5129999923706055,0.615067720413208,SetPiece,Head,Dodi Lukebakio,Aerial
+2279,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Wilfried Kanga,56,BlockedShot,0.9540000152587891,0.4420000076293945,0.06761231273412704,FromCorner,Head,Dodi Lukebakio,Aerial
+2280,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Maximilian Mittelstädt,57,BlockedShot,0.774000015258789,0.4779999923706055,0.015795568004250526,FromCorner,LeftFoot,,Aerial
+2281,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Dodi Lukebakio,61,Goal,0.885,0.5,0.75777667760849,Penalty,LeftFoot,,Standard
+2282,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Stevan Jovetic,63,Goal,0.840999984741211,0.5420000076293945,0.025944285094738007,SetPiece,RightFoot,,Aerial
+2283,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Stevan Jovetic,68,MissedShots,0.9580000305175781,0.40700000762939453,0.07820968329906464,OpenPlay,Head,Maximilian Mittelstädt,Cross
+2284,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Chidera Ejuke,80,BlockedShot,0.8780000305175781,0.6270000076293946,0.49078893661499023,OpenPlay,RightFoot,Wilfried Kanga,HeadPass
+2285,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Davie Selke,85,SavedShot,0.84,0.549000015258789,0.056459419429302216,OpenPlay,RightFoot,,None
+2286,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Dodi Lukebakio,85,MissedShots,0.8669999694824219,0.47200000762939454,0.03958968445658684,OpenPlay,LeftFoot,Lucas Tousart,Aerial
+2287,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Wilfried Kanga,93,SavedShot,0.8809999847412109,0.32299999237060545,0.05167108401656151,OpenPlay,RightFoot,Stevan Jovetic,Pass
+2288,2022-2023,10,Hertha Berlin,RasenBallsport Leipzig,Away,Defeat,Wilfried Kanga,94,MissedShots,0.92,0.46599998474121096,0.11200439184904099,OpenPlay,Head,Dodi Lukebakio,Cross
+2289,2022-2023,10,FC Cologne,Augsburg,Home,Win,Ellyes Skhiri,4,BlockedShot,0.710999984741211,0.6079999923706054,0.013432932086288929,OpenPlay,RightFoot,,BallTouch
+2290,2022-2023,10,FC Cologne,Augsburg,Home,Win,Linton Maina,20,SavedShot,0.95,0.3029999923706055,0.05617653205990791,OpenPlay,RightFoot,Steffen Tigges,TakeOn
+2291,2022-2023,10,FC Cologne,Augsburg,Home,Win,Denis Huseinbasic,31,BlockedShot,0.874000015258789,0.5179999923706055,0.07922982424497604,FromCorner,LeftFoot,,None
+2292,2022-2023,10,FC Cologne,Augsburg,Home,Win,Steffen Tigges,32,BlockedShot,0.9330000305175781,0.4370000076293945,0.08579649031162262,OpenPlay,LeftFoot,,None
+2293,2022-2023,10,FC Cologne,Augsburg,Home,Win,Eric Martel,39,BlockedShot,0.7390000152587891,0.6229999923706054,0.019084887579083443,OpenPlay,RightFoot,Ondrej Duda,Pass
+2294,2022-2023,10,FC Cologne,Augsburg,Home,Win,Eric Martel,45,MissedShots,0.805,0.6580000305175782,0.03252459317445755,OpenPlay,RightFoot,Ondrej Duda,Pass
+2295,2022-2023,10,FC Cologne,Augsburg,Home,Win,Steffen Tigges,46,Goal,0.9159999847412109,0.49,0.3935185670852661,OpenPlay,RightFoot,Linton Maina,Cross
+2296,2022-2023,10,FC Cologne,Augsburg,Home,Win,Ondrej Duda,49,SavedShot,0.784000015258789,0.38299999237060545,0.028776515275239944,OpenPlay,RightFoot,Ellyes Skhiri,Pass
+2297,2022-2023,10,FC Cologne,Augsburg,Home,Win,Steffen Tigges,49,MissedShots,0.975,0.395,0.07533753663301468,OpenPlay,LeftFoot,Eric Martel,Cross
+2298,2022-2023,10,FC Cologne,Augsburg,Home,Win,Benno Schmitz,50,BlockedShot,0.85,0.3390000152587891,0.04758414253592491,OpenPlay,RightFoot,,None
+2299,2022-2023,10,FC Cologne,Augsburg,Home,Win,Ellyes Skhiri,59,MissedShots,0.9230000305175782,0.49,0.056887418031692505,FromCorner,Head,,Aerial
+2300,2022-2023,10,FC Cologne,Augsburg,Home,Win,Denis Huseinbasic,60,Goal,0.919000015258789,0.549000015258789,0.11185082793235779,OpenPlay,LeftFoot,,BallTouch
+2301,2022-2023,10,FC Cologne,Augsburg,Home,Win,Ondrej Duda,66,MissedShots,0.8430000305175781,0.6,0.047113087028265,FromCorner,RightFoot,Linton Maina,Pass
+2302,2022-2023,10,FC Cologne,Augsburg,Home,Win,Steffen Tigges,70,BlockedShot,0.91,0.4859999847412109,0.0553852804005146,OpenPlay,Head,Benno Schmitz,Aerial
+2303,2022-2023,10,FC Cologne,Augsburg,Home,Win,Steffen Tigges,80,Goal,0.919000015258789,0.51,0.44305717945098877,OpenPlay,LeftFoot,,TakeOn
+2304,2022-2023,10,Augsburg,FC Cologne,Away,Defeat,Florian Niederlechner,13,Goal,0.9390000152587891,0.7080000305175781,0.04396086558699608,OpenPlay,LeftFoot,Frederik Winther,Chipped
+2305,2022-2023,10,Augsburg,FC Cologne,Away,Defeat,Iago,57,BlockedShot,0.86,0.6409999847412109,0.04687081277370453,FromCorner,LeftFoot,Robert Gumny,Pass
+2306,2022-2023,10,Augsburg,FC Cologne,Away,Defeat,Daniel Caligiuri,67,Goal,0.8730000305175781,0.42900001525878906,0.05390981212258339,OpenPlay,LeftFoot,Florian Niederlechner,HeadPass
+2307,2022-2023,10,Augsburg,FC Cologne,Away,Defeat,Elvis Rexhbecaj,77,MissedShots,0.7559999847412109,0.515,0.021535305306315422,OpenPlay,LeftFoot,,None
+2308,2022-2023,10,Augsburg,FC Cologne,Away,Defeat,Mërgim Berisha,86,MissedShots,0.7019999694824218,0.48700000762939455,0.04123973101377487,DirectFreekick,RightFoot,,Standard
+2309,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Jordan Siebatcheu,0,BlockedShot,0.92,0.46700000762939453,0.11454492807388306,OpenPlay,RightFoot,Sheraldo Becker,Cross
+2310,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Andras Schafer,4,SavedShot,0.8809999847412109,0.32799999237060545,0.06128368154168129,OpenPlay,RightFoot,Sheraldo Becker,Pass
+2311,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Sheraldo Becker,5,BlockedShot,0.6869999694824219,0.62,0.021290218457579613,FromCorner,RightFoot,Julian Ryerson,Pass
+2312,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Sheraldo Becker,5,MissedShots,0.7480000305175781,0.6270000076293946,0.015538913197815418,FromCorner,RightFoot,,None
+2313,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Janik Haberer,7,Goal,0.975999984741211,0.5320000076293945,0.6868717074394226,OpenPlay,LeftFoot,,None
+2314,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Timo Baumgartl,9,MissedShots,0.889000015258789,0.4540000152587891,0.01587950624525547,FromCorner,Head,Christopher Trimmel,Aerial
+2315,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Janik Haberer,9,BlockedShot,0.8440000152587891,0.39,0.05659271776676178,FromCorner,RightFoot,,Rebound
+2316,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Jordan Siebatcheu,17,MissedShots,0.9640000152587891,0.66,0.047103315591812134,OpenPlay,RightFoot,Sheraldo Becker,Cross
+2317,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Sheraldo Becker,17,SavedShot,0.7290000152587891,0.7119999694824218,0.015728572383522987,OpenPlay,RightFoot,Julian Ryerson,BallRecovery
+2318,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Janik Haberer,20,Goal,0.785,0.5179999923706055,0.041388049721717834,OpenPlay,RightFoot,Jordan Siebatcheu,Pass
+2319,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Julian Ryerson,28,MissedShots,0.8580000305175781,0.7240000152587891,0.05025729537010193,OpenPlay,RightFoot,Diogo Leite,Pass
+2320,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Timo Baumgartl,55,SavedShot,0.9019999694824219,0.5329999923706055,0.09341283142566681,OpenPlay,Head,Janik Haberer,Cross
+2321,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Rani Khedira,67,MissedShots,0.8440000152587891,0.5790000152587891,0.0754363164305687,OpenPlay,LeftFoot,,None
+2322,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Morten Thorsby,70,MissedShots,0.835999984741211,0.565,0.06919864565134048,OpenPlay,RightFoot,,None
+2323,2022-2023,10,Union Berlin,Borussia Dortmund,Home,Win,Kevin Behrens,85,MissedShots,0.925,0.5309999847412109,0.10836216807365417,FromCorner,Head,Christopher Trimmel,Cross
+2324,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Emre Can,6,MissedShots,0.9009999847412109,0.475,0.2170906364917755,OpenPlay,Head,Thomas Meunier,Cross
+2325,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Karim Adeyemi,11,SavedShot,0.874000015258789,0.5309999847412109,0.03543562442064285,OpenPlay,Head,Niklas Süle,Chipped
+2326,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Jude Bellingham,16,MissedShots,0.7959999847412109,0.5429999923706055,0.12164637446403503,DirectFreekick,RightFoot,,Standard
+2327,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Youssoufa Moukoko,34,MissedShots,0.750999984741211,0.30700000762939456,0.01625741831958294,OpenPlay,LeftFoot,Niklas Süle,Pass
+2328,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Youssoufa Moukoko,35,SavedShot,0.895,0.6090000152587891,0.08999872952699661,OpenPlay,LeftFoot,Karim Adeyemi,Pass
+2329,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Youssoufa Moukoko,45,BlockedShot,0.8130000305175781,0.4540000152587891,0.03963528573513031,FromCorner,LeftFoot,Niklas Süle,TakeOn
+2330,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Mats Hummels,52,BlockedShot,0.885,0.5520000076293945,0.036227934062480927,FromCorner,Head,Raphael Guerreiro,Cross
+2331,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Donyell Malen,60,BlockedShot,0.9169999694824219,0.28899999618530275,0.016285905614495277,OpenPlay,RightFoot,Jude Bellingham,Cross
+2332,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Jude Bellingham,74,SavedShot,0.749000015258789,0.3370000076293945,0.012999376282095909,OpenPlay,LeftFoot,,BallRecovery
+2333,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Marco Reus,76,SavedShot,0.9669999694824218,0.34900001525878904,0.07093359529972076,OpenPlay,RightFoot,Julian Brandt,Pass
+2334,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Youssoufa Moukoko,78,SavedShot,0.9309999847412109,0.3189999961853027,0.06790215522050858,OpenPlay,RightFoot,Mats Hummels,TakeOn
+2335,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Youssoufa Moukoko,81,SavedShot,0.8090000152587891,0.4159999847412109,0.035585518926382065,SetPiece,RightFoot,,None
+2336,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Nico Schlotterbeck,84,BlockedShot,0.870999984741211,0.4640000152587891,0.025507213547825813,FromCorner,Head,Thorgan Hazard,Cross
+2337,2022-2023,10,Borussia Dortmund,Union Berlin,Away,Defeat,Nico Schlotterbeck,88,BlockedShot,0.7330000305175781,0.485,0.01215019728988409,SetPiece,RightFoot,,None
+2338,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Alphonso Davies,4,MissedShots,0.8330000305175781,0.675,0.036934833973646164,OpenPlay,LeftFoot,,None
+2339,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Sadio Mané,5,BlockedShot,0.894000015258789,0.3039999961853027,0.05280359834432602,OpenPlay,RightFoot,Serge Gnabry,Pass
+2340,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Leroy Sané,5,MissedShots,0.8590000152587891,0.49,0.07386832684278488,OpenPlay,LeftFoot,Leon Goretzka,HeadPass
+2341,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Joshua Kimmich,8,MissedShots,0.69,0.2560000038146973,0.009927913546562195,OpenPlay,RightFoot,,BallRecovery
+2342,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Leroy Sané,12,SavedShot,0.924000015258789,0.534000015258789,0.3961901068687439,OpenPlay,RightFoot,Alphonso Davies,Cross
+2343,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Serge Gnabry,12,Goal,0.8590000152587891,0.46599998474121096,0.016334595158696175,OpenPlay,Head,,Rebound
+2344,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Serge Gnabry,20,SavedShot,0.8380000305175781,0.519000015258789,0.08853232860565186,OpenPlay,RightFoot,Leon Goretzka,Pass
+2345,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Leroy Sané,24,BlockedShot,0.81,0.7180000305175781,0.02765788696706295,OpenPlay,LeftFoot,Sadio Mané,Pass
+2346,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Eric Maxim Choupo-Moting,32,Goal,0.9019999694824219,0.36,0.10382210463285446,OpenPlay,RightFoot,Leroy Sané,Pass
+2347,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Leroy Sané,36,MissedShots,0.7340000152587891,0.40200000762939453,0.018501652404665947,OpenPlay,LeftFoot,Noussair Mazraoui,Pass
+2348,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Serge Gnabry,38,SavedShot,0.9390000152587891,0.6659999847412109,0.21425920724868774,OpenPlay,LeftFoot,Leroy Sané,Pass
+2349,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Serge Gnabry,51,ShotOnPost,0.884000015258789,0.385,0.08788015693426132,OpenPlay,RightFoot,,None
+2350,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Leroy Sané,51,Goal,0.7859999847412109,0.5279999923706055,0.07313215732574463,OpenPlay,LeftFoot,Eric Maxim Choupo-Moting,LayOff
+2351,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Sadio Mané,54,Goal,0.8630000305175781,0.4620000076293945,0.33159497380256653,OpenPlay,RightFoot,Serge Gnabry,Chipped
+2352,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Marcel Sabitzer,79,Goal,0.845,0.46599998474121096,0.4445260167121887,OpenPlay,RightFoot,,None
+2353,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Mathys Tel,87,MissedShots,0.8469999694824218,0.534000015258789,0.08394362032413483,OpenPlay,RightFoot,,None
+2354,2022-2023,10,Bayern Munich,Freiburg,Home,Win,Sadio Mané,88,MissedShots,0.725999984741211,0.5790000152587891,0.026545874774456024,OpenPlay,RightFoot,,TakeOn
+2355,2022-2023,10,Freiburg,Bayern Munich,Away,Defeat,Ritsu Doan,1,MissedShots,0.740999984741211,0.625999984741211,0.01666855998337269,OpenPlay,LeftFoot,,BallRecovery
+2356,2022-2023,10,Freiburg,Bayern Munich,Away,Defeat,Kevin Schade,3,BlockedShot,0.8769999694824219,0.40299999237060546,0.07390124350786209,OpenPlay,RightFoot,Michael Gregoritsch,None
+2357,2022-2023,10,Freiburg,Bayern Munich,Away,Defeat,Matthias Ginter,15,BlockedShot,0.8690000152587891,0.445,0.07098302245140076,FromCorner,RightFoot,,None
+2358,2022-2023,10,Freiburg,Bayern Munich,Away,Defeat,Kevin Schade,45,BlockedShot,0.8690000152587891,0.37099998474121093,0.03838994354009628,FromCorner,RightFoot,Christian Günter,Cross
+2359,2022-2023,10,Freiburg,Bayern Munich,Away,Defeat,Matthias Ginter,68,BlockedShot,0.8730000305175781,0.529000015258789,0.032562777400016785,OpenPlay,Head,Christian Günter,Cross
+2360,2022-2023,10,Freiburg,Bayern Munich,Away,Defeat,Noah Weißhaupt,89,MissedShots,0.8780000305175781,0.43900001525878907,0.0958070382475853,OpenPlay,RightFoot,Lucas Höler,Pass
