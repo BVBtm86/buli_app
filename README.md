@@ -15,4 +15,4 @@ Data Reference:
 - https://www.bundesliga.com/en/bundesliga
 - https://understat.com/league/Bundesliga
 
-App: [Bundesliga Statistical App](https://bvbtm86-buli-app-app-fol11y.streamlitapp.com)
+App: [Bundesliga Statistical App](https://bvbtm86-buli-stats.streamlitapp.com)
