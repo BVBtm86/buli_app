@@ -58,8 +58,8 @@ def main():
         st.header("")
         st.subheader("")
         st.markdown(
-            'A statistical application that allows to analyse different types of football statistics for both Teams '
-            'and players.<br> <br> <b>App Features</b>', unsafe_allow_html=True)
+            'A statistical application that allows the user to analyse different types of football statistics for '
+            'both Teams and players.<br> <br> <b>App Features</b>', unsafe_allow_html=True)
 
         """ 
         * Select your favourite team

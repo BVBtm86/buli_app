@@ -91,6 +91,16 @@ def season_data_process(season):
     df_analysis.rename(columns=main_columns, inplace=True)
     current_match_day = np.max(df_analysis['Week_No'])
 
+    recode_missing_stats = ['Pressure', 'Carries', 'Progressive Carries', 'Passes Under Pressure', 'passes_ground',
+                            'passes_low', 'passes_high', 'passes_left_foot', 'passes_right_foot', 'passes_head',
+                            'passes_other_body', 'passes_oob', 'passes_intercepted', 'Pressure Regains',
+                            'Pressure Regains Successful %', 'Pressure Def 3rd', 'Pressure Mid 3rd',
+                            'Pressure Att 3rd', 'blocked_shots_saves', 'players_dribbled_past', 'nutmegs',
+                            'Carries Distance', 'Carries Progressive Distance', 'Carries Final 3rd',
+                            'Carries Penalty Area', 'passes_received_pct']
+    for col in recode_missing_stats:
+        df_analysis[col] = df_analysis[col].fillna(np.nanmean(df_analysis[col]))
+
     model_no = buli_df.groupby(['Venue'])['Team'].value_counts().min()
     if model_no > 5:
         model_no = 5
