@@ -66,9 +66,9 @@ def prediction_page(prediction_type, season, favourite_team):
                 with home_logo_col:
                     h_logo = Image.open(f'images/{home_team_names[i]}.png')
                     if current_match_day % 2 == 0:
-                        st.image(h_logo, width=16)
+                        st.image(h_logo, width=24)
                     else:
-                        st.image(h_logo, width=16)
+                        st.image(h_logo, width=25)
 
                 with home_name_col:
                     if home_team_names[i] == favourite_team or away_team_names[i] == favourite_team:
@@ -79,9 +79,9 @@ def prediction_page(prediction_type, season, favourite_team):
                 with away_logo_col:
                     a_logo = Image.open(f'images/{away_team_names[i]}.png')
                     if current_match_day % 2 == 0:
-                        st.image(a_logo, width=16)
+                        st.image(a_logo, width=25)
                     else:
-                        st.image(a_logo, width=16)
+                        st.image(a_logo, width=24)
 
                 with away_name_col:
                     if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
