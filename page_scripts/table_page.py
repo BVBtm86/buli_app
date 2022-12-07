@@ -1,4 +1,5 @@
-from page_scripts.stats_scripts.table_stats import *
+import streamlit as st
+from page_scripts.stats_scripts.table_stats import filter_data, buli_table_data
 from PIL import Image
 
 
@@ -15,13 +16,12 @@ def table_page(page_season, favourite_team):
     st.header(f'Season {page_season}: {season_type} Table Games')
 
     logo_col, rank_col, team_col, mp_col, w_col, d_col, l_col, gf_col, ga_col, gd_col, pts_col = st.columns(
-        [0.473, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1])
+        [0.5, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1])
 
     with logo_col:
         st.markdown(f"<h4 style='text-align: center;'h4><b><font color='white'>#</font></b>", unsafe_allow_html=True)
         teams_logo = buli_season_df['Team'].unique()
-        logo_teams = [Image.open(f'images/{teams_logo[i]}.png') for i in range(len(teams_logo))]
-        st.image(logo_teams, use_column_width=True)
+        [st.image(Image.open(f'images/{teams_logo[i]}.png'),  width=26) for i in range(len(teams_logo))]
         pos_favourite_team = list(teams_logo).index(favourite_team)
 
     with rank_col:

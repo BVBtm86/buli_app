@@ -1,14 +1,19 @@
-from page_scripts.stats_scripts.team_stats import *
+import numpy as np
+import streamlit as st
+from page_scripts.stats_scripts.team_stats import stats_team, season_data_process, teams_season_stats, \
+    teams_charts_day, teams_season_type, relationship_data, season_teams, teams_buli_type, relationship_buli_data
 from PIL import Image
 
 
-def team_page(page_season, favourite_team):
+def team_page(page_season, favourite_team, all_seasons):
     # #### Team Statistics Type
     team_stats = st.sidebar.selectbox("Season Stats", ["Season Stats", "Season by Season Stats"])
 
     if team_stats == "Season Stats":
         # ##### Select Season
-        buli_season_df = season_data_process(season=page_season, stat_type=team_stats)
+        buli_season_df = season_data_process(season=page_season,
+                                             stat_type=team_stats,
+                                             all_seasons=all_seasons)
 
         # ##### Season Filter
         filter_type = ["Total", "Home", "Away", "1st Period", "2nd Period"]
@@ -20,7 +25,7 @@ def team_page(page_season, favourite_team):
         menu_filter_col, chart_team_col = st.columns([2, 5])
         with menu_filter_col:
             season_type_team = st.selectbox("Team Season Filter", filter_type)
-            stat_name_team = st.selectbox("Team Season Statistics", team_stats_names)
+            stat_name_team = st.selectbox("Team Season Statistics", stats_team)
             team_type = st.selectbox("Team Type", ['Team', 'Opponent'])
             fig_team, avg_value, better_avg = teams_season_stats(data=buli_season_df,
                                                                  stat_name=stat_name_team,
@@ -61,7 +66,7 @@ def team_page(page_season, favourite_team):
 
         with stat_col_day:
             # ##### Data Charts
-            stat_name_day = st.selectbox("Game Statistics", team_stats_names)
+            stat_name_day = st.selectbox("Game Statistics", stats_team)
             fig_day, avg_team, avg_opp, better, stat_sig_name = teams_charts_day(data=buli_season_df,
                                                                                  team=team_chart,
                                                                                  stat_name=stat_name_day,
@@ -120,7 +125,7 @@ def team_page(page_season, favourite_team):
         corr_filter_col, corr_team_col, corr_team_image = st.columns([2, 6, 1])
         with corr_filter_col:
             corr_filter_type = st.selectbox("Relationship Season Selection", filter_type)
-            stats_names_1 = team_stats_names.copy()
+            stats_names_1 = stats_team.copy()
             corr_stat_x = st.selectbox("Select X Stat", stats_names_1)
             stats_names_2 = stats_names_1.copy()
             stats_names_2.remove(corr_stat_x)
@@ -167,8 +172,8 @@ def team_page(page_season, favourite_team):
                         f"{corr_value[max_result]}</font></b>).", unsafe_allow_html=True)
     elif team_stats == "Season by Season Stats":
 
-        buli_df = season_data_process(season="", stat_type=1)
-        seasons = list(buli_df['Season'].unique())[-5:]
+        buli_df = season_data_process(season="", stat_type=1, all_seasons=all_seasons)
+        seasons = list(buli_df['Season'].unique())
         buli_teams = season_teams(buli_df, page_season)
         pos_team = buli_teams.index(favourite_team)
         st.subheader(f"Team Stats vs Opponent over the Last 5 Seasons")
@@ -177,7 +182,7 @@ def team_page(page_season, favourite_team):
         with filter_col:
             filter_type = ["Total", "Home", "Away", "1st Period", "2nd Period"]
             season_type_team = st.selectbox("Season Filter", filter_type)
-            stat_name_team = st.selectbox("Select Season Statistics", team_stats_names)
+            stat_name_team = st.selectbox("Select Season Statistics", stats_team)
             buli_team = st.selectbox("Select Team", buli_teams, pos_team)
 
         with team_logo_col:
@@ -228,7 +233,7 @@ def team_page(page_season, favourite_team):
         corr_filter_col, corr_team_col, corr_team_image = st.columns([2.5, 6, 1])
         with corr_filter_col:
             corr_filter_type = st.selectbox("Relationship Filter Selection", filter_type)
-            stats_names_x = team_stats_names.copy()
+            stats_names_x = stats_team.copy()
             corr_stat_x = st.selectbox("Select X Stat", stats_names_x)
             stats_names_y = stats_names_x.copy()
             stats_names_y.remove(corr_stat_x)

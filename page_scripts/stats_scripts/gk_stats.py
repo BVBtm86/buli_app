@@ -3,44 +3,22 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 from scipy.stats import ttest_ind
+from page_scripts.stats_scripts.utilities import season_gk_query, all_gk_query
 
-# ##### Team Names
-team_name = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer 04 Leverkusen",
-             "Hoffenheim": "TSG 1899 Hoffenheim", "Werder Bremen": "SV Werder Bremen", "Mainz 05": "1. FSV Mainz 05",
-             "Hannover 96": "Hannover 96", "Wolfsburg": "VfL Wolfsburg", "Dortmund": "Borussia Dortmund",
-             "Hamburger SV": "Hamburger SV", "Augsburg": "FC Augsburg", "Hertha BSC": "Hertha Berlin",
-             "Stuttgart": "VfB Stuttgart", "Schalke 04": "FC Schalke 04", "RB Leipzig": "RasenBallsport Leipzig",
-             "Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
-             "Mönchengladbach": "Borussia Mönchengladbach", "Köln": "1. FC Köln", "Düsseldorf": "Fortuna Düsseldorf",
-             "Nürnberg": "1. FC Nürnberg", "Paderborn 07": "SC Paderborn 07", "Union Berlin": "1. FC Union Berlin",
-             "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth",
-             "Greuther F�rth": "SpVgg Greuther Fürth"}
+gk_stats_total = ["Shots on Target", "Goals Conceded", "Saves", "Post-Shot xGoal", "Passes 35m+ Completed",
+                  "Passes 35m+", "Passes", "Throws", "Avg Pass Length", "Goal Kicks", "Avg Goal Kick Length",
+                  "Crosses Faced", "Crosses Stopped", "Sweeper Actions", "Sweeper Avg Distance"]
 
-gk_stats_vars_total = ["shots_on_target_against", "goals_against_gk", "saves", "psxg_gk", "passes_gk",
-                       "passes_launched_gk", "passes_completed_launched_gk", "passes_throws_gk", "passes_length_avg_gk",
-                       "goal_kicks", "goal_kick_length_avg", "crosses_gk", "crosses_stopped_gk",
-                       "def_actions_outside_pen_area_gk", "avg_distance_def_actions_gk"]
-
-gk_stats_names_total = ["Shot on Target Against", "Goals Against", "Saves", "Post-Shot Expected Goals", "Passes",
-                        "Launched Passes", "Launched Completed Passes", "Throws", "Passes Avg Length (yards)",
-                        "Goal Kicks", "Goal Kicks Avg Length (yards)", "Opponent Crosses", "Crosses Stopped",
-                        "Sweeper Actions", "Sweeper Avg Length (yards)"]
-
-gk_stats_vars_avg = ["shots_on_target_against", "goals_against_gk", "saves", "save_pct", "psxg_gk", "passes_gk",
-                     "passes_launched_gk", "passes_completed_launched_gk", "passes_pct_launched_gk", "passes_throws_gk",
-                     "passes_length_avg_gk", "goal_kicks", "goal_kick_length_avg", "crosses_gk", "crosses_stopped_gk",
-                     "crosses_stopped_pct_gk", "def_actions_outside_pen_area_gk", "avg_distance_def_actions_gk"]
-
-gk_stats_names_avg = ["Shot on Target Against", "Goals Against", "Saves", "Saves %", "Post-Shot Expected Goals",
-                      "Passes", "Launched Passes", "Launched Completed Passes", "Launched Completed Passes %", "Throws",
-                      "Passes Avg Length (yards)", "Goal Kicks", "Goal Kicks Avg Length (yards)", "Opponent Crosses",
-                      "Crosses Stopped", "Crosses Stopped %", "Sweeper Actions", "Sweeper Avg Length (yards)"]
+gk_stats_avg = ["Shots on Target", "Goals Conceded", "Saves", "Saves %", "Post-Shot xGoal", "Passes 35m+ Completed",
+                "Passes 35m+", "Passes 35m+ Completed %", "Passes", "Throws", "Avg Pass Length", "Goal Kicks",
+                "Goal Kicks %", "Avg Goal Kick Length", "Crosses Faced", "Crosses Stopped", "Crosses Stopped %",
+                "Sweeper Actions", "Sweeper Avg Distance"]
 
 
 @st.cache
 def season_gk_data(season):
     # ##### Read Data
-    buli_df_gk = pd.read_csv(f"./data/Seasons_data/Bundesliga_Gk_Statistics_{season}.csv", index_col='Unnamed: 0')
+    buli_df_gk = season_gk_query(season=season)
 
     # ##### Add Filter Type Stats
     buli_df_gk['Total'] = 1
@@ -52,12 +30,8 @@ def season_gk_data(season):
     buli_df_gk["Draw"] = np.where(buli_df_gk["Result"] == 'Draw', 1, 0)
     buli_df_gk["Defeat"] = np.where(buli_df_gk["Result"] == 'Defeat', 1, 0)
 
-    # ##### Filter Data
-    buli_df_gk['Team'] = buli_df_gk['Team'].map(team_name)
-    buli_df_gk = buli_df_gk[buli_df_gk['Season'] == season].reset_index(drop=True)
-    buli_df_gk['Name_Team'] = buli_df_gk['Team'] + "_" + buli_df_gk['Name']
-
     # ##### Total Players
+    buli_df_gk['Name_Team'] = buli_df_gk['Team'] + "_" + buli_df_gk['Name']
     total_gk = list(buli_df_gk['Name'].unique())
     total_gk.sort()
 
@@ -71,12 +45,12 @@ def season_gk_data(season):
     return buli_df_gk, total_gk, avg_gk
 
 
-@st.cache
-def gk_df_filter(data, season_filter):
-    # ##### Filter Data
-    buli_team_gk_df = data[(data[season_filter] == 1)].reset_index(drop=True)
-
-    return buli_team_gk_df
+# @st.cache
+# def gk_df_filter(data, season_filter):
+#     # ##### Filter Data
+#     buli_team_gk_df = data[(data[season_filter] == 1)].reset_index(drop=True)
+#
+#     return buli_team_gk_df
 
 
 def gk_top_statistics(data, season_filter, avg_gk, stat_top10, type_top10):
@@ -88,12 +62,12 @@ def gk_top_statistics(data, season_filter, avg_gk, stat_top10, type_top10):
 
     # ##### Create Top 10 Data
     if type_top10 == 'Total':
-        stat_plot = gk_stats_vars_total[gk_stats_names_total.index(stat_top10)]
+        stat_plot = stat_top10
         top10_gk_group_df = top10_df.groupby(["Name", "Team"])[stat_plot].sum().reset_index()
         top10_plot_data = top10_gk_group_df.nlargest(10, stat_plot)
         top10_plot_data.rename(columns={stat_plot: stat_top10}, inplace=True)
     elif type_top10 == 'Average':
-        stat_plot = gk_stats_vars_avg[gk_stats_names_avg.index(stat_top10)]
+        stat_plot = stat_top10
         top10_gk_group_avg_df = np.round(top10_avg_df.groupby(["Name", "Team"])[stat_plot].mean().reset_index(), 2)
         top10_plot_data = top10_gk_group_avg_df.nlargest(10, stat_plot).nlargest(10, stat_plot)
         top10_plot_data.rename(columns={stat_plot: stat_top10}, inplace=True)
@@ -134,10 +108,6 @@ def gk_chart_day(data, avg_gk, gk_name, stat_name):
     gk_df = data[(data['Name'] == gk_name) & (data['Name_Team'].isin(avg_gk))].reset_index(drop=True)
     week_no = data['Week_No'].max()
     gk_team_name = gk_df['Team'].unique()[0]
-
-    # ##### Rename Stat Name
-    gk_df.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_name)]: stat_name}, inplace=True)
-    full_data.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_name)]: stat_name}, inplace=True)
 
     # ##### Plot Data
     min_value = 0
@@ -209,10 +179,8 @@ def gk_season_filter_stats(data, player_name, avg_gk, stat_name):
         if length_stat > 0:
             names_stats.append(stats_types_gk[i])
             names_stats.append(stats_types_gk[i])
-            gk_stats.append(np.round(gk_df.groupby(stats_types_gk[i])[gk_stats_vars_avg[
-                gk_stats_names_avg.index(stat_name)]].mean().values[-1], 2))
-            gk_stats.append(np.round(league_df.groupby(stats_types_gk[i])[gk_stats_vars_avg[
-                gk_stats_names_avg.index(stat_name)]].mean().values[-1], 2))
+            gk_stats.append(np.round(gk_df.groupby(stats_types_gk[i])[stat_name].mean().values[-1], 2))
+            gk_stats.append(np.round(league_df.groupby(stats_types_gk[i])[stat_name].mean().values[-1], 2))
             gk_name.append(player_name)
             gk_name.append("League Average")
 
@@ -258,11 +226,6 @@ def gk_relationship_data(data, filter_type, player_name, avg_gk, stat_x, stat_y,
     gk_corr_team = league_df[(league_df['Name'] == player_name) &
                              (avg_data['Name_Team'].isin(avg_gk))]['Team'].unique()[0]
 
-    # ##### Rename Stat Name
-    league_df.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_x)]: stat_x}, inplace=True)
-    league_df.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_y)]: stat_y}, inplace=True)
-    league_df.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_size)]: stat_size}, inplace=True)
-
     gk_group_df = np.round(league_df.groupby('Name')[[stat_x, stat_y, stat_size]].mean(), 2).reset_index()
     gk_group_df['Group'] = np.where(gk_group_df['Name'] == player_name, player_name, "Bundesliga")
 
@@ -307,9 +270,9 @@ def gk_relationship_data(data, filter_type, player_name, avg_gk, stat_x, stat_y,
 
 
 @st.cache
-def buli_gk_data(season):
+def buli_gk_data(season, team, all_seasons):
     # ##### Read Data
-    buli_df_gk = pd.read_csv("./data/Full_Seasons_data/Bundesliga_Gk_Statistics.csv", index_col='Unnamed: 0')
+    buli_df_gk = all_gk_query(all_seasons=all_seasons)
 
     # ##### Add Filter Type Stats
     buli_df_gk['Total'] = 1
@@ -322,7 +285,6 @@ def buli_gk_data(season):
     buli_df_gk["Defeat"] = np.where(buli_df_gk["Result"] == 'Defeat', 1, 0)
 
     # ##### Filter Data
-    buli_df_gk['Team'] = buli_df_gk['Team'].map(team_name)
     buli_df_gk['Name_Team'] = buli_df_gk['Team'] + "_" + buli_df_gk['Name']
     gk_current_season = buli_df_gk[buli_df_gk['Season'] == season].reset_index(drop=True)
 
@@ -352,9 +314,6 @@ def gk_buli_stats(data, gk_team, gk_name, avg_gk, stat_name, filter_type, analys
     gk_df_seasons = list(gk_df['Season'].unique())
     league_df = data[(data['Season'].isin(gk_df_seasons)) & (data['Name_Team'].isin(avg_gk))
                      & (data[filter_type] == 1)].reset_index(drop=True)
-
-    gk_df.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_name)]: stat_name}, inplace=True)
-    league_df.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_name)]: stat_name}, inplace=True)
 
     # ##### Create Stats
     gk_season_stats = np.round(gk_df.groupby('Season')[stat_name].mean(), 2).reset_index()
@@ -411,12 +370,6 @@ def gk_buli_corr_data(data, filter_type, team, player, stat_x, stat_y, avg_gk, a
                         & (data['Name'] == player)
                         & (data[filter_type] == 1)].reset_index(
         drop=True)
-
-    # ##### Rename Stat Name
-    filter_df_gk.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_x)]: stat_x},
-                        inplace=True)
-    filter_df_gk.rename(columns={gk_stats_vars_avg[gk_stats_names_avg.index(stat_y)]: stat_y},
-                        inplace=True)
 
     filter_df_gk['Points'] = np.where(filter_df_gk['Result'] == 'Win', 3,
                                       np.where(filter_df_gk['Result'] == 'Defeat', 1, 2))

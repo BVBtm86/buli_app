@@ -1,18 +1,20 @@
 # Bundesliga Statistical Application
 
-A Web Application build with Python and Streamlit:
+A statistical application that allows the user to analyse different types of football statistics for 
+both Teams and players
+
+App Features
+
 - Match Day Statistics
 - Season Table
 - Team Statistics
 - Player Statistics
 - Player vs Player Statistics
 - Goalkeeper Statistics
-- Event Data
 - Season Prediction
 
 Data Reference:
 - https://fbref.com/en/comps/20/Bundesliga-Stats
 - https://www.bundesliga.com/en/bundesliga
-- https://understat.com/league/Bundesliga
 
 App: [Bundesliga Statistical App](https://bvbtm86-buli-stats.streamlitapp.com)

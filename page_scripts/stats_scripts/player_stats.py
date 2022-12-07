@@ -2,100 +2,70 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import streamlit as st
+from page_scripts.stats_scripts.utilities import season_player_query, all_player_query, radar_mosaic
+from mplsoccer import Radar, PyPizza
+from highlight_text import fig_text
 
-# ##### Team Names
-team_name = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer 04 Leverkusen",
-             "Hoffenheim": "TSG 1899 Hoffenheim", "Werder Bremen": "SV Werder Bremen", "Mainz 05": "1. FSV Mainz 05",
-             "Hannover 96": "Hannover 96", "Wolfsburg": "VfL Wolfsburg", "Dortmund": "Borussia Dortmund",
-             "Hamburger SV": "Hamburger SV", "Augsburg": "FC Augsburg", "Hertha BSC": "Hertha Berlin",
-             "Stuttgart": "VfB Stuttgart", "Schalke 04": "FC Schalke 04", "RB Leipzig": "RasenBallsport Leipzig",
-             "Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
-             "Mönchengladbach": "Borussia Mönchengladbach", "Köln": "1. FC Köln", "Düsseldorf": "Fortuna Düsseldorf",
-             "Nürnberg": "1. FC Nürnberg", "Paderborn 07": "SC Paderborn 07", "Union Berlin": "1. FC Union Berlin",
-             "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth",
-             "Greuther F�rth": "SpVgg Greuther Fürth"}
+player_stats_total = ['Goals', 'Assists', 'Shots', 'Shots on Target', 'xGoal', 'Non-Penalty xGoal', 'xGoal Assist',
+                      'xAssist', 'Goal Created Action', 'Shot Created Action', 'Key Passes', 'Penalty Goal',
+                      'Penalty Attempted', 'Own Goals', 'Passes', 'Passes Completed', 'Passes Short',
+                      'Passes Short Completed', 'Passes Medium', 'Passes Medium Completed', 'Passes Long',
+                      'Passes Long Completed', 'Passes Final 3rd', 'Passes PA', 'Progressive Passes',
+                      'Passes Distance', 'Passes Progressive Distance', 'Passes Received',
+                      'Progressive Passes Received', 'Passes Free Kicks', 'Passes Live', 'Passes Dead',
+                      'Passes Switches', 'Passes Offsides', 'Passes Blocked', 'Through Balls', 'Ball Touches',
+                      'Touches Def PA', 'Touches Def 3rd', 'Touches Mid 3rd', 'Touches Att 3rd', 'Touches Att PA',
+                      'Touches Live Ball', 'Dribbles', 'Dribbles Completed', 'Crosses', 'Crosses PA', 'Interceptions',
+                      'Ball Recoveries', 'Corner Kicks', 'Corner Kicks In', 'Corner Kicks Out',
+                      'Corner Kicks Straight', 'Tackles', 'Tackles Won', 'Tackles Def 3rd', 'Tackles Mid 3rd',
+                      'Tackles Att 3rd', 'Tackles + Interceptions', 'Duel Aerial Won', 'Duel Aerial Lost',
+                      'Dribbles Tackled', 'Dribbles Contested', 'Dribbled Past', 'Blocks', 'Blocked Shots',
+                      'Blocked Passes', 'Clearances', 'Offsides', 'Penalty Won', 'Penalty Conceded', 'Throw Ins',
+                      'Misscontrols', 'Dispossessed', 'Fouls', 'Fouled', 'Yellow Cards', 'Red Cards',
+                      'Yellow + Red Cards', 'Errors']
 
-players_stats_vars_total = ["goals", "assists", "assisted_shots", "xg", "xa", "shots_total", "shots_on_target",
-                            "aerials_won", "crosses", "corner_kicks", "offsides", "cards_yellow", "fouls", "fouled",
-                            "tackles", "tackles_won", "tackles_def_3rd", "tackles_mid_3rd", "tackles_att_3rd",
-                            "pressures", "pressure_regains", "pressures_def_3rd", "pressures_mid_3rd",
-                            "pressures_att_3rd", "ball_recoveries", "interceptions", "blocks", "clearances",
-                            "dispossessed", "errors", "sca", "dribbles", "dribbles_completed",
-                            "crosses_into_penalty_area", "through_balls", "passes", "passes_completed",
-                            "progressive_passes", "passes_pressure", "passes_short", "passes_completed_short",
-                            "passes_medium", "passes_completed_medium", "passes_long", "passes_completed_long",
-                            "passes_into_final_third", "passes_into_penalty_area", "passes_total_distance",
-                            "passes_progressive_distance", "touches", "touches_def_pen_area", "touches_def_3rd",
-                            "touches_mid_3rd", "touches_att_3rd", "touches_att_pen_area", "carries",
-                            "progressive_carries", "carries_into_final_third", "carries_into_penalty_area",
-                            "carry_distance", "carry_progressive_distance"]
 
-player_stats_names_total = ["Goals", "Assists", "Key Passes", "xGoals", "xAssisted", "Shots", "Shots On Target",
-                            "Aerials Won", "Crosses", "Corners", "Offsides", "Yellow Cards", "Fouls", "Fouled",
-                            "Tackels", "Tackles Won", "Tackles Def 3rd", "Tackles Mid 3rd", "Tackles Att 3rd",
-                            "Pressure", "Pressure Regains", "Pressure Def 3rd", "Pressure Mid 3rd", "Pressure Att 3rd",
-                            "Ball Recoveries", "Interceptions", "Blocks", "Clearances", "Dispossessed", "Errors",
-                            "Shot Created Actions", "Dribbles", "Dribbles Successful", "Crosses Penalty Area",
-                            "Through Balls", "Total Passes", "Completed Passes", "Progressive Passes",
-                            "Passes Under Pressure", "Passes Short", "Passes Short Completed", "Passes Medium",
-                            "Passes Medium Completed", "Passes Long", "Passes Long Completed", "Passes Final Third",
-                            "Passes Penalty Area", "Passes Distance", "Passes Progressive Distance", "Touches",
-                            "Touches Def Pen Area", "Touches Def 3rd", "Touches Mid 3rd", "Touches Att 3rd",
-                            "Touches Att Pen Area", "Carries", "Progressive Carries", "Carries Final 3rd",
-                            "Carries Penalty Area", "Carries Distance", "Carries Progressive Distance"]
+player_stats_avg = ['Goals', 'Assists', 'Shots', 'Shots on Target', 'Shot Accuracy %', 'xGoal', 'Non-Penalty xGoal',
+                    'xGoal Assist', 'xAssist', 'Goal Created Action', 'Shot Created Action', 'Key Passes',
+                    'Penalty Goal', 'Penalty Attempted', 'Own Goals', 'Passes', 'Passes Completed',
+                    'Passes Completed %', 'Passes Short', 'Passes Short Completed', 'Passes Short Completed %',
+                    'Passes Medium', 'Passes Medium Completed', 'Passes Medium Completed %', 'Passes Long',
+                    'Passes Long Completed', 'Passes Long Completed %', 'Passes Final 3rd', 'Passes PA',
+                    'Progressive Passes', 'Passes Distance', 'Passes Progressive Distance', 'Passes Received',
+                    'Progressive Passes Received', 'Passes Free Kicks', 'Passes Live', 'Passes Dead',
+                    'Passes Switches', 'Passes Offsides', 'Passes Blocked', 'Through Balls', 'Ball Touches',
+                    'Touches Def PA', 'Touches Def 3rd', 'Touches Mid 3rd', 'Touches Att 3rd', 'Touches Att PA',
+                    'Touches Live Ball', 'Dribbles', 'Dribbles Completed', 'Dribbles Completed %', 'Crosses',
+                    'Crosses PA', 'Interceptions', 'Ball Recoveries', 'Corner Kicks', 'Corner Kicks In',
+                    'Corner Kicks Out', 'Corner Kicks Straight', 'Tackles', 'Tackles Won %', 'Tackles Won',
+                    'Tackles Def 3rd', 'Tackles Mid 3rd', 'Tackles Att 3rd', 'Tackles + Interceptions',
+                    'Duel Aerial Won', 'Duel Aerial Lost', 'Duel Aerial Won %', 'Dribbles Tackled',
+                    'Dribbles Contested', 'Dribbles Tackled %', 'Dribbled Past', 'Blocks', 'Blocked Shots',
+                    'Blocked Passes', 'Clearances', 'Offsides', 'Penalty Won', 'Penalty Conceded', 'Throw Ins',
+                    'Misscontrols', 'Dispossessed', 'Fouls', 'Fouled', 'Yellow Cards', 'Red Cards',
+                    'Yellow + Red Cards', 'Errors']
 
-players_stats_vars_avg = ["goals", "assists", "assisted_shots", "xg", "xa", "shots_total", "shots_on_target",
-                          "shot_accuracy", "aerials_won", "aerials_won_pct", "crosses", "corner_kicks", "offsides",
-                          "cards_yellow", "fouls", "fouled", "tackles", "tackles_won", "successful_tackles",
-                          "tackles_def_3rd", "tackles_mid_3rd", "tackles_att_3rd", "pressures", "pressure_regains",
-                          "pressure_regain_pct", "pressures_def_3rd", "pressures_mid_3rd", "pressures_att_3rd",
-                          "ball_recoveries", "interceptions", "blocks", "clearances", "dispossessed", "errors", "sca",
-                          "dribbles", "dribbles_completed", "successful_dribbles", "crosses_into_penalty_area",
-                          "through_balls", "passes", "passes_completed", "passes_pct", "progressive_passes",
-                          "passes_pressure", "passes_short", "passes_completed_short", "passes_pct_short",
-                          "passes_medium", "passes_completed_medium", "passes_pct_medium", "passes_long",
-                          "passes_completed_long", "passes_pct_long", "passes_into_final_third",
-                          "passes_into_penalty_area", "passes_total_distance", "passes_progressive_distance",
-                          "touches", "touches_def_pen_area", "touches_def_3rd", "touches_mid_3rd", "touches_att_3rd",
-                          "touches_att_pen_area", "carries", "progressive_carries", "carries_into_final_third",
-                          "carries_into_penalty_area", "carry_distance", "carry_progressive_distance"]
-
-player_stats_names_avg = ["Goals", "Assists", "Key Passes", "xGoals", "xAssisted", "Shots", "Shots On Target",
-                          "Shot Accuracy %", "Aerials Won", "Aerials Won %", "Crosses", "Corners", "Offsides",
-                          "Yellow Cards", "Fouls", "Fouled", "Tackles", "Tackles Won", "Tackles Won %",
-                          "Tackles Def 3rd", "Tackles Mid 3rd", "Tackles Att 3rd", "Pressure", "Pressure Regains",
-                          "Pressure Regains Successful %", "Pressure Def 3rd", "Pressure Mid 3rd", "Pressure Att 3rd",
-                          "Ball Recoveries", "Interceptions", "Blocks", "Clearances", "Dispossessed", "Errors",
-                          "Shot Created Actions", "Dribbles", "Dribbles Successful", "Dribbles Successful %",
-                          "Crosses Penalty Area", "Through Balls", "Total Passes", "Completed Passes",
-                          "Completed Passes %", "Progressive Passes", "Passes Under Pressure", "Passes Short",
-                          "Passes Short Completed", "Passes Short Completed %", "Passes Medium",
-                          "Passes Medium Completed", "Passes Medium Completed %", "Passes Long",
-                          "Passes Long Completed", "Passes Long Completed %", "Passes Final Third",
-                          "Passes Penalty Area", "Passes Distance", "Passes Progressive Distance", "Touches",
-                          "Touches Def Pen Area", "Touches Def 3rd", "Touches Mid 3rd", "Touches Att 3rd",
-                          "Touches Att Pen Area", "Carries", "Progressive Carries", "Carries Final 3rd",
-                          "Carries Penalty Area", "Carries Distance", "Carries Progressive Distance"]
 
 player_position = {"CB": "Defenders", "RB": "Defenders", "LB": "Defenders", "RWB": "Defenders", "LWB": "Defenders",
                    "WB": "Defenders", "DF": "Defenders", "DM": "Midfielders", "CM": "Midfielders", "CAM": "Midfielders",
                    "LM": "Midfielders", "RM": "Midfielders", "AM": "Midfielders", "MF": "Midfielders", "FW": "Forwards",
                    "LW": "Forwards", "RW": "Forwards"}
 
+player_offensive_stats = ["xGoal", "Key Passes", "Shots", "Shots on Target", "Shot Accuracy %", "Shot Created Action",
+                          "Dribbles", "Dribbles Completed %"]
+
+player_defensive_stats = ["Tackles", "Tackles Won %", "Duel Aerial Won", "Duel Aerial Won %", "Clearances",
+                          "Interceptions", "Ball Recoveries", "Blocks"]
+
+player_passing_stats = ["Ball Touches", "Passes", "Passes Completed %", "Passes Final 3rd", "Passes PA",
+                        "Progressive Passes", 'Dispossessed', "Crosses PA"]
+
 
 @st.cache
 def season_player_data(season):
     # ##### Read Data
-    buli_df_players = pd.read_csv("./data/Full_Seasons_data/Bundesliga_Players_Statistics.csv", index_col='Unnamed: 0')
+    buli_df_players = season_player_query(season=season)
     buli_df_players = buli_df_players[buli_df_players['Position'] != 'GK'].reset_index(drop=True)
-
-    # ##### Create Match Day Statistics
-    buli_df_players['shot_accuracy'] = np.round(
-        (buli_df_players['shots_on_target'] / buli_df_players['shots_total']) * 100, 1)
-    buli_df_players['successful_dribbles'] = np.round(
-        (buli_df_players['dribbles_completed'] / buli_df_players['dribbles']) * 100, 1)
-    buli_df_players['successful_tackles'] = np.round(
-        (buli_df_players['tackles_won'] / buli_df_players['tackles']) * 100, 1)
 
     # ##### Add Filter Type Stats
     buli_df_players['Total'] = 1
@@ -107,10 +77,6 @@ def season_player_data(season):
     buli_df_players["Draw"] = np.where(buli_df_players["Result"] == 'Draw', 1, 0)
     buli_df_players["Defeat"] = np.where(buli_df_players["Result"] == 'Defeat', 1, 0)
     buli_df_players["Player Position"] = buli_df_players["Position"].map(player_position)
-
-    # ##### Filter Data
-    buli_df_players['Team'] = buli_df_players['Team'].map(team_name)
-    buli_df_players = buli_df_players[buli_df_players['Season'] == season].reset_index(drop=True)
 
     # ##### Total Players
     total_players = list(buli_df_players['Name'].unique())
@@ -127,14 +93,6 @@ def season_player_data(season):
     return buli_df_players, total_players, avg_players
 
 
-@st.cache
-def player_df_filter(data, season_filter):
-    # ##### Filter Data
-    buli_team_players_df = data[(data[season_filter] == 1)].reset_index(drop=True)
-
-    return buli_team_players_df
-
-
 def player_top_statistics(data, season_filter, avg_players, stat_top10, type_top10):
     # ##### Filter Data
     top10_df = data[(data[season_filter] == 1)].reset_index(drop=True)
@@ -145,12 +103,12 @@ def player_top_statistics(data, season_filter, avg_players, stat_top10, type_top
 
     # ##### Create Top 10 Data
     if type_top10 == 'Total':
-        stat_plot = players_stats_vars_total[player_stats_names_total.index(stat_top10)]
+        stat_plot = stat_top10
         top10_player_group_df = top10_df.groupby(["Name", "Team"])[stat_plot].sum().reset_index()
         top10_plot_data = top10_player_group_df.nlargest(10, stat_plot)
         top10_plot_data.rename(columns={stat_plot: stat_top10}, inplace=True)
-    elif type_top10 == 'Average':
-        stat_plot = players_stats_vars_avg[player_stats_names_avg.index(stat_top10)]
+    else:
+        stat_plot = stat_top10
         top10_player_group_avg_df = np.round(top10_avg_df.groupby(["Name", "Team"])[stat_plot].mean().reset_index(), 2)
         top10_plot_data = top10_player_group_avg_df.nlargest(10, stat_plot)
         top10_plot_data.rename(columns={stat_plot: stat_top10}, inplace=True)
@@ -209,34 +167,31 @@ def player_df_stat_season(data, team, total_players, avg_players, stat_name, sta
 
     # ##### Create Table
     if stat_type == 'Total':
-        final_players_stat = team_player_df.groupby('Name')[
-            players_stats_vars_total[player_stats_names_total.index(stat_name)]].sum().sort_values(
-            ascending=False).reset_index()
+        final_players_stat = \
+            team_player_df.groupby('Name')[stat_name].sum().sort_values(ascending=False).reset_index()
         final_players_stat.columns = ['Name', stat_name]
         final_players_plot = final_players_stat[final_players_stat[stat_name] > 0]
         if stat_name == 'xGoals' or stat_name == 'xAssisted':
             final_players_plot[stat_name] = np.round(final_players_plot[stat_name], 2)
-    elif stat_type == "Average":
-        final_players_stat_avg = team_player_avg_df.groupby('Name')[
-            players_stats_vars_avg[player_stats_names_avg.index(stat_name)]].mean().sort_values(
-            ascending=False).reset_index()
+        final_players_avg_plot = None
+    else:
+        final_players_stat_avg = \
+            team_player_avg_df.groupby('Name')[stat_name].mean().sort_values(ascending=False).reset_index()
         final_players_stat_avg.columns = ['Name', stat_name]
         final_players_avg_plot = final_players_stat_avg[final_players_stat_avg[stat_name] > 0]
         final_players_avg_plot[stat_name] = np.round(final_players_avg_plot[stat_name], 2)
+        final_players_plot = None
 
     # ##### Season Average
     if stat_type == 'Total':
-        full_season = full_player_df.groupby('Name')[
-            players_stats_vars_total[player_stats_names_total.index(stat_name)]].sum().reset_index()
+        full_season = \
+            full_player_df.groupby('Name')[stat_name].sum().reset_index()
         full_season_avg = \
-            np.round(full_season[full_season[players_stats_vars_total[player_stats_names_total.index(stat_name)]] > 0][
-                         players_stats_vars_total[player_stats_names_total.index(stat_name)]].mean(), 2)
-    elif stat_type == 'Average':
-        full_season = full_player_avg_df.groupby('Name')[
-            players_stats_vars_avg[player_stats_names_avg.index(stat_name)]].mean().reset_index()
+            np.round(full_season[full_season[stat_name] > 0][stat_name].mean(), 2)
+    else:
+        full_season = full_player_avg_df.groupby('Name')[stat_name].mean().reset_index()
         full_season_avg = \
-            np.round(full_season[full_season[players_stats_vars_avg[player_stats_names_avg.index(stat_name)]] > 0][
-                         players_stats_vars_avg[player_stats_names_avg.index(stat_name)]].mean(), 2)
+            np.round(full_season[full_season[stat_name] > 0][stat_name].mean(), 2)
 
     # ##### Create Plot
     if stat_type == 'Total':
@@ -252,7 +207,7 @@ def player_df_stat_season(data, team, total_players, avg_players, stat_name, sta
         team_player_fig.update_traces(marker_color='rgb(200,11,1)')
         team_player_fig.update_yaxes(title_text=f"Total {stat_name}")
 
-    elif stat_type == 'Average':
+    else:
         team_player_fig = px.bar(final_players_avg_plot,
                                  x="Name",
                                  y=stat_name,
@@ -269,7 +224,7 @@ def player_df_stat_season(data, team, total_players, avg_players, stat_name, sta
     # ##### Markdown
     if stat_type == 'Total':
         season_better_avg = np.sum(final_players_plot[stat_name] > full_season_avg)
-    elif stat_type == 'Average':
+    else:
         season_better_avg = np.sum(final_players_avg_plot[stat_name] > full_season_avg)
 
     return team_player_fig, full_season_avg, season_better_avg
@@ -288,7 +243,6 @@ def player_match_day_team(data, team, players):
 def player_chart_day(data, player_name, stat_name):
     # ##### Filter Player and Stat Data
     player_df = data[(data['Name'] == player_name)].reset_index(drop=True)
-    player_df.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_name)]: stat_name}, inplace=True)
     week_no = data['Week_No'].max()
 
     # ##### Plot Data
@@ -315,10 +269,8 @@ def player_chart_day(data, player_name, stat_name):
     fig_player_day.update_yaxes(title_text=stat_name, col=1)
 
     # ##### Markdown
-    team_max_day = data.groupby('Week_No')[
-        players_stats_vars_avg[player_stats_names_avg.index(stat_name)]].max().reset_index()
-    team_avg_day = data.groupby('Week_No')[
-        players_stats_vars_avg[player_stats_names_avg.index(stat_name)]].mean().reset_index()
+    team_max_day = data.groupby('Week_No')[stat_name].max().reset_index()
+    team_avg_day = data.groupby('Week_No')[stat_name].mean().reset_index()
 
     player_comparison = player_df[['Week_No', stat_name]]
     player_comparison = player_comparison[player_comparison[stat_name] > 0]
@@ -351,12 +303,9 @@ def player_season_filter_stats(data, team, player, avg_players, stat_name, vs_pl
             names_stats.append(stats_types_player[i])
             names_stats.append(stats_types_player[i])
             names_stats.append(stats_types_player[i])
-            player_stats.append(np.round(player_df.groupby(stats_types_player[i])[players_stats_vars_avg[
-                player_stats_names_avg.index(stat_name)]].mean().values[-1], 2))
-            player_stats.append(np.round(team_df.groupby(stats_types_player[i])[players_stats_vars_avg[
-                player_stats_names_avg.index(stat_name)]].mean().values[-1], 2))
-            player_stats.append(np.round(league_df.groupby(stats_types_player[i])[players_stats_vars_avg[
-                player_stats_names_avg.index(stat_name)]].mean().values[-1], 2))
+            player_stats.append(np.round(player_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
+            player_stats.append(np.round(team_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
+            player_stats.append(np.round(league_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
             player_name.append(player)
             player_name.append(team)
             player_name.append(f"League: {vs_player_type}s")
@@ -428,14 +377,6 @@ def player_relationship_data(data, filter_type, team, player, avg_players, stat_
                               (avg_data['Name_Team'].isin(avg_players))].reset_index(drop=True)
     filter_df_season = avg_data[(avg_data[filter_type] == 1) &
                                 (avg_data['Name_Team'].isin(avg_players))].reset_index(drop=True)
-
-    # ##### Rename Stat Name
-    filter_df_team.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_x)]: stat_x}, inplace=True)
-    filter_df_team.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_y)]: stat_y}, inplace=True)
-    filter_df_season.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_x)]: stat_x},
-                            inplace=True)
-    filter_df_season.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_y)]: stat_y},
-                            inplace=True)
 
     # ##### Create Average Data
     stat_var_1, stat_var_2 = stat_x, stat_y
@@ -513,18 +454,10 @@ def player_relationship_data(data, filter_type, team, player, avg_players, stat_
 
 
 @st.cache
-def buli_player_data(season):
+def buli_player_data(team, season, all_seasons):
     # ##### Read Data
-    buli_df_players = pd.read_csv("./data/Full_Seasons_data/Bundesliga_Players_Statistics.csv", index_col='Unnamed: 0')
+    buli_df_players = all_player_query(team=team, all_seasons=all_seasons)
     buli_df_players = buli_df_players[buli_df_players['Position'] != 'GK'].reset_index(drop=True)
-
-    # ##### Create Match Day Statistics
-    buli_df_players['shot_accuracy'] = np.round(
-        (buli_df_players['shots_on_target'] / buli_df_players['shots_total']) * 100, 1)
-    buli_df_players['successful_dribbles'] = np.round(
-        (buli_df_players['dribbles_completed'] / buli_df_players['dribbles']) * 100, 1)
-    buli_df_players['successful_tackles'] = np.round(
-        (buli_df_players['tackles_won'] / buli_df_players['tackles']) * 100, 1)
 
     # ##### Add Filter Type Stats
     buli_df_players['Total'] = 1
@@ -536,27 +469,16 @@ def buli_player_data(season):
     buli_df_players["Draw"] = np.where(buli_df_players["Result"] == 'Draw', 1, 0)
     buli_df_players["Defeat"] = np.where(buli_df_players["Result"] == 'Defeat', 1, 0)
     buli_df_players["Player Position"] = buli_df_players["Position"].map(player_position)
-    buli_df_players['Team'] = buli_df_players['Team'].map(team_name)
-
-    # Season Teams
-    player_teams = list(buli_df_players[buli_df_players['Season'] == season]['Team'].unique())
-    player_teams.sort()
-
-    return buli_df_players, player_teams
-
-
-def buli_players_avg(data, team, season):
-    # ##### Team Name
-    player_team = data[(data['Team'] == team) & (data['Season'] == season)].reset_index(drop=True)
 
     # ##### Players for the Avg Analysis
+    player_team = buli_df_players[buli_df_players['Season'] == season].reset_index(drop=True)
     filter_players_avg = pd.DataFrame(player_team.groupby('Name')['Minutes'].sum().reset_index())
     filter_players_avg.columns = ['Name', 'Minutes']
     minutes_cutoff = (player_team['Week_No'].max() * 90) * 0.1
     avg_players = list(filter_players_avg[filter_players_avg['Minutes'] >= minutes_cutoff]['Name'].unique())
     avg_players.sort()
 
-    return avg_players
+    return buli_df_players, avg_players
 
 
 def player_buli_stats(data, season_filter, team, player, avg_players, stat_name, analysis_seasons):
@@ -566,9 +488,6 @@ def player_buli_stats(data, season_filter, team, player, avg_players, stat_name,
     player_df_seasons = list(player_df['Season'].unique())
     team_df = data[(data['Season'].isin(player_df_seasons)) & (data['Team'] == team) & (data['Name'].isin(avg_players))
                    & (data[season_filter] == 1)].reset_index(drop=True)
-
-    player_df.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_name)]: stat_name}, inplace=True)
-    team_df.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_name)]: stat_name}, inplace=True)
 
     # ##### Create Stats
     player_season_stats = np.round(player_df.groupby('Season')[stat_name].mean(), 3).reset_index()
@@ -624,20 +543,14 @@ def player_buli_corr_data(data, filter_type, team, player, stat_x, stat_y, analy
         drop=True)
 
     no_seasons_player = len(list(filter_df_player['Season'].unique()))
-    # ##### Rename Stat Name
-    filter_df_player.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_x)]: stat_x},
-                            inplace=True)
-    filter_df_player.rename(columns={players_stats_vars_avg[player_stats_names_avg.index(stat_y)]: stat_y},
-                            inplace=True)
-
     filter_df_player['Points'] = np.where(filter_df_player['Result'] == 'Win', 3,
                                           np.where(filter_df_player['Result'] == 'Defeat', 1, 2))
 
-    colors_plot = {analysis_seasons[-5]: 'rgb(216,62,135)',
-                   analysis_seasons[-4]: 'rgb(130,101,167)',
-                   analysis_seasons[-3]: 'rgb(179, 179, 179)',
-                   analysis_seasons[-2]: 'rgb(78,78,80)',
-                   analysis_seasons[-1]: 'rgb(200,11,1)'}
+    colors_plot = {analysis_seasons[4]: 'rgb(216,62,135)',
+                   analysis_seasons[3]: 'rgb(130,101,167)',
+                   analysis_seasons[2]: 'rgb(179, 179, 179)',
+                   analysis_seasons[1]: 'rgb(78,78,80)',
+                   analysis_seasons[0]: 'rgb(200,11,1)'}
 
     # ##### Average Plot
     player_seasons_fig = px.scatter(filter_df_player,
@@ -705,4 +618,160 @@ def player_buli_corr_data(data, filter_type, team, player, stat_x, stat_y, analy
         pl_season_corr_sign = 0
 
     return player_seasons_fig, pl_overall_corr_value, pl_overall_corr_strength, pl_overall_corr_sign, \
-           pl_season_name_best_corr, pl_season_value_best_corr, pl_season_corr_strength, pl_season_corr_sign
+        pl_season_name_best_corr, pl_season_value_best_corr, pl_season_corr_strength, pl_season_corr_sign
+
+
+@st.cache
+def player_comparison_filter(data, season_filter, team, players, remove_player=""):
+    # ##### Filter Data by Team and Filter
+    buli_team_players = data[(data[season_filter] == 1) & (data['Team'] == team)].reset_index(drop=True)
+    buli_team_players['Name_Team'] = buli_team_players['Team'] + "_" + buli_team_players['Name']
+
+    # ##### Players for the Comparison Analysis
+    avg_buli_players = buli_team_players[buli_team_players['Name_Team'].isin(players)]['Name'].unique()
+    avg_buli_players.sort()
+
+    if remove_player == "":
+        final_buli_players = avg_buli_players.copy()
+    else:
+        final_buli_players = [player for player in avg_buli_players if player != remove_player]
+
+    return final_buli_players
+
+
+def player_comparison_radar(data, season_filter, stats_type, player_1, player_2, team_player_1, team_player_2):
+    # ##### Season Filter Data
+    season_data = data[data[season_filter] == 1].reset_index(drop=True)
+
+    # ##### Select Stats
+    if stats_type == 'Offensive':
+        plot_stats = player_offensive_stats.copy()
+    elif stats_type == 'Defensive':
+        plot_stats = player_defensive_stats.copy()
+    else:
+        plot_stats = player_passing_stats.copy()
+
+    # ##### Create Player Stats
+    player_df_1 = season_data[season_data['Name'] == player_1].reset_index(drop=True)
+    player_stats_1 = np.round(player_df_1.groupby('Name')[plot_stats].mean(), 2)
+    player_stats_values_1 = player_stats_1.values.tolist()[0]
+
+    player_df_2 = season_data[season_data['Name'] == player_2].reset_index(drop=True)
+    player_stats_2 = np.round(player_df_2.groupby('Name')[plot_stats].mean(), 2)
+    player_stats_values_2 = player_stats_2.values.tolist()[0]
+
+    # #### Create Plot Ranges
+    min_stats = np.round(np.min(season_data.groupby('Name')[plot_stats].mean()).tolist(), 2)
+    max_stats = np.round(np.max(season_data.groupby('Name')[plot_stats].mean()).tolist(), 2)
+
+    # ##### Create Plot
+    params = plot_stats.copy()
+
+    # Create Figure
+    radar = Radar(params,
+                  min_stats,
+                  max_stats,
+                  num_rings=10,
+                  ring_width=1,
+                  center_circle_radius=1)
+
+    # PLot Data
+    fig_radar, axs = radar_mosaic(radar_height=0.9, title_height=0.1, figheight=14)
+
+    radar.setup_axis(ax=axs['radar'])
+    radar.draw_circles(ax=axs['radar'], facecolor='#8265A7', edgecolor='#4e4e50')
+    radar.draw_radar_compare(player_stats_values_1, player_stats_values_2, ax=axs['radar'],
+                             kwargs_radar={'facecolor': '#c70b01', 'alpha': 0.5},
+                             kwargs_compare={'facecolor': '#4e4e50', 'alpha': 0.5})
+    # radar_poly, radar_poly2, vertices1, vertices2 = radar_output
+    radar.draw_range_labels(ax=axs['radar'], fontsize=15)
+    radar.draw_param_labels(ax=axs['radar'], fontsize=20)
+
+    axs['title'].text(0.01, 0.65, player_1, fontsize=25, color='#c70b01', ha='left', va='center')
+    axs['title'].text(0.01, 0.30, team_player_1, fontsize=20, ha='left', va='center', color='#c70b01')
+    axs['title'].text(0.99, 0.65, player_2, fontsize=25, ha='right', va='center', color='#4e4e50')
+    axs['title'].text(0.99, 0.30, team_player_2, fontsize=20, ha='right', va='center', color='#4e4e50')
+
+    # ##### Markdown
+    radar_player_1_better = np.sum(np.array(player_stats_values_1) > np.array(player_stats_values_2))
+    radar_len_stats = len(player_stats_values_1)
+    return fig_radar, radar_player_1_better, radar_len_stats
+
+
+def player_comparison_pizza(data, season_filter, stats_type, player_1, player_2):
+    # ##### Season Filter Data
+    season_data = data[data[season_filter] == 1].reset_index(drop=True)
+
+    # ##### Select Stats
+    if stats_type == 'Offensive':
+        plot_stats = player_offensive_stats.copy()
+    elif stats_type == 'Defensive':
+        plot_stats = player_defensive_stats.copy()
+    else:
+        plot_stats = player_passing_stats.copy()
+
+    # ##### Player Stats
+    player_stats = np.round(
+        season_data.groupby('Name')[plot_stats].mean().rank(pct=True) * 100).reset_index()
+
+    player_1_values = list(player_stats[player_stats['Name'] == player_1].values[0][1:])
+    player_2_values = list(player_stats[player_stats['Name'] == player_2].values[0][1:])
+    for i in range(len(player_1_values)):
+        if np.isnan(player_1_values[i]):
+            player_1_values[i] = 0
+        if np.isnan(player_2_values[i]):
+            player_2_values[i] = 0
+
+    # ##### Pizza PLot
+    baker = PyPizza(
+        params=plot_stats,
+        background_color="#FFFFFF",
+        straight_line_color="#808080",
+        straight_line_lw=1,
+        last_circle_lw=1,
+        last_circle_color="#808080",
+        other_circle_ls="-.",
+        other_circle_lw=1)
+
+    # plot pizza
+    pizza_fig, ax = baker.make_pizza(
+        player_1_values,
+        compare_values=player_2_values,
+        figsize=(8, 8),
+        kwargs_slices=dict(
+            facecolor="#c70b01", edgecolor="#808080",
+            zorder=2, linewidth=1
+        ),
+        kwargs_compare=dict(
+            facecolor="#4e4e50", edgecolor="#808080",
+            zorder=2, linewidth=1,
+        ),
+        kwargs_params=dict(
+            color="#8265A7", fontsize=8,
+            va="center"
+        ),
+        kwargs_values=dict(
+            color="#FFFFFF", fontsize=8,
+            zorder=3,
+            bbox=dict(
+                edgecolor="#8265A7", facecolor="#c70b01",
+                boxstyle="round,pad=0.2", lw=1
+            )
+        ),
+        kwargs_compare_values=dict(
+            color="#FFFFFF", fontsize=8, zorder=3,
+            bbox=dict(edgecolor="#808080", facecolor="#4e4e50", boxstyle="round,pad=0.2", lw=1)
+        ),
+    )
+
+    fig_text(
+        0.515, 0.99, f"<{player_1}> vs <{player_2}>", size=17, fig=pizza_fig,
+        highlight_textprops=[{"color": '#c70b01'}, {"color": '#4e4e50'}],
+        ha="center", color="#8265A7")
+
+    # ##### Markdown
+    pizza_player_1_better = np.sum(np.array(player_1_values) >= 90)
+    pizza_player_2_better = np.sum(np.array(player_2_values) >= 90)
+    pizza_len_stats = len(plot_stats)
+
+    return pizza_fig, pizza_player_1_better, pizza_player_2_better, pizza_len_stats

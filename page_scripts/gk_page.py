@@ -1,6 +1,9 @@
-from page_scripts.stats_scripts.gk_stats import *
-from PIL import Image
+import numpy as np
 import streamlit as st
+from page_scripts.stats_scripts.gk_stats import gk_stats_total, gk_stats_avg, season_gk_data, gk_top_statistics, \
+    gk_chart_day, gk_season_filter_stats, gk_relationship_data, buli_gk_data, gk_current_season_team, gk_buli_stats, \
+    gk_buli_corr_data
+from PIL import Image
 
 
 def gk_page(all_seasons, page_season, favourite_team):
@@ -24,9 +27,9 @@ def gk_page(all_seasons, page_season, favourite_team):
             top10_stat_type = st.selectbox("Type Statistics", ["Total", "Average"])
             top10_gk_filter = st.selectbox("Season Type", filter_type_gk)
             if top10_stat_type == "Total":
-                top10_gk_stats = gk_stats_names_total
+                top10_gk_stats = gk_stats_total
             else:
-                top10_gk_stats = gk_stats_names_avg
+                top10_gk_stats = gk_stats_avg
             top10_gk_stat = st.selectbox("Name Statistics", top10_gk_stats)
 
         with top10_plot_col:
@@ -49,14 +52,14 @@ def gk_page(all_seasons, page_season, favourite_team):
         st.subheader(f"GK Match Day Statistics: Season {page_season}")
         gk_day_col, gk_day_chart_col, gk_day_logo_col = st.columns([3.1, 8, 1])
         with gk_day_col:
-            stat_gk_day = st.selectbox("Gk Statistics", gk_stats_names_avg)
+            stat_gk_day = st.selectbox("Gk Statistics", gk_stats_avg)
             gk_match_day = buli_gk_season_df[(buli_gk_season_df['Team'] == favourite_team)]['Name_Team'].values[0]
             pos_gk = final_avg_gk.index(gk_match_day)
             final_name_avg_gk = [gk.split("_")[1] for gk in final_avg_gk]
             gk_name_day = st.selectbox("Select Match Day Gk", final_name_avg_gk, pos_gk)
         with gk_day_chart_col:
             fig_gk_day, gk_team_name, gk_league_comparison, gk_stat_sig_name = gk_chart_day(data=buli_gk_season_df,
-                                                                                            avg_gk= final_avg_gk,
+                                                                                            avg_gk=final_avg_gk,
                                                                                             gk_name=gk_name_day,
                                                                                             stat_name=stat_gk_day)
 
@@ -92,7 +95,7 @@ def gk_page(all_seasons, page_season, favourite_team):
         with gk_team_name_col:
             st.markdown("")
             st.markdown(f"<h4><b>{gk_name_day}</b></h4>", unsafe_allow_html=True)
-            gk_type_stat = st.selectbox("Statistics", gk_stats_names_avg)
+            gk_type_stat = st.selectbox("Statistics", gk_stats_avg)
 
         with type_gk_chart_col:
             gk_stat_fig, gk_home_away = gk_season_filter_stats(data=buli_gk_season_df,
@@ -117,7 +120,7 @@ def gk_page(all_seasons, page_season, favourite_team):
         with gk_rel_filter_col:
             gk_corr_filter_type = st.selectbox("GK Relationship Season Type", filter_type_gk)
             gk_name = st.selectbox("Highlight Player", final_name_avg_gk, pos_gk)
-            gk_stats_names_1 = gk_stats_names_avg.copy()
+            gk_stats_names_1 = gk_stats_avg.copy()
             gk_stat_x = st.selectbox("Select X Stat", gk_stats_names_1)
             gk_stats_names_2 = gk_stats_names_1.copy()
             gk_stats_names_2.remove(gk_stat_x)
@@ -163,11 +166,13 @@ def gk_page(all_seasons, page_season, favourite_team):
         gk_filter_col, gk_chart_col, gk_markdown_col = st.columns([3, 7, 2])
         with gk_filter_col:
             # ##### Select Season
-            buli_gk_season_df, final_avg_gk = buli_gk_data(season=page_season)
+            buli_gk_season_df, final_avg_gk = buli_gk_data(season=page_season,
+                                                           team=favourite_team,
+                                                           all_seasons=all_seasons)
 
             # ##### Data Filter
             filter_type_gk = ["Total", "Home", "Away", "1st Period", "2nd Period"]
-            stat_gk_seasons = st.selectbox("Gk Statistics", gk_stats_names_avg)
+            stat_gk_seasons = st.selectbox("Gk Statistics", gk_stats_avg)
             seasons_gk_filter = st.selectbox("Select Season Type", filter_type_gk)
             default_player_team = buli_gk_season_df[
                 (buli_gk_season_df['Team'] == favourite_team) & (buli_gk_season_df['Season'] == page_season)][
@@ -230,7 +235,7 @@ def gk_page(all_seasons, page_season, favourite_team):
         gk_rel_filter_col, gk_rel_chart_col, gk_markdown_col = st.columns([2.5, 6, 2])
         with gk_rel_filter_col:
             gk_corr_filter_type = st.selectbox("Player Relationship Season Type", filter_type_gk)
-            gk_stats_names_1 = gk_stats_names_avg.copy()
+            gk_stats_names_1 = gk_stats_avg.copy()
             gk_stat_x = st.selectbox("Select X Stat", gk_stats_names_1)
             gk_stats_names_2 = gk_stats_names_1.copy()
             gk_stats_names_2.remove(gk_stat_x)
@@ -240,15 +245,15 @@ def gk_page(all_seasons, page_season, favourite_team):
 
         with gk_rel_chart_col:
             gk_seasons_fig, gk_overall_corr_value, gk_overall_corr_strength, gk_overall_corr_sign, \
-            gk_season_name_best_corr, gk_season_value_best_corr, gk_season_corr_strength, gk_season_corr_sign, \
-            gk_no_games = gk_buli_corr_data(data=buli_gk_season_df,
-                                            filter_type=gk_corr_filter_type,
-                                            team=gk_team_name,
-                                            player=seasons_gk_name,
-                                            stat_x=gk_stat_x,
-                                            stat_y=gk_stat_y,
-                                            avg_gk=final_avg_gk,
-                                            analysis_seasons=all_seasons)
+                gk_season_name_best_corr, gk_season_value_best_corr, gk_season_corr_strength, gk_season_corr_sign, \
+                gk_no_games = gk_buli_corr_data(data=buli_gk_season_df,
+                                                filter_type=gk_corr_filter_type,
+                                                team=gk_team_name,
+                                                player=seasons_gk_name,
+                                                stat_x=gk_stat_x,
+                                                stat_y=gk_stat_y,
+                                                avg_gk=final_avg_gk,
+                                                analysis_seasons=all_seasons)
 
             config = {'displayModeBar': False}
             st.plotly_chart(gk_seasons_fig, config=config, use_container_width=True)

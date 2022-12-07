@@ -1,8 +1,10 @@
-from page_scripts.stats_scripts.season_predictions import *
+import streamlit as st
+from page_scripts.stats_scripts.season_predictions import season_data_process, data_processing, data_prediction_game, \
+    create_predictions_season
 from PIL import Image
 
-accuracy_combo = [0.5689, 0.5740, 0.5600, 0.6021, 0.5703]
-model_data = ["last season", "last season", "last 2 seasons", "last 2 seasons", "last 3 seasons"]
+accuracy_combo = [0.5069, 0.5302, 0.5200, 0.5699, 0.5469]
+model_data = ["last 5 seasons", "last 4 seasons", "last season", "last 2 seasons", "last 3 seasons"]
 
 
 def prediction_page(prediction_type, season, favourite_team):
@@ -65,10 +67,7 @@ def prediction_page(prediction_type, season, favourite_team):
             for i in range(len(home_team_names)):
                 with home_logo_col:
                     h_logo = Image.open(f'images/{home_team_names[i]}.png')
-                    if current_match_day % 2 == 0:
-                        st.image(h_logo, width=24)
-                    else:
-                        st.image(h_logo, width=25)
+                    st.image(h_logo, width=26)
 
                 with home_name_col:
                     if home_team_names[i] == favourite_team or away_team_names[i] == favourite_team:
@@ -78,10 +77,7 @@ def prediction_page(prediction_type, season, favourite_team):
 
                 with away_logo_col:
                     a_logo = Image.open(f'images/{away_team_names[i]}.png')
-                    if current_match_day % 2 == 0:
-                        st.image(a_logo, width=25)
-                    else:
-                        st.image(a_logo, width=24)
+                    st.image(a_logo, width=26)
 
                 with away_name_col:
                     if away_team_names[i] == favourite_team or home_team_names[i] == favourite_team:
@@ -111,6 +107,12 @@ def prediction_page(prediction_type, season, favourite_team):
                 st.markdown(f"<b>Model Accuracy</b>: <b><font color=#d20614>"
                             f"{accuracy_combo[agg_stats_options.index(agg_stats)]:.2%}</font></b>",
                             unsafe_allow_html=True)
+            st.markdown(
+                f"<b><font color = #d20614>Note</font></b>: The model was build using the <b><font color = #d20614"
+                f">Logistic Regression </font></b> Algorithm on the {model_data[agg_stats_options.index(agg_stats)]} "
+                f"of data using <b><font color = #d20614>{len(model_features)}</font></b> match day stats.",
+                unsafe_allow_html=True)
+            st.sidebar.markdown("")
 
         elif prediction_type == 'Season':
             season_col, accuracy_col = st.columns([8, 2])
@@ -154,7 +156,7 @@ def prediction_page(prediction_type, season, favourite_team):
             for i in range(len(final_predict_tab)):
                 with logo_col:
                     logo_teams = Image.open(f'images/{final_predict_tab.iloc[i, 0]}.png')
-                    st.image(logo_teams, width=24)
+                    st.image(logo_teams, width=26)
 
                 with rank_col:
                     if final_predict_tab.iloc[i, 0] == favourite_team:
@@ -225,10 +227,10 @@ def prediction_page(prediction_type, season, favourite_team):
                             f"{accuracy_combo[agg_stats_options.index(agg_stats)]:.2%}</font></b>",
                             unsafe_allow_html=True)
             st.markdown(
-                f"<b><font color = #d20614>Note</font></b>: The base model was build using the <b><font color = #d20614"
+                f"<b><font color = #d20614>Note</font></b>: The model was build using the <b><font color = #d20614"
                 f">Logistic Regression </font></b> Algorithm on the {model_data[agg_stats_options.index(agg_stats)]} "
-                f"of data with the following features: <b><font color = #d20614>"
-                f"{str(model_features).replace('[', '').replace(']', '')}</font></b>", unsafe_allow_html=True)
+                f"of data using <b><font color = #d20614>{len(model_features)}</font></b> match day stats.",
+                unsafe_allow_html=True)
         st.sidebar.markdown("")
     else:
         st.markdown("<h2><b>Page will be available after </font></b></h2> <h2><b><font color=#d20614>Match Day: 2"

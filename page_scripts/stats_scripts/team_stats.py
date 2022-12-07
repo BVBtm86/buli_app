@@ -3,125 +3,57 @@ import numpy as np
 import plotly.express as px
 import streamlit as st
 from scipy.stats import ttest_ind
+from page_scripts.stats_scripts.utilities import season_team_query, season_gk_query, all_team_query, all_gk_query
 import warnings
-from pandas.core.common import SettingWithCopyWarning
-warnings.simplefilter(action="ignore", category=SettingWithCopyWarning)
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
-# ##### Team Names
-team_name_1 = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer 04 Leverkusen",
-               "Hoffenheim": "TSG 1899 Hoffenheim", "Werder Bremen": "SV Werder Bremen", "Mainz 05": "1. FSV Mainz 05",
-               "Hannover 96": "Hannover 96", "Wolfsburg": "VfL Wolfsburg", "Dortmund": "Borussia Dortmund",
-               "Hamburger SV": "Hamburger SV", "Augsburg": "FC Augsburg", "Hertha BSC": "Hertha Berlin",
-               "Stuttgart": "VfB Stuttgart", "Schalke 04": "FC Schalke 04", "RB Leipzig": "RasenBallsport Leipzig",
-               "Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
-               "Mönchengladbach": "Borussia Mönchengladbach", "Köln": "1. FC Köln", "Düsseldorf": "Fortuna Düsseldorf",
-               "Nürnberg": "1. FC Nürnberg", "Paderborn 07": "SC Paderborn 07", "Union Berlin": "1. FC Union Berlin",
-               "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth",
-               "Greuther F�rth": "SpVgg Greuther Fürth"}
-
-team_name_2 = {"FC Bayern Mu_nchen": "FC Bayern München", "Bayer 04 Leverkusen": "Bayer 04 Leverkusen",
-               "1. FSV Mainz 05": "1. FSV Mainz 05", "Hannover 96": "Hannover 96", "Hamburger SV": "Hamburger SV",
-               "FC Augsburg": "FC Augsburg", "Hertha Berlin": "Hertha Berlin", "VfB Stuttgart": "VfB Stuttgart",
-               "TSG 1899 Hoffenheim": "TSG 1899 Hoffenheim", "SV Werder Bremen": "SV Werder Bremen",
-               "VfL Wolfsburg": "VfL Wolfsburg", "Borussia Dortmund": "Borussia Dortmund",
-               "FC Schalke 04": "FC Schalke 04", "RasenBallsport Leipzig": "RasenBallsport Leipzig",
-               "Sport-Club Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
-               "Borussia Mo_nchengladbach": "Borussia Mönchengladbach", "1. FC Ko_ln": "1. FC Köln",
-               "Fortuna Du_sseldorf": "Fortuna Düsseldorf", "1. FC Nu_rnberg": "1. FC Nürnberg",
-               "FC Bayern München": "FC Bayern München", "Fortuna Düsseldorf": "Fortuna Düsseldorf",
-               "1. FC Köln": "1. FC Köln", "SC Paderborn 07": "SC Paderborn 07",
-               "Borussia Mönchengladbach": "Borussia Mönchengladbach", "1. FC Union Berlin": "1. FC Union Berlin",
-               "RB Leipzig": "RasenBallsport Leipzig", "TSG Hoffenheim": "TSG 1899 Hoffenheim",
-               "DSC Arminia Bielefeld": "Arminia Bielefeld", "Arminia Bielefeld": "Arminia Bielefeld",
-               "SC Freiburg": "Sport-Club Freiburg", "SpVgg Greuther Fürth": "SpVgg Greuther Fürth",
-               "VfL Bochum 1848": "VfL Bochum 1848", "Borussia M'gladbach": "Borussia Mönchengladbach"}
-
-team_stats_vars = ["goals", "assists", "assisted_shots", "xg", "xa", "Distance_Covered", "Sprints", "Possession",
-                   "shots_total", "shots_on_target", "shot_accuracy", "aerials_won", "aerials_won_pct", "crosses",
-                   "corner_kicks", "offsides", "cards_yellow", "fouls", "fouled", "tackles", "tackles_won",
-                   "successful_tackles", "tackles_def_3rd", "tackles_mid_3rd", "tackles_att_3rd", "pressures",
-                   "pressure_regains", "pressure_regain_pct", "pressures_def_3rd", "pressures_mid_3rd",
-                   "pressures_att_3rd", "ball_recoveries", "interceptions", "blocks", "clearances", "dispossessed",
-                   "errors", "sca", "dribbles_completed", "dribbles", "successful_dribbles",
-                   "crosses_into_penalty_area", "through_balls", "passes", "passes_completed", "passes_pct",
-                   "progressive_passes", "passes_pressure", "passes_short", "passes_completed_short",
-                   "passes_pct_short", "passes_medium", "passes_completed_medium", "passes_pct_medium", "passes_long",
-                   "passes_completed_long", "passes_pct_long", "passes_into_final_third", "passes_into_penalty_area",
-                   "passes_total_distance", "passes_progressive_distance", "touches", "touches_def_pen_area",
-                   "touches_def_3rd", "touches_mid_3rd", "touches_att_3rd", "touches_att_pen_area", "carries",
-                   "progressive_carries", "carries_into_final_third", "carries_into_penalty_area", "carry_distance",
-                   "carry_progressive_distance", "saves", "saves_pct", "passes_gk", "passess_successful_gk",
-                   "goal_kicks", "goal_kicks_successful"]
-
-team_stats_names = ["Goals", "Assists", "Key Passes", "xGoals", "xAssisted", "Distance Covered (Km)", "Sprint",
-                    "Possession", "Shots", "Shots On Target", "Shot Accuracy %", "Aerials Won", "Aerials Won %",
-                    "Crosses", "Corners", "Offsides", "Yellow Cards", "Fouls", "Fouled", "Tackles", "Tackles Won",
-                    "Tackles Won %", "Tackles Def 3rd", "Tackles Mid 3rd", "Tackles Att 3rd", "Pressure",
-                    "Pressure Regains", "Pressure Regains Successful %", "Pressure Def 3rd", "Pressure Mid 3rd",
-                    "Pressure Att 3rd", "Ball Recoveries", "Interceptions", "Blocks", "Clearances", "Dispossessed",
-                    "Errors", "Shot Created Actions", "Dribbles", "Dribbles Successful", "Dribbles Successful %",
-                    "Crosses Penalty Area", "Through Balls", "Passes", "Completed Passes", "Completed Passes %",
-                    "Progressive Passes", "Passes Under Pressure", "Passes Short", "Passes Short Completed",
-                    "Passes Short Completed %", "Passes Medium", "Passes Medium Completed", "Passes Medium Completed %",
-                    "Passes Long", "Passes Long Completed", "Passes Long Completed %", "Passes Final Third",
-                    "Passes Penalty Area", "Passes Distance", "Passes Progressive Distance", "Touches",
-                    "Touches Def Pen Area", "Touches Def 3rd", "Touches Mid 3rd", "Touches Att 3rd",
-                    "Touches Att Pen Area", "Carries", "Progressive Carries", "Carries Final 3rd",
-                    "Carries Penalty Area", "Carries Distance", "Carries Progressive Distance", "Saves", "Saves %",
-                    "GK Passes", "GK Passes Successful %", "Goal Kicks", "Goal Kicks Successful %"]
+# ##### Stats
+stats_team = ['Possession', 'Goals', 'Assists', 'Shots', 'Shots on Target', 'Shot Accuracy %', 'xGoal',
+              'Non-Penalty xGoal', 'xGoal Assist', 'xAssist', 'Goal Created Action', 'Shot Created Action',
+              'Key Passes', 'Penalty Goal', 'Penalty Attempted', 'Own Goals', 'Distance Covered (Km)', 'Sprints',
+              'Passes', 'Passes Completed', 'Passes Completed %', 'Passes Short', 'Passes Short Completed',
+              'Passes Short Completed %', 'Passes Medium', 'Passes Medium Completed', 'Passes Medium Completed %',
+              'Passes Long', 'Passes Long Completed', 'Passes Long Completed %', 'Passes Final 3rd', 'Passes PA',
+              'Progressive Passes', 'Passes Distance', 'Passes Progressive Distance', 'Passes Received',
+              'Progressive Passes Received', 'Passes Free Kicks', 'Passes Live', 'Passes Dead', 'Passes Switches',
+              'Passes Offsides', 'Passes Blocked', 'Through Balls', 'Ball Touches', 'Touches Def PA', 'Touches Def 3rd',
+              'Touches Mid 3rd', 'Touches Att 3rd', 'Touches Att PA', 'Touches Live Ball', 'Dribbles',
+              'Dribbles Completed', 'Dribbles Completed %', 'Crosses', 'Crosses PA', 'Interceptions', 'Ball Recoveries',
+              'Corner Kicks', 'Corner Kicks In', 'Corner Kicks Out', 'Corner Kicks Straight', 'Tackles',
+              'Tackles Won %', 'Tackles Won', 'Tackles Def 3rd', 'Tackles Mid 3rd', 'Tackles Att 3rd',
+              'Tackles + Interceptions', 'Duel Aerial Won', 'Duel Aerial Lost', 'Duel Aerial Won %', 'Dribbles Tackled',
+              'Dribbles Contested', 'Dribbles Tackled %', 'Dribbled Past', 'Blocks', 'Blocked Shots', 'Blocked Passes',
+              'Clearances', 'Offsides', 'Penalty Won', 'Penalty Conceded', 'Throw Ins', 'Misscontrols', 'Dispossessed',
+              'Fouls', 'Fouled', 'Yellow Cards', 'Red Cards', 'Yellow + Red Cards', 'Errors', 'Saves', 'Saves %',
+              'Goal Kicks', 'Throws', 'Crosses Faced', 'Crosses Stopped %']
 
 
 @st.cache
-def season_data_process(season, stat_type):
+def season_data_process(season, stat_type, all_seasons):
     # ##### Read Data
     if stat_type == "Season Stats":
-        buli_df = pd.read_csv(f"./data/Seasons_data/Bundesliga_Team_Statistics_{season}.csv", index_col='Unnamed: 0')
-        buli_tracking_df = pd.read_csv(f"./data/Seasons_data/Bundesliga_Team_Tracking_Statistics_{season}.csv",
-                                       index_col='Unnamed: 0')
-        buli_gk_df = pd.read_csv(f"./data/Seasons_data/Bundesliga_Gk_Statistics_{season}.csv", index_col='Unnamed: 0')
+        buli_df = season_team_query(season=season)
+        buli_gk_df = season_gk_query(season=season)
     else:
-        buli_df = pd.read_csv("./data/Full_Seasons_data/Bundesliga_Team_Statistics.csv",
-                              index_col='Unnamed: 0')
-        buli_tracking_df = pd.read_csv("./data/Full_Seasons_data/Bundesliga_Team_Tracking_Statistics.csv",
-                                       index_col='Unnamed: 0')
-        buli_gk_df = pd.read_csv("./data/Full_Seasons_data/Bundesliga_Gk_Statistics.csv",
-                                 index_col='Unnamed: 0')
-
-    # ##### Merge Tracking Statistics to the Main DataFrame
-    buli_df['Team'] = buli_df['Team'].map(team_name_1)
-    buli_df['Opponent'] = buli_df['Opponent'].map(team_name_1)
-    buli_tracking_df['Team'] = buli_tracking_df['Team'].map(team_name_2)
-    buli_tracking_df['Opponent'] = buli_tracking_df['Opponent'].map(team_name_2)
-    buli_df = pd.merge(buli_df, buli_tracking_df, left_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'],
-                       right_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'])
+        buli_df = all_team_query(all_seasons=all_seasons)
+        buli_gk_df = all_gk_query(all_seasons=all_seasons)
 
     # ##### Correct Lineup Statistics
     buli_df['Team_Lineup'] = buli_df['Team_Lineup'].apply(lambda x: x.replace("◆", ""))
     buli_df['Opp_Lineup'] = buli_df['Opp_Lineup'].apply(lambda x: x.replace("◆", ""))
 
-    # ##### Create Match Day Statistics
-    buli_df['Possession'] = np.round(buli_df['Possession'] * 100, 2)
-    buli_df['shot_accuracy'] = np.round((buli_df['shots_on_target'] / buli_df['shots_total']) * 100, 1)
-    buli_df['successful_dribbles'] = np.round((buli_df['dribbles_completed'] / buli_df['dribbles']) * 100, 1)
-    buli_df['successful_tackles'] = np.round((buli_df['tackles_won'] / buli_df['tackles']) * 100, 1)
-
     # ##### Add Team Goalkeeper Statistics
-    buli_gk_df['Team'] = buli_gk_df['Team'].map(team_name_1)
-    buli_gk_df['Opponent'] = buli_gk_df['Opponent'].map(team_name_1)
-    buli_gk_df['passess_successful_gk'] = np.round(buli_gk_df['passes_gk'] * buli_gk_df['pct_passes_launched_gk'] / 100)
-    buli_gk_df['goal_kicks_successful'] = np.round(
-        buli_gk_df['goal_kicks'] * buli_gk_df['pct_goal_kicks_launched'] / 100)
-    df_team_gk = buli_gk_df.groupby(["Season", "Week_No", "Team", "Opponent", "Venue"])[
-        ["shots_on_target_against", "saves", "passes_gk", "passess_successful_gk", "goal_kicks",
-         "goal_kicks_successful", "passes_throws_gk"]].sum()
+    df_team_gk = \
+        buli_gk_df.groupby(["Season", "Week_No", "Team", "Opponent", "Venue"])["Shots on Target",
+                                                                               "Saves", "Post-Shot xGoal",
+                                                                               "Passes", "Goal Kicks", "Throws",
+                                                                               "Crosses Faced", "Crosses Stopped"].sum()
+
     df_team_gk.reset_index(inplace=True)
-    df_team_gk['saves_pct'] = np.round(df_team_gk['saves'] / df_team_gk['shots_on_target_against'] * 100, 2)
-    df_team_gk['passess_pct_successful_gk'] = np.round(
-        df_team_gk['passess_successful_gk'] / df_team_gk['passes_gk'] * 100, 2)
-    df_team_gk['goal_kicks_pct_successful'] = np.round(
-        df_team_gk['goal_kicks_successful'] / df_team_gk['goal_kicks'] * 100, 2)
-    df_team_gk.drop(columns=['shots_on_target_against'], inplace=True)
+    df_team_gk['Saves %'] = np.round(df_team_gk['Saves'] / df_team_gk['Shots on Target'] * 100, 2)
+    df_team_gk['Crosses Stopped %'] = np.round(df_team_gk['Crosses Stopped'] / df_team_gk['Crosses Faced'] * 100, 2)
+    df_team_gk.drop(columns=['Shots on Target', "Crosses Stopped"], inplace=True)
+    df_team_gk.rename(columns={"Passes": "Total Passes"}, inplace=True)
     buli_df = pd.merge(buli_df, df_team_gk, left_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'],
                        right_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'])
 
@@ -140,9 +72,10 @@ def season_data_process(season, stat_type):
     home_df.reset_index(drop=True, inplace=True)
     away_df = buli_df[buli_df['Venue'] == 'Away']
     away_df.reset_index(drop=True, inplace=True)
-    home_df['goals'] = home_df['goals'] + away_df['own_goals']
-    away_df['goals'] = away_df['goals'] + home_df['own_goals']
+    home_df['Goals'] = home_df['Goals'] + away_df['Own Goals']
+    away_df['Goals'] = away_df['Goals'] + home_df['Own Goals']
     final_df = pd.concat([home_df, away_df])
+    final_df.reset_index(drop=True, inplace=True)
 
     return final_df
 
@@ -150,9 +83,6 @@ def season_data_process(season, stat_type):
 def teams_season_stats(data, stat_name, stat_filter, team_type):
     # #### Filter Season Data by Season Type
     filter_team_stat = data[data[stat_filter] == 1].reset_index(drop=True)
-
-    # ##### Rename Stat Name
-    filter_team_stat.rename(columns={team_stats_vars[team_stats_names.index(stat_name)]: stat_name}, inplace=True)
 
     # ##### Create Team Chart
     if team_type == 'Team':
@@ -198,10 +128,6 @@ def teams_charts_day(data, team, stat_name, stat_filter):
     # ##### Filter Season Data by Season Type
     filter_df_team = data[(data['Team'] == team)].reset_index(drop=True)
     filter_df_opp = data[(data['Opponent'] == team)].reset_index(drop=True)
-
-    # ##### Rename Stat Name
-    filter_df_team.rename(columns={team_stats_vars[team_stats_names.index(stat_name)]: stat_name}, inplace=True)
-    filter_df_opp.rename(columns={team_stats_vars[team_stats_names.index(stat_name)]: stat_name}, inplace=True)
 
     filter_team_stat = filter_df_team[filter_df_team[stat_filter] == 1].reset_index(drop=True)
     if stat_filter == 'Home':
@@ -283,10 +209,6 @@ def teams_season_type(data, team, stat_name):
     filter_df_team = data[(data['Team'] == team)].reset_index(drop=True)
     filter_df_opp = data[(data['Opponent'] == team)].reset_index(drop=True)
 
-    # ##### Rename Stat Name
-    filter_df_team.rename(columns={team_stats_vars[team_stats_names.index(stat_name)]: stat_name}, inplace=True)
-    filter_df_opp.rename(columns={team_stats_vars[team_stats_names.index(stat_name)]: stat_name}, inplace=True)
-
     # ##### Stats Type Results
     stats_types_team = ['Total', 'Home', 'Away', '1st Period', '2nd Period', 'Win', 'Draw', 'Defeat']
     stats_types_opp = ['Total', 'Away', 'Home', '1st Period', '2nd Period', 'Defeat', 'Draw', 'Win']
@@ -346,6 +268,9 @@ def teams_season_type(data, team, stat_name):
         team_value_1 = team_away_data[0]
         team_value_2 = team_home_data[0]
 
+    team_part_name = ""
+    team_value_3 = np.nan
+    team_value_4 = np.nan
     if "2nd Period" in data_season_type['Type'].values:
         team_half1_data = \
             data_season_type[(data_season_type['Team'] == team) & (data_season_type['Type'] == '1st Period')][
@@ -361,10 +286,6 @@ def teams_season_type(data, team, stat_name):
             team_part_name = ['2nd Period', '1st Period']
             team_value_3 = team_half2_data[0]
             team_value_4 = team_half1_data[0]
-    else:
-        team_part_name = ""
-        team_value_3 = np.nan
-        team_value_4 = np.nan
 
     return team_stat_fig, team_data_name, team_value_1, team_value_2, team_part_name, team_value_3, team_value_4
 
@@ -376,11 +297,6 @@ def relationship_data(data, team, filter_type, stat_x, stat_y, stat_size, ols_li
     else:
         filter_df_team = data.copy()
     final_df = filter_df_team[filter_df_team[filter_type] == 1].reset_index(drop=True)
-
-    # ##### Rename Stat Name
-    final_df.rename(columns={team_stats_vars[team_stats_names.index(stat_x)]: stat_x}, inplace=True)
-    final_df.rename(columns={team_stats_vars[team_stats_names.index(stat_y)]: stat_y}, inplace=True)
-    final_df.rename(columns={team_stats_vars[team_stats_names.index(stat_size)]: stat_size}, inplace=True)
 
     # ##### Relationship Chart
     if ols_line:
@@ -456,7 +372,7 @@ def relationship_data(data, team, filter_type, stat_x, stat_y, stat_size, ols_li
         result_corr_sign = "Positive"
 
     return relationship_fig, corr_value, corr_name, overall_corr_strength, overall_corr_sign, result_corr_strength, \
-           result_corr_sign, max_result
+        result_corr_sign, max_result
 
 
 @st.cache
@@ -477,10 +393,6 @@ def teams_buli_type(data, analysis_seasons, filter_type, team, stat_name):
     filter_df_opp = data[
         (data['Season'].isin(analysis_seasons)) & (data['Opponent'] == team) & (data[filter_type] == 1)].reset_index(
         drop=True)
-
-    # ##### Rename Stat Name
-    filter_df_team.rename(columns={team_stats_vars[team_stats_names.index(stat_name)]: stat_name}, inplace=True)
-    filter_df_opp.rename(columns={team_stats_vars[team_stats_names.index(stat_name)]: stat_name}, inplace=True)
 
     # ##### Stats Type Results
     home_stats = np.round(filter_df_team.groupby('Season')[stat_name].mean(), 2).reset_index()
@@ -528,20 +440,14 @@ def teams_buli_type(data, analysis_seasons, filter_type, team, stat_name):
 
 def relationship_buli_data(data, team, analysis_seasons, filter_type, stat_x, stat_y, ols_line):
     # ##### Filter Season Data by Season Type
-    final_df = data[
-        (data['Season'].isin(analysis_seasons)) & (data['Team'] == team) & (data[filter_type] == 1)].reset_index(
-        drop=True)
-
-    # ##### Rename Stat Name
-    final_df.rename(columns={team_stats_vars[team_stats_names.index(stat_x)]: stat_x}, inplace=True)
-    final_df.rename(columns={team_stats_vars[team_stats_names.index(stat_y)]: stat_y}, inplace=True)
+    final_df = data[(data['Team'] == team) & (data[filter_type] == 1)].reset_index(drop=True)
     final_df['Points'] = np.where(final_df['Result'] == 'Win', 3, np.where(final_df['Result'] == 'Defeat', 1, 2))
 
-    colors_plot = {analysis_seasons[-5]: 'rgb(216,62,135)',
-                   analysis_seasons[-4]: 'rgb(130,101,167)',
-                   analysis_seasons[-3]: 'rgb(179, 179, 179)',
-                   analysis_seasons[-2]: 'rgb(78,78,80)',
-                   analysis_seasons[-1]: 'rgb(200,11,1)'}
+    colors_plot = {analysis_seasons[4]: 'rgb(216,62,135)',
+                   analysis_seasons[3]: 'rgb(130,101,167)',
+                   analysis_seasons[2]: 'rgb(179, 179, 179)',
+                   analysis_seasons[1]: 'rgb(78,78,80)',
+                   analysis_seasons[0]: 'rgb(200,11,1)'}
 
     # ##### Relationship Chart
     if ols_line:
@@ -604,4 +510,4 @@ def relationship_buli_data(data, team, analysis_seasons, filter_type, stat_x, st
         season_corr_sign = "Positive"
 
     return relationship_fig, overall_corr_value, overall_corr_strength, overall_corr_sign, season_name_best_corr, \
-           season_value_best_corr, season_corr_strength, season_corr_sign
+        season_value_best_corr, season_corr_strength, season_corr_sign

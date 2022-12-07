@@ -1,11 +1,16 @@
-from page_scripts.stats_scripts.player_stats import *
-from PIL import Image
+import numpy as np
 import streamlit as st
+from page_scripts.stats_scripts.player_stats import season_player_data, player_stats_total, player_stats_avg, \
+    player_top_statistics, player_df_stat_season, player_match_day_team, player_chart_day, player_season_filter_stats, \
+    player_corr_filter_team, player_relationship_data, buli_player_data, player_buli_stats, player_buli_corr_data, \
+    player_comparison_filter, player_comparison_radar, player_comparison_pizza
+from PIL import Image
 
 
 def player_page(all_seasons, page_season, favourite_team):
     # #### Player Statistics Type
-    player_stats = st.sidebar.selectbox("Season Stats", ["Season Stats", "Season by Season Stats"])
+    player_stats = st.sidebar.selectbox("Season Stats", ["Season Stats", "Season by Season Stats",
+                                                         "Player vs Player Stats"])
 
     if player_stats == "Season Stats":
         # ##### Select Season
@@ -27,9 +32,9 @@ def player_page(all_seasons, page_season, favourite_team):
             top10_stat_type = st.selectbox("Type Statistics", ["Total", "Average"])
             top10_player_filter = st.selectbox("Season Type", filter_type_player)
             if top10_stat_type == "Total":
-                top10_player_stats = player_stats_names_total
+                top10_player_stats = player_stats_total
             else:
-                top10_player_stats = player_stats_names_avg
+                top10_player_stats = player_stats_avg
             top10_player_stat = st.selectbox("Name Statistics", top10_player_stats)
 
         with top10_plot_col:
@@ -82,15 +87,12 @@ def player_page(all_seasons, page_season, favourite_team):
         with player_stat_col:
             player_stat_type = st.selectbox("Statistics Type", ["Total", "Average"])
             if player_stat_type == "Total":
-                player_stat = st.selectbox("Select Statistics", player_stats_names_total)
+                player_stat = st.selectbox("Select Statistics", player_stats_total)
             elif player_stat_type == "Average":
-                player_stat = st.selectbox("Select Statistics", player_stats_names_avg)
-
-        buli_player_filter_df = player_df_filter(data=buli_player_season_df,
-                                                 season_filter=season_player_filter)
+                player_stat = st.selectbox("Select Statistics", player_stats_avg)
 
         with player_plot_col:
-            team_player_fig, league_avg, league_better = player_df_stat_season(data=buli_player_filter_df,
+            team_player_fig, league_avg, league_better = player_df_stat_season(data=buli_player_season_df,
                                                                                team=season_player_team,
                                                                                total_players=final_total_players,
                                                                                avg_players=final_avg_players,
@@ -144,7 +146,7 @@ def player_page(all_seasons, page_season, favourite_team):
         st.subheader(f"Players Match Day Statistics: Season {page_season}")
         player_day_col, player_day_chart_col, player_day_logo_col = st.columns([3, 8, 1])
         with player_day_col:
-            stat_player_day = st.selectbox("Player Statistics", player_stats_names_avg)
+            stat_player_day = st.selectbox("Player Statistics", player_stats_avg)
             team_season_player_df, team_players = player_match_day_team(data=buli_player_season_df,
                                                                         team=season_player_team,
                                                                         players=final_avg_players)
@@ -236,21 +238,21 @@ def player_page(all_seasons, page_season, favourite_team):
                                                       team=team_corr_name,
                                                       players=final_avg_players)
             player_corr_name = st.selectbox("Highlight Player", players_corr)
-            player_stats_names_1 = player_stats_names_avg.copy()
+            player_stats_names_1 = player_stats_avg.copy()
             player_stat_x = st.selectbox("Select X Stat", player_stats_names_1)
             player_stats_names_2 = player_stats_names_1.copy()
             player_stats_names_2.remove(player_stat_x)
             player_stat_y = st.selectbox("Select Y Stat", player_stats_names_2)
 
-        player_league_fig, player_team_fig, player_corr_value, \
-        player_corr_strength, player_corr_sign = player_relationship_data(
-            data=buli_player_season_df,
-            filter_type=player_corr_filter_type,
-            team=team_corr_name,
-            player=player_corr_name,
-            avg_players=final_avg_players,
-            stat_x=player_stat_x,
-            stat_y=player_stat_y)
+        player_league_fig, player_team_fig, player_corr_value, player_corr_strength, player_corr_sign = \
+            player_relationship_data(
+                data=buli_player_season_df,
+                filter_type=player_corr_filter_type,
+                team=team_corr_name,
+                player=player_corr_name,
+                avg_players=final_avg_players,
+                stat_x=player_stat_x,
+                stat_y=player_stat_y)
 
         config = {'displayModeBar': False}
         with player_rel_chart_col:
@@ -277,22 +279,18 @@ def player_page(all_seasons, page_season, favourite_team):
         st.subheader(f"Player Stats over the Last 5 Seasons")
         player_filter_col, player_chart_col, player_stat_col = st.columns([3, 7, 3])
         with player_filter_col:
-            seasons = all_seasons
-            # ##### Select Season
-            buli_player_season_df, season_teams = buli_player_data(season=page_season)
-            pos_team_players = season_teams.index(favourite_team)
-
             # ##### Data Filter
             filter_type_player = ["Total", "Home", "Away", "1st Period", "2nd Period"]
             seasons_player_filter = st.selectbox("Select Season Type", filter_type_player)
-            seasons_player_team = st.selectbox("Select Team", season_teams, pos_team_players)
-            current_season = page_season
-            final_avg_players = buli_players_avg(data=buli_player_season_df,
-                                                 team=seasons_player_team,
-                                                 season=current_season)
+            seasons_player_team = favourite_team
+            buli_player_season_df, final_avg_players = buli_player_data(team=seasons_player_team,
+                                                                        season=page_season,
+                                                                        all_seasons=all_seasons)
+            # ##### Select Season
+            seasons = all_seasons
             seasons_player_name = st.selectbox("Player Name", final_avg_players)
 
-            buli_player_logo = Image.open(f'images/{seasons_player_team}.png')
+            buli_player_logo = Image.open(f'images/{favourite_team}.png')
             st.image(buli_player_logo, width=100)
 
             st.markdown(
@@ -300,7 +298,7 @@ def player_page(all_seasons, page_season, favourite_team):
                 "</font></b> of minutes played were included.", unsafe_allow_html=True)
 
         with player_stat_col:
-            stat_player_seasons = st.selectbox("Player Statistics", player_stats_names_avg)
+            stat_player_seasons = st.selectbox("Player Statistics", player_stats_avg)
 
         with player_chart_col:
             player_seasons_fig, player_rank_season, player_better_seasons, player_no_seasons, latest_season = \
@@ -348,7 +346,7 @@ def player_page(all_seasons, page_season, favourite_team):
         player_rel_filter_col, player_rel_chart_col, player_markdown_col = st.columns([2.5, 6, 2])
         with player_rel_filter_col:
             player_corr_filter_type = st.selectbox("Player Relationship Season Type", filter_type_player)
-            player_stats_names_1 = player_stats_names_avg.copy()
+            player_stats_names_1 = player_stats_avg.copy()
             player_stat_x = st.selectbox("Select X Stat", player_stats_names_1)
             player_stats_names_2 = player_stats_names_1.copy()
             player_stats_names_2.remove(player_stat_x)
@@ -363,7 +361,7 @@ def player_page(all_seasons, page_season, favourite_team):
 
         with player_rel_chart_col:
             player_seasons_fig, pl_overall_corr_value, pl_overall_corr_strength, pl_overall_corr_sign, \
-            pl_season_name_best_corr, pl_season_value_best_corr, pl_season_corr_strength, pl_season_corr_sign = \
+                pl_season_name_best_corr, pl_season_value_best_corr, pl_season_corr_strength, pl_season_corr_sign = \
                 player_buli_corr_data(data=buli_player_season_df,
                                       filter_type=player_corr_filter_type,
                                       team=seasons_player_team,
@@ -393,8 +391,8 @@ def player_page(all_seasons, page_season, favourite_team):
                     no_season_name = "Season"
                 else:
                     no_season_name = f"{player_no_seasons} Seasons"
-                st.markdown(f"For <b><font color = #d20614>{player_corr_filter_type}</font></b> Season Games there is a "
-                            f"<b><font color = #d20614>{pl_overall_corr_sign}</font></b> <b><font color = green>"
+                st.markdown(f"For <b><font color = #d20614>{player_corr_filter_type}</font></b> Season Games there is a"
+                            f" <b><font color = #d20614>{pl_overall_corr_sign}</font></b> <b><font color = green>"
                             f"{pl_overall_corr_strength}</font></b> Correlation between <b><font color = #d20614>"
                             f"{player_stat_x}</font></b> and <b><font color = #d20614>{player_stat_y}</font></b> "
                             f"(<b><font color = purple>{pl_overall_corr_value}</font></b>) if we look at the last "
@@ -407,3 +405,119 @@ def player_page(all_seasons, page_season, favourite_team):
                                 f"(<b><font color = purple>{pl_season_value_best_corr}</font></b>) a <b>"
                                 f"<font color = #d20614>{pl_season_corr_sign}</font></b><b><font color = green> "
                                 f"{pl_season_corr_strength}</font></b> Relationship.", unsafe_allow_html=True)
+
+    elif player_stats == "Player vs Player Stats":
+
+        st.subheader(f"Player vs Player Statistics: Season {page_season}")
+        radar_player_col, radar_chart_col, radar_vs_player_col = st.columns([3, 8, 3])
+        with radar_vs_player_col:
+            radar_compare_stat = st.selectbox("Comparison Statistics Type", ["Offensive", "Defensive", "Passing"])
+
+        buli_player_season_df, _, final_players = season_player_data(season=page_season)
+        teams_players = list(buli_player_season_df[buli_player_season_df['Venue'] == 'Home']['Team'].unique())
+        teams_players.sort()
+        pos_team_players = teams_players.index(favourite_team)
+
+        # ##### Season Filter
+        season_filter_player = ["Total", "Home", "Away", "1st Period", "2nd Period"]
+        match_day_player = np.max(buli_player_season_df['Week_No'].values)
+        if match_day_player <= 17:
+            season_filter_player.remove("2nd Period")
+
+        with radar_player_col:
+            radar_compare_season_type = st.selectbox("Comparison Season Filter", season_filter_player)
+            radar_team_main_player = st.selectbox("Comparison Player 1 Team", teams_players, pos_team_players)
+            radar_main_players_compare = player_comparison_filter(data=buli_player_season_df,
+                                                                  season_filter=radar_compare_season_type,
+                                                                  team=radar_team_main_player,
+                                                                  players=final_players)
+            radar_main_player = st.selectbox("Comparison Player 1", radar_main_players_compare)
+            radar_main_team_player_logo = Image.open(f'images/{radar_team_main_player}.png')
+            st.image(radar_main_team_player_logo, width=100)
+
+        with radar_vs_player_col:
+            radar_team_compare_player = st.selectbox("Comparison Player 2 Team", teams_players, pos_team_players)
+            radar_compare_players_compare = player_comparison_filter(data=buli_player_season_df,
+                                                                     season_filter=radar_compare_season_type,
+                                                                     team=radar_team_compare_player,
+                                                                     players=final_players,
+                                                                     remove_player=radar_main_player)
+
+            radar_compare_player = st.selectbox("Comparison Player 2", radar_compare_players_compare)
+            radar_compare_team_player_logo = Image.open(f'images/{radar_team_compare_player}.png')
+            st.image(radar_compare_team_player_logo, width=100)
+
+        with radar_chart_col:
+            radar_fig, radar_player_1_better, radar_len_stats = \
+                player_comparison_radar(data=buli_player_season_df,
+                                        season_filter=radar_compare_season_type,
+                                        player_1=radar_main_player,
+                                        player_2=radar_compare_player,
+                                        stats_type=radar_compare_stat,
+                                        team_player_1=radar_team_main_player,
+                                        team_player_2=radar_team_compare_player)
+
+            st.pyplot(radar_fig)
+
+        with radar_player_col:
+            st.markdown(
+                f"In <b><font color = green>{radar_player_1_better}</font></b> of the <b><font color = green>"
+                f"{radar_len_stats}</font></b> <b><font color = green>{radar_compare_stat}</font></b> Statistics, "
+                f"<b><font color = #d20614>{radar_main_player}</font></b> of <b><font color = #d20614>"
+                f"{radar_team_main_player}</font></b> has better on average statistics for <b><font color = green>"
+                f"{radar_compare_season_type}</font></b> Season Games than <b><font color = grey>{radar_compare_player}"
+                f"</font></b> of <b><font color = grey>{radar_team_compare_player}</font></b>.", unsafe_allow_html=True)
+            st.markdown("<b><font color = #d20614>Note</font></b>: Only Players with at least <b>"
+                        "<font color = #d20614>10%</font></b> of minutes played were included.",
+                        unsafe_allow_html=True)
+
+        st.subheader(f"Player vs Player Percentile: Season {page_season}")
+        pizza_player_col, pizza_chart_col, pizza_vs_player_col = st.columns([3, 8, 3])
+        with pizza_vs_player_col:
+            pizza_compare_stat = st.selectbox("Percentile Statistics Type", ["Offensive", "Defensive", "Passing"])
+
+        with pizza_player_col:
+            pizza_compare_season_type = st.selectbox("Percentile Season Filter", season_filter_player)
+            pizza_team_main_player = st.selectbox("Percentile Player 1 Team", teams_players, pos_team_players)
+            pizza_main_players_compare = player_comparison_filter(data=buli_player_season_df,
+                                                                  season_filter=pizza_compare_season_type,
+                                                                  team=pizza_team_main_player,
+                                                                  players=final_players)
+            pizza_main_player = st.selectbox("Percentile Player 1", pizza_main_players_compare)
+            pizza_main_team_player_logo = Image.open(f'images/{pizza_team_main_player}.png')
+            st.image(pizza_main_team_player_logo, width=100)
+
+        with pizza_vs_player_col:
+            pizza_team_compare_player = st.selectbox("Percentile Player 2 Team", teams_players, pos_team_players)
+            pizza_compare_players_compare = player_comparison_filter(data=buli_player_season_df,
+                                                                     season_filter=pizza_compare_season_type,
+                                                                     team=pizza_team_compare_player,
+                                                                     players=final_players,
+                                                                     remove_player=pizza_main_player)
+
+            pizza_compare_player = st.selectbox("Percentile Player 2", pizza_compare_players_compare)
+            pizza_compare_team_player_logo = Image.open(f'images/{pizza_team_compare_player}.png')
+            st.image(pizza_compare_team_player_logo, width=100)
+
+        with pizza_chart_col:
+            pizza_fig, pizza_player_1_better, pizza_player_2_better, pizza_len_stats = \
+                player_comparison_pizza(data=buli_player_season_df,
+                                        season_filter=pizza_compare_season_type,
+                                        player_1=pizza_main_player,
+                                        player_2=pizza_compare_player,
+                                        stats_type=pizza_compare_stat)
+
+            st.pyplot(pizza_fig)
+
+            with pizza_player_col:
+                st.markdown(
+                    f"In <b><font color = green>{pizza_player_1_better}</font></b> of the <b><font color = green>"
+                    f"{pizza_len_stats}</font></b> <b><font color = green>{pizza_compare_stat}</font></b> Statistics, "
+                    f"<b><font color = #d20614>{pizza_main_player}</font></b> of <b><font color = #d20614>"
+                    f"{pizza_team_main_player}</font></b> has better on average stats then 90% of the League for <b>"
+                    f"<font color = green>{radar_compare_season_type}</font></b> Season Games while in <b>"
+                    f"<font color = green>{pizza_player_2_better}</font></b> of the <b><font color = green>"
+                    f"{pizza_len_stats}</font></b> <b><font color = green>{pizza_compare_stat}</font></b> Statistics, "
+                    f"<b><font color = #d20614>{pizza_compare_player}</font></b> of <b><font color = #d20614>"
+                    f"{pizza_team_compare_player}</font></b> has better on average stats then 90% of the League.",
+                    unsafe_allow_html=True)

@@ -2,106 +2,16 @@ import pandas as pd
 import numpy as np
 from joblib import load
 import streamlit as st
-
-# ##### Team Names
-team_name_1 = {"Bayern Munich": "FC Bayern München", "Bayer Leverkusen": "Bayer 04 Leverkusen",
-               "Hoffenheim": "TSG 1899 Hoffenheim", "Werder Bremen": "SV Werder Bremen", "Mainz 05": "1. FSV Mainz 05",
-               "Hannover 96": "Hannover 96", "Wolfsburg": "VfL Wolfsburg", "Dortmund": "Borussia Dortmund",
-               "Hamburger SV": "Hamburger SV", "Augsburg": "FC Augsburg", "Hertha BSC": "Hertha Berlin",
-               "Stuttgart": "VfB Stuttgart", "Schalke 04": "FC Schalke 04", "RB Leipzig": "RasenBallsport Leipzig",
-               "Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
-               "Mönchengladbach": "Borussia Mönchengladbach", "Köln": "1. FC Köln", "Düsseldorf": "Fortuna Düsseldorf",
-               "Nürnberg": "1. FC Nürnberg", "Paderborn 07": "SC Paderborn 07", "Union Berlin": "1. FC Union Berlin",
-               "Arminia": "Arminia Bielefeld", "Bochum": "VfL Bochum 1848", "Greuther Fürth": "SpVgg Greuther Fürth",
-               "Greuther F�rth": "SpVgg Greuther Fürth"}
-
-team_name_2 = {"FC Bayern Mu_nchen": "FC Bayern München", "Bayer 04 Leverkusen": "Bayer 04 Leverkusen",
-               "1. FSV Mainz 05": "1. FSV Mainz 05", "Hannover 96": "Hannover 96", "Hamburger SV": "Hamburger SV",
-               "FC Augsburg": "FC Augsburg", "Hertha Berlin": "Hertha Berlin", "VfB Stuttgart": "VfB Stuttgart",
-               "TSG 1899 Hoffenheim": "TSG 1899 Hoffenheim", "SV Werder Bremen": "SV Werder Bremen",
-               "VfL Wolfsburg": "VfL Wolfsburg", "Borussia Dortmund": "Borussia Dortmund",
-               "FC Schalke 04": "FC Schalke 04", "RasenBallsport Leipzig": "RasenBallsport Leipzig",
-               "Sport-Club Freiburg": "Sport-Club Freiburg", "Eintracht Frankfurt": "Eintracht Frankfurt",
-               "Borussia Mo_nchengladbach": "Borussia Mönchengladbach", "1. FC Ko_ln": "1. FC Köln",
-               "Fortuna Du_sseldorf": "Fortuna Düsseldorf", "1. FC Nu_rnberg": "1. FC Nürnberg",
-               "FC Bayern München": "FC Bayern München", "Fortuna Düsseldorf": "Fortuna Düsseldorf",
-               "1. FC Köln": "1. FC Köln", "SC Paderborn 07": "SC Paderborn 07",
-               "Borussia Mönchengladbach": "Borussia Mönchengladbach", "1. FC Union Berlin": "1. FC Union Berlin",
-               "RB Leipzig": "RasenBallsport Leipzig", "TSG Hoffenheim": "TSG 1899 Hoffenheim",
-               "DSC Arminia Bielefeld": "Arminia Bielefeld", "Arminia Bielefeld": "Arminia Bielefeld",
-               "SC Freiburg": "Sport-Club Freiburg", "SpVgg Greuther Fürth": "SpVgg Greuther Fürth",
-               "VfL Bochum 1848": "VfL Bochum 1848", "Borussia M'gladbach": "Borussia Mönchengladbach"}
-
-team_stats_vars = ["goals", "assists", "assisted_shots", "xg", "xa", "Distance_Covered", "Sprints", "Possession",
-                   "shots_total", "shots_on_target", "shot_accuracy", "aerials_won", "aerials_won_pct", "crosses",
-                   "corner_kicks", "offsides", "cards_yellow", "fouls", "fouled", "tackles", "tackles_won",
-                   "successful_tackles", "tackles_def_3rd", "tackles_mid_3rd", "tackles_att_3rd", "pressures",
-                   "pressure_regains", "pressure_regain_pct", "pressures_def_3rd", "pressures_mid_3rd",
-                   "pressures_att_3rd", "ball_recoveries", "interceptions", "blocks", "clearances", "dispossessed",
-                   "errors", "sca", "dribbles_completed", "dribbles", "successful_dribbles",
-                   "crosses_into_penalty_area", "through_balls", "passes", "passes_completed", "passes_pct",
-                   "progressive_passes", "passes_pressure", "passes_short", "passes_completed_short",
-                   "passes_pct_short", "passes_medium", "passes_completed_medium", "passes_pct_medium", "passes_long",
-                   "passes_completed_long", "passes_pct_long", "passes_into_final_third", "passes_into_penalty_area",
-                   "passes_total_distance", "passes_progressive_distance", "touches", "touches_def_pen_area",
-                   "touches_def_3rd", "touches_mid_3rd", "touches_att_3rd", "touches_att_pen_area", "carries",
-                   "progressive_carries", "carries_into_final_third", "carries_into_penalty_area", "carry_distance",
-                   "carry_progressive_distance"]
-
-team_stats_names = ["Goals", "Assists", "Key Passes", "xGoals", "xAssisted", "Distance Covered (Km)", "Sprint",
-                    "Possession", "Shots", "Shots On Target", "Shot Accuracy %", "Aerials Won", "Aerials Won %",
-                    "Crosses", "Corners", "Offsides", "Yellow Cards", "Fouls", "Fouled", "Tackles", "Tackles Won",
-                    "Tackles Won %", "Tackles Def 3rd", "Tackles Mid 3rd", "Tackles Att 3rd", "Pressure",
-                    "Pressure Regains", "Pressure Regains Successful %", "Pressure Def 3rd", "Pressure Mid 3rd",
-                    "Pressure Att 3rd", "Ball Recoveries", "Interceptions", "Blocks", "Clearences", "Dispossessed",
-                    "Errors", "Shot Created Actions", "Dribbles", "Dribbles Successful", "Dribbles Successful %",
-                    "Crosses Penalty Area", "Through Balls", "Passes", "Completed Passes", "Completed Passes %",
-                    "Progressive Passes", "Passes Under Pressure", "Passes Short", "Passes Short Completed",
-                    "Passes Short Completed %", "Passes Medium", "Passes Medium Completed", "Passes Medium Completed %",
-                    "Passes Long", "Passes Long Completed", "Passes Long Completed %", "Passes Final Third",
-                    "Passes Penalty Area", "Passes Distance", "Passes Progresive Distance", "Touches",
-                    "Touches Def Pen Area", "Touches Def 3rd", "Touches Mid 3rd", "Touches Att 3rd",
-                    "Touches Att Pen Area", "Carries", "Progressive Carries", "Carries Final 3rd",
-                    "Carries Penalty Area", "Carries Distance", "Carries Progressive Distance"]
-
-main_columns = dict(zip(team_stats_vars, team_stats_names))
+from page_scripts.stats_scripts.utilities import season_team_query, prediction_query
 
 
 # ##### Read Data
 @st.cache
 def season_data_process(season):
-    buli_df = pd.read_csv(f"././data/Seasons_data/Bundesliga_Team_Statistics_{season}.csv", index_col='Unnamed: 0')
-    buli_tracking_df = pd.read_csv(f"././data/Seasons_data/Bundesliga_Team_Tracking_Statistics_{season}.csv",
-                                   index_col='Unnamed: 0')
-
-    # ##### Merge Tracking Statistics to the Main DataFrame
-    buli_df['Team'] = buli_df['Team'].map(team_name_1)
-    buli_df['Opponent'] = buli_df['Opponent'].map(team_name_1)
-    buli_tracking_df['Team'] = buli_tracking_df['Team'].map(team_name_2)
-    buli_tracking_df['Opponent'] = buli_tracking_df['Opponent'].map(team_name_2)
-    df_analysis = pd.merge(buli_df, buli_tracking_df, left_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'],
-                           right_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'])
-
-    # ##### Create Match Day Statistics
-    df_analysis['Possession'] = np.round(df_analysis['Possession'] * 100, 2)
-    df_analysis['shot_accuracy'] = np.round((df_analysis['shots_on_target'] / df_analysis['shots_total']) * 100, 1)
-    df_analysis['successful_dribbles'] = np.round((df_analysis['dribbles_completed'] / df_analysis['dribbles']) * 100,
-                                                  1)
-    df_analysis['successful_tackles'] = np.round((df_analysis['tackles_won'] / df_analysis['tackles']) * 100, 1)
-    df_analysis.rename(columns=main_columns, inplace=True)
+    # ##### Season Data
+    df_analysis = season_team_query(season=season)
     current_match_day = np.max(df_analysis['Week_No'])
-
-    recode_missing_stats = ['Pressure', 'Carries', 'Progressive Carries', 'Passes Under Pressure', 'passes_ground',
-                            'passes_low', 'passes_high', 'passes_left_foot', 'passes_right_foot', 'passes_head',
-                            'passes_other_body', 'passes_oob', 'passes_intercepted', 'Pressure Regains',
-                            'Pressure Regains Successful %', 'Pressure Def 3rd', 'Pressure Mid 3rd',
-                            'Pressure Att 3rd', 'blocked_shots_saves', 'players_dribbled_past', 'nutmegs',
-                            'Carries Distance', 'Carries Progressive Distance', 'Carries Final 3rd',
-                            'Carries Penalty Area', 'passes_received_pct']
-    for col in recode_missing_stats:
-        df_analysis[col] = df_analysis[col].fillna(np.nanmean(df_analysis[col]))
-
-    model_no = buli_df.groupby(['Venue'])['Team'].value_counts().min()
+    model_no = df_analysis.groupby(['Venue'])['Team'].value_counts().min()
     if model_no > 5:
         model_no = 5
     return df_analysis, current_match_day, model_no
@@ -109,23 +19,26 @@ def season_data_process(season):
 
 @st.cache
 def data_processing(data, current_match_day, rolling_data):
-    buli_prediction = pd.read_csv("././data/Season_Prediction_Games.csv")
+    # ##### Df & Prediction Data
+    df = data.copy()
+    buli_prediction = prediction_query()
     buli_prediction = buli_prediction[buli_prediction['Week_No'] > current_match_day].reset_index(drop=True)
-    df_home = data[(data['Venue'] == 'Home')].reset_index(drop=True)
-    df_away = data[(data['Venue'] == 'Away')].reset_index(drop=True)
+    df_home = df[(df['Venue'] == 'Home')].reset_index(drop=True)
+    df_away = df[(df['Venue'] == 'Away')].reset_index(drop=True)
+    team_stats_names = df.columns[10:]
 
     # ##### Home Stats
     df_home.drop(columns=['Manager', 'Team_Lineup', 'Opp_Lineup', 'Venue'], inplace=True)
     df_home.rename(columns={'Team': 'Home Team', 'Opponent': 'Away Team', 'Result': 'Home Result'}, inplace=True)
-    home_new_cols = [col for col in df_home.columns[:5]]
-    home_new_cols.extend([f"{col} Home" for col in df_home.columns[5:]])
+    home_new_cols = [col for col in df_home.columns[:6]]
+    home_new_cols.extend([f"{col} Home" for col in df_home.columns[6:]])
     df_home.columns = home_new_cols
 
     # ##### Away Stats
     df_away.drop(columns=['Manager', 'Team_Lineup', 'Opp_Lineup', 'Venue'], inplace=True)
     df_away.rename(columns={'Team': 'Away Team', 'Opponent': 'Home Team', 'Result': 'Away Result'}, inplace=True)
-    away_new_cols = [col for col in df_away.columns[:5]]
-    away_new_cols.extend([f"{col} Away" for col in df_away.columns[5:]])
+    away_new_cols = [col for col in df_away.columns[:6]]
+    away_new_cols.extend([f"{col} Away" for col in df_away.columns[6:]])
     df_away.columns = away_new_cols
 
     if rolling_data == 1:
@@ -179,10 +92,13 @@ def data_processing(data, current_match_day, rolling_data):
 
 
 def data_prediction_game(data, step, week_no):
-
     # ###### Load Prediction Data
-    final_model = load(open(f"././final_models/Last {step} Games Model.pkl", 'rb'))
-    final_transform = load(open(f"././final_models/Last {step} Games Transform.pkl", 'rb'))
+    if step == 1:
+        final_model = load(open(f"././final_models/Last Game Model.pkl", 'rb'))
+        final_transform = load(open(f"././final_models/Last Game Transform.pkl", 'rb'))
+    else:
+        final_model = load(open(f"././final_models/Last {step} Games Model.pkl", 'rb'))
+        final_transform = load(open(f"././final_models/Last {step} Games Transform.pkl", 'rb'))
     model_features = list(final_transform.get_feature_names_out())
 
     # ##### Predictions
@@ -193,7 +109,7 @@ def data_prediction_game(data, step, week_no):
     dprob = [np.round(prediction_prob[i][1] * 100, 2) for i in range(len(prediction_prob))]
     aprob = [np.round(prediction_prob[i][0] * 100, 2) for i in range(len(prediction_prob))]
 
-    final_results = data[['Week_No', 'Home Team', 'Away Team']]
+    final_results = data[['Week_No', 'Home Team', 'Away Team']].copy()
     final_results['Win %'] = pd.Series(hprob)
     final_results['Draw %'] = pd.Series(dprob)
     final_results['Defeat %'] = pd.Series(aprob)
@@ -205,15 +121,19 @@ def data_prediction_game(data, step, week_no):
 
 def create_predictions_season(data, current_data, step):
     # ###### Load Prediction Data
-    final_model = load(open(f"././final_models/Last {step} Games Model.pkl", 'rb'))
-    final_transform = load(open(f"././final_models/Last {step} Games Transform.pkl", 'rb'))
+    if step == 1:
+        final_model = load(open(f"././final_models/Last Game Model.pkl", 'rb'))
+        final_transform = load(open(f"././final_models/Last Game Transform.pkl", 'rb'))
+    else:
+        final_model = load(open(f"././final_models/Last {step} Games Model.pkl", 'rb'))
+        final_transform = load(open(f"././final_models/Last {step} Games Transform.pkl", 'rb'))
     model_features = list(final_transform.get_feature_names_out())
 
     # ##### Predictions
     prediction_data = data[model_features]
     prediction_transformed = final_transform.transform(prediction_data)
     prediction_results = final_model.predict(prediction_transformed)
-    final_results = data[['Week_No', 'Home Team', 'Away Team']]
+    final_results = data[['Week_No', 'Home Team', 'Away Team']].copy()
     final_results['Predicted Result'] = pd.Series(prediction_results)
 
     # ##### Merge with current Data
