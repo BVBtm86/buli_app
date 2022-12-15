@@ -28,7 +28,7 @@ def prediction_page(prediction_type, season, favourite_team):
         if prediction_type == 'Games':
             week_no = st.sidebar.selectbox("Select Week No", remaining_weeks, index=0)
 
-            match_day_col, accuracy_col = st.columns([8, 2])
+            match_day_col, accuracy_col, _ = st.columns([8, 2, 0.5])
             with match_day_col:
                 st.header(f"Season: {season} Match Day {week_no} Predictions")
 
@@ -115,7 +115,7 @@ def prediction_page(prediction_type, season, favourite_team):
             st.sidebar.markdown("")
 
         elif prediction_type == 'Season':
-            season_col, accuracy_col = st.columns([8, 2])
+            season_col, accuracy_col, _ = st.columns([15, 2, 0.5])
             with season_col:
                 st.header(f"Season: {season} Predicted Table")
 

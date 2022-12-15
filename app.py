@@ -32,6 +32,7 @@ with buli_container:
     with buli_logo_col:
         st.image(buli_logo, use_column_width=True)
     with text_col:
+        st.markdown("")
         st.title("Bundesliga App")
 
 # ##### Statistic Type

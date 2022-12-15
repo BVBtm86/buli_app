@@ -20,12 +20,28 @@ stats_team = ['Possession', 'Goals', 'Assists', 'Shots', 'Shots on Target', 'Sho
               'Touches Mid 3rd', 'Touches Att 3rd', 'Touches Att PA', 'Touches Live Ball', 'Dribbles',
               'Dribbles Completed', 'Dribbles Completed %', 'Crosses', 'Crosses PA', 'Interceptions', 'Ball Recoveries',
               'Corner Kicks', 'Corner Kicks In', 'Corner Kicks Out', 'Corner Kicks Straight', 'Tackles',
-              'Tackles Won %', 'Tackles Won', 'Tackles Def 3rd', 'Tackles Mid 3rd', 'Tackles Att 3rd',
+              'Tackles Won', 'Tackles Won %', 'Tackles Def 3rd', 'Tackles Mid 3rd', 'Tackles Att 3rd',
               'Tackles + Interceptions', 'Duel Aerial Won', 'Duel Aerial Lost', 'Duel Aerial Won %', 'Dribbles Tackled',
-              'Dribbles Contested', 'Dribbles Tackled %', 'Dribbled Past', 'Blocks', 'Blocked Shots', 'Blocked Passes',
+              'Dribbles Contested', 'Dribbled Past', 'Dribbles Tackled %', 'Blocks', 'Blocked Shots', 'Blocked Passes',
               'Clearances', 'Offsides', 'Penalty Won', 'Penalty Conceded', 'Throw Ins', 'Misscontrols', 'Dispossessed',
               'Fouls', 'Fouled', 'Yellow Cards', 'Red Cards', 'Yellow + Red Cards', 'Errors', 'Saves', 'Saves %',
-              'Goal Kicks', 'Throws', 'Crosses Faced', 'Crosses Stopped %']
+              'Goal Kicks', 'Throws', 'Crosses Faced', 'Crosses Stopped', 'Crosses Stopped %']
+
+
+stats_perc_calculations = ['Shot Accuracy %', 'Passes Completed %', 'Passes Short Completed %',
+                           'Passes Medium Completed %', 'Passes Long Completed %', 'Dribbles Completed %',
+                           'Tackles Won %', 'Duel Aerial Won %', 'Dribbles Tackled %', 'Saves %', 'Crosses Stopped %']
+
+# #### Aggregate Stats for Percentage Calculation
+stats_agg_perc = {
+    'Shot Accuracy %': ['Shots', 'Shots on Target'], 'Passes Completed %': ['Passes', 'Passes Completed'],
+    'Passes Short Completed %': ['Passes Short', 'Passes Short Completed'],
+    'Passes Medium Completed %': ['Passes Medium', 'Passes Medium Completed'],
+    'Passes Long Completed %': ['Passes Long', 'Passes Long Completed'],
+    'Dribbles Completed %':  ['Dribbles', 'Dribbles Completed'], 'Tackles Won %': ['Tackles', 'Tackles Won'],
+    'Duel Aerial Won %': ['Duel Aerial', 'Duel Aerial Won'],
+    'Dribbles Tackled %': ['Dribbles Contested', 'Dribbles Tackled'], 'Saves %': ['Shots on Target GK', 'Saves'],
+    'Crosses Stopped %': ['Crosses Faced', 'Crosses Stopped']}
 
 
 @st.cache
@@ -42,6 +58,9 @@ def season_data_process(season, stat_type, all_seasons):
     buli_df['Team_Lineup'] = buli_df['Team_Lineup'].apply(lambda x: x.replace("◆", ""))
     buli_df['Opp_Lineup'] = buli_df['Opp_Lineup'].apply(lambda x: x.replace("◆", ""))
 
+    # ##### Extra Statistics needed
+    buli_df['Duel Aerial'] = buli_df['Duel Aerial Won'] + buli_df['Duel Aerial Lost']
+
     # ##### Add Team Goalkeeper Statistics
     df_team_gk = \
         buli_gk_df.groupby(["Season", "Week_No", "Team", "Opponent", "Venue"])["Shots on Target",
@@ -52,8 +71,7 @@ def season_data_process(season, stat_type, all_seasons):
     df_team_gk.reset_index(inplace=True)
     df_team_gk['Saves %'] = np.round(df_team_gk['Saves'] / df_team_gk['Shots on Target'] * 100, 2)
     df_team_gk['Crosses Stopped %'] = np.round(df_team_gk['Crosses Stopped'] / df_team_gk['Crosses Faced'] * 100, 2)
-    df_team_gk.drop(columns=['Shots on Target', "Crosses Stopped"], inplace=True)
-    df_team_gk.rename(columns={"Passes": "Total Passes"}, inplace=True)
+    df_team_gk.rename(columns={"Passes": "Total Passes", "Shots on Target": "Shots on Target GK"}, inplace=True)
     buli_df = pd.merge(buli_df, df_team_gk, left_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'],
                        right_on=['Season', 'Week_No', 'Team', 'Opponent', 'Venue'])
 
@@ -68,9 +86,9 @@ def season_data_process(season, stat_type, all_seasons):
     buli_df["Defeat"] = np.where(buli_df["Result"] == 'Defeat', 1, 0)
 
     # ##### Goals Statistics
-    home_df = buli_df[buli_df['Venue'] == 'Home']
+    home_df = buli_df[buli_df['Venue'] == 'Home'].copy()
     home_df.reset_index(drop=True, inplace=True)
-    away_df = buli_df[buli_df['Venue'] == 'Away']
+    away_df = buli_df[buli_df['Venue'] == 'Away'].copy()
     away_df.reset_index(drop=True, inplace=True)
     home_df['Goals'] = home_df['Goals'] + away_df['Own Goals']
     away_df['Goals'] = away_df['Goals'] + home_df['Own Goals']
@@ -86,11 +104,23 @@ def teams_season_stats(data, stat_name, stat_filter, team_type):
 
     # ##### Create Team Chart
     if team_type == 'Team':
-        data_plot = filter_team_stat.groupby('Team')[stat_name].mean().round(2).sort_values(
-            ascending=False).reset_index()
+        if stat_name in stats_perc_calculations:
+            stats_agg = stats_agg_perc[stat_name]
+            data_plot = filter_team_stat.groupby('Team')[stats_agg].sum()
+            data_plot[stat_name] = data_plot[stats_agg[1]] / data_plot[stats_agg[0]] * 100
+            data_plot = data_plot[stat_name].round(2).sort_values(ascending=False).reset_index()
+        else:
+            data_plot = filter_team_stat.groupby('Team')[stat_name].mean().round(2).sort_values(
+                    ascending=False).reset_index()
     else:
-        data_plot = filter_team_stat.groupby('Opponent')[stat_name].mean().round(2).sort_values(
-            ascending=True).reset_index()
+        if stat_name in stats_perc_calculations:
+            stats_agg = stats_agg_perc[stat_name]
+            data_plot = filter_team_stat.groupby('Opponent')[stats_agg].sum()
+            data_plot[stat_name] = data_plot[stats_agg[1]] / data_plot[stats_agg[0]] * 100
+            data_plot = data_plot[stat_name].round(2).sort_values(ascending=False).reset_index()
+        else:
+            data_plot = filter_team_stat.groupby('Opponent')[stat_name].mean().round(2).sort_values(
+                ascending=True).reset_index()
 
     min_value_team = np.min(data_plot[stat_name]) * 0.8
     if min_value_team < 5:
@@ -182,8 +212,16 @@ def teams_charts_day(data, team, stat_name, stat_filter):
     fig.update_yaxes(title_text=stat_name, col=1)
 
     # #### Statistics
-    avg_team = np.round(filter_team_stat[stat_name].mean(), 2)
-    avg_opp = np.round(filter_opp_stat[stat_name].mean(), 2)
+    if stat_name in stats_perc_calculations:
+        stats_agg = stats_agg_perc[stat_name]
+        avg_team_calc = pd.DataFrame(filter_team_stat[stats_agg].sum()).T
+        avg_team = np.round(avg_team_calc[stats_agg[1]] / avg_team_calc[stats_agg[0]] * 100, 2).values[0]
+        avg_opp_calc = pd.DataFrame(filter_opp_stat[stats_agg].sum()).T
+        avg_opp = np.round(avg_opp_calc[stats_agg[1]] / avg_opp_calc[stats_agg[0]] * 100, 2).values[0]
+    else:
+        avg_team = np.round(filter_team_stat[stat_name].mean(), 2)
+        avg_opp = np.round(filter_opp_stat[stat_name].mean(), 2)
+
     better = np.round(np.sum(filter_team_stat[stat_name] > filter_opp_stat[stat_name]) / len(filter_opp_stat) * 100, 2)
     stat_sig = ttest_ind(filter_team_stat[stat_name].values,
                          filter_opp_stat[stat_name].values)[1]
@@ -221,13 +259,25 @@ def teams_season_type(data, team, stat_name):
         df_opp = filter_df_opp[filter_df_opp[stats_types_opp[i]] == 1]
         if len(df_team) > 0:
             results_names.append(stats_types_team[i])
-            results_stats.append(np.round(
-                df_team.groupby(stats_types_team[i])[stat_name].mean().values[-1], 2))
+            if stat_name in stats_perc_calculations:
+                stats_agg = stats_agg_perc[stat_name]
+                team_agg_stats = df_team.groupby(stats_types_team[i])[stats_agg].sum()
+                results_stats.append(
+                    np.round([team_agg_stats[stats_agg[1]] / team_agg_stats[stats_agg[0]] * 100][0][1], 2))
+            else:
+                results_stats.append(np.round(
+                    df_team.groupby(stats_types_team[i])[stat_name].mean().values[-1], 2))
             results_team.append(team)
         if len(df_opp) > 0:
             results_names.append(stats_types_team[i])
-            results_stats.append(
-                np.round(df_opp.groupby(stats_types_opp[i])[stat_name].mean().values[-1], 2))
+            if stat_name in stats_perc_calculations:
+                stats_agg = stats_agg_perc[stat_name]
+                opp_agg_stats = df_opp.groupby(stats_types_opp[i])[stats_agg].sum()
+                results_stats.append(
+                    np.round([opp_agg_stats[stats_agg[1]] / opp_agg_stats[stats_agg[0]] * 100][0][1], 2))
+            else:
+                results_stats.append(
+                    np.round(df_opp.groupby(stats_types_opp[i])[stat_name].mean().values[-1], 2))
             results_team.append("Opponent")
 
     data_season_type = pd.DataFrame([results_names, results_team, results_stats]).T
@@ -395,11 +445,20 @@ def teams_buli_type(data, analysis_seasons, filter_type, team, stat_name):
         drop=True)
 
     # ##### Stats Type Results
-    home_stats = np.round(filter_df_team.groupby('Season')[stat_name].mean(), 2).reset_index()
-    home_stats['Team'] = team
-    away_stats = np.round(filter_df_opp.groupby('Season')[stat_name].mean(), 2).reset_index()
-    away_stats['Team'] = 'Opponent'
+    if stat_name in stats_perc_calculations:
+        stats_agg = stats_agg_perc[stat_name]
+        home_agg_stats = filter_df_team.groupby('Season')[stats_agg].sum()
+        home_agg_stats[stat_name] = home_agg_stats[stats_agg[1]] / home_agg_stats[stats_agg[0]] * 100
+        home_stats = np.round(home_agg_stats[stat_name], 2).reset_index()
+        away_agg_stats = filter_df_opp.groupby('Season')[stats_agg].sum()
+        away_agg_stats[stat_name] = away_agg_stats[stats_agg[1]] / away_agg_stats[stats_agg[0]] * 100
+        away_stats = np.round(away_agg_stats[stat_name], 2).reset_index()
+    else:
+        home_stats = np.round(filter_df_team.groupby('Season')[stat_name].mean(), 2).reset_index()
+        away_stats = np.round(filter_df_opp.groupby('Season')[stat_name].mean(), 2).reset_index()
 
+    home_stats['Team'] = team
+    away_stats['Team'] = 'Opponent'
     data_seasons = pd.concat([home_stats, away_stats])
     min_value = np.min(data_seasons[stat_name]) * 0.8
     if min_value < 10:

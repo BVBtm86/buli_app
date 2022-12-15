@@ -49,7 +49,7 @@ def team_page(page_season, favourite_team, all_seasons):
             st.plotly_chart(fig_team, config=config, use_container_width=True)
 
         st.subheader(f"Team Stats vs Opponent by Match Day: Season {page_season}")
-        team_col, team_logo_col, type_col_day, _, stat_col_day = st.columns([4, 1, 2, 0.25, 2])
+        team_col, team_logo_col, type_col_day, _, stat_col_day = st.columns([4, 1, 4, 0.25, 4])
         with team_col:
             # ##### Teams Filter
             teams = list(buli_season_df['Team'].unique())
@@ -178,7 +178,7 @@ def team_page(page_season, favourite_team, all_seasons):
         pos_team = buli_teams.index(favourite_team)
         st.subheader(f"Team Stats vs Opponent over the Last 5 Seasons")
 
-        filter_col, team_chart_col, team_logo_col = st.columns([3, 9, 1])
+        filter_col, team_chart_col, team_logo_col = st.columns([4, 10, 1])
         with filter_col:
             filter_type = ["Total", "Home", "Away", "1st Period", "2nd Period"]
             season_type_team = st.selectbox("Season Filter", filter_type)
@@ -230,7 +230,7 @@ def team_page(page_season, favourite_team, all_seasons):
 
         st.subheader(f"Team Stats Relationship over the Last 5 Seasons")
 
-        corr_filter_col, corr_team_col, corr_team_image = st.columns([2.5, 6, 1])
+        corr_filter_col, corr_team_col, corr_team_image = st.columns([4, 10, 1])
         with corr_filter_col:
             corr_filter_type = st.selectbox("Relationship Filter Selection", filter_type)
             stats_names_x = stats_team.copy()

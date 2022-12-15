@@ -56,8 +56,8 @@ def match_day_process_data(season):
     buli_df['Opp_Lineup'] = buli_df['Opp_Lineup'].apply(lambda x: x.replace("◆", ""))
     buli_df.rename(columns={"Team_Lineup": "Lineup",
                             "Corner Kicks": "Corners",
-                            "Dribbles": "Dribbles Attempted",
-                            "Dribbles Completed": "Dribbles",
+                            "Dribbles": "Dribbles",
+                            "Dribbles Completed": "Dribbles Completed",
                             "Dribbles Completed %": "Dribbles %",
                             "Passes Completed %": 'Pass %',
                             "Passes Short Completed %": 'Pass Short %',

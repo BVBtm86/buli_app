@@ -21,9 +21,9 @@ def filter_data(season):
     buli_df["2nd Period"] = np.where(buli_df["Week_No"] >= 18, 1, 0)
 
     # ##### Goals Statistics
-    home_df = buli_df[buli_df['Venue'] == 'Home']
+    home_df = buli_df[buli_df['Venue'] == 'Home'].copy()
     home_df.reset_index(drop=True, inplace=True)
-    away_df = buli_df[buli_df['Venue'] == 'Away']
+    away_df = buli_df[buli_df['Venue'] == 'Away'].copy()
     away_df.reset_index(drop=True, inplace=True)
     home_df['Goals'] = home_df['Goals'] + away_df['Own Goals']
     away_df['Goals'] = away_df['Goals'] + home_df['Own Goals']
