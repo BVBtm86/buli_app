@@ -18,7 +18,7 @@ gk_stats_avg = ["Shots on Target", "Goals Conceded", "Saves", "Saves %", "Post-S
 gk_perc_calculations = ["Saves %", "Passes 35m+ Completed %", "Crosses Stopped %"]
 
 gk_agg_perc = {
-    "Saves %": ["Shots on Target", "Goals Conceded"],
+    "Saves %": ["Shots on Target", "Saves"],
     "Passes 35m+ Completed %": ["Passes 35m+", "Passes 35m+ Completed"],
     "Crosses Stopped %": ["Crosses Faced", "Crosses Stopped"]}
 
@@ -74,8 +74,6 @@ def gk_top_statistics(data, season_filter, avg_gk, stat_top10, type_top10):
             top10_gk_group_avg_df[stat_plot] = \
                 np.round(top10_gk_group_avg_df[stats_agg[1]] / top10_gk_group_avg_df[stats_agg[0]] * 100,2)
             top10_gk_group_avg_df = top10_gk_group_avg_df[stat_plot]
-            if stat_top10 == "Saves %":
-                top10_gk_group_avg_df = 100 - top10_gk_group_avg_df
             top10_gk_group_avg_df = top10_gk_group_avg_df.reset_index()
         else:
             top10_gk_group_avg_df = np.round(top10_avg_df.groupby(["Name", "Team"])[stat_plot].mean().reset_index(), 2)
@@ -148,9 +146,6 @@ def gk_chart_day(data, avg_gk, gk_name, stat_name):
         stats_agg = gk_agg_perc[stat_name]
         gk_average = np.round(gk_df[stats_agg[1]].sum() / gk_df[stats_agg[0]].sum() * 100,2)
         league_average = np.round(full_data[stats_agg[1]].sum() / full_data[stats_agg[0]].sum() * 100,2)
-        if stat_name == "Saves %":
-            gk_average = 100 - gk_average
-            league_average = 100 - league_average
     else:
         gk_average = np.nanmean(gk_df[stat_name])
         league_average = np.nanmean(full_data[stat_name])
@@ -211,9 +206,7 @@ def gk_season_filter_stats(data, player_name, avg_gk, stat_name):
                 league_stats_filter_calc[stat_name] = \
                     np.round(league_stats_filter_calc[stats_agg[1]] / league_stats_filter_calc[stats_agg[0]] * 100, 2)
                 league_stats_filter_calc = league_stats_filter_calc[stat_name].values[0]
-                if stat_name == "Saves %":
-                    gk_stats_filter_calc = 100 - gk_stats_filter_calc
-                    league_stats_filter_calc = 100 - league_stats_filter_calc
+
                 gk_stats.append(gk_stats_filter_calc)
                 gk_stats.append(league_stats_filter_calc)
             else:
@@ -270,8 +263,6 @@ def gk_relationship_data(data, filter_type, player_name, avg_gk, stat_x, stat_y,
         stat_x_calculation[stat_x] = \
             np.round(stat_x_calculation[stats_x_agg[1]] / stat_x_calculation[stats_x_agg[0]] * 100, 2)
         stat_x_calculation = stat_x_calculation[stat_x]
-        if stat_x == "Saves %":
-            stat_x_calculation = 100 - stat_x_calculation
     else:
         stat_x_calculation = np.round(league_df.groupby('Name')[stat_x].mean(), 2)
     if stat_y in gk_perc_calculations:
@@ -280,8 +271,6 @@ def gk_relationship_data(data, filter_type, player_name, avg_gk, stat_x, stat_y,
         stat_y_calculation[stat_y] = \
             np.round(stat_y_calculation[stats_y_agg[1]] / stat_y_calculation[stats_y_agg[0]] * 100, 2)
         stat_y_calculation = stat_y_calculation[stat_y]
-        if stat_y == "Saves %":
-            stat_y_calculation = 100 - stat_y_calculation
     else:
         stat_y_calculation = np.round(league_df.groupby('Name')[stat_y].mean(), 2)
     if stat_size in gk_perc_calculations:
@@ -290,8 +279,6 @@ def gk_relationship_data(data, filter_type, player_name, avg_gk, stat_x, stat_y,
         stat_size_calculation[stat_size] = \
             np.round(stat_size_calculation[stats_size_agg[1]] / stat_size_calculation[stats_size_agg[0]] * 100, 2)
         stat_size_calculation = stat_size_calculation[stat_size]
-        if stat_size == "Saves %":
-            stat_size_calculation = 100 - stat_size_calculation
     else:
         stat_size_calculation = np.round(league_df.groupby('Name')[stat_size].mean(), 2)
 
@@ -399,9 +386,6 @@ def gk_buli_stats(data, gk_team, gk_name, avg_gk, stat_name, filter_type, analys
         league_season_stats[stat_name] = \
             np.round(league_season_stats[stats_agg[1]] / league_season_stats[stats_agg[0]] * 100, 2)
         league_season_stats = league_season_stats[stat_name]
-        if stat_name == "Saves %":
-            gk_season_stats = 100 - gk_season_stats
-            league_season_stats = 100 - league_season_stats
         gk_season_stats = gk_season_stats.reset_index()
         league_season_stats = league_season_stats.reset_index()
     else:
