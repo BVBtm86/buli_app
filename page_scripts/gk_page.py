@@ -52,7 +52,7 @@ def gk_page(all_seasons, page_season, favourite_team):
         st.subheader(f"GK Match Day Statistics: Season {page_season}")
         gk_day_col, gk_day_chart_col, gk_day_logo_col = st.columns([3.1, 8, 1])
         with gk_day_col:
-            stat_gk_day = st.selectbox("Gk Statistics", gk_stats_avg)
+            gk_type_stat = st.selectbox("Gk Statistics", gk_stats_avg)
             gk_match_day = buli_gk_season_df[(buli_gk_season_df['Team'] == favourite_team)]['Name_Team'].values[0]
             pos_gk = final_avg_gk.index(gk_match_day)
             final_name_avg_gk = [gk.split("_")[1] for gk in final_avg_gk]
@@ -61,7 +61,7 @@ def gk_page(all_seasons, page_season, favourite_team):
             fig_gk_day, gk_team_name, gk_league_comparison, gk_stat_sig_name = gk_chart_day(data=buli_gk_season_df,
                                                                                             avg_gk=final_avg_gk,
                                                                                             gk_name=gk_name_day,
-                                                                                            stat_name=stat_gk_day)
+                                                                                            stat_name=gk_type_stat)
 
             config = {'displayModeBar': False}
             st.plotly_chart(fig_gk_day, config=config, use_container_width=True)
@@ -74,12 +74,12 @@ def gk_page(all_seasons, page_season, favourite_team):
             if gk_stat_sig_name == "":
                 st.markdown(
                     f"<b><font color = #d20614>{gk_name_day}</font></b> has on Average <b><font color = green>"
-                    f"{gk_league_comparison}</font></b> <b><font color = #d20614>{stat_gk_day}</font></b> per game "
+                    f"{gk_league_comparison}</font></b> <b><font color = #d20614>{gk_type_stat}</font></b> per game "
                     f"then the league Average.", unsafe_allow_html=True)
             else:
                 st.markdown(
-                    f"<b><font color = #d20614>{gk_name_day}</font></b> has on Average <b><font color = greeen>"
-                    f"{gk_league_comparison}</font></b> <b><font color = #d20614>{stat_gk_day}</font></b> per game"
+                    f"<b><font color = #d20614>{gk_name_day}</font></b> has on Average <b><font color = green>"
+                    f"{gk_league_comparison}</font></b> <b><font color = #d20614>{gk_type_stat}</font></b> per game"
                     f" then the league Average which is <b><font color = #d20614>{gk_stat_sig_name}</font></b>",
                     unsafe_allow_html=True)
 
@@ -95,7 +95,6 @@ def gk_page(all_seasons, page_season, favourite_team):
         with gk_team_name_col:
             st.markdown("")
             st.markdown(f"<h4><b>{gk_name_day}</b></h4>", unsafe_allow_html=True)
-            gk_type_stat = st.selectbox("Statistics", gk_stats_avg)
 
         with type_gk_chart_col:
             gk_stat_fig, gk_home_away = gk_season_filter_stats(data=buli_gk_season_df,

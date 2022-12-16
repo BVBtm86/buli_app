@@ -27,12 +27,11 @@ stats_team = ['Possession', 'Goals', 'Assists', 'Shots', 'Shots on Target', 'Sho
               'Fouls', 'Fouled', 'Yellow Cards', 'Red Cards', 'Yellow + Red Cards', 'Errors', 'Saves', 'Saves %',
               'Goal Kicks', 'Throws', 'Crosses Faced', 'Crosses Stopped', 'Crosses Stopped %']
 
-
+# #### Aggregate Stats for Percentage Calculation
 stats_perc_calculations = ['Shot Accuracy %', 'Passes Completed %', 'Passes Short Completed %',
                            'Passes Medium Completed %', 'Passes Long Completed %', 'Dribbles Completed %',
                            'Tackles Won %', 'Duel Aerial Won %', 'Dribbles Tackled %', 'Saves %', 'Crosses Stopped %']
 
-# #### Aggregate Stats for Percentage Calculation
 stats_agg_perc = {
     'Shot Accuracy %': ['Shots', 'Shots on Target'], 'Passes Completed %': ['Passes', 'Passes Completed'],
     'Passes Short Completed %': ['Passes Short', 'Passes Short Completed'],
