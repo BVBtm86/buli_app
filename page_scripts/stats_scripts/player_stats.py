@@ -37,7 +37,7 @@ player_stats_avg = ['Goals', 'Assists', 'Shots', 'Shots on Target', 'Shot Accura
                     'Touches Def PA', 'Touches Def 3rd', 'Touches Mid 3rd', 'Touches Att 3rd', 'Touches Att PA',
                     'Touches Live Ball', 'Dribbles', 'Dribbles Completed', 'Dribbles Completed %', 'Crosses',
                     'Crosses PA', 'Interceptions', 'Ball Recoveries', 'Corner Kicks', 'Corner Kicks In',
-                    'Corner Kicks Out', 'Corner Kicks Straight', 'Tackles', 'Tackles Won %', 'Tackles Won',
+                    'Corner Kicks Out', 'Corner Kicks Straight', 'Tackles', 'Tackles Won', 'Tackles Won %',
                     'Tackles Def 3rd', 'Tackles Mid 3rd', 'Tackles Att 3rd', 'Tackles + Interceptions',
                     'Duel Aerial Won', 'Duel Aerial Lost', 'Duel Aerial Won %', 'Dribbles Tackled',
                     'Dribbles Contested', 'Dribbles Tackled %', 'Dribbled Past', 'Blocks', 'Blocked Shots',
@@ -60,6 +60,21 @@ player_defensive_stats = ["Tackles", "Tackles Won %", "Duel Aerial Won", "Duel A
 player_passing_stats = ["Ball Touches", "Passes", "Passes Completed %", "Passes Final 3rd", "Passes PA",
                         "Progressive Passes", 'Dispossessed', "Crosses PA"]
 
+# #### Aggregate Stats for Percentage Calculation
+player_perc_calculations = ['Shot Accuracy %', 'Passes Completed %', 'Passes Short Completed %',
+                            'Passes Medium Completed %', 'Passes Long Completed %', 'Dribbles Completed %',
+                            'Tackles Won %', 'Duel Aerial Won %', 'Dribbles Tackled %', 'Saves %', 'Crosses Stopped %']
+
+player_agg_perc = {
+    'Shot Accuracy %': ['Shots', 'Shots on Target'], 'Passes Completed %': ['Passes', 'Passes Completed'],
+    'Passes Short Completed %': ['Passes Short', 'Passes Short Completed'],
+    'Passes Medium Completed %': ['Passes Medium', 'Passes Medium Completed'],
+    'Passes Long Completed %': ['Passes Long', 'Passes Long Completed'],
+    'Dribbles Completed %':  ['Dribbles', 'Dribbles Completed'], 'Tackles Won %': ['Tackles', 'Tackles Won'],
+    'Duel Aerial Won %': ['Duel Aerial', 'Duel Aerial Won'],
+    'Dribbles Tackled %': ['Dribbles Contested', 'Dribbles Tackled'], 'Saves %': ['Shots on Target GK', 'Saves'],
+    'Crosses Stopped %': ['Crosses Faced', 'Crosses Stopped']}
+
 
 @st.cache
 def season_player_data(season):
@@ -77,6 +92,9 @@ def season_player_data(season):
     buli_df_players["Draw"] = np.where(buli_df_players["Result"] == 'Draw', 1, 0)
     buli_df_players["Defeat"] = np.where(buli_df_players["Result"] == 'Defeat', 1, 0)
     buli_df_players["Player Position"] = buli_df_players["Position"].map(player_position)
+
+    # ##### Extra Statistics needed
+    buli_df_players['Duel Aerial'] = buli_df_players['Duel Aerial Won'] + buli_df_players['Duel Aerial Lost']
 
     # ##### Total Players
     total_players = list(buli_df_players['Name'].unique())
@@ -109,9 +127,19 @@ def player_top_statistics(data, season_filter, avg_players, stat_top10, type_top
         top10_plot_data.rename(columns={stat_plot: stat_top10}, inplace=True)
     else:
         stat_plot = stat_top10
-        top10_player_group_avg_df = np.round(top10_avg_df.groupby(["Name", "Team"])[stat_plot].mean().reset_index(), 2)
-        top10_plot_data = top10_player_group_avg_df.nlargest(10, stat_plot)
-        top10_plot_data.rename(columns={stat_plot: stat_top10}, inplace=True)
+        if stat_plot in player_perc_calculations:
+            stats_agg = player_agg_perc[stat_plot]
+            top10_player_group_avg_df = top10_avg_df.groupby(["Name", "Team"])[stats_agg].sum()
+            top10_player_group_avg_df[stat_plot] = \
+                top10_player_group_avg_df[stats_agg[1]] / top10_player_group_avg_df[stats_agg[0]] * 100
+            top10_plot_data = top10_player_group_avg_df.nlargest(10, stat_plot)
+            top10_plot_data = \
+                top10_plot_data[stat_plot].round(2).sort_values(ascending=False).reset_index()
+        else:
+            top10_player_group_avg_df = \
+                np.round(top10_avg_df.groupby(["Name", "Team"])[stat_plot].mean().reset_index(), 2)
+            top10_plot_data = top10_player_group_avg_df.nlargest(10, stat_plot)
+            top10_plot_data.rename(columns={stat_plot: stat_top10}, inplace=True)
 
     if type_top10 == "Total":
         plot_title = f"Top 10 <b>{stat_top10}</b> for <b>{season_filter}</b> Season Games"
@@ -175,11 +203,20 @@ def player_df_stat_season(data, team, total_players, avg_players, stat_name, sta
             final_players_plot[stat_name] = np.round(final_players_plot[stat_name], 2)
         final_players_avg_plot = None
     else:
-        final_players_stat_avg = \
-            team_player_avg_df.groupby('Name')[stat_name].mean().sort_values(ascending=False).reset_index()
-        final_players_stat_avg.columns = ['Name', stat_name]
-        final_players_avg_plot = final_players_stat_avg[final_players_stat_avg[stat_name] > 0]
-        final_players_avg_plot[stat_name] = np.round(final_players_avg_plot[stat_name], 2)
+        if stat_name in player_perc_calculations:
+            stats_agg = player_agg_perc[stat_name]
+            final_players_stat_avg = team_player_avg_df.groupby(["Name"])[stats_agg].sum()
+            final_players_stat_avg[stat_name] = \
+                final_players_stat_avg[stats_agg[1]] / final_players_stat_avg[stats_agg[0]] * 100
+            final_players_avg_plot = \
+                final_players_stat_avg[stat_name].round(2).sort_values(ascending=False).reset_index()
+            final_players_avg_plot = final_players_avg_plot[final_players_avg_plot[stat_name] > 0]
+        else:
+            final_players_stat_avg = \
+                team_player_avg_df.groupby('Name')[stat_name].mean().sort_values(ascending=False).reset_index()
+            final_players_stat_avg.columns = ['Name', stat_name]
+            final_players_avg_plot = final_players_stat_avg[final_players_stat_avg[stat_name] > 0]
+            final_players_avg_plot[stat_name] = np.round(final_players_avg_plot[stat_name], 2)
         final_players_plot = None
 
     # ##### Season Average
@@ -189,9 +226,17 @@ def player_df_stat_season(data, team, total_players, avg_players, stat_name, sta
         full_season_avg = \
             np.round(full_season[full_season[stat_name] > 0][stat_name].mean(), 2)
     else:
-        full_season = full_player_avg_df.groupby('Name')[stat_name].mean().reset_index()
-        full_season_avg = \
-            np.round(full_season[full_season[stat_name] > 0][stat_name].mean(), 2)
+        if stat_name in player_perc_calculations:
+            stats_agg = player_agg_perc[stat_name]
+            full_season = full_player_avg_df.groupby(["Name"])[stats_agg].sum()
+            full_season[stat_name] = \
+                full_season[stats_agg[1]] / full_season[stats_agg[0]] * 100
+            full_season_avg = \
+                np.round(full_season[full_season[stat_name] > 0][stat_name].mean(), 2)
+        else:
+            full_season = full_player_avg_df.groupby('Name')[stat_name].mean().reset_index()
+            full_season_avg = \
+                np.round(full_season[full_season[stat_name] > 0][stat_name].mean(), 2)
 
     # ##### Create Plot
     if stat_type == 'Total':
@@ -303,9 +348,33 @@ def player_season_filter_stats(data, team, player, avg_players, stat_name, vs_pl
             names_stats.append(stats_types_player[i])
             names_stats.append(stats_types_player[i])
             names_stats.append(stats_types_player[i])
-            player_stats.append(np.round(player_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
-            player_stats.append(np.round(team_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
-            player_stats.append(np.round(league_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
+            if stat_name in player_perc_calculations:
+                stats_agg = player_agg_perc[stat_name]
+                # ##### Player Calculation
+                player_filter_agg = player_df.groupby([stats_types_player[i]])[stats_agg].sum()
+                player_filter_agg = pd.DataFrame(player_filter_agg.loc[1, :]).T
+                player_filter_agg[stat_name] = \
+                    player_filter_agg[stats_agg[1]] / player_filter_agg[stats_agg[0]] * 100
+                player_filter_agg = np.round(player_filter_agg[stat_name].values[0], 2)
+                player_stats.append(player_filter_agg)
+                # ##### Team Calculation
+                team_filter_agg = team_df.groupby([stats_types_player[i]])[stats_agg].sum()
+                team_filter_agg = pd.DataFrame(team_filter_agg.loc[1, :]).T
+                team_filter_agg[stat_name] = \
+                    team_filter_agg[stats_agg[1]] / team_filter_agg[stats_agg[0]] * 100
+                team_filter_agg = np.round(team_filter_agg[stat_name].values[0], 2)
+                player_stats.append(team_filter_agg)
+                # ##### League Calculation
+                league_filter_agg = league_df.groupby([stats_types_player[i]])[stats_agg].sum()
+                league_filter_agg = pd.DataFrame(league_filter_agg.loc[1, :]).T
+                league_filter_agg[stat_name] = \
+                    league_filter_agg[stats_agg[1]] / league_filter_agg[stats_agg[0]] * 100
+                league_filter_agg = np.round(league_filter_agg[stat_name].values[0], 2)
+                player_stats.append(league_filter_agg)
+            else:
+                player_stats.append(np.round(player_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
+                player_stats.append(np.round(team_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
+                player_stats.append(np.round(league_df.groupby(stats_types_player[i])[stat_name].mean().values[-1], 2))
             player_name.append(player)
             player_name.append(team)
             player_name.append(f"League: {vs_player_type}s")
@@ -380,8 +449,25 @@ def player_relationship_data(data, filter_type, team, player, avg_players, stat_
 
     # ##### Create Average Data
     stat_var_1, stat_var_2 = stat_x, stat_y
+    if stat_var_1 in player_perc_calculations:
+        stats_x_agg = player_agg_perc[stat_var_1]
+        stat_x_calculation = filter_df_season.groupby(["Name"])[stats_x_agg].sum()
+        stat_x_calculation[stat_var_1] = \
+            np.round(stat_x_calculation[stats_x_agg[1]] / stat_x_calculation[stats_x_agg[0]] * 100, 2)
+        stat_x_calculation = stat_x_calculation[stat_var_1]
+    else:
+        stat_x_calculation = np.round(filter_df_season.groupby('Name')[stat_var_1].mean(), 2)
 
-    player_group_df = np.round(filter_df_season.groupby('Name')[[stat_var_1, stat_var_2]].mean(), 2).reset_index()
+    if stat_var_2 in player_perc_calculations:
+        stats_y_agg = player_agg_perc[stat_var_2]
+        stat_y_calculation = filter_df_season.groupby(["Name"])[stats_y_agg].sum()
+        stat_y_calculation[stat_var_2] = \
+            np.round(stat_y_calculation[stats_y_agg[1]] / stat_y_calculation[stats_y_agg[0]] * 100, 2)
+        stat_y_calculation = stat_y_calculation[stat_var_2]
+    else:
+        stat_y_calculation = np.round(filter_df_season.groupby('Name')[stat_var_2].mean(), 2)
+
+    player_group_df = pd.merge(left=stat_x_calculation, right=stat_y_calculation, left_index=True, right_index=True)
     player_group_df = pd.merge(player_group_df, filter_df_season[["Name", "Team"]].drop_duplicates(keep="last"),
                                on="Name", how="left")
 
@@ -470,6 +556,9 @@ def buli_player_data(team, season, all_seasons):
     buli_df_players["Defeat"] = np.where(buli_df_players["Result"] == 'Defeat', 1, 0)
     buli_df_players["Player Position"] = buli_df_players["Position"].map(player_position)
 
+    # ##### Extra Statistics needed
+    buli_df_players['Duel Aerial'] = buli_df_players['Duel Aerial Won'] + buli_df_players['Duel Aerial Lost']
+
     # ##### Players for the Avg Analysis
     player_team = buli_df_players[buli_df_players['Season'] == season].reset_index(drop=True)
     filter_players_avg = pd.DataFrame(player_team.groupby('Name')['Minutes'].sum().reset_index())
@@ -489,10 +578,24 @@ def player_buli_stats(data, season_filter, team, player, avg_players, stat_name,
     team_df = data[(data['Season'].isin(player_df_seasons)) & (data['Team'] == team) & (data['Name'].isin(avg_players))
                    & (data[season_filter] == 1)].reset_index(drop=True)
 
-    # ##### Create Stats
-    player_season_stats = np.round(player_df.groupby('Season')[stat_name].mean(), 3).reset_index()
+    # ##### Player Stats Stats
+    if stat_name in player_perc_calculations:
+        stats_agg = player_agg_perc[stat_name]
+        # ##### Player Calculation
+        player_season_stats = player_df.groupby('Season')[stats_agg].sum()
+        player_season_stats[stat_name] = \
+            player_season_stats[stats_agg[1]] / player_season_stats[stats_agg[0]] * 100
+        player_season_stats = np.round(player_season_stats[stat_name], 2).reset_index()
+        # ##### Team Calculation
+        team_season_stats = team_df.groupby('Season')[stats_agg].sum()
+        team_season_stats[stat_name] = \
+            team_season_stats[stats_agg[1]] / team_season_stats[stats_agg[0]] * 100
+        team_season_stats = np.round(team_season_stats[stat_name], 2).reset_index()
+    else:
+        player_season_stats = np.round(player_df.groupby('Season')[stat_name].mean(), 2).reset_index()
+        team_season_stats = np.round(team_df.groupby('Season')[stat_name].mean(), 2).reset_index()
+
     player_season_stats['Averages'] = player
-    team_season_stats = np.round(team_df.groupby('Season')[stat_name].mean(), 3).reset_index()
     team_season_stats['Averages'] = team
     season_stats = pd.concat([player_season_stats, team_season_stats])
 
@@ -653,16 +756,45 @@ def player_comparison_radar(data, season_filter, stats_type, player_1, player_2,
 
     # ##### Create Player Stats
     player_df_1 = season_data[season_data['Name'] == player_1].reset_index(drop=True)
-    player_stats_1 = np.round(player_df_1.groupby('Name')[plot_stats].mean(), 2)
-    player_stats_values_1 = player_stats_1.values.tolist()[0]
-
     player_df_2 = season_data[season_data['Name'] == player_2].reset_index(drop=True)
-    player_stats_2 = np.round(player_df_2.groupby('Name')[plot_stats].mean(), 2)
-    player_stats_values_2 = player_stats_2.values.tolist()[0]
+    player_stats_values_1 = []
+    player_stats_values_2 = []
+    for stat_name in plot_stats:
+        if stat_name in player_perc_calculations:
+            stats_agg = player_agg_perc[stat_name]
+            # ##### Player Calculation 1
+            player_stats_1 = player_df_1.groupby('Name')[stats_agg].sum()
+            player_stats_1[stat_name] = \
+                player_stats_1[stats_agg[1]] / player_stats_1[stats_agg[0]] * 100
+            player_stats_1 = player_stats_1[stat_name]
+            # ##### Player Calculation 2
+            player_stats_2 = player_df_2.groupby('Name')[stats_agg].sum()
+            player_stats_2[stat_name] = \
+                player_stats_2[stats_agg[1]] / player_stats_2[stats_agg[0]] * 100
+            player_stats_2 = player_stats_2[stat_name]
+        else:
+            # ##### Player Calculation 1
+            player_stats_1 = player_df_1.groupby('Name')[stat_name].mean()
+            # ##### Player Calculation 2
+            player_stats_2 = player_df_2.groupby('Name')[stat_name].mean()
+        player_stats_values_1.append(np.round(player_stats_1.values[0], 2))
+        player_stats_values_2.append(np.round(player_stats_2.values[0], 2))
 
     # #### Create Plot Ranges
-    min_stats = np.round(np.min(season_data.groupby('Name')[plot_stats].mean()).tolist(), 2)
-    max_stats = np.round(np.max(season_data.groupby('Name')[plot_stats].mean()).tolist(), 2)
+    min_stats = []
+    max_stats = []
+    for stat_name in plot_stats:
+        if stat_name in player_perc_calculations:
+            stats_agg = player_agg_perc[stat_name]
+            # ##### Player Calculation 1
+            range_stats = season_data.groupby('Name')[stats_agg].sum()
+            range_stats[stat_name] = \
+                range_stats[stats_agg[1]] / range_stats[stats_agg[0]] * 100
+            range_stats = range_stats[stat_name]
+        else:
+            range_stats = season_data.groupby('Name')[stat_name].mean()
+        min_stats.append(np.round(np.nanmin(range_stats), 2))
+        max_stats.append(np.round(np.nanmax(range_stats), 2))
 
     # ##### Create Plot
     params = plot_stats.copy()
@@ -711,9 +843,18 @@ def player_comparison_pizza(data, season_filter, stats_type, player_1, player_2)
         plot_stats = player_passing_stats.copy()
 
     # ##### Player Stats
-    player_stats = np.round(
-        season_data.groupby('Name')[plot_stats].mean().rank(pct=True) * 100).reset_index()
-
+    player_stats = np.round(season_data.groupby('Name')[plot_stats[0]].mean().rank(pct=True) * 100)
+    for stat_name in plot_stats[1:]:
+        if stat_name in player_perc_calculations:
+            stats_agg = player_agg_perc[stat_name]
+            stats_calculation = season_data.groupby('Name')[stats_agg].sum()
+            stats_calculation[stat_name] = stats_calculation[stats_agg[1]] / stats_calculation[stats_agg[0]] * 100
+            stats_calculation = np.round(stats_calculation[stat_name].rank(pct=True) * 100)
+        else:
+            stats_calculation = np.round(
+                season_data.groupby('Name')[stat_name].mean().rank(pct=True) * 100)
+        player_stats = pd.merge(left=player_stats, right=stats_calculation, left_index=True, right_index=True)
+    player_stats.reset_index(inplace=True)
     player_1_values = list(player_stats[player_stats['Name'] == player_1].values[0][1:])
     player_2_values = list(player_stats[player_stats['Name'] == player_2].values[0][1:])
     for i in range(len(player_1_values)):

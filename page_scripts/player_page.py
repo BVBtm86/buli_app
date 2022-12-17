@@ -146,7 +146,6 @@ def player_page(all_seasons, page_season, favourite_team):
         st.subheader(f"Players Match Day Statistics: Season {page_season}")
         player_day_col, player_day_chart_col, player_day_logo_col = st.columns([3, 8, 1])
         with player_day_col:
-            stat_player_day = st.selectbox("Player Statistics", player_stats_avg)
             team_season_player_df, team_players = player_match_day_team(data=buli_player_season_df,
                                                                         team=season_player_team,
                                                                         players=final_avg_players)
@@ -155,7 +154,7 @@ def player_page(all_seasons, page_season, favourite_team):
         with player_day_chart_col:
             fig_player_day, fig_max_value, team_max_day, team_avg_day = player_chart_day(data=team_season_player_df,
                                                                                          player_name=player_name_day,
-                                                                                         stat_name=stat_player_day)
+                                                                                         stat_name=player_stat)
             if fig_max_value == 0:
                 st.subheader("No data")
 
@@ -172,9 +171,9 @@ def player_page(all_seasons, page_season, favourite_team):
             else:
                 st.markdown(
                     f"<b><font color = #d20614>{player_name_day}</font></b> had the most <b><font color = green>"
-                    f"{stat_player_day}</font></b> for <b><font color = #d20614>{season_player_team}</font></b> in "
+                    f"{player_stat}</font></b> for <b><font color = #d20614>{season_player_team}</font></b> in "
                     f"<b><font color = #d20614>{team_max_day}</font></b> Games and had more <b><font color = green>"
-                    f"{stat_player_day}</font></b> then the team average in <b><font color = #d20614>{team_avg_day}"
+                    f"{player_stat}</font></b> then the team average in <b><font color = #d20614>{team_avg_day}"
                     f"</font></b> Games.", unsafe_allow_html=True)
 
             st.markdown(
@@ -198,7 +197,7 @@ def player_page(all_seasons, page_season, favourite_team):
                                            team=season_player_team,
                                            player=player_name_day,
                                            avg_players=final_avg_players,
-                                           stat_name=stat_player_day,
+                                           stat_name=player_stat,
                                            vs_player_type=vs_player_type)
 
             if fig_max_value == 0:
@@ -212,15 +211,15 @@ def player_page(all_seasons, page_season, favourite_team):
                 pass
             else:
                 st.markdown(f"<b><font color = #d20614>{player_name_day}</font></b> has <b><font color = green>"
-                            f"{player_team_comparison}</font></b> <b><font color = green>{stat_player_day}</font></b> "
+                            f"{player_team_comparison}</font></b> <b><font color = green>{player_stat}</font></b> "
                             f"per Game on Average than <b><font color = #d20614>{season_player_team}</font></b>'s teams"
                             f" Average and <b><font color = green>{player_league_comparison}</font></b> <b>"
-                            f"<font color = green>{stat_player_day}</font></b> per Game than the Leagues <b>"
+                            f"<font color = green>{player_stat}</font></b> per Game than the Leagues <b>"
                             f"<font color = #d20614>{vs_player_type}</font></b> Average.", unsafe_allow_html=True)
                 if player_home_away != "":
                     st.markdown(
                         f"<b><font color = #d20614>{player_name_day}</font></b> has more <b><font color = green>"
-                        f"{stat_player_day}</font></b> per Game on Average for <b><font color = #d20614>"
+                        f"{player_stat}</font></b> per Game on Average for <b><font color = #d20614>"
                         f"{player_home_away}</font></b> Season Games.", unsafe_allow_html=True)
 
             st.markdown(
