@@ -33,7 +33,8 @@ with buli_container:
         st.image(buli_logo, use_column_width=True)
     with text_col:
         st.markdown("")
-        st.title("Bundesliga App")
+        st.markdown(f"<h1><font color = #d20614>Bundesliga</font> Game Statistics <font color = #d20614></font>"
+                    f"</h1>", unsafe_allow_html=True)
 
 # ##### Statistic Type
 statistics_type = ["Home", "Match Day Statistics", "Season Table", "Team Statistics", "Player Statistics",
