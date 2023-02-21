@@ -135,13 +135,16 @@ def create_predictions_season(data, current_data, step):
     prediction_results = final_model.predict(prediction_transformed)
     final_results = data[['Week_No', 'Home Team', 'Away Team']].copy()
     final_results['Predicted Result'] = pd.Series(prediction_results)
+    final_results['Result'] = final_results['Predicted Result'].map({0: 2, 1: 1, 2: 0})
+
+    # ##### Home and Away Data
+    home_df = final_results[['Home Team', 'Predicted Result']].rename(
+        columns={"Home Team": "Team", "Predicted Result": "Result"})
+    away_df = final_results[['Away Team', 'Result']].rename(columns={"Away Team": "Team"})
+    predicted_tab = pd.concat([home_df, away_df])
 
     # ##### Merge with current Data
-    predicted_tab = pd.melt(final_results, id_vars=["Predicted Result"], value_vars=["Home Team", "Away Team"])
-    predicted_tab = predicted_tab[['value', 'Predicted Result']]
-    predicted_tab.columns = ['Team', 'Result']
     predicted_tab['Result'] = predicted_tab['Result'].map({0: "Defeat", 1: "Draw", 2: "Win"})
-
     season_predicted = pd.concat([current_data[['Team', "Result"]], predicted_tab])
 
     # ##### Create Current Table
