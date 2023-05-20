@@ -24,7 +24,6 @@ player_stats_total = ['Goals', 'Assists', 'Shots', 'Shots on Target', 'xGoal', '
                       'Misscontrols', 'Dispossessed', 'Fouls', 'Fouled', 'Yellow Cards', 'Red Cards',
                       'Yellow + Red Cards', 'Errors']
 
-
 player_stats_avg = ['Goals', 'Assists', 'Shots', 'Shots on Target', 'Shot Accuracy %', 'xGoal', 'Non-Penalty xGoal',
                     'xGoal Assist', 'xAssist', 'Goal Created Action', 'Shot Created Action', 'Key Passes',
                     'Penalty Goal', 'Penalty Attempted', 'Own Goals', 'Passes', 'Passes Completed',
@@ -44,7 +43,6 @@ player_stats_avg = ['Goals', 'Assists', 'Shots', 'Shots on Target', 'Shot Accura
                     'Blocked Passes', 'Clearances', 'Offsides', 'Penalty Won', 'Penalty Conceded', 'Throw Ins',
                     'Misscontrols', 'Dispossessed', 'Fouls', 'Fouled', 'Yellow Cards', 'Red Cards',
                     'Yellow + Red Cards', 'Errors']
-
 
 player_position = {"CB": "Defenders", "RB": "Defenders", "LB": "Defenders", "RWB": "Defenders", "LWB": "Defenders",
                    "WB": "Defenders", "DF": "Defenders", "DM": "Midfielders", "CM": "Midfielders", "CAM": "Midfielders",
@@ -70,7 +68,7 @@ player_agg_perc = {
     'Passes Short Completed %': ['Passes Short', 'Passes Short Completed'],
     'Passes Medium Completed %': ['Passes Medium', 'Passes Medium Completed'],
     'Passes Long Completed %': ['Passes Long', 'Passes Long Completed'],
-    'Dribbles Completed %':  ['Dribbles', 'Dribbles Completed'], 'Tackles Won %': ['Tackles', 'Tackles Won'],
+    'Dribbles Completed %': ['Dribbles', 'Dribbles Completed'], 'Tackles Won %': ['Tackles', 'Tackles Won'],
     'Duel Aerial Won %': ['Duel Aerial', 'Duel Aerial Won'],
     'Dribbles Tackled %': ['Dribbles Contested', 'Dribbles Tackled'], 'Saves %': ['Shots on Target GK', 'Saves'],
     'Crosses Stopped %': ['Crosses Faced', 'Crosses Stopped']}
@@ -101,7 +99,7 @@ def season_player_data(season):
     total_players.sort()
 
     # ##### Players for the Avg Analysis
-    filter_players_avg = pd.DataFrame(buli_df_players.groupby(['Name', 'Team'])['Minutes'].sum().sort_values()).\
+    filter_players_avg = pd.DataFrame(buli_df_players.groupby(['Name', 'Team'])['Minutes'].sum().sort_values()). \
         reset_index()
     filter_players_avg['Name_Team'] = filter_players_avg['Team'] + "_" + filter_players_avg['Name']
     minutes_cutoff = (buli_df_players['Week_No'].max() * 90) * 0.1
@@ -171,8 +169,9 @@ def player_top_statistics(data, season_filter, avg_players, stat_top10, type_top
     max_no_players = top10_plot_data['Team'].value_counts().max()
     if max_no_players > 1:
         value_counts = top10_plot_data['Team'].value_counts().reset_index()
-        value_counts = value_counts.rename(columns={"index":"Team", "Team": "# Players"})
-        teams_no_top10 = value_counts[value_counts['# Players'] == max_no_players]['Team']
+        value_counts = value_counts.rename(columns={"index": "Team", "Team": "# Players"})
+        teams_no_top10 = value_counts[value_counts['# Players'] == max_no_players]['Team'].values
+        # print(teams_no_top10)
         no_teams_top10 = len(teams_no_top10)
         teams_top10 = ""
         for team in teams_no_top10:
@@ -722,7 +721,7 @@ def player_buli_corr_data(data, filter_type, team, player, stat_x, stat_y, analy
         pl_season_corr_sign = 0
 
     return player_seasons_fig, pl_overall_corr_value, pl_overall_corr_strength, pl_overall_corr_sign, \
-        pl_season_name_best_corr, pl_season_value_best_corr, pl_season_corr_strength, pl_season_corr_sign
+           pl_season_name_best_corr, pl_season_value_best_corr, pl_season_corr_strength, pl_season_corr_sign
 
 
 @st.cache
