@@ -491,7 +491,7 @@ def gk_buli_corr_data(data, filter_type, team, player, stat_x, stat_y, avg_gk, a
     no_seasons_gk = len(valid_seasons_gk)
     # Season Correlation
     if no_seasons_gk > 1:
-        gk_season_corr = corr_season_df.groupby('Season')[stat_x, stat_y].corr().reset_index()
+        gk_season_corr = corr_season_df.groupby('Season')[[stat_x, stat_y]].corr().reset_index()
         gk_season_corr = gk_season_corr[gk_season_corr['level_1'] == stat_y]
         gk_season_corr['Rank'] = np.abs(gk_season_corr[stat_x]).rank(ascending=False)
         gk_season_name_best_corr = gk_season_corr[gk_season_corr['Rank'] == 1]['Season'].values[0]
