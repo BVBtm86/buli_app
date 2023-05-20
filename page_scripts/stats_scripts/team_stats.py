@@ -549,7 +549,7 @@ def relationship_buli_data(data, team, analysis_seasons, filter_type, stat_x, st
         overall_corr_sign = "Positive"
 
     # Season Correlation
-    season_corr = final_df.groupby('Season')[stat_x, stat_y].corr().reset_index()
+    season_corr = final_df.groupby('Season')[[stat_x, stat_y]].corr().reset_index()
     season_corr = season_corr[season_corr['level_1'] == stat_y]
     season_corr['Rank'] = np.abs(season_corr[stat_x]).rank(ascending=False)
     season_name_best_corr = season_corr[season_corr['Rank'] == 1]['Season'].values[0]
