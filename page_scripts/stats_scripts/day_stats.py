@@ -67,10 +67,10 @@ def match_day_process_data(season):
 
     # ##### Add Team Goalkeeper Statistics
     df_team_gk = \
-        buli_gk_df.groupby(["Season", "Week_No", "Team", "Opponent", "Venue"])["Shots on Target",
+        buli_gk_df.groupby(["Season", "Week_No", "Team", "Opponent", "Venue"])[["Shots on Target",
                                                                                "Saves", "Post-Shot xGoal",
                                                                                "Passes", "Goal Kicks", "Throws",
-                                                                               "Crosses Faced", "Crosses Stopped"].sum()
+                                                                               "Crosses Faced", "Crosses Stopped"]].sum()
 
     df_team_gk.reset_index(inplace=True)
     df_team_gk['Saves %'] = np.round(df_team_gk['Saves'] / df_team_gk['Shots on Target'] * 100, 2)
