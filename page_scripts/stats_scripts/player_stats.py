@@ -172,7 +172,7 @@ def player_top_statistics(data, season_filter, avg_players, stat_top10, type_top
     if max_no_players > 1:
         value_counts = top10_plot_data['Team'].value_counts().reset_index()
         value_counts = value_counts.rename(columns={"index":"Team", "Team": "# Players"})
-        teams_no_top10 = value_counts[value_counts['# Players'] == max_no_players]['Team'].unique()
+        teams_no_top10 = value_counts[value_counts['# Players'] == max_no_players]['Team']
         no_teams_top10 = len(teams_no_top10)
         teams_top10 = ""
         for team in teams_no_top10:
